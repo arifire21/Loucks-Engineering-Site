@@ -11,7 +11,10 @@ function App() {
   return (
     <div>
       <Header />
-      <Hero title="Loucks Engineering INC" />
+      <Hero 
+      title="Loucks Engineering INC"
+      BG="hero__bg"
+       />
 
     </div>
   );
