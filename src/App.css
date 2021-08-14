@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Darker Grotesque', sans-serif;
+  }
+  p, span {
+    font-family: 'Roboto', sans-serif;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .fifty-fifty {
+    padding: 60px;
+    display: flex;
+  }
+  .fifty-fifty__item {
+    flex: 1;
+    padding: 30px;
+  }
+  @media (max-width: 1024px) {
+    .fifty-fifty {
+      flex-direction: column;
+    }
+    .hero {
+      height: auto !important;
+      padding: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  
