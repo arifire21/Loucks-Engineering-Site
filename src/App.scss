@@ -1,5 +1,5 @@
-// site color declarations
 
+// site color declarations
 $primary : #CC0B01;
 $secondary: #111011;
 $tertiary: #555454;
@@ -8,7 +8,6 @@ $white: #ffff;
 //font declarations
 $primary-font: 'Darker Grotesque', sans-serif;
 $body-font: 'Roboto', sans-serif;
-
 //global fonts
 
 h1,h2,h3,h4,h5,h6{
@@ -30,6 +29,8 @@ p,span{
 
 }
 
+
+
 .hero{
     display: flex;
     justify-content: center;
@@ -42,6 +43,7 @@ p,span{
     &__cta{
 
     }
+    
 }
 
 .fifty-fifty{

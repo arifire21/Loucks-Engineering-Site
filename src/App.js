@@ -12,7 +12,7 @@ function App() {
     <div>
       <Header />
       <Hero 
-      title="Loucks Engineering INC"
+      title=""
       BG="hero__bg"
        />
 
