@@ -8,6 +8,15 @@
 @import './styles/fonts.scss';
 
 //hero
+
+.wrapper .row{
+    justify-content: center;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .hero{
     height: 100vh;
     display: flex;
@@ -55,6 +64,11 @@
     &__services{
         background-color:$off-white;
     }
+    &__blueprint{
+        background: url(./images/blueprinttexture.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
 }
 
 .headline{
@@ -92,4 +106,28 @@
     img{
         width: 60px;
     }
+}
+
+.showcase{
+    background-color:white;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    &__body{
+        margin-bottom: 15px;
+    }
+    &__inner{
+        padding: 15px;
+    }
+}
+
+.align-left h2{
+    text-align: left !important;
+    margin-bottom: 10px;
 }

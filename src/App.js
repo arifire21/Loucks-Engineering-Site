@@ -10,52 +10,108 @@ import Card from './components/Widgets/Card';
 import Idea from './components/Icons/Idea';
 import Mockup from './components/Icons/Mockup';
 import Engineer from './components/Icons/Engineer';
+import ShowcaseData from './data/showcase.js';
+import Showcase from './components/Widgets/Showcase';
+import Button from './components/Widgets/Button';
+import EngineeringBanner from './images/engineerbanner.png';
 
 
 function App() {
 
   return (
     <div>
-      <Hero/>
+      <Hero />
       <Section
-      extraClass="section__services"
+        extraClass="section__services"
       >
         <div className="section__services-title">
           <Headline
-          title="Our Services"
+            title="Our Services"
           />
         </div>
+
+
         <Container fluid>
+          <div className="wrapper">
+            <Row>
+
+              <Col md={{ span: 3 }}>
+                <Card
+                  icon={<Idea />}
+                  title="Lorem Ipsum"
+                  body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
+                />
+              </Col>
+              <Col md={{ span: 3 }}>
+                <Card
+                  icon={<Mockup />}
+                  title="Lorem Ipsum"
+                  body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
+                />
+              </Col>
+              <Col md={{ span: 3 }}>
+                <Card
+                  icon={<Engineer />}
+                  title="Lorem Ipsum"
+                  body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
+                />
+              </Col>
+            </Row>
+          </div>
+        </Container>
+
+      </Section>
+      <Section
+        extraClass="section__blueprint"
+      >
+        <Headline
+          title="PROJECT SHOWCASE"
+        />
+        <div className="wrapper">
           <Row>
-            <Col md={{span: 2, offset: 3}}>
-              <Card
-              icon={<Idea/>}
-              title="Lorem Ipsum"
-              body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
+            {ShowcaseData().map(item => {
+              return (
+                <Col md={{ span: 3 }}>
+                  <Showcase
+                    image={item.image}
+                    body={item.bodyCopy}
+                    link={item.mapsLink}
+                  />
+                </Col>
+              )
+            })}
+          </Row>
+        </div>
+      </Section>
+
+      <Section
+        extraClass="section__final-cta"
+      >
+        <div className="wrapper">
+          <Row>
+            <Col md={{ span: 5, offset: 1}}>
+              <Headline
+                title="Client Job Status Tracker"
+                extraClass="align-left"
+              />
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              <Button
+                title="Launch Tracking Application"
+                link="#"
+                extraClass="btn__red"
               />
             </Col>
-            <Col md={{span: 2}}>
-            <Card
-              icon={<Mockup/>}
-              title="Lorem Ipsum"
-              body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
-              />
-            </Col>
-            <Col md={{span: 2}}>
-            <Card
-              icon={<Engineer/>}
-              title="Lorem Ipsum"
-              body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
-              />
+            <Col md={{ span: 6 }}>
+              <img src={EngineeringBanner} width="100%"/>
             </Col>
           </Row>
-        </Container>
+        </div>
       </Section>
-      
+
 
     </div>
   );
-  
+
 }
 
 export default App;
