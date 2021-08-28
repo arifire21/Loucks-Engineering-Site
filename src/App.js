@@ -30,22 +30,26 @@ function App() {
           />
         </div>
 
+        <div className="project__list">
+          <p> Commercial Buildings <b>|</b> Retail Spaces <b>|</b> Single-Family / Multi-Family Residences <b>|</b> Restaurants <b>|</b> Education Centers </p>
+        </div>
 
         <Container fluid>
           <div className="wrapper">
             <Row>
 
+              {/* TODO: get descriptions / better names */}
               <Col md={{ span: 3 }}>
                 <Card
                   icon={<Idea />}
-                  title="Lorem Ipsum"
+                  title="MEP Drawings"
                   body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
                 />
               </Col>
               <Col md={{ span: 3 }}>
                 <Card
                   icon={<Mockup />}
-                  title="Lorem Ipsum"
+                  title="Load Calcs"
                   body={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}
                 />
               </Col>
@@ -64,6 +68,7 @@ function App() {
       <Section
         extraClass="section__blueprint"
       >
+            
         <Headline
           title="PROJECT SHOWCASE"
         />
@@ -94,7 +99,7 @@ function App() {
                 title="Client Job Status Tracker"
                 extraClass="align-left"
               />
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+              <p>Track job status using the LEI job number. </p>
               <Button
                 title="Launch Tracking Application"
                 link="#"

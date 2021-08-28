@@ -1,16 +1,18 @@
 import Image from '../images/examplebuilding.png';
+import Oceanic_Img from '../images/oceanic.jpg';
+import Lucky_Fish_Img from '../images/lucky_fish.jpg';
 
 export default function(){
    return [
     {
-       "image": Image,
+       "image": Oceanic_Img,
        "mapsLink" : "#",
-       "bodyCopy": "Lorem Ipsum"
+       "bodyCopy": "Oceanic Pompano"
     },
     {
-        "image": Image,
+        "image": Lucky_Fish_Img,
         "mapsLink" : "#",
-        "bodyCopy": "Lorem Ipsum"
+        "bodyCopy": "Lucky Fish Bar and Grill"
      },
      {
         "image": Image,
