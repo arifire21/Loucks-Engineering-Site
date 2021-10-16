@@ -113,6 +113,21 @@ function App() {
         </div>
       </Section>
 
+      <div className="contact">
+        <Headline
+          title="Contact Us"
+          extraClass="align-left"
+        />
+
+        <p><b>Location</b></p>
+        <p>tbd</p>
+
+        <p><b>Phone</b></p>
+        <p>tbd</p>
+
+        <p><b>Email</b></p>
+        <p>tbd</p>
+      </div>
 
     </div>
   );
