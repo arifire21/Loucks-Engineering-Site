@@ -13,6 +13,8 @@ import Engineer from './components/Icons/Engineer';
 import ShowcaseData from './data/showcase.js';
 import Showcase from './components/Widgets/Showcase';
 import Button from './components/Widgets/Button';
+import NavTabs from './components/Widgets/NavTabs';
+import Carousel from './components/Widgets/Carousel';
 import EngineeringBanner from './images/engineerbanner.png';
 
 
@@ -20,6 +22,8 @@ function App() {
 
   return (
     <div>
+      <NavTabs />
+      <Carousel />
       <Hero />
       <Section
         extraClass="section__services"

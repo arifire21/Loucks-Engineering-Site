@@ -7,6 +7,9 @@
 //load global fonts
 @import './styles/fonts.scss';
 
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+
 //hero
 
 .wrapper .row{
@@ -21,7 +24,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    background: url('./images/banner.png');
+    // background: url('./images/banner.png');
+    background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

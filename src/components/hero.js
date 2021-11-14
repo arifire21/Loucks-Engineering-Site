@@ -11,11 +11,11 @@ export default function (props) {
                         <Col md={{ span: 6, offset: 6 }}>
                             <div className="hero__content-wrapper">
                             <img src={Logo} width="80%"/>
-                            <Button
+                            {/* <Button
                                 title="Launch Tracking Application"
                                 link="#"
                                 extraClass="btn__red"
-                            />
+                            /> */}
                             </div>
                         </Col>
                     </Row>
