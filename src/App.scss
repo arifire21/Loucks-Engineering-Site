@@ -146,3 +146,14 @@
     background-color: $off-white;
     color: black;
 }
+
+.arrowbtn{
+    background-color: red;
+    color: white;
+    border-color: palevioletred;
+}
+
+.arrowbtn:hover{
+    background-color: darkred;
+    border-color: darkred;
+}
