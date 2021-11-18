@@ -14,6 +14,7 @@ import ShowcaseData from './data/showcase.js';
 import Showcase from './components/Widgets/Showcase';
 import Button from './components/Widgets/Button';
 import NavTabs from './components/Widgets/NavTabs';
+import BasicTabs from './components/Widgets/TabContentTest';
 import Carousel from './components/Widgets/Carousel';
 import EngineeringBanner from './images/engineerbanner.png';
 
@@ -22,8 +23,9 @@ function App() {
 
   return (
     <div>
-      <NavTabs />
-      <Carousel />
+      {/* <NavTabs /> */}
+      <BasicTabs />
+      {/* <Carousel /> */}
       <Hero />
       <Section
         extraClass="section__services"

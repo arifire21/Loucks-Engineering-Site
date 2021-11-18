@@ -24,7 +24,13 @@ export default function NavTabs() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Tabs value={value} onChange={handleChange} aria-label="nav tabs example" variant="fullWidth">
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="nav tabs example"
+        variant="fullWidth"
+        textColor="secondary"
+      >
         <LinkTab label="Home" href="/#" />
         <LinkTab label="Services" href="/#" />
         <LinkTab label="Project Portfolio" href="/#" />

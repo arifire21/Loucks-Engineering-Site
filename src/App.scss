@@ -157,3 +157,26 @@
     background-color: darkred;
     border-color: darkred;
 }
+
+// SERVICES TAB
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.item {
+    flex-grow: 1;
+    font-size: 40;
+}
+
+p.subtitle {
+    font-size: medium;
+}
+
+hr.half-width{
+    border: 2px solid red;
+    width:50%;
+    margin: 0 auto;
+  }
