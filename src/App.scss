@@ -168,15 +168,26 @@
 
 .item {
     flex-grow: 1;
-    font-size: 40;
-}
-
-p.subtitle {
-    font-size: medium;
+    padding: 20px;
 }
 
 hr.half-width{
     border: 2px solid red;
-    width:50%;
+    width: 50%;
     margin: 0 auto;
   }
+
+p.subtitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul.list {
+    text-align: center;
+    font-size: 15px;
+  }
+
+// .test {
+//     background: url('./images/banner.png');
+// }

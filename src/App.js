@@ -124,15 +124,21 @@ function App() {
           title="Contact Us"
           extraClass="align-left"
         />
-
-        <p><b>Location</b></p>
-        <p>tbd</p>
-
-        <p><b>Phone</b></p>
-        <p>tbd</p>
-
-        <p><b>Email</b></p>
-        <p>tbd</p>
+        {/* testing using flexbox from TabContentTest */}
+        <div className="flex-container">
+          <div className="item">
+            <p><b>Location</b></p>
+            <p>tbd</p>
+          </div>
+          <div className="item">
+            <p><b>Phone</b></p>
+            <p>tbd</p>
+          </div>
+          <div className="item">
+            <p><b>Email</b></p>
+            <p>tbd</p>
+          </div>
+        </div>
       </div>
 
     </div>
