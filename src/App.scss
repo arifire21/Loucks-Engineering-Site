@@ -143,8 +143,8 @@
 .contact{
     margin-top: 50px;
     margin-left: 20px;
-    background-color: $off-white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .arrowbtn{
@@ -156,6 +156,16 @@
 .arrowbtn:hover{
     background-color: darkred;
     border-color: darkred;
+}
+
+//TABS GENERAL
+.pagetitle {
+    margin-left: 1rem;
+}
+
+.titleheader {
+    border: 3px solid red;
+    width: 65%;
 }
 
 // SERVICES TAB
@@ -171,23 +181,27 @@
     padding: 20px;
 }
 
-hr.half-width{
+.half-width{
     border: 2px solid red;
-    width: 50%;
+    width: 55%;
     margin: 0 auto;
   }
 
-p.subtitle {
+.subtitle {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-ul.list {
-    text-align: center;
-    font-size: 15px;
-  }
+.list li{
+    // text-align: center;
+    font-size: 20px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
 
-// .test {
-//     background: url('./images/banner.png');
-// }
+.details {
+    margin: 2rem;
+}

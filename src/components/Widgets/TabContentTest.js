@@ -48,7 +48,12 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" variant="fullWidth" textColor="secondary">
+        <Tabs value={value} onChange={handleChange}
+            aria-label="basic tabs example"
+            variant="fullWidth"
+            textColor="secondary"
+            borderColor="primary"
+            inkBarStyle={{background: 'blue'}}>
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Services" {...a11yProps(1)} />
           <Tab label="Project Portfolio" {...a11yProps(2)} />
@@ -58,10 +63,12 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         Item One
+        <hr className='titleheader'/>
       </TabPanel>
 
       <TabPanel value={value} index={1}>
-        <h2><b>Services</b></h2>
+        <h2 className='pagetitle'><b>Services</b></h2>
+        <hr className='titleheader'/>
         <div className="flex-container">
             <div className="item">
               <p className="subtitle">Mechanical</p>
@@ -69,7 +76,8 @@ export default function BasicTabs() {
                 <ul className="list">
                   <li>HVAC Design</li>
                   <li>HVAC Load Calculations</li>
-                  <li>todo</li>
+                  <li>Existing HVAC System Analysis</li>
+                  <li>Building Energy Audits</li>
                 </ul>
             </div>
             <div className="item">
@@ -77,19 +85,52 @@ export default function BasicTabs() {
               <hr className="half-width"/>
                 <ul className="list">
                   <li>Power Distribution</li>
-                  <li>Lighting Design</li>
+                  <li>Lighting Design and Controls</li>
                   <li>Data and IT Systems</li>
-                  <li>todo</li>
+                  <li>Photometrics</li>
+                  <li>UPS systems?</li>
                 </ul>
             </div>
             <div className="item">
               <p className="subtitle">Plumbing</p>
               <hr className="half-width"/>
                 <ul className="list">
-                  <li>insert stuff about plumbing</li>
+                  <li>Plumbing Systems Design</li>
+                  <li>Domestic Water System Design</li>
+                  <li>Sanitary Waste System Design</li>
+                  <li>Natural Gas System Design</li>
                 </ul>
             </div>
-        </div> 
+        </div>
+        <hr cstyle='text-align: center'/>
+        <div className='details'>
+          <Typography align='left' variant='h6'>
+            <i>Mechanical Details</i>
+          </Typography>
+          <p align='left'>
+          Put details about mechanical services here.<br/>
+          Wow much text.<br/>
+          Amazing<br/>
+          </p>
+
+        <Typography align='right' variant='h6'>
+          <i>Electrical Details</i>
+        </Typography>
+        <p align='right'>
+        Put details about electrical services here.<br/>
+        Wow much text.<br/>
+        Amazing
+        </p>
+
+        <Typography align='left' variant='h6'>
+          <i>Plumbing Details</i>
+        </Typography>
+        <p align='left'>
+        Put details about plumbing services here.<br/>
+        Wow much text.<br/>
+        Amazing
+        </p>
+      </div>
       </TabPanel>
 
       <TabPanel value={value} index={2}>
@@ -97,7 +138,8 @@ export default function BasicTabs() {
       </TabPanel>
 
       <TabPanel value={value} index={3}>
-        <h2><b>About Us</b></h2>
+        <h2 className='pagetitle'><b>About Us</b></h2>
+        <hr color='titleheader'/>
         <h3>Company History</h3>
         <p>temp text. wow such a cool sentence.</p>
         <hr className="half-width"/>
@@ -112,16 +154,20 @@ export default function BasicTabs() {
 
       <TabPanel value={value} index={4}>
         {/* <div className="test"> */}
-        <h2><b>Contact Us</b></h2>
+        <h2 className='pagetitle'><b>Contact Us</b></h2>
+        <hr color='titleheader'/>
         <h4>Main Phone</h4>
+
 
         <h4>Email?</h4>
 
+
         <h4>Op Hours?</h4>
+
 
         {/* todo, maybe put this in a flexbox */}
         <h4>Location</h4>
-        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank">TEST: Get Directions</a>
+        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank">Get Directions</a>
         {/* </div> */}
       </TabPanel>
 
