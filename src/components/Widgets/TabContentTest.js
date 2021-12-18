@@ -5,6 +5,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import Logo from '../../images/logo.png';
+
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -63,8 +66,10 @@ export default function BasicTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         Item One
+        <Logo/>
         <hr className='titleheader'/>
       </TabPanel>
+
 
       <TabPanel value={value} index={1}>
         <h2 className='pagetitle'><b>Services</b></h2>
@@ -133,6 +138,7 @@ export default function BasicTabs() {
       </div>
       </TabPanel>
 
+
       <TabPanel value={value} index={2}>
         Portfolio
       </TabPanel>
@@ -151,6 +157,7 @@ export default function BasicTabs() {
         <p>something about being licensed in # of states</p>
         <hr className="half-width"/>
       </TabPanel>
+
 
       <TabPanel value={value} index={4}>
         {/* <div className="test"> */}

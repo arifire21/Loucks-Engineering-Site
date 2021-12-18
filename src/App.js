@@ -17,6 +17,7 @@ import NavTabs from './components/Widgets/NavTabs';
 import BasicTabs from './components/Widgets/TabContentTest';
 import Carousel from './components/Widgets/Carousel';
 import EngineeringBanner from './images/engineerbanner.png';
+import Footer from './components/Widgets/Footer'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       {/* <NavTabs /> */}
       <BasicTabs />
       {/* <Carousel /> */}
+{/*
       <Hero />
       <Section
         extraClass="section__services"
@@ -43,8 +45,10 @@ function App() {
         <Container fluid>
           <div className="wrapper">
             <Row>
-
+*/}
               {/* TODO: get descriptions / better names */}
+{/*
+
               <Col md={{ span: 3 }}>
                 <Card
                   icon={<Idea />}
@@ -118,13 +122,16 @@ function App() {
           </Row>
         </div>
       </Section>
-
+*/}
+{/*
       <div className="contact">
         <Headline
           title="Contact Us"
           extraClass="align-left"
         />
+*/}
         {/* testing using flexbox from TabContentTest */}
+{/*
         <div className="flex-container">
           <div className="item">
             <p><b>Location</b></p>
@@ -141,6 +148,9 @@ function App() {
         </div>
       </div>
 
+*/}
+
+  <Footer/>
     </div>
   );
 
