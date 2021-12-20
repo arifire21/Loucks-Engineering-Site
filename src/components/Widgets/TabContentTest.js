@@ -1,9 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import {Tabs, Tab, Typography, Box, AppBar} from '@material-ui/core/';
 
 import Logo from '../../images/logo.png';
 import Carousel from './Carousel';
@@ -51,19 +48,22 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <AppBar position='static' color='inherit' >
         <Tabs value={value} onChange={handleChange}
             aria-label="basic tabs example"
             variant="fullWidth"
             textColor="secondary"
             borderColor="primary"
             inkBarStyle={{background: 'blue'}}>
-          <Tab label="Home" {...a11yProps(0)} />
-          <Tab label="Services" {...a11yProps(1)} />
-          <Tab label="Project Portfolio" {...a11yProps(2)} />
-          <Tab label="About Us" {...a11yProps(3)} />
-          <Tab label="Contact Us" {...a11yProps(4)} />
+          <Tab className='testtab' label="Home" {...a11yProps(0)} />
+          <Tab className='testtab' label="Services" {...a11yProps(1)} />
+          <Tab className='testtab' label="Project Portfolio" {...a11yProps(2)} />
+          <Tab className='testtab' label="About Us" {...a11yProps(3)} />
+          <Tab className='testtab' label="Contact Us" {...a11yProps(4)} />
         </Tabs>
+        </AppBar>
       </Box>
+
       <TabPanel value={value} index={0}>
         {/* Item One */}
         <Carousel/>
