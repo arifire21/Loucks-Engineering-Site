@@ -6,16 +6,16 @@ export default function Footer() {
         <div className="footer">
             <Box bgcolor="gray"
             color="white"
-            px={{xs: 3, sm: 10}}
-            py={{xs: 6, sm: 11}}
+            px={{xs: 5, sm: 5}}
+            py={{xs: 5, sm: 5}}
             >
             
                 <Container maxWidth="lg">
                     <Grid container spacing={6}>
-                        <Grid item xs={12} sm={3}> 
+                        <Grid item xs={8} sm={3}> 
                             <Box> <img src={Logo} alt="lei logo" width='150' height='50'/></Box>
                         </Grid>
-                        <Grid item xs={12} sm={4}> 
+                        <Grid item xs={8} sm={4}> 
                             <Box borderBottom={1}><b>ItemOne</b></Box>
                             <Box>
                                 <Link href="url" underline="always" color="inherit">LinkText</Link>
@@ -33,7 +33,7 @@ export default function Footer() {
                                 <Link href="url" underline="always" color="inherit">LinkText</Link>
                             </Box>
                         </Grid> */}
-                        <Grid item xs={12} sm={4}> 
+                        <Grid item xs={8} sm={4}> 
                             <Box borderBottom={1}><b>Contact Us</b></Box>
                             <Box>
                                 <p><b>Phone</b>: 1234567890</p>
