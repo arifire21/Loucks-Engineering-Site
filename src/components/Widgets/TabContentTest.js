@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import Logo from '../../images/logo.png';
-
+import Carousel from './Carousel';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,9 +65,12 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
-        <Logo/>
-        <hr className='titleheader'/>
+        {/* Item One */}
+        <Carousel/>
+        <div className='logo'>
+          <img src={Logo} alt="lei logo"/>
+          {/* <hr className='titleheader'/> */}
+        </div>
       </TabPanel>
 
 
