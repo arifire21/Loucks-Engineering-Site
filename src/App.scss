@@ -9,6 +9,10 @@
 
 //hero
 
+html, body {
+    height: 100vh;
+}
+
 .wrapper .row{
     justify-content: center;
 }
@@ -141,25 +145,35 @@
 }
 
 //for footer
-.contact{
-    margin-top: 50px;
-    background-color: #4a4a4a;
-    color: white;
+// .contact{
+//     margin-top: 50px;
+//     background-color: #4a4a4a;
+//     color: white;
+// }
+
+//CAROUSEL
+.carousel-img {
+    border-radius: 30px;
 }
 
 .arrowbtn{
-    background-color: red;
-    color: white;
-    border-color: palevioletred;
+    text-align: center;
+    font-size: 30px;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    // background-color: red;
+    color: black;
+    border-color: red;
 }
 
 .arrowbtn:hover{
-    background-color: darkred;
+    transition-duration: 0.5s;
+    background-color: #d00000;
     border-color: darkred;
 }
 
 //TABS GENERAL
-.testtab:hover {
+.tab:hover {
     transition-duration: 1s;
     background-color: #f4cccc;
 }
@@ -173,18 +187,40 @@
     width: 65%;
 }
 
-.footer {
-    margin-top: 1rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
+// .footer {
+//     // margin-top: 5rem;
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     // height: 50%;
+// }
 
 //HOME TAB
-.logo {
-    text-align: center;
+// .carousel {
+//     width: 20%;
+// }
+.home-container {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0.5rem;
+    justify-content: center
 }
+
+.home-item {
+    flex-grow: 1;
+    padding: 2rem;
+    justify-self: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+// .one {
+//     margin: 50%;
+// }
 
 // SERVICES TAB
 
@@ -192,7 +228,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
+}
 
 .item {
     flex-grow: 1;
@@ -203,7 +239,7 @@
     border: 2px solid red;
     width: 55%;
     margin: 0 auto;
-  }
+}
 
 .subtitle {
     text-align: center;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Tabs, Tab, Typography, Box, AppBar} from '@material-ui/core/';
 
 import Logo from '../../images/logo.png';
-import Carousel from './Carousel';
+import CarouselNew from './CarouselNew';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,25 +55,33 @@ export default function BasicTabs() {
             textColor="secondary"
             borderColor="primary"
             inkBarStyle={{background: 'blue'}}>
-          <Tab className='testtab' label="Home" {...a11yProps(0)} />
-          <Tab className='testtab' label="Services" {...a11yProps(1)} />
-          <Tab className='testtab' label="Project Portfolio" {...a11yProps(2)} />
-          <Tab className='testtab' label="About Us" {...a11yProps(3)} />
-          <Tab className='testtab' label="Contact Us" {...a11yProps(4)} />
+          <Tab className='tab' label="Home" {...a11yProps(0)} />
+          <Tab className='tab' label="Services" {...a11yProps(1)} />
+          <Tab className='tab' label="Project Portfolio" {...a11yProps(2)} />
+          <Tab className='tab' label="About Us" {...a11yProps(3)} />
+          <Tab className='tab' label="Contact Us" {...a11yProps(4)} />
         </Tabs>
         </AppBar>
       </Box>
 
+      {/* HOME TAB */}
       <TabPanel value={value} index={0}>
-        {/* Item One */}
-        <Carousel/>
-        <div className='logo'>
-          <img src={Logo} alt="lei logo"/>
-          {/* <hr className='titleheader'/> */}
+        <div className='home-container'>
+          <div className='home-item one'>
+            <img src={Logo} alt="lei logo"/>
+          </div>
+          <div className='home-item'>
+            <CarouselNew/>
+          </div>
         </div>
+
+        <hr className='titleheader'/>
+
+        <p>company tagline</p>
+        
       </TabPanel>
 
-
+      {/* SERVICES TAB */}
       <TabPanel value={value} index={1}>
         <h2 className='pagetitle'><b>Services</b></h2>
         <hr className='titleheader'/>
@@ -143,7 +151,7 @@ export default function BasicTabs() {
 
 
       <TabPanel value={value} index={2}>
-        Portfolio
+        <h1>Portfolio Coming Soon!</h1>
       </TabPanel>
 
       <TabPanel value={value} index={3}>

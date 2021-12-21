@@ -15,7 +15,6 @@ import Showcase from './components/Widgets/Showcase';
 import Button from './components/Widgets/Button';
 import NavTabs from './components/Widgets/NavTabs';
 import BasicTabs from './components/Widgets/TabContentTest';
-import Carousel from './components/Widgets/Carousel';
 import EngineeringBanner from './images/engineerbanner.png';
 import Footer from './components/Widgets/Footer'
 
@@ -26,7 +25,6 @@ function App() {
     <div>
       {/* <NavTabs /> */}
       <BasicTabs />
-      {/* <Carousel /> */}
 {/*
       <Hero />
       <Section
