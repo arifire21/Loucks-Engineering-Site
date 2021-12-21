@@ -67,7 +67,7 @@ export default function BasicTabs() {
       {/* HOME TAB */}
       <TabPanel value={value} index={0}>
         <div className='home-container'>
-          <div className='home-item one'>
+          <div className='home-item'>
             <img src={Logo} alt="lei logo"/>
           </div>
           <div className='home-item'>

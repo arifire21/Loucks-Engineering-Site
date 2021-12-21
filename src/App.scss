@@ -9,9 +9,9 @@
 
 //hero
 
-html, body {
-    height: 100vh;
-}
+// html, body {
+//     height: 100vh;
+// }
 
 .wrapper .row{
     justify-content: center;
@@ -157,7 +157,7 @@ html, body {
 }
 
 .arrowbtn{
-    text-align: center;
+    // text-align: center;
     font-size: 30px;
     width: 50px; height: 50px;
     border-radius: 50%;
@@ -197,30 +197,31 @@ html, body {
 // }
 
 //HOME TAB
-// .carousel {
-//     width: 20%;
+// .carousel-container {
+//     height: 500px;
+//     width: 500px;
 // }
+
 .home-container {
     display: flex;
     flex-direction: row;
-    row-gap: 0.5rem;
-    justify-content: center
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-item {
+    flex-basis: 0;
     flex-grow: 1;
-    padding: 2rem;
-    justify-self: center;
+    // padding: 2rem;
+    // justify-self: center;
 }
 
 .btn-container {
+    padding: 20px;
     display: flex;
     justify-content: center;
 }
-
-// .one {
-//     margin: 50%;
-// }
 
 // SERVICES TAB
 
