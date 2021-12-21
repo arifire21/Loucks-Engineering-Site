@@ -3,7 +3,7 @@ import Logo from '../../images/logo.png';
 
 export default function Footer() {
     return(
-        <div className="footer">
+        <footer>
             <Box bgcolor="gray"
             color="white"
             px={{xs: 5, sm: 5}}
@@ -43,16 +43,16 @@ export default function Footer() {
                             </Box>
                             <Box>
                                 {/* <p><b>Address</b>:</p> */}
-                                <Link href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" underline="always" color="inherit"><b>Address</b></Link>
+                                <Link href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" underline="always" color="inherit" target="_blank"><b>Address</b></Link>
                             </Box>
                         </Grid>
                     </Grid>
                     {/* copyright */}
                     <Box textAlign="center">
-                        &copy; {new Date().getFullYear()}
+                        reg number | &copy; {new Date().getFullYear()}
                     </Box>
                 </Container>
             </Box>
-        </div>
+        </footer>
     )
 }
