@@ -151,27 +151,6 @@
 //     color: white;
 // }
 
-//CAROUSEL
-.carousel-img {
-    border-radius: 30px;
-}
-
-.arrowbtn{
-    // text-align: center;
-    font-size: 30px;
-    width: 50px; height: 50px;
-    border-radius: 50%;
-    // background-color: red;
-    color: black;
-    border-color: red;
-}
-
-.arrowbtn:hover{
-    transition-duration: 0.5s;
-    background-color: #d00000;
-    border-color: darkred;
-}
-
 //TABS GENERAL
 .tab:hover {
     transition-duration: 1s;
@@ -217,10 +196,36 @@
     // justify-self: center;
 }
 
+//CAROUSEL
+// .carousel-img {
+//     border-radius: 25px;
+// }
+
 .btn-container {
+    // margin-top: 20px;
     padding: 20px;
     display: flex;
     justify-content: center;
+}
+
+.single-btn {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.arrowbtn{
+    font-size: 30px;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    // background-color: red;
+    color: black;
+    border-color: red;
+}
+
+.arrowbtn:hover{
+    transition-duration: 0.5s;
+    background-color: #d00000;
+    border-color: darkred;
 }
 
 // SERVICES TAB

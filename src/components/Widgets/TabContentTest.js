@@ -78,6 +78,7 @@ export default function BasicTabs() {
         <hr className='titleheader'/>
 
         <p>company tagline</p>
+        <p>brief details</p>
         
       </TabPanel>
 

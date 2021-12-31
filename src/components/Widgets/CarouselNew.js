@@ -1,10 +1,11 @@
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, DotGroup } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import Placeholder_Image from '../../images/examplebuilding.png';
 import Oceanic_Img from '../../images/oceanic.jpg';
 import Lucky_Fish_Img from '../../images/lucky_fish.jpg';
+import { Typography } from '@material-ui/core';
 
 export default class extends React.Component {
   render() {
@@ -21,22 +22,27 @@ export default class extends React.Component {
           <Slider>
             <Slide index={0}>
               {/* todo replace "img-#" with actual project name */}
+              <Typography align='center'>ImgName</Typography>
               <Image className='carousel-img' src={Placeholder_Image} alt='showcase-img-1' title='showcase-img-1'/>
-              <p>img1</p>
             </Slide>
             <Slide index={1}>
+              <Typography align='center'>Oceanic at Pompano Pier</Typography>
               <Image className='carousel-img' src={Oceanic_Img} alt='showcase-img-oceanic' title='Oceanic at Pompano Pier'/>
-              <p>Oceanic at Pompano Pier</p>
             </Slide>
             <Slide index={2}>
+              <Typography align='center'>Lucky Fish at Pompano Pier</Typography>
               <Image className='carousel-img' src={Lucky_Fish_Img} alt='showcase-img-lucky' title='Lucky Fish at Pompano Pier'/>
             </Slide>
           </Slider>
+
           <div className='btn-container'>
-            <ButtonBack className='arrowbtn'>&lt;</ButtonBack>
-            {/* <DotGroup className='arrowbtn'/> */}
-            <ButtonNext className='arrowbtn'>&gt;</ButtonNext>
-        </div>
+            <div className='single-btn'>
+              <ButtonBack className='arrowbtn'>&lt;</ButtonBack>
+            </div>
+            <div className='single-btn'>
+              <ButtonNext className='arrowbtn'>&gt;</ButtonNext>
+            </div>
+          </div>
         </CarouselProvider>
       </div>
     );
