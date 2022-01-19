@@ -1,5 +1,6 @@
 import { Container, Grid, Box, Link } from "@material-ui/core";
 import Logo from '../../images/logo.png';
+import Pin from '../../images/pin.png';
 
 export default function Footer() {
     return(
@@ -13,16 +14,19 @@ export default function Footer() {
                 <Container maxWidth="lg">
                     <Grid container spacing={6}>
                         <Grid item xs={8} sm={3}> 
-                            <Box> <img src={Logo} alt="lei logo" width='150' height='50'/></Box>
+                            <Box> <img src={Logo} alt="lei logo" width='220' height='100'/></Box>
                         </Grid>
                         <Grid item xs={8} sm={4}> 
                             <Box borderBottom={1}><b>ItemOne</b></Box>
                             <Box>
-                                <Link href="url" underline="always" color="inherit">LinkText</Link>
+                                <p>Filler text about company here??</p>
+                                <p>Line test</p>
+                                <p>Line test</p>
                             </Box>
+                            {/*
                             <Box>
                                 <Link href="url" underline="always" color="inherit">LinkText</Link>
-                            </Box>
+                            </Box> */}
                         </Grid>
                         {/* <Grid item xs={12} sm={4}> 
                             <Box borderBottom={1}><b>ItemTwo</b></Box>
@@ -36,13 +40,13 @@ export default function Footer() {
                         <Grid item xs={8} sm={4}> 
                             <Box borderBottom={1}><b>Contact Us</b></Box>
                             <Box>
-                                <p><b>Phone</b>: 1234567890</p>
+                                <p><b>Phone</b>: (123) 456-7890</p>
                             </Box>
                             <Box>
-                                <p><b>Fax</b>: 1234567890</p>
+                                <p><b>Fax</b>: (123) 456-7890</p>
                             </Box>
                             <Box>
-                                {/* <p><b>Address</b>:</p> */}
+                                <img src={Pin} alt="maps_pin" width='20' height='30' className="maps-pin"/>
                                 <Link href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" underline="always" color="inherit" target="_blank"><b>Address</b></Link>
                             </Box>
                         </Grid>

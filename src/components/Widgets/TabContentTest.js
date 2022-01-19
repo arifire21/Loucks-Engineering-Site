@@ -48,20 +48,22 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <AppBar position='static' color='inherit' >
-        <Tabs value={value} onChange={handleChange}
-            aria-label="basic tabs example"
-            variant="fullWidth"
-            textColor="secondary"
-            borderColor="primary"
-            inkBarStyle={{background: 'blue'}}>
-          <Tab className='tab' label="Home" {...a11yProps(0)} />
-          <Tab className='tab' label="Services" {...a11yProps(1)} />
-          <Tab className='tab' label="Project Portfolio" {...a11yProps(2)} />
-          <Tab className='tab' label="About Us" {...a11yProps(3)} />
-          <Tab className='tab' label="Contact Us" {...a11yProps(4)} />
-        </Tabs>
-        </AppBar>
+        <div className='navbar'>
+          <AppBar position='fixed' color='inherit' >
+          <Tabs value={value} onChange={handleChange}
+              aria-label="basic tabs example"
+              variant="fullWidth"
+              textColor="secondary"
+              borderColor="primary"
+              inkBarStyle={{background: 'blue'}}>
+            <Tab className='tab' label="Home" {...a11yProps(0)} />
+            <Tab className='tab' label="Services" {...a11yProps(1)} />
+            <Tab className='tab' label="Project Portfolio" {...a11yProps(2)} />
+            <Tab className='tab' label="About Us" {...a11yProps(3)} />
+            <Tab className='tab' label="Contact Us" {...a11yProps(4)} />
+          </Tabs>
+          </AppBar>
+        </div>
       </Box>
 
       {/* HOME TAB */}
@@ -78,14 +80,14 @@ export default function BasicTabs() {
         <hr className='titleheader'/>
 
         <p>company tagline</p>
-        <p>brief details</p>
-        
+        <p>Loucks Engineering Inc. specializes in mechanical, electrical, and plumbing systems.</p>
+        <p>cool placeholder stuff</p>
       </TabPanel>
 
       {/* SERVICES TAB */}
       <TabPanel value={value} index={1}>
         <h2 className='pagetitle'><b>Services</b></h2>
-        <hr className='titleheader'/>
+        <hr/> {/* <hr className='titleheader'/> */}
         <div className="flex-container">
             <div className="item">
               <p className="subtitle">Mechanical</p>
@@ -192,4 +194,11 @@ export default function BasicTabs() {
 
     </Box>
   );
+}
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "block";
 }
