@@ -155,6 +155,7 @@ export default function BasicTabs() {
 
       <TabPanel value={value} index={2}>
         <h1>Portfolio Coming Soon!</h1>
+        <h2>Jump to: Residental (Single/Multi-Family) | Commercial Buildings | Educational | Warehouses</h2>
       </TabPanel>
 
       <TabPanel value={value} index={3}>
@@ -178,14 +179,11 @@ export default function BasicTabs() {
         <h2 className='pagetitle'><b>Contact Us</b></h2>
         <hr color='titleheader'/>
         <h4>Main Phone</h4>
-
-
+        <br/>
         <h4>Email?</h4>
-
-
+        <br/>
         <h4>Op Hours?</h4>
-
-
+        <br/>
         {/* todo, maybe put this in a flexbox */}
         <h4>Location</h4>
         <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank">Get Directions</a>
