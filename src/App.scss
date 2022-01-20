@@ -335,3 +335,14 @@
 .form-container .btn:hover, .jl-test:hover {
   opacity: 1;
 } 
+
+//PORTFOLIO STUFF
+.portfolio-flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-item {
+    justify-content: space-evenly;
+    margin: 50px;
+}

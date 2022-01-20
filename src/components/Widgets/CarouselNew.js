@@ -8,6 +8,7 @@ import Oceanic_Img from '../../images/oceanic.jpg';
 import Lucky_Fish_Img from '../../images/lucky_fish.jpg';
 import Blu_Img from '../../images/blu-apt.jpg';
 import Funky_Buddha_Img from '../../images/funkyb.png';
+import Mora_Grill_img from '../../images/mora-grill.jpg'
 import Temp from '../../images/warehouse.jpg';
 
 export default class extends React.Component {
@@ -17,7 +18,7 @@ export default class extends React.Component {
         <CarouselProvider
           naturalSlideWidth={150}
           naturalSlideHeight={100}
-          totalSlides={5}
+          totalSlides={6}
           isPlaying={true}
           playDirection='forward'
           infinite={true}
@@ -35,13 +36,17 @@ export default class extends React.Component {
               <Typography align='center'>Lucky Fish, Pompano Pier</Typography>
               <Image className='carousel-img' src={Lucky_Fish_Img} alt='showcase-img-lucky' title='Lucky Fish, Pompano Pier'/>
             </Slide>
-            <Slide index={4}>
+            <Slide index={3}>
               <Typography align='center'>Funky Buddha Brewery, Oakland Park</Typography>
               <Image className='carousel-img' src={Funky_Buddha_Img} alt='showcase-img-funky-buddha' title='Funky Buddha Brewery, Oakland Park'/>
             </Slide>
-            <Slide index={5}>
+            <Slide index={4}>
               <Typography align='center'>ImgName</Typography>
               <Image className='carousel-img' src={Temp} alt='###' title='###'/>
+            </Slide>
+            <Slide index={5}>
+              <Typography align='center'>Mora Grill, Pompano Beach</Typography>
+              <Image className='carousel-img' src={Mora_Grill_img} alt='showcase-mora-grill' title='Mora Grill, Pompano Beach'/>
             </Slide>
           </Slider>
 

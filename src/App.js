@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 
 //import modules
-import Hero from './components/Hero';
+// import Hero from './components/Hero';
 import Section from './components/Section';
 import { Container, Row, Col } from "react-bootstrap"
 import Headline from './components/Widgets/Heading'
