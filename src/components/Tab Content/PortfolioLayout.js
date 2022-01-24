@@ -21,26 +21,31 @@ export default function PortfolioLayout() {
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
         </div>
 
@@ -52,26 +57,31 @@ export default function PortfolioLayout() {
                 <img className='portfolio-img' src={Oceanic_Img} alt="img"/>
                 <p className='item-name'>Oceanic</p>
                 <p className='item-location'>Pompano Pier</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Lucky_Fish_Img} alt="img"/>
                 <p className='item-name'>Lucky Fish</p>
                 <p className='item-location'>Pompano Pier</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Blu_Img} alt="img"/>
                 <p className='item-name'>Blu Apartments</p>
                 <p className='item-location'>Marina Mile Blvd, Ft. Lauderdale</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
             <div className='portfolio-item'>
                 <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
                 <p className='item-name'>name</p>
                 <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
             </div>
         </div>
 
@@ -81,11 +91,11 @@ export default function PortfolioLayout() {
             <h4 id='oth'><b>Other Notable Projects:</b></h4>
             <br/>
             <ul className="list">
-                <li>Gulfstream Park Track Display (Hallendale Beach)</li>
-                <li>Warehouse for Fun Sweets Cotton Candy (Pompano Beach)</li>
-                <li>temp</li>
-                <li>temp</li>
-                <li>temp</li>
+                <li>Gulfstream Park Track Display (Hallendale Beach) - MEP category</li>
+                <li>Warehouse for Fun Sweets Cotton Candy (Pompano Beach) - MEP category</li>
+                <li>temp - MEP category</li>
+                <li>temp - MEP category</li>
+                <li>temp - MEP category</li>
             </ul>
         </div>
 
