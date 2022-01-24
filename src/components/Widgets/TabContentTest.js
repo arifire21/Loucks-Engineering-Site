@@ -76,25 +76,25 @@ export default function BasicTabs() {
 
       {/* SERVICES TAB */}
       <TabPanel value={value} index={1}>
-        <h2 className='pagetitle'><b>Services</b></h2>
+        <h2 className='pagetitle'>Services</h2>
         <hr/> {/* <hr className='titleheader'/> */}
         <ServicesBody/>
       </TabPanel>
 
       <TabPanel value={value} index={2}>
-        <h2>Portfolio</h2>
+        <h2 className='pagetitle'>Portfolio</h2>
         <hr/>
         <Portfolio/>
       </TabPanel>
 
       <TabPanel value={value} index={3}>
-        <h2 className='pagetitle'><b>About Us</b></h2>
+        <h2 className='pagetitle'>About Us</h2>
         <hr/>
         <AboutBody/>
       </TabPanel>
 
       <TabPanel value={value} index={4}>
-        <h2 className='pagetitle'><b>Contact Us</b></h2>
+        <h2 className='pagetitle'>Contact Us</h2>
         <hr/>
         <ContactBody/>
       </TabPanel>

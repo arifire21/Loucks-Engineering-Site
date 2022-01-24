@@ -9,7 +9,9 @@ export default function AboutBody(){
         <h4>Name?</h4>
         <p>temp text. wow such a cool sentence.</p>
 
-        <p>something about being licensed in # of states</p>
+        <h3>Qualifications</h3>
+        <p>licensed in # of states</p>
+        <p>reg numbers</p>
         <hr className="half-width"/>
         </div>
     )
