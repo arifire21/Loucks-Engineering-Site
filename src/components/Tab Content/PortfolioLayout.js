@@ -12,7 +12,13 @@ export default function PortfolioLayout() {
     return(
         <div>
 
-        <h4>Jump to: <a className='link' href='#res'>Residental (Single/Multi-Family)</a> | <a className='link' href='#com'>Commercial Buildings</a> | <a href='#edu'>tbd?</a> | <a className='link' href='#oth'>Other Notable Projects</a></h4>
+        <h4>Jump to:</h4>
+            <nav>
+                <a className='link' href='#res'>Residental (Single/Multi-Family)</a> | 
+                <a className='link' href='#com'>Commercial Buildings</a> | 
+                <a href='#edu'>tbd?</a> | 
+                <a className='link' href='#oth'>Other Notable Projects</a>
+            </nav>
         <br/>
 
         <h4 id='res'><b>Residental</b></h4> 
