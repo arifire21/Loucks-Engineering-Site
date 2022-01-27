@@ -25,28 +25,34 @@ export default class extends React.Component {
         >
           <Slider>
             <Slide index={0}>
-              <Typography align='center'>Blu Apartments, Marina Mile Blvd</Typography>
+              {/* <Typography align='center' variant='caption'>Blu Apartments, Marina Mile Blvd</Typography> */}
               <Image className='carousel-img' src={Blu_Img} alt='showcase-blu-apts' title='Blu Apartments, Marina Mile Blvd'/>
+              <caption className='carousel-caption'>Blu Apartments, Marina Mile Blvd</caption>
             </Slide>
             <Slide index={1}>
-              <Typography align='center'>Oceanic, Pompano Pier</Typography>
+              {/* <Typography align='center' variant='caption'>Oceanic, Pompano Pier</Typography> */}
               <Image className='carousel-img' src={Oceanic_Img} alt='showcase-img-oceanic' title='Oceanic, Pompano Pier'/>
+              <caption className='carousel-caption'>Oceanic, Pompano Pier</caption>
             </Slide>
             <Slide index={2}>
-              <Typography align='center'>Lucky Fish, Pompano Pier</Typography>
+              {/* <Typography align='center' variant='caption'>Lucky Fish, Pompano Pier</Typography> */}
               <Image className='carousel-img' src={Lucky_Fish_Img} alt='showcase-img-lucky' title='Lucky Fish, Pompano Pier'/>
+              <caption className='carousel-caption'>Lucky Fish, Pompano Pier</caption>
             </Slide>
             <Slide index={3}>
-              <Typography align='center'>Funky Buddha Brewery, Oakland Park</Typography>
+              {/* <Typography align='center' variant='caption'>Funky Buddha Brewery, Oakland Park</Typography> */}
               <Image className='carousel-img' src={Funky_Buddha_Img} alt='showcase-img-funky-buddha' title='Funky Buddha Brewery, Oakland Park'/>
+              <caption className='carousel-caption'>Funky Buddha Brewery, Oakland Park</caption>
             </Slide>
             <Slide index={4}>
-              <Typography align='center'>ImgName</Typography>
+              {/* <Typography align='center' variant='caption'>ImgName</Typography> */}
               <Image className='carousel-img' src={Temp} alt='###' title='###'/>
+              <caption className='carousel-caption'>ImgName</caption>
             </Slide>
             <Slide index={5}>
-              <Typography align='center'>Mora Grill, Pompano Beach</Typography>
+              {/* <Typography align='center' variant='caption'>Mora Grill, Fort Lauderdale</Typography> */}
               <Image className='carousel-img' src={Mora_Grill_img} alt='showcase-mora-grill' title='Mora Grill, Pompano Beach'/>
+              <caption className='carousel-caption'>Mora Grill, Fort Lauderdale</caption>
             </Slide>
           </Slider>
 

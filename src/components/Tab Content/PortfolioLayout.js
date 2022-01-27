@@ -14,9 +14,9 @@ export default function PortfolioLayout() {
 
         <h4>Jump to:</h4>
             <nav>
-                <a className='link' href='#res'>Residental (Single/Multi-Family)</a> | 
-                <a className='link' href='#com'>Commercial Buildings</a> | 
-                <a href='#edu'>tbd?</a> | 
+                <a className='link' href='#res'>Residental (Single/Multi-Family)</a>&ensp;<b>|</b>&ensp;
+                <a className='link' href='#com'>Commercial Buildings</a>&ensp;<b>|</b>&ensp;
+                <a href='#edu'>tbd?</a>&ensp;<b>|</b>&ensp;
                 <a className='link' href='#oth'>Other Notable Projects</a>
             </nav>
         <br/>
@@ -55,6 +55,7 @@ export default function PortfolioLayout() {
             </div>
         </div>
 
+        <hr/>
         <br/>
 
         <h4 id='com'><b>Commercial</b></h4> 
@@ -91,6 +92,7 @@ export default function PortfolioLayout() {
             </div>
         </div>
 
+        <hr/>
         <br/>
 
         <div>
@@ -105,9 +107,6 @@ export default function PortfolioLayout() {
             </ul>
         </div>
 
-        </div>
-
-
-
+        </div> //end
     )
 }

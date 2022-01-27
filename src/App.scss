@@ -197,9 +197,21 @@
 }
 
 //CAROUSEL
-// .carousel-img {
-//     border-radius: 10%;
-// }
+.carousel-img {
+    border-radius: 10%;
+}
+
+.carousel-caption{
+    justify-content: center;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: rgba(50, 50, 50, 0.7);
+    border-radius: 90%;
+    // margin-top: 500px;
+    font-size: 16pt;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+}
 
 .btn-container {
     padding: 20px;
