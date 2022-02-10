@@ -1,7 +1,10 @@
 import React from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import { Typography } from '@material-ui/core';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import {IconButton} from '@material-ui/core/';
+
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 
 import Placeholder_Image from '../../images/examplebuilding.png';
 import Oceanic_Img from '../../images/oceanic.jpg';
@@ -58,10 +61,10 @@ export default class extends React.Component {
 
           <div className='btn-container'>
             <div className='single-btn'>
-              <ButtonBack className='arrowbtn'>&lt;</ButtonBack>
+              <ButtonBack className='arrowbtn'><IconButton labelStyle={{ fontSize: '500%' }}><ArrowLeftIcon className='arr'/></IconButton></ButtonBack>
             </div>
             <div className='single-btn'>
-              <ButtonNext className='arrowbtn'>&gt;</ButtonNext>
+              <ButtonNext className='arrowbtn'><ArrowRightIcon className='arr' fontSize='large'/></ButtonNext>
             </div>
           </div>
         </CarouselProvider>

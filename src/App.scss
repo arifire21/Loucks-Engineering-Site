@@ -225,17 +225,17 @@
 }
 
 .arrowbtn {
-    font-size: 30px;
-    width: 50px; height: 50px;
-    border-radius: 50%;
-    // background-color: red;
-    color: black;
-    border-color: red;
-    &:hover {
+    border: none;
+    background-color: white;
+    color: red;
+    // visibility: hidden;
+    // width: 50px; height: 50px;
+    justify-content: center;
+}
+
+.arr:hover {
         transition-duration: 0.5s;
-        background-color: #d00000;
-        border-color: darkred;
-    }
+        color: darkred;
 }
 
 // SERVICES TAB
