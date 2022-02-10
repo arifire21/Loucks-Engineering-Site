@@ -183,7 +183,7 @@
 .home-container {
     display: flex;
     flex-direction: row;
-    row-gap: 1rem;
+    row-gap: 0.5rem;
     justify-content: center;
     align-items: center;
     margin-top: 2.5rem;
@@ -324,4 +324,50 @@
 //CONTACT TAB
 .contact-address{
     font-size: 14pt;
+}
+
+//-------------------------------------------//
+//MOBILE STYLING
+
+.mobile-nav {
+    margin: 2em 0em 1em 2em;
+    border: 2px solid red;
+    border-radius: 20px;
+    width: fit-content;
+    &:active{
+        background-color: lightgray;
+    }
+}
+
+@media(max-width:420px) {
+    .home-container{
+        margin-top: 0;
+        flex-direction: column;
+        row-gap: 0;
+        column-gap: 0.5rem;
+    }
+
+    #logo {
+        max-width: 90vw;
+        max-height: 90vh;
+        margin-bottom: 20px;
+    }
+
+    .home-item {
+        flex-grow: 0;
+    }
+    
+    .carousel-caption{
+        // justify-content: center;
+        // // min-width: 300px;
+        // // max-width: 400px;
+        // width: min-content;
+        // background-color: rgba(50, 50, 50, 0.7);
+        // border-radius: 90%;
+        // // margin-top: 500px;
+        // font-size: 10pt;
+        // color: white;
+        // text-shadow: 5px 5px 5px black;
+        display: none;
+    }
 }

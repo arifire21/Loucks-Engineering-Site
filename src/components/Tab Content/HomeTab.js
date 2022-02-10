@@ -6,7 +6,7 @@ export default function HomeBody() {
         <div>
             <div className='home-container'>
             <div className='home-item'>
-                <img src={Logo} alt="lei logo"/>
+                <img id='logo' src={Logo} alt="lei logo"/>
             </div>
             <div className='home-item'>
                 <CarouselNew/>
