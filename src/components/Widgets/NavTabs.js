@@ -1,19 +1,6 @@
 import * as React from 'react';
-import Box from '@material-ui/core/Box';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-
-function LinkTab(props) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event) => {
-        event.preventDefault();
-      }}
-      {...props}
-    />
-  );
-}
+import {Tabs, Tab, Box, AppBar} from '@material-ui/core/';
+import { Link } from 'react-router-dom';
 
 export default function NavTabs() {
   const [value, setValue] = React.useState(0);
@@ -22,21 +9,27 @@ export default function NavTabs() {
     setValue(newValue);
   };
 
+  // TODO FIX SET SELECTED TAB
+
   return (
     <Box sx={{ width: '100%' }}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        aria-label="nav tabs example"
-        variant="fullWidth"
-        textColor="secondary"
-      >
-        <LinkTab label="Home" href="/#" />
-        <LinkTab label="Services" href="/#" />
-        <LinkTab label="Project Portfolio" href="/#" />
-        <LinkTab label="About Us" href="/#" />
-        <LinkTab label="Contact Us" href="/#" />
-      </Tabs>
+      <div className='navbar'>
+        <AppBar position='fixed' color='inherit' >
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="nav tabs example"
+            variant="fullWidth"
+            textColor="secondary"
+          >
+            <Tab component={Link} className="nav-link" label="Home" to="/"/>
+            <Tab component={Link} className="nav-link" label="Services" to="/services"/>
+            <Tab component={Link} className="nav-link" label="Project Portfolio" to="/portfolio"/>
+            <Tab component={Link} className="nav-link" label="About Us" to="/about"/>
+            <Tab component={Link} className="nav-link" label="Contact Us" to="/contact"/>
+          </Tabs>
+        </AppBar>
+        </div>
     </Box>
   );
 }

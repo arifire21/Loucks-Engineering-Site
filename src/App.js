@@ -15,20 +15,23 @@ import './App.scss';
 // import NavTabs from './components/Widgets/NavTabs';
 // import EngineeringBanner from './images/engineerbanner.png';
 
-import DesktopTabs from './components/Widgets/DesktopTabs';
-import MobileTabs from './components/Widgets/MobileTabs';
+import DesktopTabs from './OLD_ARCHIVED/DesktopTabs';
+import MobileTabs from './OLD_ARCHIVED/MobileTabs';
 import {BrowserView, MobileView} from 'react-device-detect';
 import * as rdd from 'react-device-detect';
 import Footer from './components/Widgets/Footer';
+import NavTabs from './components/Widgets/NavTabs';
+import Logo from './images/logo.png'
+import CarouselNew from './components/Widgets/CarouselNew';
 
 
 function App() {
   //for testing mobile view
-  rdd.isMobile = true;
+  // rdd.isMobile = true;
 
   return (
     <div>
-      <BrowserView>
+      {/* <BrowserView>
           <DesktopTabs/>
           <Footer/>
       </BrowserView>
@@ -36,7 +39,26 @@ function App() {
       <MobileView>
         <MobileTabs/>
         <Footer/>
-      </MobileView>
+      </MobileView> */}
+
+      <NavTabs/>
+
+      <div>
+            <div className='home-container'>
+            <div className='home-item'>
+                <img id='logo' src={Logo} alt="lei logo"/>
+            </div>
+            <div className='home-item'>
+                <CarouselNew/>
+            </div>
+            </div>
+
+            <hr className='titleheader'/>
+
+            <p>company tagline</p>
+            <p>Loucks Engineering Inc. specializes in mechanical, electrical, and plumbing systems.</p>
+            <p>cool placeholder stuff</p>
+        </div>
     </div>
   );
 }
