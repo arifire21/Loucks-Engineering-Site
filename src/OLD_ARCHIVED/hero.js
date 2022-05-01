@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap"
 import Logo from '../images/logo.png'
-import Button from './Widgets/Button'
+import Button from '../components/Widgets/Button'
 
 export default function (props) {
     return (

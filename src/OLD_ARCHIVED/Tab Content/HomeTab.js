@@ -1,5 +1,5 @@
 import Logo from '../../images/logo.png';
-import CarouselNew from '../Widgets/CarouselNew';
+import CarouselNew from '../../components/Widgets/CarouselNew';
 
 export default function HomeBody() {
     return(

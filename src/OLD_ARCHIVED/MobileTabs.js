@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import {Tabs, Tab, Typography, Box, Drawer, IconButton} from '@material-ui/core/';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import HomeBody from '../Tab Content/HomeTab';
-import ServicesBody from '../Tab Content/ServicesTab';
-import Portfolio from '../Tab Content/PortfolioLayout';
-import AboutBody from '../Tab Content/AboutUsTab';
-import ContactBody from '../Tab Content/ContactUsTab';
+import HomeBody from '../OLD_ARCHIVED/Tab Content/HomeTab';
+import ServicesBody from '../OLD_ARCHIVED/Tab Content/HomeTab';
+import Portfolio from '../OLD_ARCHIVED/Tab Content/HomeTab';
+import AboutBody from '../OLD_ARCHIVED/Tab Content/HomeTab';
+import ContactBody from '../OLD_ARCHIVED/Tab Content/HomeTab';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
