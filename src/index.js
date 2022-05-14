@@ -5,7 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //pages
+// import Home from './pages/home';
 import Services from './pages/services';
+import Portfolio from './pages/portfolio';
+import About from './pages/about';
+import Contact from './pages/contact';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -13,6 +17,9 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,

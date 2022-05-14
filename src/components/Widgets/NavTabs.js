@@ -1,35 +1,44 @@
 import * as React from 'react';
 import {Tabs, Tab, Box, AppBar} from '@material-ui/core/';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Services from '../../pages/services'
+import Home from '../../pages/home';
 
 export default function NavTabs() {
-  const [value, setValue] = React.useState(0);
+  const [selectedTab, setSelectedTab] = React.useState(0);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setSelectedTab(newValue);
   };
 
   // TODO FIX SET SELECTED TAB
 
   return (
     <Box sx={{ width: '100%' }}>
-      <div className='navbar'>
-        <AppBar position='fixed' color='inherit' >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="nav tabs example"
-            variant="fullWidth"
-            textColor="secondary"
-          >
-            <Tab component={Link} className="nav-link" label="Home" to="/"/>
-            <Tab component={Link} className="nav-link" label="Services" to="/services"/>
-            <Tab component={Link} className="nav-link" label="Project Portfolio" to="/portfolio"/>
-            <Tab component={Link} className="nav-link" label="About Us" to="/about"/>
-            <Tab component={Link} className="nav-link" label="Contact Us" to="/contact"/>
-          </Tabs>
-        </AppBar>
-        </div>
+      {/* <BrowserRouter> */}
+        {/* <div className='navbar'> */}
+          <AppBar position='sticky' color='inherit' >
+            <Tabs
+              value={selectedTab}
+              onChange={handleChange}
+              aria-label="navbar"
+              variant="fullWidth"
+              textColor="secondary"
+              disableRipple="false"
+            >
+              <Tab component={Link} className="nav-link" label="Home" to="/" selectedTab={0}/>
+              <Tab component={Link} className="nav-link" label="Services" to="/services" selectedTab={1}/>
+              <Tab component={Link} className="nav-link" label="Project Portfolio" to="/portfolio"/>
+              <Tab component={Link} className="nav-link" label="About Us" to="/about"/>
+              <Tab component={Link} className="nav-link" label="Contact Us" to="/contact"/>
+            </Tabs>
+          </AppBar>
+          {/* <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/services' element={<Services/>}/>
+          </Routes> */}
+        {/* </div> */}
+      {/* </BrowserRouter> */}
     </Box>
   );
 }
