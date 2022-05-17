@@ -3,20 +3,20 @@ import Logo from '../../images/logo.png';
 import Pin from '../../images/pin.png';
 
 export default function Footer() {
-    return(
+    return (
         <footer>
             <Box bgcolor="gray"
-            color="white"
-            px={{xs: 5, sm: 5}}
-            py={{xs: 5, sm: 5}}
+                color="white"
+                px={{ xs: 5, sm: 5 }}
+                py={{ xs: 5, sm: 5 }}
             >
-            
+
                 <Container maxWidth="lg">
                     <Grid container spacing={6}>
-                        <Grid item xs={8} sm={3}> 
-                            <Box> <img src={Logo} alt="lei logo" width='220' height='100'/></Box>
+                        <Grid item xs={8} sm={3}>
+                            <Box> <img src={Logo} alt="lei logo" width='220' height='100' /></Box>
                         </Grid>
-                        <Grid item xs={8} sm={4}> 
+                        <Grid item xs={8} sm={4}>
                             <Box borderBottom={1}><b>ItemOne</b></Box>
                             <Box>
                                 <p>Filler text about company here??</p>
@@ -37,7 +37,7 @@ export default function Footer() {
                                 <Link href="url" underline="always" color="inherit">LinkText</Link>
                             </Box>
                         </Grid> */}
-                        <Grid item xs={8} sm={4}> 
+                        <Grid item xs={8} sm={4}>
                             <Box borderBottom={1}><b>Contact Us</b></Box>
                             <Box>
                                 <p><b>Phone</b>: (123) 456-7890</p>
@@ -46,14 +46,15 @@ export default function Footer() {
                                 <p><b>Fax</b>: (123) 456-7890</p>
                             </Box>
                             <Box>
-                                <img src={Pin} alt="maps_pin" width='20' height='30' className="maps-pin"/>
+                                <img src={Pin} alt="maps_pin" width='20' height='30' className="maps-pin" />
                                 <Link href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" underline="always" color="inherit" target="_blank"><b>Address</b></Link>
                             </Box>
                         </Grid>
                     </Grid>
                     {/* copyright */}
                     <Box textAlign="center">
-                        reg number | &copy; {new Date().getFullYear()}
+                        reg number | &copy; {new Date().getFullYear()}"\n"
+                        Maintained by _name_
                     </Box>
                 </Container>
             </Box>

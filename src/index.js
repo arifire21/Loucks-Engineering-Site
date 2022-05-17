@@ -10,6 +10,8 @@ import Services from './pages/services';
 import Portfolio from './pages/portfolio';
 import About from './pages/about';
 import Contact from './pages/contact';
+//portfolio pages
+import Residences from './pages/portfolio/residences';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,6 +22,7 @@ ReactDOM.render(
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio/residences" element={<Residences />} />
       </Routes>
     </React.StrictMode>
   </BrowserRouter>,

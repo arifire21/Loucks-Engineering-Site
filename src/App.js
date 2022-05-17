@@ -16,19 +16,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import NavTabs from './components/Widgets/NavTabs';
 // import EngineeringBanner from './images/engineerbanner.png';
 
-import DesktopTabs from './OLD_ARCHIVED/DesktopTabs';
-import MobileTabs from './OLD_ARCHIVED/MobileTabs';
-import { BrowserView, MobileView } from 'react-device-detect';
-import * as rdd from 'react-device-detect';
+
+// import { BrowserView, MobileView } from 'react-device-detect';
+// import * as rdd from 'react-device-detect';
 import Footer from './components/Widgets/Footer';
 import Logo from './images/logo.png'
 import BootstrapCarousel from './components/boostrap-components/bs-carousel';
 import BootstrapNavbar from './components/boostrap-components/bs-navbar';
-
-import MiniLogo from './images/logo192.png';
-import { Link } from 'react-router-dom';
-
-import Example from './components/boostrap-components/bs-navbar';
 
 function App() {
   //for testing mobile view

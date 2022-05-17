@@ -370,6 +370,22 @@
     font-size: 14pt;
 }
 
+.portfolio-list-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.portfolio-column {
+    // width: 60%;
+    margin: 1rem 3rem;
+    // padding: 20px;
+}
+
+// .list-group-item {
+//     text-align: center;
+// }
+
 //-------------------------------------------//
 //MOBILE STYLING
 
@@ -414,8 +430,10 @@
         // text-shadow: 5px 5px 5px black;
         display: none;
     }
-}
 
-.bs-navbar-container {
-    position: sticky;
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

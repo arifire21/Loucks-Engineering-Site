@@ -1,31 +1,45 @@
-import MiniLogo from '../images/logo192.png';
-import { Link } from 'react-router-dom';
+import BootstrapNavbar from "../components/boostrap-components/bs-navbar";
 
 export default function Services() {
-    return (
-        <div>
-           <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
-            <img src={MiniLogo} alt="logo_small" width="50" height="50" />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav">
-              <a class="nav-link"><Link className="nav-link-link" to='/'>Home</Link></a>
-              <a class="nav-link active" aria-current="page"><Link className="nav-link-link" to='/services'>Services</Link></a>
-              <a class="nav-link"><Link className="nav-link-link" to='/portfolio'>Project Portfolio</Link></a>
-              <a class="nav-link"><Link className="nav-link-link" to='/about'>About Us</Link></a>
-              <a class="nav-link"><Link className="nav-link-link" to='/contact'>Contact Us</Link></a>
-            </div>
-          </div>
+  return (
+    <div>
+      <BootstrapNavbar />
+
+      <h1>Services</h1>
+
+      <div className="flex-container">
+        <div className="item">
+          <p className="subtitle">Mechanical</p>
+          <hr className="half-width" />
+          <ul className="list">
+            <li>HVAC Design</li>
+            <li>HVAC Load Calculations</li>
+            <li>Existing HVAC System Analysis</li>
+            <li>Building Energy Audits</li>
+          </ul>
         </div>
-      </nav>
+        <div className="item">
+          <p className="subtitle">Electrical</p>
+          <hr className="half-width" />
+          <ul className="list">
+            <li>Power Distribution</li>
+            <li>Lighting Design and Controls</li>
+            <li>Data and IT Systems</li>
+            <li>Photometrics</li>
+            <li>UPS systems?</li>
+          </ul>
+        </div>
+        <div className="item">
+          <p className="subtitle">Plumbing</p>
+          <hr className="half-width" />
+          <ul className="list">
+            <li>Plumbing Systems Design</li>
+            <li>Domestic Water System Design</li>
+            <li>Sanitary Waste System Design</li>
+            <li>Natural Gas System Design</li>
+          </ul>
+        </div>
+      </div>
     </div>
-            <h1>Services</h1>
-        </div>
-    );
+  );
 }
