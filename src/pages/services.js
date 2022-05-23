@@ -4,8 +4,10 @@ export default function Services() {
   return (
     <div>
       <BootstrapNavbar />
-
-      <h1>Services</h1>
+      <header>
+        <h1>Services</h1>
+        <p>description text here</p>
+      </header>
 
       <div className="flex-container">
         <div className="item">
