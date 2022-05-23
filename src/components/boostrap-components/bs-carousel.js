@@ -13,9 +13,11 @@ export default function BootstrapCarousel() {
 <Carousel fade variant="dark">
   <Carousel.Item>
     <img
-      className="fluid rounded-3 d-block w-100"
+      className="fluid rounded-3 d-block"
       src={Oceanic_Img}
       alt="First slide"
+      width='700'
+      height='500'
     />
     <Carousel.Caption>
       <h5>First slide label</h5>
@@ -24,9 +26,11 @@ export default function BootstrapCarousel() {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      className="fluid rounded-3 d-block w-100"
+      className="fluid rounded-3 d-block"
       src={Blu_Img}
       alt="Second slide"
+      width='700'
+      height='500'
     />
     <Carousel.Caption>
       <h5>Second slide label</h5>
@@ -36,9 +40,11 @@ export default function BootstrapCarousel() {
   <Carousel.Item>
     {/* <Image src={Mora_Grill_img} fluid='true' rounded='true'/> */}
     <img
-      className="fluid rounded-3 d-block w-100"
+      className="fluid rounded-3 d-block"
       src={Mora_Grill_img}
       alt="Third slide"
+      width='700'
+      height='500'
     />
     <Carousel.Caption>
       <h5>Third slide label</h5>
