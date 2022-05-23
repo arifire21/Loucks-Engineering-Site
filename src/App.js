@@ -47,9 +47,9 @@ function App() {
 
       <hr className='titleheader' />
 
-      <p>company tagline</p>
+      {/* <p>company tagline</p> */}
       <p>Loucks Engineering Inc. specializes in mechanical, electrical, and plumbing systems.</p>
-      <p>cool placeholder stuff</p>
+      {/* <p>cool placeholder stuff</p> */}
 
       <Footer/>
     </div>

@@ -53,8 +53,8 @@ export default function Footer() {
                     </Grid>
                     {/* copyright */}
                     <Box textAlign="center">
-                        reg number | &copy; {new Date().getFullYear()}"\n"
-                        Maintained by _name_
+                        &copy; {new Date().getFullYear()}
+                        {/* Maintained by _name_ */}
                     </Box>
                 </Container>
             </Box>

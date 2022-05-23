@@ -1,17 +1,17 @@
 import BootstrapNavbar from '../components/boostrap-components/bs-navbar';
-import { ListGroup } from 'react-bootstrap';
 import Footer from '../components/Widgets/Footer';
 import BootstrapFolioCard from '../components/boostrap-components/bs-portfolio-card';
-// import LinkContainer from 'react-router-bootstrap/LinkContainer';
 
 export default function Portfolio() {
   return (
     <div>
       <BootstrapNavbar />
 
-      <h1>Portfolio</h1>
-      <p>This is a portfolio overview page. description goes here</p>
-      <p>Click on items to be taken to portfolio pages.</p>
+      <header>
+        <h1>Project Portfolio</h1>
+        <p>This is a portfolio overview page. description goes here</p>
+        <p>Click on items to be taken to portfolio pages.</p>
+      </header>
 
       <div className='portfolio-list-container'>
         <BootstrapFolioCard
