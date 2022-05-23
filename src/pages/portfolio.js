@@ -24,67 +24,67 @@ export default function Portfolio() {
           // img_src=''
           title='Restaurants'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Retail Spaces'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Tenent Improvements'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Multi-Purpose'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Office Spaces'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Schools'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Gymnasiums'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Medical Offices'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='Media & Entertainment'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='TITLE'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
         <BootstrapFolioCard
           // img_src=''
           title='TITLE'
           text='Lorem ipsum dummy text'
-          link='/#'
+          link='/portfolio/#'
         />
       </div>
 
