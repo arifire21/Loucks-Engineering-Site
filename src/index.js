@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 //pages
 // import Home from './pages/home';
 import Services from './pages/services';
@@ -14,8 +14,9 @@ import Contact from './pages/contact';
 import Residences from './pages/portfolio/residences';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
+  // <BrowserRouter>
+  <React.StrictMode>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/services" element={<Services />} />
@@ -24,8 +25,9 @@ ReactDOM.render(
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio/residences" element={<Residences />} />
       </Routes>
-    </React.StrictMode>
-  </BrowserRouter>,
+    </HashRouter>
+  </React.StrictMode>,
+  // </BrowserRouter>,
   document.getElementById('root')
 );
 
