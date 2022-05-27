@@ -11,7 +11,7 @@ export default function BootstrapFolioCard(props) {
           <Card.Text>
             {props.text}
           </Card.Text>
-          <Link className='btn btn-danger' to={props.link}>
+          <Link className='btn btn-outline-danger' to={props.link}>
             View Projects
           </Link>
         </Card.Body>

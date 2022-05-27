@@ -1,17 +1,55 @@
 import BootstrapNavbar from "../components/boostrap-components/bs-navbar";
+import Footer from '../components/Widgets/Footer';
 
 export default function Services() {
   return (
     <div>
       <BootstrapNavbar />
-      <header>
-        <h1>Services</h1>
-        <p>description text here</p>
-      </header>
 
-      <div className="flex-container">
+      <div className="page-contents">
+        <header>
+          <h1>Services</h1>
+          <p>description text here</p>
+        </header>
+
+        <div className="flex-container">
+          <div className="item">
+            <p className="subtitle">Mechanical</p>
+            <hr className="half-width" />
+            <ul className="list">
+              <li>HVAC Design</li>
+              <li>HVAC Load Calculations</li>
+              <li>Existing HVAC System Analysis</li>
+              <li>Building Energy Audits</li>
+            </ul>
+          </div>
+
+          <div className="item">
+            <p className="subtitle">Electrical</p>
+            <hr className="half-width" />
+            <ul className="list">
+              <li>Power Distribution</li>
+              <li>Lighting Design and Controls</li>
+              <li>Data and IT Systems</li>
+              <li>Photometrics</li>
+              <li>UPS systems?</li>
+            </ul>
+          </div>
+
+          <div className="item">
+            <p className="subtitle">Plumbing</p>
+            <hr className="half-width" />
+            <ul className="list">
+              <li>Plumbing Systems Design</li>
+              <li>Domestic Water System Design</li>
+              <li>Sanitary Waste System Design</li>
+              <li>Natural Gas System Design</li>
+            </ul>
+          </div>
+        </div>
+
         <div className="item">
-          <p className="subtitle">Mechanical</p>
+          <p className="subtitle">Other</p>
           <hr className="half-width" />
           <ul className="list">
             <li>HVAC Design</li>
@@ -20,28 +58,8 @@ export default function Services() {
             <li>Building Energy Audits</li>
           </ul>
         </div>
-        <div className="item">
-          <p className="subtitle">Electrical</p>
-          <hr className="half-width" />
-          <ul className="list">
-            <li>Power Distribution</li>
-            <li>Lighting Design and Controls</li>
-            <li>Data and IT Systems</li>
-            <li>Photometrics</li>
-            <li>UPS systems?</li>
-          </ul>
-        </div>
-        <div className="item">
-          <p className="subtitle">Plumbing</p>
-          <hr className="half-width" />
-          <ul className="list">
-            <li>Plumbing Systems Design</li>
-            <li>Domestic Water System Design</li>
-            <li>Sanitary Waste System Design</li>
-            <li>Natural Gas System Design</li>
-          </ul>
-        </div>
       </div>
+      <Footer />
     </div>
   );
 }
