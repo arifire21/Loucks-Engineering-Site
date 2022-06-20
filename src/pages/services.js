@@ -1,9 +1,14 @@
 import BootstrapNavbar from "../components/boostrap-components/bs-navbar";
 import Footer from '../components/Widgets/Footer';
+import Helmet from 'react-helmet';
 
 export default function Services() {
   return (
     <div>
+      <Helmet>
+      <title>React Helmet Tutorial</title>  
+      </Helmet>
+      
       <BootstrapNavbar />
 
       <div className="page-contents">
