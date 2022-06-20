@@ -1,9 +1,14 @@
 import BootstrapNavbar from "../components/boostrap-components/bs-navbar";
 import Footer from '../components/Widgets/Footer';
+import Helmet from 'react-helmet';
 
 export default function About() {
   return (
     <div>
+      <Helmet>
+      <title>About Us | Loucks Engineering Inc.</title>  
+      </Helmet>
+
       <BootstrapNavbar/>
 
       <div className="page-contents">

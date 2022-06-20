@@ -27,8 +27,21 @@ export default function BootstrapCarousel() {
   <Carousel.Item>
     <img
       className="fluid rounded-custom d-block"
-      src={Blu_Img}
+      src={Lucky_Fish_Img}
       alt="Second slide"
+      width='700'
+      height='500'
+    />
+    <Carousel.Caption>
+      <h5>Lucky Fish</h5>
+      <p>Pompano Pier</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="fluid rounded-custom d-block"
+      src={Blu_Img}
+      alt="Third slide"
       width='700'
       height='500'
     />
@@ -41,7 +54,7 @@ export default function BootstrapCarousel() {
     <img
       className="fluid rounded-custom d-block"
       src={Mora_Grill_img}
-      alt="Third slide"
+      alt="Fourth slide"
       width='700'
       height='500'
     />

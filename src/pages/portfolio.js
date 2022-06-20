@@ -1,10 +1,15 @@
 import BootstrapNavbar from '../components/boostrap-components/bs-navbar';
 import Footer from '../components/Widgets/Footer';
 import BootstrapFolioCard from '../components/boostrap-components/bs-portfolio-card';
+import Helmet from 'react-helmet';
 
 export default function Portfolio() {
   return (
     <div>
+      <Helmet>
+      <title>Projects | Loucks Engineering Inc.</title>  
+      </Helmet>
+
       <BootstrapNavbar />
 
       <div className='page-contents'>
@@ -53,7 +58,7 @@ export default function Portfolio() {
           />
           <BootstrapFolioCard
             // img_src=''
-            title='Schools'
+            title='Educational Insitiutions'
             text='Lorem ipsum dummy text'
             link='/portfolio/#'
           />
@@ -65,7 +70,13 @@ export default function Portfolio() {
           />
           <BootstrapFolioCard
             // img_src=''
-            title='Medical Offices'
+            title='Churches'
+            text='Lorem ipsum dummy text'
+            link='/portfolio/#'
+          />
+          <BootstrapFolioCard
+            // img_src=''
+            title='Medical & Dental Offices'
             text='Lorem ipsum dummy text'
             link='/portfolio/#'
           />
@@ -77,13 +88,31 @@ export default function Portfolio() {
           />
           <BootstrapFolioCard
             // img_src=''
-            title='TITLE'
+            title='Veterinary & Pet Groomers'
             text='Lorem ipsum dummy text'
             link='/portfolio/#'
           />
           <BootstrapFolioCard
             // img_src=''
-            title='TITLE'
+            title='Laundry Facilities'
+            text='Lorem ipsum dummy text'
+            link='/portfolio/#'
+          />
+            <BootstrapFolioCard
+            // img_src=''
+            title='Storage Facilities'
+            text='Lorem ipsum dummy text'
+            link='/portfolio/#'
+          />
+          <BootstrapFolioCard
+            // img_src=''
+            title='Auto Body and Repair Shops'
+            text='Lorem ipsum dummy text'
+            link='/portfolio/#'
+          />
+          <BootstrapFolioCard
+            // img_src=''
+            title='Other Projects'
             text='Lorem ipsum dummy text'
             link='/portfolio/#'
           />

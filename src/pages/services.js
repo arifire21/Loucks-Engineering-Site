@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div>
       <Helmet>
-      <title>React Helmet Tutorial</title>  
+      <title>Services | Loucks Engineering Inc.</title>  
       </Helmet>
       
       <BootstrapNavbar />

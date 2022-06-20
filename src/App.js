@@ -2,27 +2,13 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //IMPORT MODULES
-// import Hero from './components/Hero';
-// import Section from './components/Section';
-// import { Container, Row, Col } from "react-bootstrap"
-// import Headline from './components/Widgets/Heading'
-// import Card from './components/Widgets/Card';
-// import Idea from './components/Icons/Idea';
-// import Mockup from './components/Icons/Mockup';
-// import Engineer from './components/Icons/Engineer';
-// import ShowcaseData from './data/showcase.js';
-// import Showcase from './components/Widgets/Showcase';
-// import Button from './components/Widgets/Button';
-// import NavTabs from './components/Widgets/NavTabs';
-// import EngineeringBanner from './images/engineerbanner.png';
-
-
 // import { BrowserView, MobileView } from 'react-device-detect';
 // import * as rdd from 'react-device-detect';
 import Footer from './components/Widgets/Footer';
 import Logo from './images/logo.png'
 import BootstrapCarousel from './components/boostrap-components/bs-carousel';
 import BootstrapNavbar from './components/boostrap-components/bs-navbar';
+import Helmet from 'react-helmet';
 
 function App() {
   //for testing mobile view
@@ -30,6 +16,10 @@ function App() {
 
   return (
     <div>
+      <Helmet>
+      <title>Loucks Engineering Inc.</title>  
+      </Helmet>
+
       <BootstrapNavbar/>
       {/* <h1>Home</h1> */}
 
@@ -46,10 +36,12 @@ function App() {
       </div>
 
       <hr className='titleheader' />
-
+      
+      <div className='page-contents'>
       {/* <p>company tagline</p> */}
       <p>Loucks Engineering Inc. specializes in mechanical, electrical, and plumbing systems.</p>
       {/* <p>cool placeholder stuff</p> */}
+      </div>
 
       <Footer/>
     </div>
