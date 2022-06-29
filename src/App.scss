@@ -383,15 +383,15 @@ footer {
 //-------------------------------------------//
 //MOBILE STYLING
 
-.mobile-nav {
-    margin: 2em 0em 1em 2em;
-    border: 2px solid red;
-    border-radius: 20px;
-    width: fit-content;
-    &:active{
-        background-color: lightgray;
-    }
-}
+// .mobile-nav {
+//     margin: 2em 0em 1em 2em;
+//     border: 2px solid red;
+//     border-radius: 20px;
+//     width: fit-content;
+//     &:active{
+//         background-color: lightgray;
+//     }
+// }
 
 @media(max-width:420px) {
     .home-container{
@@ -413,7 +413,8 @@ footer {
     }
     
     .carousel-caption{
-        display: none;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 
     .carousel-item > img {
