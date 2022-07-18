@@ -17,16 +17,14 @@ export default function Contact() {
         </header>
 
         <h2>Main Contact Info</h2>
-        <p><b>Phone:xxxxxxxxxx</b></p>
+        <p><b>Phone:</b> (954) 938-1881</p>
+        <p><b>Email:</b> Bob Loucks -- bob@louckseng.com</p>
         <br/>
 
-        <h2>Visit Our Office:</h2>
-        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer"><b>Click for Address</b></a>
-        <br/><br/>
-
-        <h2>Website Contact Info</h2>
-        <p>Arianna Loucks -- arianna@louckseng.com</p>
+        <h2>Visit Our Office</h2>
+        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer"><b>Click for Address</b></a>    
       </div>
+
       <Footer/>
     </div>
   )
