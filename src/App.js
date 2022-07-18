@@ -30,7 +30,7 @@ function App() {
         <div className='home-item'>
           <img id='logo' src={Logo} alt="lei logo" />
         </div>
-        <div className='home-item'>
+        <div className='home-item' id='home-caro'>
           <BootstrapCarousel />
         </div>
       </div>

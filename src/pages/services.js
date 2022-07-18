@@ -56,11 +56,10 @@ export default function Services() {
         <div className="item">
           <p className="subtitle">Other</p>
           <hr className="half-width" />
-          <ul className="list">
-            <li>HVAC Design</li>
-            <li>HVAC Load Calculations</li>
-            <li>Existing HVAC System Analysis</li>
-            <li>Building Energy Audits</li>
+          <ul className="list" style={{textAlign:'center'}}>
+            <li>OTHER ITEM 1</li>
+            <li>OTHER ITEM 2</li>
+            <li>OTHER ITEM 3</li>
           </ul>
         </div>
       </div>

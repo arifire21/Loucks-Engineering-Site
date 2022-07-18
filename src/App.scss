@@ -212,6 +212,14 @@ footer {
 //     width: 500px;
 // }
 
+// .home-container {
+//     display: flex;
+//     flex-direction: row;
+//     row-gap: 0.5rem;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 2.5rem;
+// }
 .home-container {
     display: flex;
     flex-direction: row;
@@ -226,7 +234,12 @@ footer {
     // flex-grow: 1;
     // padding: 2rem;
     // justify-self: center;
-    margin: 0 4rem;
+    margin: 0 auto;
+}
+
+#home-caro {
+    width: 700px !important;
+    height: 500px !important;
 }
 
 //CAROUSEL
@@ -244,38 +257,11 @@ footer {
 
 .rounded-custom {
     border-radius: 0.6rem !important;
+    width: 700px !important;
+    height: 500px !important;
 }
 
 
-
-// //NAVBAR
-// ul {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     background-color: #333;
-//   }
-  
-//   li {
-//     float: left;
-//   }
-  
-//   li a {
-//     display: block;
-//     color: white;
-//     text-align: center;
-//     padding: 14px 16px;
-//     text-decoration: none;
-//   }
-  
-//   li a:hover {
-//     background-color: #111;
-//   }
-
-//   .active {
-//     background-color: red;
-//   }
 // SERVICES TAB
 
 .flex-container {
@@ -393,10 +379,19 @@ footer {
 //     }
 // }
 
-@media(max-width:420px) {
+//for smaller viewports, just wrap the stupid thing for now
+@media (max-width:1275px) {
+    .home-container {
+        flex-wrap: wrap;
+    }
+}
+
+//for mobile
+@media (max-width:420px) {
     .home-container{
         margin-top: 0;
         flex-direction: column;
+        flex-wrap: nowrap;
         row-gap: 0;
         column-gap: 0.5rem;
     }
@@ -413,13 +408,21 @@ footer {
     }
     
     .carousel-caption{
-        padding-bottom: 1rem;
-        padding-top: 1rem;
+       padding: 0.5rem 0 !important;
+    }
+
+    .carousel-caption > p {
+        margin-bottom: 0.5rem;
     }
 
     .carousel-item > img {
-        width: 100%;
-        height: 300px;
+        width: 100% !important;
+        height: 300px !important;
+    }
+
+    #home-caro {
+        width: 95% !important;
+        height: 300px !important;
     }
 
     .flex-container {
