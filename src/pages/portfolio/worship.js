@@ -2,37 +2,37 @@ import BootstrapNavbar from "../../components/boostrap-components/bs-navbar";
 import Footer from '../../components/Widgets/Footer';
 import Helmet from 'react-helmet';
 
-export default function Residences() {
+export default function Worship() {
   return (
     <div>
       <Helmet>
-      <title>Residences - Portfolio | Loucks Engineering Inc.</title>  
+      <title>Churches - Portfolio | Loucks Engineering Inc.</title>  
       </Helmet>
 
       <BootstrapNavbar/>
 
       <div className="page-contents">
         <header>
-          <h1>Single-Family/Mutlifamily Residences</h1>
+          <h1>Churches</h1>
           <p>description text here</p>
         </header>
 
        <div>
           <h2><i>Notable Projects</i></h2>
 
-          <p className="project-name">Miller Residence</p>
+          <p className="project-name">Project Name</p>
           <p>date | work done</p>
 
-          <p className="project-name">Loucks Residence Remodel</p>
+          <p className="project-name">Project Name</p>
           <p>date | work done</p>
 
-          <p className="project-name">Kendall Residence</p>
+          <p className="project-name">Project Name</p>
           <p>date | work done</p>
 
-          <p className="project-name">Torres Residence</p>
+          <p className="project-name">Project Name</p>
           <p>date | work done</p>
 
-          <p className="project-name">Torres Residence</p>
+          <p className="project-name">Project Name</p>
           <p>date | work done</p>
         </div> 
       </div>

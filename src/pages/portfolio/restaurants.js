@@ -2,18 +2,18 @@ import BootstrapNavbar from "../../components/boostrap-components/bs-navbar";
 import Footer from '../../components/Widgets/Footer';
 import Helmet from 'react-helmet';
 
-export default function Residences() {
+export default function Restaurants() {
   return (
     <div>
       <Helmet>
-      <title>Residences - Portfolio | Loucks Engineering Inc.</title>  
+      <title>Restaurants - Portfolio | Loucks Engineering Inc.</title>  
       </Helmet>
 
       <BootstrapNavbar/>
 
       <div className="page-contents">
         <header>
-          <h1>Single-Family/Mutlifamily Residences</h1>
+          <h1>Restaurants</h1>
           <p>description text here</p>
         </header>
 
