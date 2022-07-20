@@ -14,17 +14,13 @@ html, body {
     padding:0;
 }
 
-body {
-    padding-bottom: 55px;
-}
-
 header {
     margin-top: 0.5rem;
     text-align: center;
 }
 
 footer {
-    position: absolute;
+    position: sticky;
     bottom: 0px;
     height: 55px;
     width: 100%;
@@ -33,12 +29,14 @@ footer {
     background-color: maroon;
     color: white;
     text-align: center;
+    z-index: 2;
+
 }
 
-#content-wrapper {
-    min-height:100%;
-    position:relative;
-}
+// #content-wrapper {
+//     min-height:100%;
+//     position:relative;
+// }
 
 .page-contents {
     height: 100%;
@@ -52,28 +50,6 @@ footer {
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.btn {
-    text-decoration: none;
-    padding: 5px 10px;
-    text-transform: capitalize;
-    text-align: center;
-    display: inline-block;
-    margin: 0 auto;
-
-    &__red {
-        
-        background-color: $red;
-
-        a{
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-        
-    }
 }
 
 .section{
