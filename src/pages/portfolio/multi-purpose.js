@@ -1,6 +1,7 @@
 import BootstrapNavbar from "../../components/boostrap-components/bs-navbar";
 import Footer from '../../components/Widgets/Footer';
 import Helmet from 'react-helmet';
+import PortfolioReturnBtn from "../../components/boostrap-components/bs-portfolio-btn";
 
 export default function MultiPurpose() {
   return (
@@ -35,6 +36,7 @@ export default function MultiPurpose() {
           <p className="project-name">Project Name</p>
           <p>date | work done</p>
         </div> 
+        <PortfolioReturnBtn/>
       </div>
       <Footer />
     </div>
