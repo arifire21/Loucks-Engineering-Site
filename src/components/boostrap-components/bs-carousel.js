@@ -63,6 +63,19 @@ export default function BootstrapCarousel() {
       <p>Pomano Beach</p>
     </Carousel.Caption>
   </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="fluid rounded-custom d-block"
+      src={Funky_Buddha_Img}
+      alt="Forth slide"
+      width='700'
+      height='500'
+    />
+    <Carousel.Caption>
+      <h5>Funky Buddha Brewery</h5>
+      <p>Oakland Park</p>
+    </Carousel.Caption>
+  </Carousel.Item>
 </Carousel>
   );
 }

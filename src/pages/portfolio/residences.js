@@ -19,7 +19,7 @@ export default function Residences() {
         </header>
 
        <div>
-          <h2><i>Notable Projects</i></h2>
+          
 
           <p className="project-name">Miller Residence</p>
           <p>date | work done</p>

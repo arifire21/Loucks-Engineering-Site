@@ -19,7 +19,7 @@ export default function Other() {
         </header>
 
        <div>
-          {/* <h2><i>Notable Projects</i></h2> */}
+          {/*  */}
 
           <p className="project-name">Project Name</p>
           <p>date | work done</p>

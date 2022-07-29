@@ -28,7 +28,7 @@ function App() {
           
           
           {/* <p>company tagline</p> */}
-          <p>Loucks Engineering Inc. specializes in mechanical, electrical, and plumbing systems.</p>
+          <p>Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems.</p>
           {/* <p>cool placeholder stuff</p> */}
           </div>
 

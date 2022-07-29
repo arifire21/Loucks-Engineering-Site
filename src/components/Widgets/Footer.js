@@ -5,7 +5,7 @@
 export default function Footer() {
     return (
     <footer>
-        <p style={{marginBottom: '0'}}><b>&copy; {new Date().getFullYear()}</b></p>
+        <p style={{marginBottom: '0'}}>FL Reg. #EB-0033839 | &copy; {new Date().getFullYear()}</p>
     </footer>
     )
 }
