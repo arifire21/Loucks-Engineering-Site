@@ -316,6 +316,18 @@ footer {
     margin-bottom: 0.25rem;
 }
 
+// button[role="tab"][class="active"]{
+//     color: #e06666;
+
+// }
+
+button[role="tab"] {
+    color: #495057;
+    &:hover{
+        color:#e06666;
+    }
+}
+
 //-------------------------------------------//
 //MOBILE STYLING
 
@@ -379,5 +391,20 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    //mobile nav
+    .offcanvas {
+        width: 50% !important;
+    }
+
+    .me-auto.navbar-nav > .nav-link {
+        border-bottom: 0px;
+        color: black;
+    }
+
+    .me-auto.navbar-nav > .nav-link.active {
+        // color: red;
+        width: fit-content;
     }
 }
