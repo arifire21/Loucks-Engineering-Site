@@ -21,19 +21,10 @@ export default function Residences() {
        <div>
           
 
-          <p className="project-name">Miller Residence</p>
+          <p className="project-name">Boca Residence</p>
           <p>date | work done</p>
 
-          <p className="project-name">Loucks Residence Remodel</p>
-          <p>date | work done</p>
-
-          <p className="project-name">Kendall Residence</p>
-          <p>date | work done</p>
-
-          <p className="project-name">Torres Residence</p>
-          <p>date | work done</p>
-
-          <p className="project-name">Torres Residence</p>
+          <p className="project-name">Pompano Beach Residences</p>
           <p>date | work done</p>
         </div> 
         <PortfolioReturnBtn/>

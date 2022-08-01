@@ -321,6 +321,14 @@ footer {
 
 // }
 
+//nav tab stuff portfolio
+.nav-tabs {
+    border-bottom: 1px solid #b9bec3 !important
+}
+.nav-tabs .nav-link.active {
+    border-color: #b9bec3 #b9bec3 red !important;
+}
+
 button[role="tab"] {
     color: #495057;
     &:hover{

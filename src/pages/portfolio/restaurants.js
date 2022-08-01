@@ -2,6 +2,8 @@ import BootstrapNavbar from "../../components/boostrap-components/bs-navbar";
 import Footer from '../../components/Widgets/Footer';
 import Helmet from 'react-helmet';
 import PortfolioReturnBtn from "../../components/boostrap-components/bs-portfolio-btn";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 export default function Restaurants() {
   return (
@@ -18,9 +20,9 @@ export default function Restaurants() {
           <p>description text here</p>
         </header>
 
-       <div>
+       {/* <div>
           
-
+        <h2>Dining</h2>
           <p className="project-name">Miller Residence</p>
           <p>date | work done</p>
 
@@ -35,7 +37,31 @@ export default function Restaurants() {
 
           <p className="project-name">Torres Residence</p>
           <p>date | work done</p>
-        </div> 
+
+          <h2>Dining</h2>
+
+        </div>  */}
+
+  <Tabs
+    defaultActiveKey="dining"
+    id="uncontrolled-tab-example"
+    className="mb-3"
+  >
+        <Tab eventKey="dining" title="Dining" className="portfolio-tab">
+        <p className="project-name">Restaurant1</p>
+          <p>date | work done</p>
+
+          <p className="project-name">Restaurant2</p>
+          <p>date | work done</p>
+        </Tab>
+        <Tab eventKey="brewery" title="Breweries">
+        <p className="project-name">Funky Buddha Brewery</p>
+          <p>date | work done</p>
+
+          <p className="project-name">Restaurant2</p>
+          <p>date | work done</p>
+        </Tab>
+      </Tabs>
         <PortfolioReturnBtn/>
       </div>
       <Footer />
