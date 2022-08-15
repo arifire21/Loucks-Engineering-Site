@@ -22,7 +22,8 @@ export default function Contact() {
         <br/>
 
         <h2>Visit Our Office</h2>
-        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer"><b>Click for Address</b></a>    
+          <p>321 E Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
+        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer"><b>Click for Directions</b></a>    
       </div>
 
       <Footer/>
