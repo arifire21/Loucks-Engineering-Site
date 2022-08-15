@@ -8,11 +8,6 @@ import BootstrapCarousel from './components/boostrap-components/bs-carousel';
 import BootstrapNavbar from './components/boostrap-components/bs-navbar';
 import Helmet from 'react-helmet';
 
-window.onload = (event) => {
-  window.scrollTo(0,0);
-  console.log("scrolled to top!");
-};
-
 function App() {
   return (
     <div>

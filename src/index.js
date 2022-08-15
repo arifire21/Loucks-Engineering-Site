@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter, Routes, Route } from "react-router-dom";
+import ScrollResetHandler from './components/ScrollResetHandler';
 //pages
 // import Home from './pages/home';
 import Services from './pages/services';
@@ -34,6 +35,7 @@ ReactDOM.render(
   // <BrowserRouter>
   <React.StrictMode>
     <HashRouter>
+      <ScrollResetHandler>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/services" element={<Services />} />
@@ -58,6 +60,7 @@ ReactDOM.render(
         <Route path="/portfolio/auto-repair" element={<Auto />} />
         <Route path="/portfolio/other" element={<Other />} />
       </Routes>
+      </ScrollResetHandler>
     </HashRouter>
   </React.StrictMode>,
   // </BrowserRouter>,
