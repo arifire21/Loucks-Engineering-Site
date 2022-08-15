@@ -42,6 +42,7 @@ footer {
 .page-contents {
     min-height: calc(100vh - 131px); //vh - header and footer
     margin: 1rem;
+    margin-top: 0px;
 }
 
 .wrapper .row{
@@ -179,6 +180,7 @@ footer {
     row-gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .home-item {
@@ -334,6 +336,10 @@ button[role="tab"] {
     &:hover{
         color:#e06666;
     }
+}
+
+.card {
+    padding: 20px !important;
 }
 
 //-------------------------------------------//
