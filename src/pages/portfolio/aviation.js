@@ -25,9 +25,9 @@ export default function Aviation() {
           <ul>
             <li>Phase 1 and 2 Revisions</li>
             <li>Flight Simulator</li>
-            <li>AC</li>
+            <li>Sheltair Westside Developments</li>
           </ul>
-          <p>date | work done</p>
+          <p>Work done: mechanical, electrical</p>
 
           <p className="project-name">Project Name</p>
           <p>date | work done</p>

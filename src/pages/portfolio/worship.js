@@ -21,8 +21,8 @@ export default function Worship() {
        <div>
           
 
-          <p className="project-name">Project Name</p>
-          <p>date | work done</p>
+          <p className="project-name">Crown of Life Lutheran Church (Classroom Addition)</p>
+          <p>Work done: mechanical, electrical, plumbing</p>
 
           <p className="project-name">Project Name</p>
           <p>date | work done</p>

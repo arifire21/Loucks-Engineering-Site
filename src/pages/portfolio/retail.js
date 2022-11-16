@@ -21,8 +21,11 @@ export default function Retail() {
        <div>
           
 
-          <p className="project-name">Project Name</p>
-          <p>date | work done</p>
+          <p className="project-name">Mizner Park</p>
+          <ul>
+            <li>Whitebox Suites</li>
+          </ul>
+          <p>Work done: mechanical, electrical</p>
 
           <p className="project-name">Project Name</p>
           <p>date | work done</p>
