@@ -6,9 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { HashRouter, Routes, Route } from "react-router-dom";
 import ScrollResetHandler from './components/ScrollResetHandler';
 //pages
+//errors
+import PageNotFound from './pages/error-pages/404page';
 // import Home from './pages/home';
 import Services from './pages/services';
-import Portfolio from './pages/portfolio';
+// import Portfolio from './pages/portfolio';
+import Portfolio2 from './pages/portfolio2';
 import About from './pages/about';
 import Contact from './pages/contact';
 //portfolio pages
@@ -38,8 +41,9 @@ ReactDOM.render(
       <ScrollResetHandler>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="*" element={<PageNotFound/>} />
         <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio" element={<Portfolio2 />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio/residences" element={<Residences />} />

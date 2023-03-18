@@ -16,14 +16,14 @@ export default function Contact() {
           <h1>Contact Us</h1>
         </header>
 
-        <h2>Main Contact Info</h2>
-        <p><b>Phone:</b> (954) 938-1881</p>
-        <p><b>Email:</b> Bob Loucks -- bob@louckseng.com</p>
+        <h2>Loucks Engineering</h2>
+        <p><b>Office Phone:</b> (954) 938-1881</p>
+        <p><b>Email:</b> Bob Loucks - bob@louckseng.com</p>
         <br/>
 
-        <h2>Visit Our Office</h2>
+        <h2>Location</h2>
           <p>321 E Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
-        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer"><b>Click for Directions</b></a>    
+        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <i class="far fa-external-link-alt"></i></a>    
       </div>
 
       <Footer/>

@@ -13,8 +13,7 @@ export default function Services() {
 
       <div className="page-contents">
         <header>
-          <h1>Services</h1>
-          <p>description text here</p>
+          <h1>Services Provided</h1>
         </header>
 
         <div className="flex-container">
@@ -53,7 +52,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="item">
+        {/* <div className="item">
           <p className="subtitle">Other</p>
           <hr className="half-width" />
           <ul className="list" style={{textAlign:'center'}}>
@@ -61,7 +60,7 @@ export default function Services() {
             <li>OTHER ITEM 2</li>
             <li>OTHER ITEM 3</li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>
