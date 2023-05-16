@@ -24,10 +24,7 @@ export default function About() {
         <br/>
         <section>
           <h2>History</h2>
-          <p>
-            Our company was founded in 1966. MORE TEXT
-          </p>
-          <p>It is still a family business. All employees are also treated as part of this family. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
+          <p>Our company was founded in 1966, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
         </section>
       </div> 
       <Footer/>

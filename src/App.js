@@ -27,10 +27,9 @@ function App() {
 
           <hr className='titleheader' />
           
-          
-          {/* <p>company tagline</p> */}
-          <p>Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems.</p>
-          {/* <p>cool placeholder stuff</p> */}
+          <p style={{padding: "0 3rem", display:"flex", textAlign:"center"}}>
+            Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems. We are known for various project across Florida, having worked in the state for over 25 years. With licenses in X states and Green Building Council certification, we are committed to producing projects with sustainability in mind
+          </p>
           </div>
 
         <Footer/>

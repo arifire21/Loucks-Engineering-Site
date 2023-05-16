@@ -36,7 +36,7 @@ export default function Services() {
               <li>Lighting Design and Controls</li>
               <li>Data and IT Systems</li>
               <li>Photometrics</li>
-              <li>UPS systems?</li>
+              <li>UPS systems</li>
             </ul>
           </div>
 
@@ -51,16 +51,6 @@ export default function Services() {
             </ul>
           </div>
         </div>
-
-        {/* <div className="item">
-          <p className="subtitle">Other</p>
-          <hr className="half-width" />
-          <ul className="list" style={{textAlign:'center'}}>
-            <li>OTHER ITEM 1</li>
-            <li>OTHER ITEM 2</li>
-            <li>OTHER ITEM 3</li>
-          </ul>
-        </div> */}
       </div>
       <Footer />
     </div>
