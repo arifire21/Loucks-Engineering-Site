@@ -4,13 +4,13 @@
 //load global colors
 @import './styles/colors.scss';
 
-//load global fonts
+//load fonts
 @import './styles/fonts.scss';
-
-//hero
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@400;500&display=swap');
 
 html, body {
-    // position: relative;
+    font-family: 'Playfair', serif;
+    font-size: 14pt;
     margin:0;
     padding:0;
 }

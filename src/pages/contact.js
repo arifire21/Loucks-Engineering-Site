@@ -1,6 +1,7 @@
 import BootstrapNavbar from '../components/boostrap-components/bs-navbar';
 import Footer from '../components/Widgets/Footer';
 import { Helmet } from 'react-helmet';
+import {HiOutlineExternalLink} from 'react-icons/hi';
 
 export default function Contact() {
   return (
@@ -23,7 +24,7 @@ export default function Contact() {
 
         <h2>Location</h2>
           <p>321 E Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
-        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <i class="far fa-external-link-alt"></i></a>    
+        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <HiOutlineExternalLink/></a>    
       </div>
 
       <Footer/>
