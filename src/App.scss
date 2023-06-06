@@ -17,6 +17,9 @@ html, body {
 
 .navbar {
     height: 4rem !important;
+    & > .container {
+        margin-left: 1rem !important;
+   }
 }
 
 h1 {
