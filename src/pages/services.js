@@ -1,14 +1,12 @@
-import BootstrapNavbar from "../components/boostrap-components/bs-navbar";
-import Footer from '../components/Widgets/Footer';
+import BootstrapNavbar from "../components/bs-navbar";
+import Footer from '../components/Footer';
 import Helmet from 'react-helmet';
+import { ScrollRestoration } from 'react-router-dom';
 
 export default function Services() {
   return (
-    <div>
-      <Helmet>
-      <title>Services | Loucks Engineering Inc.</title>  
-      </Helmet>
-      
+    <>
+      <Helmet><title>Services | Loucks Engineering Inc.</title>  </Helmet>
       <BootstrapNavbar />
 
       <div className="page-contents">
@@ -52,7 +50,10 @@ export default function Services() {
           </div>
         </div>
       </div>
+        
       <Footer />
-    </div>
+
+      <ScrollRestoration/>
+    </>
   );
 }

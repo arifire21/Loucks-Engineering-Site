@@ -1,7 +1,7 @@
-import BootstrapNavbar from "../../components/boostrap-components/bs-navbar";
-import Footer from '../../components/Widgets/Footer';
+import BootstrapNavbar from "../../components/bs-navbar";
+import Footer from '../../components/Footer';
 import Helmet from 'react-helmet';
-import PortfolioReturnBtn from "../../components/boostrap-components/bs-portfolio-btn";
+import PortfolioReturnBtn from "../../components/bs-portfolio-btn";
 
 export default function Storage() {
   return (

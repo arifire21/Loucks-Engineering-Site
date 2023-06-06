@@ -1,10 +1,10 @@
-import Placeholder_Image from '../../images/examplebuilding.png';
-import Oceanic_Img from '../../images/oceanic.jpg';
-import Lucky_Fish_Img from '../../images/lucky_fish.jpg';
-import Blu_Img from '../../images/blu-apt.jpg';
-import Funky_Buddha_Img from '../../images/funkyb.png';
-import Mora_Grill_img from '../../images/mora-grill.jpg'
-import Temp from '../../images/warehouse.jpg';
+import Placeholder_Image from '../images/examplebuilding.png';
+import Oceanic_Img from '../images/oceanic.jpg';
+import Lucky_Fish_Img from '../images/lucky_fish.jpg';
+import Blu_Img from '../images/blu-apt.jpg';
+import Funky_Buddha_Img from '../images/funkyb.png';
+import Mora_Grill_img from '../images/mora-grill.jpg'
+import Temp from '../images/warehouse.jpg';
 
 import { Carousel, Image } from 'react-bootstrap';
 
@@ -60,7 +60,7 @@ export default function BootstrapCarousel() {
     />
     <Carousel.Caption>
       <h5>Mora Grill</h5>
-      <p>Pomano Beach</p>
+      <p>Pompano Beach</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

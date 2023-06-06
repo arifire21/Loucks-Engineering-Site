@@ -1,15 +1,13 @@
-import BootstrapNavbar from '../components/boostrap-components/bs-navbar';
-import Footer from '../components/Widgets/Footer';
+import BootstrapNavbar from '../components/bs-navbar';
+import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
 import {HiOutlineExternalLink} from 'react-icons/hi';
+import { ScrollRestoration } from 'react-router-dom';
 
 export default function Contact() {
   return (
-    <div>
-      <Helmet>
-      <title>Contact Us | Loucks Engineering Inc.</title>  
-      </Helmet>
-
+    <>
+      <Helmet><title>Contact Us | Loucks Engineering Inc.</title>  </Helmet>
       <BootstrapNavbar />
 
       <div className='page-contents'>
@@ -23,11 +21,13 @@ export default function Contact() {
         <br/>
 
         <h2>Location</h2>
-          <p>321 E Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
+          <p>321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
         <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <HiOutlineExternalLink/></a>    
       </div>
 
       <Footer/>
-    </div>
+
+      <ScrollRestoration/>
+    </>
   )
 }

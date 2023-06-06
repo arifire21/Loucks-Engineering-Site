@@ -1,7 +1,8 @@
-import BootstrapNavbar from '../components/boostrap-components/bs-navbar';
-import Footer from '../components/Widgets/Footer';
-import BootstrapFolioCard from '../components/boostrap-components/bs-portfolio-card';
+import BootstrapNavbar from '../components/bs-navbar';
+import Footer from '../components/Footer';
+import BootstrapFolioCard from '../components/bs-portfolio-card';
 import Helmet from 'react-helmet';
+import { ScrollRestoration } from 'react-router-dom';
 
 export default function Portfolio() {
   return (
@@ -52,7 +53,7 @@ export default function Portfolio() {
           />
           <BootstrapFolioCard
             // img_src=''
-            title='Educational Insitiutions'
+            title='Educational Institutions'
             link='/portfolio/education'
           />
           <BootstrapFolioCard
@@ -109,6 +110,7 @@ export default function Portfolio() {
       </div>
 
       <Footer />
+      <ScrollRestoration/>
     </div>
   )
 }

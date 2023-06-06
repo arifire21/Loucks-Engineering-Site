@@ -1,6 +1,6 @@
-import BootstrapNavbar from '../components/boostrap-components/bs-navbar';
-import Footer from '../components/Widgets/Footer';
-import BootstrapFolioCard from '../components/boostrap-components/bs-portfolio-card';
+import BootstrapNavbar from '../components/bs-navbar';
+import Footer from '../components/Footer';
+import BootstrapFolioCard from '../components/bs-portfolio-card';
 import Helmet from 'react-helmet';
 
 export default function Portfolio() {

@@ -10,9 +10,22 @@
 
 html, body {
     font-family: 'Playfair', serif !important;
-    font-size: 14pt;
-    margin:0;
+    margin:0;   //needs to be 0 to not mess w navbar
     padding:0;
+    font-size: 14pt;
+}
+
+.navbar {
+    height: 4rem !important;
+}
+
+h1 {
+    font-weight: 600 !important;
+    font-size: 2rem !important;
+}
+
+h2 {
+    font-size: 1.6rem !important;
 }
 
 header {
@@ -21,62 +34,24 @@ header {
 }
 
 footer {
-    // position: absolute;
-    // bottom: 0px;
-    // height: 55px;
+    height: 3.375rem;
     width: 100%;
-    padding: 0.7rem;
-    // margin-top: 0.5rem;
+    padding: 0.5rem;
     background-color: maroon;
     color: white;
     text-align: center;
     z-index: 2;
-
+    flex-shrink: 0;
 }
 
-// #content-wrapper {
-//     min-height:100%;
-//     position:relative;
-// }
+.abt-inner {
+    margin-left: 1rem;
+}
 
 .page-contents {
-    min-height: calc(100vh - 131px); //vh - header and footer
-    margin: 1rem;
-    margin-top: 0px;
-    margin-bottom: 0.55rem;
-}
-
-.wrapper .row{
-    justify-content: center;
-}
-
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section{
-    padding-top: 90px;
-    padding-bottom: 90px;
-    &__services{
-        background-color:$off-white;
-    }
-    &__blueprint{
-        background: url(./images/blueprinttexture.png);
-        background-size:cover;
-        background-repeat: no-repeat;
-    }
-}
-
-.headline{
-    h2{
-        font-family: $header;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 36px;
-        text-align: center;
-        margin-bottom: 45px;
-    }
+    margin: 0 1rem;
+    margin-top: 0.25rem;
+    min-height: calc(100dvh - 4rem - 0.25rem - 3.375rem); //viewport height - forced navbar height - content mt - footer height
 }
 
 .card{
@@ -364,7 +339,7 @@ button[role="tab"] {
 }
 
 //for mobile
-@media (max-width:420px) {
+@media (max-width:450px) {
     .home-container{
         margin-top: 0;
         flex-direction: column;
@@ -421,5 +396,12 @@ button[role="tab"] {
     .me-auto.navbar-nav > .nav-link.active {
         // color: red;
         width: fit-content;
+    }
+
+    //navbar override bc i hate how close it is to thw edges
+    .navbar {
+        height: 4.286rem !important; //OR for the desktop sizing
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
     }
 }

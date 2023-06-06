@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav, Offcanvas } from 'react-bootstrap';
-import MiniLogo from '../../images/logo192.png';
+import MiniLogo from '../images/logo192.png';
 import { LinkContainer } from 'react-router-bootstrap'
 
 export default function BootstrapNavbar() {
