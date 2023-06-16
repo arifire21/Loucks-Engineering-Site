@@ -14,6 +14,9 @@ import Portfolio2 from './pages/portfolio2';
 import About from './pages/about';
 import Contact from './pages/contact';
 
+//test
+import PortfolioLayout from './OLD_ARCHIVED/Tab Content/PortfolioLayout';
+
 //portfolio pages
 import Residences from './pages/portfolio/residences';
 import Restaurants from './pages/portfolio/restaurants';
@@ -46,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/portfolio",
     element: <Portfolio2/>,
+  },
+  {
+    path: "portfolio-dev",
+    element: <PortfolioLayout/>
   },
     {
       path: "/portfolio/residences",
