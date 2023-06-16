@@ -1,6 +1,4 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
-
 
 import Placeholder_Image from '../../images/examplebuilding.png';
 import Oceanic_Img from '../../images/oceanic.jpg';
