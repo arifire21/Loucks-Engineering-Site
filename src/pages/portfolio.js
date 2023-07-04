@@ -1,114 +1,135 @@
 import BootstrapNavbar from '../components/bs-navbar';
 import Footer from '../components/Footer';
-import BootstrapFolioCard from '../components/bs-portfolio-card';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
+import {HiOutlineExternalLink} from 'react-icons/hi';
+import { ScrollRestoration } from 'react-router-dom';
+
+// import Placeholder_Image from '../../images/examplebuilding.png';
+// import Oceanic_Img from '../../images/oceanic.jpg';
+// import Lucky_Fish_Img from '../../images/lucky_fish.jpg';
+// import Blu_Img from '../../images/blu-apt.jpg';
+// import Funky_Buddha_Img from '../../images/funkyb.png';
+
+import { restaurants } from '../data/portfolio_data';
 
 export default function Portfolio() {
-  return (
-    <div>
-      <Helmet>
-      <title>Projects | Loucks Engineering Inc.</title>  
-      </Helmet>
+    return(
+        <>
+        <Helmet><title>Portfolio | Loucks Engineering Inc.</title></Helmet>
 
-      <BootstrapNavbar />
+        <BootstrapNavbar/>
 
-      <div className='page-contents'>
-        <header>
-          <h1>Project Portfolio</h1>
-          <p>This is a portfolio overview page of our various projects.</p>
-          {/* <p>Click on items to be taken to portfolio pages.</p> */}
-        </header>
-
-        <div className='portfolio-list-container'>
-          <BootstrapFolioCard
-            // img_src=''
-            title='Single/Multifamily Residences'
-            link='/portfolio/residences'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Restaurants'
-            link='/portfolio/restaurants'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Retail Spaces'
-            link='/portfolio/retail'
-          />
-          {/* <BootstrapFolioCard
-            // img_src=''
-            title='Tenent Improvements'
-            link='/portfolio/tenent-impr'
-          /> */}
-          <BootstrapFolioCard
-            // img_src=''
-            title='Multi-Purpose'
-            link='/portfolio/multipurpose'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Office Spaces'
-            link='/portfolio/offices'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Educational Insitiutions'
-            link='/portfolio/education'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Gymnasiums'
-            link='/portfolio/gyms'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Aviation Services'
-            link='/portfolio/aviation'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Churches'
-            link='/portfolio/worship'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Medical & Dental Offices'
-            link='/portfolio/medical-dental'
-          />
-          {/* <BootstrapFolioCard
-            // img_src=''
-            title='Media & Entertainment'
-            link='/portfolio/media'
-          /> */}
-          <BootstrapFolioCard
-            // img_src=''
-            title='Veterinary & Pet Groomers'
-            link='/portfolio/pets'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Laundry Facilities'
-            link='/portfolio/laundry'
-          />
-            <BootstrapFolioCard
-            // img_src=''
-            title='Storage Facilities'
-            link='/portfolio/storage'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Auto Body and Repair Shops'
-            link='/portfolio/auto-repair'
-          />
-          <BootstrapFolioCard
-            // img_src=''
-            title='Other Projects'
-            link='/portfolio/other'
-          />
+        <div id='sticky-portfolio-nav'>
+        <h4>Jump to:</h4>
+            <nav>
+                <a className='link' href='#restaurants'>Restaurants</a>&ensp;<b>|</b>&ensp;
+                <a className='link' href='#residential'>Residental (Single/Multi-Family)</a>&ensp;<b>|</b>&ensp;
+                <a className='link' href='#commercial'>Commercial Buildings</a>&ensp;<b>|</b>&ensp;
+                <a href='#edu'>tbd?</a>&ensp;<b>|</b>&ensp;
+                <a className='link' href='#oth'>Other Notable Projects</a>
+            </nav>
+        <br/>
         </div>
-      </div>
 
-      <Footer />
-    </div>
-  )
+        <h1 id='restaurants'>Restaurants</h1>
+        <div className='portfolio-flex-container'>
+            {restaurants.map(item =>
+                <div className='portfolio-item'>
+                    <img className='portfolio-img' src={item.image} alt="img"/>
+                    <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
+                </div>
+            )}
+        </div>
+
+        {/* <h4 id='res'><b>Residental</b></h4> 
+        <div className='portfolio-flex-container'>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+        </div>
+
+        <hr/>
+        <br/>
+
+        <h4 id='com'><b>Commercial</b></h4> 
+        <div className='portfolio-flex-container'>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Oceanic_Img} alt="img"/>
+                <p className='item-name'>Oceanic</p>
+                <p className='item-location'>Pompano Pier</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Lucky_Fish_Img} alt="img"/>
+                <p className='item-name'>Lucky Fish</p>
+                <p className='item-location'>Pompano Pier</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Blu_Img} alt="img"/>
+                <p className='item-name'>Blu Apartments</p>
+                <p className='item-location'>Marina Mile Blvd, Ft. Lauderdale</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+            <div className='portfolio-item'>
+                <img className='portfolio-img' src={Placeholder_Image} alt="img"/>
+                <p className='item-name'>name</p>
+                <p className='item-location'>location</p>
+                <p className='item-category'>MEP category</p>
+            </div>
+        </div> */}
+
+        <hr/>
+        <br/>
+
+        <div>
+            <h4 id='oth'><b>Other Notable Projects:</b></h4>
+            <br/>
+            <ul className="list">
+                <li>Gulfstream Park Track Display (Hallendale Beach) - MEP category</li>
+                <li>Warehouse for Fun Sweets Cotton Candy (Pompano Beach) - MEP category</li>
+                <li>temp - MEP category</li>
+                <li>temp - MEP category</li>
+                <li>temp - MEP category</li>
+            </ul>
+        </div>
+
+            <Footer />
+
+    <ScrollRestoration/>
+        </>
+    )
 }

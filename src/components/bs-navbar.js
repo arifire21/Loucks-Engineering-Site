@@ -21,11 +21,11 @@ export default function BootstrapNavbar() {
                                 <LinkContainer to="/services">
                                     <Nav.Link>Services</Nav.Link>
                                 </LinkContainer>
+                                {/* <LinkContainer to="/portfolio">
+                                    <Nav.Link>Project Portfolio</Nav.Link>
+                                </LinkContainer> */}
                                 <LinkContainer to="/portfolio">
                                     <Nav.Link>Project Portfolio</Nav.Link>
-                                </LinkContainer>
-                                <LinkContainer to="/portfolio-dev">
-                                    <Nav.Link>ONE PG TEST</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/about">
                                     <Nav.Link>About Us</Nav.Link>
