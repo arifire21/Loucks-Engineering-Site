@@ -235,6 +235,11 @@ footer {
 }
 
 //PORTFOLIO STUFF
+#sticky-portfolio-nav {
+    position: sticky;
+    top: 0;
+}
+
 .portfolio-flex-container {
     display: flex;
     flex-direction: row;
@@ -244,6 +249,8 @@ footer {
 .portfolio-item {
     justify-content: space-evenly;
     margin: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-img {
@@ -409,5 +416,10 @@ button[role="tab"] {
         height: 4.286rem !important; //OR for the desktop sizing
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
+    }
+
+    .portfolio-img{
+        width: 300px;
+        height: auto;
     }
 }
