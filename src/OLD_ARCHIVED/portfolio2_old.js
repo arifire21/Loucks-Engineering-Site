@@ -1,4 +1,4 @@
-import BootstrapNavbar from '../components/bs-navbar';
+import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
 import BootstrapFolioCard from '../components/bs-portfolio-card';
 import Helmet from 'react-helmet';
@@ -11,7 +11,7 @@ export default function Portfolio() {
       <title>Projects | Loucks Engineering Inc.</title>  
       </Helmet>
 
-      <BootstrapNavbar />
+      <Navbar />
 
       <div className='page-contents'>
         <header>

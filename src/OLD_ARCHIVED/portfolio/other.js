@@ -1,4 +1,4 @@
-import BootstrapNavbar from "../../components/bs-navbar";
+import Navbar from "../../components/navbar";
 import Footer from '../../components/Footer';
 import Helmet from 'react-helmet';
 import PortfolioReturnBtn from "../../components/bs-portfolio-btn";
@@ -10,7 +10,7 @@ export default function Other() {
       <title>Other Projects - Portfolio | Loucks Engineering Inc.</title>  
       </Helmet>
 
-      <BootstrapNavbar/>
+      <Navbar/>
 
       <div className="page-contents">
         <header>

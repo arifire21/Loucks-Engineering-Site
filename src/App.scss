@@ -136,6 +136,7 @@ footer {
 
 //NAVBAR
 .nav-link {
+    padding-bottom: 0px !important;
     border-bottom:2px solid transparent;
     &:hover {
         // transition: all 0.5s;
@@ -145,6 +146,14 @@ footer {
 
 .nav-link.active {
     border-bottom:2px solid red !important;
+    & .mobile-icon {
+        color: red;
+    }
+}
+
+.mobile-icon {
+    display: none;
+    margin-right: 0.5rem;
 }
 
 //HOME TAB
@@ -236,8 +245,17 @@ footer {
 
 //PORTFOLIO STUFF
 #sticky-portfolio-nav {
+    z-index: 100;
     position: sticky;
-    top: 0;
+    top: 76px;
+    // width: 100vw;
+    background-color: white;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid red;
+}
+
+.stuck {
+    border-bottom: 1px solid red;
 }
 
 .portfolio-flex-container {
@@ -257,17 +275,37 @@ footer {
     width: 400px;
     height: 300px;
     border-radius: 25px;
+    text-align: center;
+}
+
+.portfolio-img-placeholder {
+    width: max-content;
+    height: 300px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.tbd {
+    font-weight: bold;
 }
 
 .link {
     font-size: 16pt;
     color: #e00000;
+    width: max-content;
     &:hover {
         color: #b10000;
     }
     // &:active {
     //     color: purple
     // }
+}
+
+.link-placeholder {
+    font-size: 16pt;
+    width: max-content;
+    margin-bottom: 0;
 }
 
 .item-name {
@@ -398,9 +436,22 @@ button[role="tab"] {
 
     //mobile nav
     .offcanvas {
-        width: 50% !important;
+        width: 60% !important;
     }
 
+    .mobile-icon {
+        display: block;
+    }
+
+    .nav-link {
+        display: flex !important;
+        flex-direction: row !important;
+        &:first-child {
+            padding-top: 0px !important;
+        }
+    }
+
+    //what are these??
     .me-auto.navbar-nav > .nav-link {
         border-bottom: 0px;
         color: black;
@@ -421,5 +472,9 @@ button[role="tab"] {
     .portfolio-img{
         width: 300px;
         height: auto;
+    }
+
+    #sticky-portfolio-nav a {
+        font-size: 10pt;    
     }
 }
