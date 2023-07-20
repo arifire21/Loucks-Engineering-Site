@@ -13,6 +13,11 @@ import { restaurants, offices, outreach, residences, aviation, multipurpose, edu
 
 // observer.observe(document.getElementById('sticky-portfolio-nav'));
 
+//bc stickynav takes up space at the top
+function scroll(element){
+    document.getElementById(element).scrollIntoView(false)
+}
+
 export default function Portfolio() {
     return(
         <>
@@ -89,7 +94,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1 id='offices'>Outreach</h1>
+            <h1 id='outreach'>Outreach</h1>
             <div className='portfolio-flex-container'>
                 {outreach.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -185,7 +190,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1 id='education'>Education</h1>
+            <h1 id='education'>Educational Institutions</h1>
             <div className='portfolio-flex-container'>
                 {education.map((item, index) =>
                     <div className='portfolio-item' key={index}>

@@ -67,7 +67,9 @@ export const outreach = [
         image: SheridanHouse
     },
     {
-        name: "Goodwill Kitchen"
+        name: "Goodwill (kitchen)",
+        website: 'https://goggi.org/',
+        image: Goodwill
     }
 ]
 

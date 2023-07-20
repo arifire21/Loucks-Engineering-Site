@@ -25,10 +25,10 @@ function App() {
           </div>
         </div>
 
-        <hr className='titleheader' />
+        <hr id='homeheader' className='titleheader' />
         
-        <p style={{padding: "0 3rem", display:"flex", textAlign:"center"}}>
-          Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems. We are known for various project across Florida, having worked in the state for over 50 years. With licenses in 6 states and Green Building Council certification, we are committed to producing projects with sustainability in mind
+        <p style={{padding: "0 5rem", display:"flex", textAlign:"center"}}>
+          Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems. We are known for various project across Florida, having worked in the state for over 50 years. With licenses in 6 states and Green Building Council certification, we are committed to producing projects with sustainability in mind.
         </p>
       </div>
 
