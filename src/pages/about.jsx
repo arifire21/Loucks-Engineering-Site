@@ -16,9 +16,10 @@ export default function About() {
         <section>
           <h2>Overview</h2>
           <section className="abt-inner">
-            <p>We have a lot of experience in design build, municipal projects, parks, recreation and environmentally friendly projects.</p>
-            <p>Many of our projects are of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities.</p>
+            <p>We have a lot of experience in commercial projects, municipal projects, parks, recreation and environmentally-friendly projects.</p>
+            <p>Many of our projects are of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and experience we take great pride in being part of the intelligent reuse of existing facilities.</p>
             <p>We have many projects that have achieved LEED certification. Loucks Engineering Inc. has been a member of the US Green Building Council since 2007.</p>
+            <p>We are licensed in Florida, South Carolina, Tennessee, Massachusetts, New Jersey, and Idaho.</p>
           </section>
         </section>
         <br/>
