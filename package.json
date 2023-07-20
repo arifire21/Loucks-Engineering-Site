@@ -1,6 +1,7 @@
 {
   "name": "lei-site",
   "version": "1.0.0",
+  "homepage": "https://arifire21.github.io/Loucks-Engineering-Site",
   "engines": {
     "node": "16.x",
     "npm": "8.x"
