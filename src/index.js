@@ -38,7 +38,7 @@ import Contact from './pages/contact';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Loucks-Engineering-Site",
     element: <App/>,
     errorElement: <ErrorPage/>
   },
