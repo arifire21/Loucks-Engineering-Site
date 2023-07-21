@@ -13,7 +13,6 @@ import Esperante from '../images/Esperante.jpg'
 
 //outreach
 import SheridanHouse from '../images/sheridan-house.jpg'
-import Goodwill from '../images/goodwill_kitchen.png'
 
 //other
 import Jumbotron from '../images/gulfstream.jpg'
@@ -68,9 +67,7 @@ export const outreach = [
         image: SheridanHouse
     },
     {
-        name: "Goodwill (kitchen)",
-        website: 'https://goggi.org/',
-        image: Goodwill
+        name: "Goodwill Kitchen"
     }
 ]
 

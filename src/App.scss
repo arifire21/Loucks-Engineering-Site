@@ -129,11 +129,6 @@ footer {
     font-weight: bold;
 }
 
-#homeheader {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .titleheader {
     border: 3px solid red;
     width: 65%;
@@ -250,9 +245,9 @@ footer {
 
 //PORTFOLIO STUFF
 #sticky-portfolio-nav {
-    z-index: 105;
+    z-index: 100;
     position: sticky;
-    top: 75px;
+    top: 76px;
     // width: 100vw;
     background-color: white;
     padding-bottom: 0.25rem;
@@ -296,7 +291,7 @@ footer {
 }
 
 .link {
-    font-size: 14pt;
+    font-size: 16pt;
     color: #e00000;
     width: max-content;
     &:hover {
@@ -306,12 +301,6 @@ footer {
     //     color: purple
     // }
 }
-
-.hidden-anchor {
-    display:block;
-    padding-top:100px;
-    margin-top:-100px;
- }
 
 .link-placeholder {
     font-size: 16pt;

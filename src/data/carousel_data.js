@@ -25,7 +25,7 @@ export const carouselData = [
     },
     {
         image: Blu_Img,
-        name:"Blu on Marina Boulevard",
+        name:"Blu Apartments",
         location:"Fort Lauderdale"
     },
     {
