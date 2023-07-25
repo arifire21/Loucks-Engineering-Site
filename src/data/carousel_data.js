@@ -1,10 +1,9 @@
-import Placeholder_Image from '../images/examplebuilding.png';
 import Oceanic_Img from '../images/oceanic.jpg';
 import Lucky_Fish_Img from '../images/lucky_fish.jpg';
 import Blu_Img from '../images/blu-apt.jpg';
 import Funky_Buddha_Img from '../images/funkyb.png';
-import Mora_Grill_img from '../images/mora-grill.jpg'
-import Temp from '../images/warehouse.jpg';
+// import Mora_Grill_img from '../images/mora-grill.jpg'
+// import Temp from '../images/warehouse.jpg';
 import GulfstreamScreen from '../images/gulfstream.jpg';
 
 export const carouselData = [

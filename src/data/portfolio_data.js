@@ -7,7 +7,7 @@ import CarouselClub from '../images/carousel-club.jpg'
 import BluApts from '../images/blu-apt.jpg'
 
 //offices
-import Broward from '../images/200EBroward_crop.jpg'
+// import Broward from '../images/200EBroward_crop.jpg'
 import Broward2 from '../images/broward-aerial.avif'
 import Esperante from '../images/Esperante.jpg'
 

@@ -1,4 +1,4 @@
-import { Carousel, Image } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import { carouselData } from '../data/carousel_data';
 
 export default function HomeCarousel() {
