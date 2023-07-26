@@ -14,6 +14,9 @@ import BluApts from '../images/blu-apt.jpg'
 // import Broward from '../images/200EBroward_crop.jpg'
 import Broward2 from '../images/broward-aerial.avif'
 import Esperante from '../images/Esperante.jpg'
+import Broward500 from '../images/500EBroward.webp'
+import OneBoca from '../images/onebocaplace.jpg'
+import Lakeshore from '../images/lakeshore.jpg'
 
 //outreach
 import SheridanHouse from '../images/sheridan-house.jpg'
@@ -51,11 +54,14 @@ import FBChurch from '../images/PompanoBchFBC.jpg'
 import Gregory from '../images/gregory.jpg'
 import FPChurch from '../images/first-presbyterian.png'
 import MaryMag  from '../images/Saint-Mary-Magdalene-St.-Martin-Episcopal-Church2.jpg'
+import Coleman from '../images/colemans.jpg'
+import Calvary from '../images/calvary.jpg'
 
 //beauty
 import Venetian from '../images/venetian.png'
 import Barber from '../images/carved-barber.jpg'
 import HairBenders from '../images/hair-benders.jpg'
+import MulanSpa from '../images/mulan-spa.jpg'
 
 //medDental
 import Cohen from '../images/cohen-chiro.jpg'
@@ -65,10 +71,30 @@ import Pediatrix from '../images/pediatrix.jpg'
 
 //storage
 import LuckyPick from '../images/luckypick.jpg'
+import ExtraSpace from '../images/extra space storage.webp'
+import Storaway from '../images/storaway.jpg'
+import Fayard from '../images/john-fayard-storage.jpg'
+
+//retail
+import Shoppes from '../images/broward-shoppes.jpg'
+import Stirling from '../images/The-Shoppes-at-Stirling-Place.jpg'
+import MacysVestibule from '../images/macys-boca.jpg'
+
+//laundry
+import Aaxon from '../images/aaxon-laundry.jpg'
+import PalmLaundry from '../images/palm-aire-laundry.jpg'
+import JetLaundry from '../images/Jet-Laundry-Coral-Springs.jpg'
+
+//supermarkets
+import Presidente from '../images/presidente.jpg'
+import WholeFoods from '../images/whole-foods.jpg'
+import Bodegon from '../images/bodegon.jpg'
+
+//multipurpose
+import Mizner from '../images/mizner-park-fountain.jpg'
 
 //other
 import Jumbotron from '../images/gulfstream.jpg'
-import Shoppes from '../images/broward-shoppes.jpg'
 
 export const restaurants = [
     {
@@ -122,6 +148,21 @@ export const offices = [
         image: Broward2
     },
     {
+        name: '500 E. Broward/Broward Financial Center',
+        website: 'https://www.browardfinancialcentre.com/',
+        image: Broward500
+    },
+    {
+        name: 'One Boca Place',
+        website: 'https://www.onebocaplace.com/',
+        image: OneBoca
+    },
+    {
+        name: 'YMP Real Estate Office',
+        website: 'https://ymprealestate.com/',
+        image: Lakeshore
+    },
+    {
         name: "Esperante",
         image: Esperante
     }
@@ -151,7 +192,7 @@ export const outreach = [
 
 export const aviation = [
     {
-        name: 'Avenger Flight Group - Warehouse?',
+        name: 'Avenger Flight Group - Warehouse',
         website: 'https://www.afgsim.com/flight-training-centers/north-america/fort-lauderdale/',
         image: AvengerWarehouse
     },
@@ -174,7 +215,7 @@ export const aviation = [
 
 export const education = [
     {
-        name: 'FIU Student Center',
+        name: 'FIU Student Center (offcampus building)',
         website: 'https://www.fiu.edu/',
         image: FIUStudent
     },
@@ -231,8 +272,17 @@ export const worship = [
         name: 'Episcopal Church of St. Mary Magdalene and St. Martin',
         website: 'https://stmmcs.net',
         image: MaryMag
+    },
+    {
+        name: 'St. Coleman Catholic Church',
+        website: 'https://www.saintcoleman.org/',
+        image: Coleman
+    },
+    {
+        name: 'Calvary Chapel Parkland',
+        website: 'https://calvaryftl.org/campus/parkland/',
+        image: Calvary
     }
-
 ]
 
 export const medDental = [
@@ -271,6 +321,11 @@ export const beauty = [
         name: 'Hair Benders Salon',
         website: 'https://www.hairbenderssalon.com/',
         image: HairBenders
+    },
+    {
+        name: "Mulan Spa",
+        website: 'https://www.mulanspa.com/',   
+        image: MulanSpa
     }
 
 ]
@@ -285,18 +340,24 @@ export const pets = [
         name: 'PetLife Animal Hospital',
         website: 'https://petlifefl.com/',
         image: PetLife
-    },
-    {
-        name: 'Pet Spa - Bonita Springs'
     }
 ]
 
 export const laundry = [
     {
-        name: 'Palm Aire Laundry'
+        name: 'Aaxon Laundry Systems',
+        website: 'https://www.aaxon.com/multi-housing',
+        image: Aaxon
     },
     {
-        name: 'Coral Springs Laundry'
+        name: 'Sock Monster Laundromart (tenent improvement)',
+        website: 'https://www.sockmonsterlaundromart.com/',
+        image: PalmLaundry
+    },
+    {
+        name: 'Jet Laundry',
+        website: 'https://jetlaundry.business.site/',
+        image: JetLaundry
     }
 ]
 
@@ -307,14 +368,19 @@ export const storage = [
         image: LuckyPick
     },
     {
-        name: 'Lockhart Self Storage',
-        website: 'https://www.lockhartselfstorage.com/'
+        name: 'Extra Space Storage',
+        website: 'https://www.extraspace.com/storage/facilities/us/florida/tamarac/7764/',
+        image: ExtraSpace
     },
     {
-        name: 'Burlington Self Storage'
+        name: 'Storaway Self Storage',
+        website: 'https://www.storawayselfstorage.com/self-storage/fl/palm-bay/palm-bay-self-storage/',
+        image: Storaway
     },
     {
-        name: 'Cube Smart Self Storage'
+        name: 'Fayard Self Storage',
+        website: 'https://www.johnfayardselfstorage.com/',
+        image: Fayard
     }
 ]
 
@@ -331,15 +397,54 @@ export const auto = [
     }
 ]
 
+export const retail = [
+    {
+        name: 'Shoppes of Broward (facade renovation)',
+        website: 'https://janourarealty.com/property/shoppes-at-broward/',
+        image: Shoppes
+    },
+    {
+        name: 'Shops at Stirling Place (facade renovation)',
+        website: 'https://janourarealty.com/property/shops-at-stirling-place/',
+        image: Stirling
+    },
+    {
+        name: `Macy's (vestibule addition)`,
+        website: 'https://l.macys.com/boca-raton-fl',
+        image: MacysVestibule
+    }
+]
+
+export const supermarkets = [
+    {
+        name: 'Presidente Supermarket',
+        website: 'http://presidentesupermarkets.com',
+        image: Presidente
+    },
+    {
+        name: 'Whole Foods',
+        website: 'https://www.wholefoodsmarket.com/stores/coralsprings',
+        image: WholeFoods
+    },
+    {
+        name: 'El Bodegón Supermarket #7',
+        website: 'https://bodegonfl.com/en/',
+        image: Bodegon
+    }
+]
+
+export const multipurpose = [
+    {
+        name: 'Mizner Park (tenant improvement, multiple spaces)',
+        website: 'https://www.miznerpark.com/en.html',
+        image: Mizner
+    }
+]
+
 export const other = [
     {
         name: "Gulfstream Jumbotron",
         website: "https://gulfstreampark.com/",
         image: Jumbotron
     },
-    {
-        name: 'Shoppes of Broward',
-        website: 'https://janourarealty.com/property/shoppes-at-broward/',
-        image: Shoppes
-    }
 ]

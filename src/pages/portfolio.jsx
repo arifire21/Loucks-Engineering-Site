@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import {HiOutlineExternalLink} from 'react-icons/hi';
 // import { ScrollRestoration } from 'react-router-dom';    //remove bc messes w anchor tags
 
-import { restaurants, offices, outreach, residences, aviation, education, gyms, worship, medDental, beauty, pets, laundry, storage, auto, other } from '../data/portfolio_data';
+import { restaurants, offices, outreach, residences, aviation, education, gyms, worship, medDental, beauty, pets, laundry, storage, auto, multipurpose, retail, other, supermarkets } from '../data/portfolio_data';
 
 // const observer = new IntersectionObserver( 
 //     ([e]) => e.target.classList.add('stuck'),
@@ -24,18 +24,20 @@ export default function Portfolio() {
             <h4>Jump to:</h4>
                 <nav>
                     <a className='link' href='#dining'>Dining</a>&ensp;<b>|</b>&ensp;
+                    <a className='link' href='#worship'>Worship</a>&ensp;<b>|</b>&ensp;
+                    <a className='link' href='#offices'>Offices</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#aviation'>Aviation</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#outreach'>Outreach</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#storage'>Storage</a>&ensp;<b>|</b>&ensp;
-                    <a className='link' href='#worship'>Worship</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#gyms'>Gyms</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#med-dent'>Medical & Dental</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#beauty'>Beauty</a>&ensp;<b>|</b>&ensp;
+                    <a className='link' href='#retail'>Retail</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#education'>Education</a>&ensp;<b>|</b>&ensp;
-                    <a className='link' href='#pets'>Pet Care</a>&ensp;<b>|</b>&ensp;
-                    <a className='link' href='#offices'>Offices</a>&ensp;<b>|</b>&ensp;
+                    <a className='link' href='#supermarkets'>Supermarkets</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#laundry'>Laundry</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#auto'>Automotive</a>&ensp;<b>|</b>&ensp;
+                    <a className='link' href='#pets'>Pet Care</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#residences'>Residences</a>&ensp;<b>|</b>&ensp;
                     <a className='link' href='#other'>Other Notable Projects</a>
                 </nav>
@@ -44,6 +46,54 @@ export default function Portfolio() {
             <h1 id='dining'>Dining</h1>
             <div className='portfolio-flex-container'>
                 {restaurants.map((item, index) =>
+                    <div className='portfolio-item' key={index}>
+                        {item.image ?
+                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                        :
+                            <div className='portfolio-img-placeholder'>No image available</div>
+                        }
+                        {item.website ?
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
+                        :
+                            <p className='link-placeholder'>{item.name}</p>
+                        }
+                    </div>
+                )}
+
+                {/* <div className='portfolio-item'>
+                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
+                </div> */}
+            </div>
+
+            <hr/>
+
+            <h1 id='worship'>Worship</h1>
+            <div className='portfolio-flex-container'>
+                {worship.map((item, index) =>
+                    <div className='portfolio-item' key={index}>
+                        {item.image ?
+                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                        :
+                            <div className='portfolio-img-placeholder'>No image available</div>
+                        }
+                        {item.website ?
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
+                        :
+                            <p className='link-placeholder'>{item.name}</p>
+                        }
+                    </div>
+                )}
+
+                {/* <div className='portfolio-item'>
+                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
+                </div> */}
+            </div>
+
+            <hr/>
+
+            <h1 id='offices'>Offices</h1>
+            <div className='portfolio-flex-container'>
+                {offices.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
                             <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
@@ -137,30 +187,6 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1 id='worship'>Worship</h1>
-            <div className='portfolio-flex-container'>
-                {worship.map((item, index) =>
-                    <div className='portfolio-item' key={index}>
-                        {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
-                        :
-                            <div className='portfolio-img-placeholder'>No image available</div>
-                        }
-                        {item.website ?
-                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
-                        :
-                            <p className='link-placeholder'>{item.name}</p>
-                        }
-                    </div>
-                )}
-
-                {/* <div className='portfolio-item'>
-                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
-                </div> */}
-            </div>
-
-            <hr/>
-
             <h1 id='gyms'>Gyms</h1>
             <div className='portfolio-flex-container'>
                 {gyms.map((item, index) =>
@@ -233,6 +259,30 @@ export default function Portfolio() {
 
             <hr/>
 
+            <h1 id='retail'>Retail</h1>
+            <div className='portfolio-flex-container'>
+                {retail.map((item, index) =>
+                    <div className='portfolio-item' key={index}>
+                        {item.image ?
+                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                        :
+                            <div className='portfolio-img-placeholder'>No image available</div>
+                        }
+                        {item.website ?
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
+                        :
+                            <p className='link-placeholder'>{item.name}</p>
+                        }
+                    </div>
+                )}
+
+                {/* <div className='portfolio-item'>
+                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
+                </div> */}
+            </div>
+
+            <hr/>
+
             <h1 id='education'>Educational Institutions</h1>
             <div className='portfolio-flex-container'>
                 {education.map((item, index) =>
@@ -257,33 +307,9 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1 id='pets'>Pet Care</h1>
+            <h1 id='supermarkets'>Supermarkets</h1>
             <div className='portfolio-flex-container'>
-                {pets.map((item, index) =>
-                    <div className='portfolio-item' key={index}>
-                        {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
-                        :
-                            <div className='portfolio-img-placeholder'>No image available</div>
-                        }
-                        {item.website ?
-                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
-                        :
-                            <p className='link-placeholder'>{item.name}</p>
-                        }
-                    </div>
-                )}
-
-                {/* <div className='portfolio-item'>
-                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
-                </div> */}
-            </div>
-
-            <hr/>
-
-            <h1 id='offices'>Offices</h1>
-            <div className='portfolio-flex-container'>
-                {offices.map((item, index) =>
+                {supermarkets.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
                             <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
@@ -353,6 +379,54 @@ export default function Portfolio() {
 
             <hr/>
 
+            <h1 id='pets'>Pet Care</h1>
+            <div className='portfolio-flex-container'>
+                {pets.map((item, index) =>
+                    <div className='portfolio-item' key={index}>
+                        {item.image ?
+                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                        :
+                            <div className='portfolio-img-placeholder'>No image available</div>
+                        }
+                        {item.website ?
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
+                        :
+                            <p className='link-placeholder'>{item.name}</p>
+                        }
+                    </div>
+                )}
+
+                {/* <div className='portfolio-item'>
+                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
+                </div> */}
+            </div>
+
+            <hr/>
+
+            <h1 id='multipurpose'>Multipurpose Spaces</h1>
+            <div className='portfolio-flex-container'>
+                {multipurpose.map((item, index) =>
+                    <div className='portfolio-item' key={index}>
+                        {item.image ?
+                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                        :
+                            <div className='portfolio-img-placeholder'>No image available</div>
+                        }
+                        {item.website ?
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink/></a>
+                        :
+                            <p className='link-placeholder'>{item.name}</p>
+                        }
+                    </div>
+                )}
+
+                {/* <div className='portfolio-item'>
+                    <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
+                </div> */}
+            </div>
+
+            <hr/>
+
             <h1 id='residences'>Residences (Single & Multi-Family)</h1>
             <div className='portfolio-flex-container'>
                 {residences.map((item, index) =>
@@ -398,9 +472,19 @@ export default function Portfolio() {
                     <div className='portfolio-img-placeholder tbd'>More projects coming soon!</div>
                 </div> */}
             </div>
+
+            <hr/>
+
+            <section style={{margin:"1rem 2rem"}}>
+                <p><span style={{color:'red', fontWeight:'bold'}}>Disclaimer:</span> Pictures are used to indicate the spaces on location of listed projects. Projects include tenant improvements, shell buildings, remodels, and complete jobs. By using them, we are not intending to misrepresent our projects.
+                Pictures used are either provided by us or pulled from the general internet. We believe that no copyright laws have been violated. If we are notified differently, we will immediately remove the picture(s) in question.</p>
+            </section>
+
         </div>
 
+
         <Footer />
+
         {/* <ScrollRestoration/> */}
 
         {/* <h1 id='retail'>Retail</h1>

@@ -16,9 +16,13 @@ export default function Contact() {
         </header>
 
         <h2>Loucks Engineering</h2>
+        <h3>Main Contact</h3>
         <p><b>Office Phone:</b> (954) 938-1881</p>
         <p><b>Email:</b> Bob Loucks - bob@louckseng.com</p>
-        <br/>
+
+        <h3>Website Development</h3>
+        <p><b>Email:</b> Arianna Loucks - arianna@louckseng.com</p>
+        {/* <br/> */}
 
         <h2>Location</h2>
           <p>321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
