@@ -47,75 +47,14 @@ footer {
     flex-shrink: 0;
 }
 
-.abt-inner {
-    margin-left: 1rem;
-}
+// .abt-inner {
+//     margin-left: 1rem;
+// }
 
 .page-contents {
     margin: 0 1rem;
     margin-top: 0.25rem;
     min-height: calc(100dvh - 4rem - 0.25rem - 3.375rem); //viewport height - forced navbar height - content mt - footer height
-}
-
-.card{
-    padding: 30px;
-    border-radius: 5px;
-    &__icon{
-        margin-bottom: 25px;
-    }
-    &__header h3{
-        text-align: center;
-        font-weight: 700;
-    }
-
-    &__card__body{
-        padding: 10px;
-    }
-
-}
-
-.image_icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img{
-        width: 60px;
-    }
-}
-
-.showcase{
-    background-color:white;
-    border-radius: 5px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    &__body{
-        margin-bottom: 15px;
-    }
-    &__inner{
-        padding: 15px;
-    }
-}
-
-.align-left h2{
-    text-align: left !important;
-    margin-bottom: 10px;
-}
-
-
-.project__list{
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.maps-pin {
-    margin-right: 8px;
 }
 
 //TABS GENERAL
@@ -198,6 +137,16 @@ footer {
     height: 500px !important;
 }
 
+#homeheader {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-txt {
+    display: flex;
+    text-align: center;
+    padding: 0 5rem
+}
 
 // SERVICES TAB
 
@@ -247,7 +196,7 @@ footer {
 #sticky-portfolio-nav {
     z-index: 100;
     position: sticky;
-    top: 76px;
+    top: 74px;
     // width: 100vw;
     background-color: white;
     padding-bottom: 0.25rem;
@@ -291,7 +240,7 @@ footer {
 }
 
 .link {
-    font-size: 16pt;
+    font-size: 14pt;
     color: #e00000;
     width: max-content;
     &:hover {
@@ -320,6 +269,21 @@ footer {
 .item-category {
     font-size: 14pt;
     font-style: italic;
+}
+
+//ABOUT TAB
+#abt-ctr {
+    display: flex;
+    flex-direction: column;
+}
+
+#abt-ctr > section {
+    text-align: center;
+}
+
+.abt-p {
+    margin: 0 6rem;
+    margin-bottom: 1rem !important;
 }
 
 //CONTACT TAB
@@ -434,6 +398,10 @@ button[role="tab"] {
         justify-content: center;
     }
 
+    .home-txt {
+        padding: 0 3rem;
+    }
+
     //mobile nav
     .offcanvas {
         width: 60% !important;
@@ -476,5 +444,9 @@ button[role="tab"] {
 
     #sticky-portfolio-nav a {
         font-size: 10pt;    
+    }
+
+    .abt-p {
+        margin: 0 2rem
     }
 }
