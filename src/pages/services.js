@@ -1,4 +1,4 @@
-import BootstrapNavbar from "../components/bs-navbar";
+import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 import Helmet from 'react-helmet';
 import { ScrollRestoration } from 'react-router-dom';
@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <>
       <Helmet><title>Services | Loucks Engineering Inc.</title>  </Helmet>
-      <BootstrapNavbar />
+      <Navbar />
 
       <div className="page-contents">
         <header>
@@ -17,7 +17,7 @@ export default function Services() {
         <div className="flex-container">
           <div className="item">
             <p className="subtitle">Mechanical</p>
-            <hr className="half-width" />
+            <hr className="service-header" />
             <ul className="list">
               <li>HVAC Design</li>
               <li>HVAC Load Calculations</li>
@@ -28,7 +28,7 @@ export default function Services() {
 
           <div className="item">
             <p className="subtitle">Electrical</p>
-            <hr className="half-width" />
+            <hr className="service-header" />
             <ul className="list">
               <li>Power Distribution</li>
               <li>Lighting Design and Controls</li>
@@ -40,7 +40,7 @@ export default function Services() {
 
           <div className="item">
             <p className="subtitle">Plumbing</p>
-            <hr className="half-width" />
+            <hr className="service-header" />
             <ul className="list">
               <li>Plumbing Systems Design</li>
               <li>Domestic Water System Design</li>

@@ -3,7 +3,7 @@ export default function AboutBody(){
         <div>
         <h3>Company History</h3>
         <p>temp text. wow such a cool sentence.</p>
-        <hr className="half-width"/>
+        <hr className="service-header"/>
 
         <h3>Team Members</h3>
         <h4>Name?</h4>
@@ -12,7 +12,7 @@ export default function AboutBody(){
         <h3>Qualifications</h3>
         <p>licensed in # of states</p>
         <p>reg numbers</p>
-        <hr className="half-width"/>
+        <hr className="service-header"/>
         </div>
     )
 }

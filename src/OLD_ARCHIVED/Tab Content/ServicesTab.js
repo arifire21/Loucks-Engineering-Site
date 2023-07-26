@@ -6,7 +6,7 @@ export default function ServicesBody() {
             <div className="flex-container">
                         <div className="item">
                         <p className="subtitle">Mechanical</p>
-                        <hr className="half-width"/>
+                        <hr className="service-header"/>
                             <ul className="list">
                             <li>HVAC Design</li>
                             <li>HVAC Load Calculations</li>
@@ -16,7 +16,7 @@ export default function ServicesBody() {
                         </div>
                         <div className="item">
                         <p className="subtitle">Electrical</p>
-                        <hr className="half-width"/>
+                        <hr className="service-header"/>
                             <ul className="list">
                             <li>Power Distribution</li>
                             <li>Lighting Design and Controls</li>
@@ -27,7 +27,7 @@ export default function ServicesBody() {
                         </div>
                         <div className="item">
                         <p className="subtitle">Plumbing</p>
-                        <hr className="half-width"/>
+                        <hr className="service-header"/>
                             <ul className="list">
                             <li>Plumbing Systems Design</li>
                             <li>Domestic Water System Design</li>
