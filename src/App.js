@@ -28,7 +28,7 @@ function App() {
         <hr id='homeheader' className='titleheader' />
         
         <p className='home-txt'>
-          Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems. We are known for various project across Florida, having worked in the state for over 50 years. With licenses in 6 states and Green Building Council certification, we are committed to producing projects with sustainability in mind.
+          Loucks Engineering Inc. consulting engineers specialize in mechanical, electrical, and plumbing systems. We are known for various project across Florida, having worked in the state for over 50 years. With the ability to provide services in multiple states and Green Building Council certification, we are committed to producing projects with sustainability in mind.
         </p>
       </div>
 
