@@ -11,7 +11,7 @@ export default function BootstrapNavbar() {
                     <Navbar.Brand><img src={MiniLogo} alt="lei-logo-sm" width="50" height="50" /></Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Offcanvas placement="start">
+                <Navbar.Offcanvas placement="start" className='navbar-offc'>
                     <Offcanvas.Header closeButton/>
                     <Offcanvas.Body>
                         <Navbar.Collapse id="basic-navbar-nav">
