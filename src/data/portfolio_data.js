@@ -386,7 +386,7 @@ export const storage = [
 
 export const auto = [
     {
-        name: 'Pompano Beach Parking Garage',
+        name: 'Pompano Beach Parking Garage (tenant improvement)',
         website: 'https://www.pompanobeachfl.gov/residents/parking/parking-garage',
         image: PBGarage
     },

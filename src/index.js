@@ -45,82 +45,25 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: <Services/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/portfolio",
     element: <Portfolio/>,
+    errorElement: <ErrorPage/>
   },
-    // {
-    //   path: "/portfolio/residences",
-    //   element: <Residences/>
-    // },
-    // {
-    //   path: "/portfolio/restaurants",
-    //   element: <Restaurants/>
-    // },
-    // {
-    //   path: "/portfolio/retail",
-    //   element: <Retail/>
-    // },
-    // {
-    //   path: "/portfolio/multipurpose",
-    //   element: <MultiPurpose/>
-    // },
-    // {
-    //   path: "/portfolio/offices",
-    //   element: <Offices/>
-    // },
-    // {
-    //   path: "/portfolio/education",
-    //   element: <Education/>
-    // },
-    // {
-    //   path: "/portfolio/gyms",
-    //   element: <Gyms/>
-    // },
-    // {
-    //   path: "/portfolio/aviation",
-    //   element: <Aviation/>
-    // },
-    // {
-    //   path: "/portfolio/churches",
-    //   element: <Churches/>
-    // },
-    // {
-    //   path: "/portfolio/medical-dental",
-    //   element: <MedDental/>
-    // },
-    // {
-    //   path: "/portfolio/pets",
-    //   element: <Pets/>
-    // },
-    // {
-    //   path: "/portfolio/laundry",
-    //   element: <Laundry/>
-    // },
-    // {
-    //   path: "/portfolio/storage",
-    //   element: <Storage/>
-    // },
-    // {
-    //   path: "/portfolio/Auto",
-    //   element: <Auto/>
-    // },
-    // {
-    //   path: "/portfolio/other",
-    //   element: <Other/>
-    // },
   {
     path: "/about",
     element: <About/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/contact",
     element: <Contact/>,
+    errorElement: <ErrorPage/>
   }
 ]);
 
-//hashrouter is for redirecting on ghp deployment, check if needs to be changed on final product
 ReactDOM.render(
   <React.StrictMode>
     <RouterProvider router={router}/>

@@ -61,6 +61,10 @@ footer {
     min-height: calc(100dvh - 4rem - 0.25rem - 3.375rem); //viewport height - forced navbar height - content mt - footer height
 }
 
+#portfolio-page {
+    margin-top: 0 !important;
+}
+
 //TABS GENERAL
 .tab:hover {
     transition-duration: 1s;
@@ -199,18 +203,35 @@ footer {
 }
 
 //PORTFOLIO STUFF
-#sticky-portfolio-nav {
+#portfolio-nav-desktop{
+    display: block;
     z-index: 100;
     position: sticky;
     top: 74px;
     // width: 100vw;
     background-color: white;
-    padding-bottom: 0.25rem;
+    padding: 0.25rem 1rem;
     border-bottom: 2px solid red;
 }
 
-.stuck {
-    border-bottom: 1px solid red;
+#portfolio-nav-mobile{
+    display: none;
+    z-index: 100;
+    position: sticky;
+    top: 80px;
+    background-color: white;
+    padding: 0.25rem;
+    border-bottom: 2px solid red;
+}
+
+// .stuck {
+//     border-bottom: 2px solid red;
+//     box-shadow: 0 5px 2px -2px rgb(190, 190, 190);
+// }
+
+.sticky-btn {
+    display:flex;
+    justify-content:center;
 }
 
 .portfolio-flex-container {
@@ -245,12 +266,13 @@ footer {
     font-weight: bold;
 }
 
-.link {
+.link, .portfolio-nav-item {
     font-size: 14pt;
     color: #e00000;
-    width: max-content;
+    width: max-content !important;
+    cursor: pointer;
     &:hover {
-        color: #b10000;
+        color: #b00000;
     }
     // &:active {
     //     color: purple
@@ -359,6 +381,16 @@ button[role="tab"] {
     }
 }
 
+@media (max-width:1000px) {
+    #portfolio-nav-desktop{
+        display: none;
+    }
+    
+    #portfolio-nav-mobile{
+        display: block;
+    }
+}
+
 //for mobile
 @media (max-width:450px) {
     .home-container{
@@ -409,8 +441,16 @@ button[role="tab"] {
     }
 
     //mobile nav
-    .offcanvas {
+    .navbar-offc {
         width: 60% !important;
+    }
+
+    .portfolio-offc {
+        height: max-content !important;
+    }
+
+    .portfolio-offc > .offcanvas-body {
+        padding-top: 0 !important;
     }
 
     .mobile-icon {
