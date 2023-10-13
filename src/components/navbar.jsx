@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav, Offcanvas } from 'react-bootstrap';
+import { Navbar, Container, Nav, Offcanvas, Button } from 'react-bootstrap';
 import MiniLogo from '../images/logo192.png';
 import { LinkContainer } from 'react-router-bootstrap'
 import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
@@ -39,6 +39,11 @@ export default function BootstrapNavbar() {
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>
             </Container>
+            <Navbar.Collapse className="justify-content-end">
+            <LinkContainer to="/job-viewer">
+                <Button variant='danger'>View Job Status</Button>
+            </LinkContainer>
+        </Navbar.Collapse>
         </Navbar>
     )
 }

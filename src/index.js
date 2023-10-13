@@ -13,6 +13,7 @@ import Portfolio from './pages/portfolio';
 // import Portfolio2 from './pages/portfolio2_old';
 import About from './pages/about';
 import Contact from './pages/contact';
+import JobView from './pages/job-view';
 
 //test
 // import PortfolioLayout from './pages/portfolio';
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact/>,
+  },
+  {
+    path: "/job-viewer",
+    element: <JobView/>,
   }
 ]);
 
