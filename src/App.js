@@ -12,7 +12,7 @@ import { ScrollRestoration } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Helmet><title>Loucks Engineering Inc.</title></Helmet>
+      <Helmet><title>Loucks Engineering Inc. - Consulting Engineers</title></Helmet>
       <Navbar/>
 
       <div className='page-contents'>
