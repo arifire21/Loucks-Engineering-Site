@@ -15,18 +15,17 @@ export default function Contact() {
           <h1>Contact Us</h1>
         </header>
 
-        <h2>Loucks Engineering</h2>
-        <h3>Main Contact</h3>
-        <p><b>Office Phone:</b> (954) 938-1881</p>
+        <h2>Main Contact</h2>
+        <p style={{marginBottom:0}}><b>Office Phone:</b> (954) 938-1881</p>
         <p><b>Email:</b> Bob Loucks - bob@louckseng.com</p>
 
-        <h3>Website Development</h3>
-        <p><b>Email:</b> Arianna Loucks - arianna@louckseng.com</p>
-        {/* <br/> */}
+        <h2>Office Location</h2>
+          <p style={{marginBottom:0}}>321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
+        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <HiOutlineExternalLink/></a>
+        <br/><br/>
 
-        <h2>Location</h2>
-          <p>321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
-        <a href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <HiOutlineExternalLink/></a>    
+        <h2>Hours of Operation</h2>
+          <p><b>Monday - Friday:</b> 8:00AM - 5:00PM</p>
       </div>
 
       <Footer/>
