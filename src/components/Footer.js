@@ -8,7 +8,7 @@ export default function Footer() {
     <footer>
         <div>
             <img src={Logo} alt="LEI small logo" width={100} height={100}/>
-            <p style={{fontSize: '16pt'}}>MEP Consulting Engineers</p>
+            <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p>
         </div>
 
         <div>

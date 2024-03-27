@@ -3,18 +3,6 @@ import { useState } from "react";
 
 export function PortfolioNavDesktop() {
 
-    // useEffect(() => {
-    //     const observer = new IntersectionObserver( 
-    //         ([e]) => e.target.classList.toggle('stuck', e.intersectionRatio < 49),
-    //         {threshold: [1]}
-    //     );
-
-    //     console.log('stuck now')
-    
-    //     observer.observe(document.getElementById('portfolio-nav-desktop'));
-    // }, [])
-
-
     function customScroll(id){
         console.log(id)
         let element = document.getElementById(id)
