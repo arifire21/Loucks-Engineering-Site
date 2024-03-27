@@ -1,14 +1,15 @@
-import Navbar from "../components/navbar";
-import Footer from '../components/Footer';
+// import Navbar from "../components/navbar";
+// import Footer from '../components/Footer';
 import Helmet from 'react-helmet';
 import { ScrollRestoration } from 'react-router-dom';
+import Layout from "../components/layout";
 
 export default function About() {
   return (
     <>
-      <Helmet><title>About Us | Loucks Engineering Inc.</title></Helmet>
-      <Navbar/>
-
+      <Helmet><title>About Us | Loucks Engineering, Inc.</title></Helmet>
+    
+      <Layout>
       <div className="page-contents" id="abt-ctr">
         <header>
           <h1>About Us</h1>
@@ -18,7 +19,7 @@ export default function About() {
           <h2>Overview</h2>
           <section>
             <p className="abt-p">We have a lot of experience in design, commercial projects, municipal projects, parks, recreation and environmentally-friendly projects. Many of our projects are of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities.</p>
-            <p className="abt-p">We have many projects that have achieved LEED certification. Loucks Engineering Inc. has been a member of the US Green Building Council since 2007.</p>
+            <p className="abt-p">We have many projects that have achieved LEED certification. Loucks Engineering, Inc. has been a member of the US Green Building Council since 2007.</p>
           </section>
         </section>
 
@@ -32,7 +33,7 @@ export default function About() {
         </section>
       </div> 
 
-      <Footer/>
+      </Layout>
 
       <ScrollRestoration/>      
     </>

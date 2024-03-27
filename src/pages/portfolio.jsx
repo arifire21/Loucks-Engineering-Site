@@ -1,5 +1,6 @@
-import Navbar from '../components/navbar';
-import Footer from '../components/Footer';
+// import Navbar from '../components/navbar';
+// import Footer from '../components/Footer';
+import Layout from '../components/layout';
 import { Helmet } from 'react-helmet';
 import {HiOutlineExternalLink} from 'react-icons/hi';
 import { PortfolioNavDesktop, PortfolioNavMobile } from '../components/portfolio-nav';
@@ -7,11 +8,12 @@ import { PortfolioNavDesktop, PortfolioNavMobile } from '../components/portfolio
 
 import { restaurants, offices, outreach, residences, aviation, education, gyms, worship, medDental, beauty, pets, laundry, storage, auto, multipurpose, retail, other, supermarkets } from '../data/portfolio_data';
 
+
 export default function Portfolio() {
     return(
         <>
-        <Helmet><title>Portfolio | Loucks Engineering Inc.</title></Helmet>
-        <Navbar/>
+        <Helmet><title>Portfolio | Loucks Engineering, Inc.</title></Helmet>
+        <Layout>
         <PortfolioNavDesktop/>
         <PortfolioNavMobile/>
         
@@ -22,7 +24,7 @@ export default function Portfolio() {
                 {restaurants.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -42,7 +44,7 @@ export default function Portfolio() {
                 {worship.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -62,7 +64,7 @@ export default function Portfolio() {
                 {offices.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -82,7 +84,7 @@ export default function Portfolio() {
                 {aviation.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -102,7 +104,7 @@ export default function Portfolio() {
                 {outreach.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -122,7 +124,7 @@ export default function Portfolio() {
                 {storage.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -142,7 +144,7 @@ export default function Portfolio() {
                 {gyms.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -162,7 +164,7 @@ export default function Portfolio() {
                 {medDental.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -182,7 +184,7 @@ export default function Portfolio() {
                 {beauty.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -202,7 +204,7 @@ export default function Portfolio() {
                 {retail.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -222,7 +224,7 @@ export default function Portfolio() {
                 {education.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -242,7 +244,7 @@ export default function Portfolio() {
                 {supermarkets.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -262,7 +264,7 @@ export default function Portfolio() {
                 {laundry.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -282,7 +284,7 @@ export default function Portfolio() {
                 {auto.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -302,7 +304,7 @@ export default function Portfolio() {
                 {pets.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -322,7 +324,7 @@ export default function Portfolio() {
                 {multipurpose.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -342,7 +344,7 @@ export default function Portfolio() {
                 {residences.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -362,7 +364,7 @@ export default function Portfolio() {
                 {other.map((item, index) =>
                     <div className='portfolio-item' key={index}>
                         {item.image ?
-                            <img className='portfolio-img' src={item.image} alt="portfolio_img"/>
+                            <img className='portfolio-img' src={item.image} alt="LEI MEP portfolio_img"/>
                         :
                             <div className='portfolio-img-placeholder'>No image available</div>
                         }
@@ -384,8 +386,7 @@ export default function Portfolio() {
 
         </div>
 
-
-        <Footer />
+        </Layout>
 
         {/* <ScrollRestoration/> */}
         </>

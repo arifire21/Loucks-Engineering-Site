@@ -1,13 +1,14 @@
-import Navbar from "../components/navbar";
-import Footer from '../components/Footer';
+// import Navbar from "../components/navbar";
+// import Footer from '../components/Footer';
 import Helmet from 'react-helmet';
 import { ScrollRestoration } from 'react-router-dom';
+import Layout from '../components/layout';
 
 export default function Services() {
   return (
     <>
-      <Helmet><title>Services | Loucks Engineering Inc.</title>  </Helmet>
-      <Navbar />
+      <Helmet><title>Services | Loucks Engineering, Inc.</title>  </Helmet>
+      <Layout>
 
       <div className="page-contents">
         <header>
@@ -51,7 +52,7 @@ export default function Services() {
         </div>
       </div>
         
-      <Footer />
+      </Layout>
 
       <ScrollRestoration/>
     </>

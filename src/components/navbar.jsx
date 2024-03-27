@@ -1,11 +1,11 @@
 import { Navbar, Container, Nav, Offcanvas } from 'react-bootstrap';
-import MiniLogo from '../images/logo192.png';
+import MiniLogo from '../images/logo_sm.png';
 import { LinkContainer } from 'react-router-bootstrap'
 import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
 
 export default function BootstrapNavbar() {
     return( 
-        <Navbar bg="dark" variant="dark" expand="md" sticky="top">
+        <Navbar bg="dark" variant="dark" expand="md">
             <Container>
                 <LinkContainer to="/">
                     <Navbar.Brand><img src={MiniLogo} alt="lei-logo-sm" width="50" height="50" /></Navbar.Brand>

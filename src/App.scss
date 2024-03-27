@@ -15,7 +15,26 @@ html, body {
     font-size: 14pt;
 }
 
+body {
+    height: 100vh !important;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: nowrap;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    gap: 10px;
+    grid-template:
+      "header" auto
+      "content" 1fr
+      "footer" auto;
+    //   grid-template-columns: 100%;
+}
+
 .navbar {
+    grid-area: header;
     height: 4rem !important;
     & > .container {
         margin-left: 1rem !important;
@@ -41,14 +60,32 @@ header {
 }
 
 footer {
-    height: 3.375rem;
+    grid-area: footer;
+    height: fit-content;
     width: 100%;
     padding: 0.5rem;
     background-color: maroon;
     color: white;
     text-align: center;
     z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-shrink: 0;
+}
+
+.footer-nav {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    &:hover {
+        color: salmon;
+        text-decoration: underline;
+    }
+}
+
+.footer-nav-spacer {
+    color: salmon
 }
 
 // .abt-inner {
@@ -56,9 +93,11 @@ footer {
 // }
 
 .page-contents {
+    grid-area: content;
     margin: 0 1rem;
-    margin-top: 0.25rem;
-    min-height: calc(100dvh - 4rem - 0.25rem - 3.375rem); //viewport height - forced navbar height - content mt - footer height
+    // margin-top: 0.25rem;
+    // min-height: calc(100dvh - 4rem - 0.25rem - 6.708rem); //viewport height - forced navbar height - content mt - footer height
+    // min-height: 100vh;
 }
 
 #portfolio-page {
@@ -207,7 +246,7 @@ footer {
     display: block;
     z-index: 100;
     position: sticky;
-    top: 74px;
+    top: 0px;
     // width: 100vw;
     background-color: white;
     padding: 0.25rem 1rem;
