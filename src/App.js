@@ -7,6 +7,7 @@ import HomeCarousel from './components/carousel';
 import Helmet from 'react-helmet';
 import { ScrollRestoration } from 'react-router-dom';
 import Layout from './components/layout';
+import { Button } from 'react-bootstrap';
 
 function App() {
   return (
@@ -26,9 +27,20 @@ function App() {
 
         <hr id='homeheader' className='titleheader' />
         
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
         <p className='home-txt'>
-          Loucks Engineering, Inc. consulting engineers specialize in mechanical, electrical, and plumbing (MEP) systems. We are known for various project across Florida, having worked in the state for over 50 years. With the ability to provide services in multiple states and Green Building Council certification, we are committed to producing projects with sustainability in mind.
+          Loucks Engineering, Inc. consulting engineers specialize in mechanical, electrical, and plumbing (MEP) systems. We are known for various commercial and residental projects across Florida, having worked in the state for over 50 years.
+          With the ability to provide services in multiple states and Green Building Council certification, we are committed to producing projects with sustainability in mind.
         </p>
+
+        <div className='home-btn'>
+          <Button as='a' href='/portfolio' variant='danger'>See our work</Button>
+        </div>
+
+        {/* <p className='home-txt'>
+          With the ability to provide services in multiple states and Green Building Council certification, we are committed to producing projects with sustainability in mind.
+        </p> */}
+      </div>
       </div>
       </Layout>
         

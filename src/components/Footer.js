@@ -2,8 +2,12 @@
 import Logo from '../images/logo_sm.png';
 // import Pin from '../../images/pin.png';
 import { FaMapPin, FaPhoneVolume } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
+    let pathname = useLocation().pathname
+    console.log(pathname)
+
     return (
     <footer>
         <div>
@@ -19,12 +23,15 @@ export default function Footer() {
         <div>
             <p style={{fontSize: '16pt', marginBottom:'0.5rem'}}>Quick Links</p>
             <nav>
-                <a className='footer-nav' href='/'>Home</a>&ensp;<b className='footer-nav-spacer'>|</b>&ensp;
-                <a className='footer-nav' href='/services'>Services</a>&ensp;<b className='footer-nav-spacer'>|</b>&ensp;
-                <a className='footer-nav'href='/portfolio'>Project Portfolio</a>
+                <a className={`footer-nav ${pathname === '/' ? 'f-active' : ''}`} href='/'>Home</a>
+                &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
+                <a className={`footer-nav ${pathname === '/services' ? 'f-active' : ''}`} href='/services'>Services</a>
+                &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
+                <a className={`footer-nav ${pathname === '/portfolio' ? 'f-active' : ''}`} href='/portfolio'>Project Portfolio</a>
                 <br/>
-                <a className='footer-nav' href='/about'>About Us</a>&ensp;<b className='footer-nav-spacer'>|</b>&ensp;
-                <a className='footer-nav' href='/contact'>Contact Us</a>
+                <a className={`footer-nav ${pathname === '/about' ? 'f-active' : ''}`} href='/about'>About Us</a>
+                &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
+                <a className={`footer-nav ${pathname === '/contact' ? 'f-active' : ''}`} href='/contact'>Contact Us</a>
             </nav>
         </div>
     </footer>
