@@ -15,6 +15,8 @@ export default function Services() {
           <h1>Services Provided</h1>
         </header>
 
+        <p>We provide our services to various types of projects, from sizable warehouses to small single-family residences.</p>
+
         <div className="flex-container">
           <div className="item">
             <p className="subtitle">Mechanical</p>

@@ -65,7 +65,7 @@ footer {
     height: fit-content;
     width: 100%;
     padding: 0.5rem;
-    background-color: maroon;
+    background-color: #800000;
     color: white;
     text-align: center;
     z-index: 2;
@@ -461,6 +461,15 @@ button[role="tab"] {
         gap: 1rem;
     }
 
+    #mobile-footer-logo {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .page-contents {
+        margin: 0 !important;
+    }
+
     .home-container{
         margin-top: 0;
         flex-direction: column;
@@ -496,6 +505,7 @@ button[role="tab"] {
     #home-caro {
         width: 95% !important;
         height: 300px !important;
+        margin: 0 !important;
     }
 
     .flex-container {
