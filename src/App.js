@@ -15,6 +15,7 @@ function App() {
       <Helmet><title>Loucks Engineering, Inc. - MEP Consulting Engineers</title></Helmet>
 
       <Layout>
+      <h1 hidden aria-hidden>Loucks Engineering, Inc. - MEP Consulting</h1>
       <div className='page-contents'>
         <div className='home-container'>
           <div className='home-item'>

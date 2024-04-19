@@ -16,10 +16,11 @@ export default function Portfolio() {
         <Layout>
         <PortfolioNavDesktop/>
         <PortfolioNavMobile/>
-        
-        <div className="page-contents" id='portfolio-page'>
 
-            <h1 id='dining'>Dining</h1>
+        <div className="page-contents" id='portfolio-page'>
+        <h1 style={{textAlign:'center'}}>Project Portfolio</h1>      
+
+            <h2 id='dining'>Dining</h2>
             <div className='portfolio-flex-container'>
                 {restaurants.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -39,7 +40,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1 id='worship'>Worship</h1>
+            <h2 id='worship'>Worship</h2>
             <div className='portfolio-flex-container'>
                 {worship.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -59,7 +60,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1 id='offices'>Offices</h1>
+            <h2 id='offices'>Offices</h2>
             <div className='portfolio-flex-container'>
                 {offices.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -79,7 +80,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Aviation</h1>
+            <h2>Aviation</h2>
             <div id='aviation' className='portfolio-flex-container'>
                 {aviation.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -99,7 +100,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Outreach</h1>
+            <h2>Outreach</h2>
             <div  id='outreach' className='portfolio-flex-container'>
                 {outreach.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -119,7 +120,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Storage Facilities</h1>
+            <h2>Storage Facilities</h2>
             <div id='storage' className='portfolio-flex-container'>
                 {storage.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -139,7 +140,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Gyms</h1>
+            <h2>Gyms</h2>
             <div id='gyms' className='portfolio-flex-container'>
                 {gyms.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -159,7 +160,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Medical & Dental</h1>
+            <h2>Medical & Dental</h2>
             <div id='med-dent' className='portfolio-flex-container'>
                 {medDental.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -179,7 +180,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Beauty</h1>
+            <h2>Beauty</h2>
             <div id='beauty' className='portfolio-flex-container'>
                 {beauty.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -199,7 +200,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Retail</h1>
+            <h2>Retail</h2>
             <div id='retail' className='portfolio-flex-container'>
                 {retail.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -219,7 +220,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Educational Institutions</h1>
+            <h2>Educational Institutions</h2>
             <div id='education' className='portfolio-flex-container'>
                 {education.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -239,7 +240,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Supermarkets</h1>
+            <h2>Supermarkets</h2>
             <div id='supermarkets' className='portfolio-flex-container'>
                 {supermarkets.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -259,7 +260,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Laundry Facilities</h1>
+            <h2>Laundry Facilities</h2>
             <div id='laundry' className='portfolio-flex-container'>
                 {laundry.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -279,7 +280,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Automotive</h1>
+            <h2>Automotive</h2>
             <div id='auto' className='portfolio-flex-container'>
                 {auto.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -299,7 +300,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Pet Care</h1>
+            <h2>Pet Care</h2>
             <div id='pets' className='portfolio-flex-container'>
                 {pets.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -319,7 +320,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Multipurpose Spaces</h1>
+            <h2>Multipurpose Spaces</h2>
             <div id='multipurpose' className='portfolio-flex-container'>
                 {multipurpose.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -339,7 +340,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Residences (Single & Multi-Family)</h1>
+            <h2>Residences (Single & Multi-Family)</h2>
             <div id='residences' className='portfolio-flex-container'>
                 {residences.map((item, index) =>
                     <div className='portfolio-item' key={index}>
@@ -359,7 +360,7 @@ export default function Portfolio() {
 
             <hr/>
 
-            <h1>Other Notable Projects</h1>
+            <h2>Other Notable Projects</h2>
             <div id='other' className='portfolio-flex-container'>
                 {other.map((item, index) =>
                     <div className='portfolio-item' key={index}>

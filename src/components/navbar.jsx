@@ -5,6 +5,7 @@ import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
 
 export default function BootstrapNavbar() {
     return( 
+        <header>
         <Navbar bg="dark" variant="dark" expand="md">
             <Container>
                 <LinkContainer to="/">
@@ -40,5 +41,6 @@ export default function BootstrapNavbar() {
                 </Navbar.Offcanvas>
             </Container>
         </Navbar>
+        </header>
     )
 }

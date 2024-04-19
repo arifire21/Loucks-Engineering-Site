@@ -11,9 +11,7 @@ export default function Services() {
       <Layout>
 
       <div className="page-contents">
-        <header>
-          <h1>Services Provided</h1>
-        </header>
+        <h1>Services Provided</h1>
 
         <p>We provide our services to various types of projects, from sizable warehouses to small single-family residences.</p>
 
