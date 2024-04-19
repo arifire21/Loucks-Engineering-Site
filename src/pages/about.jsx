@@ -11,7 +11,7 @@ export default function About() {
     
       <Layout>
       <div className="page-contents" id="abt-ctr">
-        <h1>About Us</h1>
+        <h1 style={{textAlign:'center'}}>About Us</h1>
 
         <section>
           <h2>Overview</h2>
