@@ -12,7 +12,10 @@ import { Button } from 'react-bootstrap';
 function App() {
   return (
     <>
-      <Helmet><title>Loucks Engineering, Inc. - MEP Consulting Engineers</title></Helmet>
+      <Helmet>
+        <title>Loucks Engineering, Inc. - MEP Consulting Engineers</title>
+        <link rel="canonical" href="https://www.louckseng.com/" />
+      </Helmet>
 
       <Layout>
       <h1 hidden aria-hidden>Loucks Engineering, Inc. - MEP Consulting</h1>
