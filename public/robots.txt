@@ -1,4 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+User-agent: AhrefsSiteAudit
+Allow: /
+User-agent: AhrefsBot
+Allow: /
 Sitemap: https://www.louckseng.com/sitemap.xml
