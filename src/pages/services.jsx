@@ -7,7 +7,11 @@ import Layout from '../components/layout';
 export default function Services() {
   return (
     <>
-      <Helmet><title>Services | Loucks Engineering, Inc.</title>  </Helmet>
+      <Helmet>
+        <title>Services | Loucks Engineering, Inc.</title>
+        <link rel="canonical" href="https://www.louckseng.com/services" />
+        <meta name="description" content="We provide our services to various types of projects, from sizable warehouses to small single-family residences. See all services listed here." />
+      </Helmet>
       <Layout>
 
       <div className="page-contents">

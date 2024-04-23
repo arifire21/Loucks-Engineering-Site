@@ -8,7 +8,11 @@ import Layout from '../components/layout';
 export default function Contact() {
   return (
     <>
-      <Helmet><title>Contact Us | Loucks Engineering, Inc.</title>  </Helmet>
+      <Helmet>
+        <title>Contact Us | Loucks Engineering, Inc.</title>
+        <link rel="canonical" href="https://www.louckseng.com/contact" />
+        <meta name="description" content="Find ways to contact us here." />
+      </Helmet>
 
       <Layout>
       <div className='page-contents'>

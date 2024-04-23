@@ -7,7 +7,11 @@ import Layout from "../components/layout";
 export default function About() {
   return (
     <>
-      <Helmet><title>About Us | Loucks Engineering, Inc.</title></Helmet>
+      <Helmet>
+        <title>About Us | Loucks Engineering, Inc.</title>
+        <link rel="canonical" href="https://www.louckseng.com/about" />
+        <meta name="description" content="Our company was founded in 1966, culminating in a lot of experience in designing multiple types of projects." />
+      </Helmet>
     
       <Layout>
       <div className="page-contents" id="abt-ctr">

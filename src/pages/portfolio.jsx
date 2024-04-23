@@ -12,7 +12,11 @@ import { restaurants, offices, outreach, residences, aviation, education, gyms, 
 export default function Portfolio() {
     return(
         <>
-        <Helmet><title>Portfolio | Loucks Engineering, Inc.</title></Helmet>
+        <Helmet>
+            <title>Portfolio | Loucks Engineering, Inc.</title>
+            <link rel="canonical" href="https://www.louckseng.com/portfolio" />
+            <meta name="description" content="View a gallery showcasing notable projects." />
+        </Helmet>
         <Layout>
         <PortfolioNavDesktop/>
         <PortfolioNavMobile/>
