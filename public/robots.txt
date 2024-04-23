@@ -1,6 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: AhrefsSiteAudit
 Allow: /
+Crawl-Delay: 10
 User-agent: AhrefsBot
 Allow: /
+Crawl-Delay: 10
 Sitemap: https://www.louckseng.com/sitemap.xml
