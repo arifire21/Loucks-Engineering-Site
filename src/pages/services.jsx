@@ -17,7 +17,7 @@ export default function Services() {
       <div className="page-contents">
         <h1 style={{textAlign:'center'}}>Services Provided</h1>
 
-        <p>We provide our services to various types of projects, from sizable warehouses to small single-family residences.</p>
+        <p style={{textAlign:'center'}}>We provide our services to various types of projects, from sizable warehouses to small single-family residences.</p>
 
         <div className="flex-container">
           <div className="item">
