@@ -17,7 +17,7 @@ export default function About() {
           <h2>Overview</h2>
           <section>
             <p className="abt-p">We have a lot of experience in design, commercial projects, municipal projects, parks, recreation and environmentally-friendly projects. Many of our projects are of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities. We have many projects that have achieved LEED certification.</p>
-            <!-- <p className="abt-p">We have many projects that have achieved LEED certification. Loucks Engineering, Inc. has been a member of the US Green Building Council since 2007.</p> -->
+            {/* <p className="abt-p">We have many projects that have achieved LEED certification. Loucks Engineering, Inc. has been a member of the US Green Building Council since 2007.</p> */}
           </section>
         </section>
 
