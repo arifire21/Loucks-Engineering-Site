@@ -3,7 +3,11 @@
 import { MapContainer, TileLayer, LayersControl, LayerGroup, Marker, Popup } from 'react-leaflet'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
+import {HiOutlineExternalLink} from 'react-icons/hi'
 import { useEffect, useRef } from 'react';
+
+import { restaurants } from '../data/portfolio_data';
+
 require('leaflet/dist/leaflet.css');
 require('leaflet/dist/leaflet.js');
 
@@ -19,26 +23,30 @@ export default function PortfolioMap() {
       }, []);
 
     const mapRef = useRef(null);
+    const markerRef = useRef(null);
 
     //zoom in to the marker if name clicked on sidebar
-    function handleFlyTo(){
-        // const {current = {}} = mapRef;
-        // const {leafletElement: map} = current;
-        // map.flyTo([26.236, -80.09], 14)
+    function handleFlyTo(lat, lng){
+        mapRef.current.flyTo([lat, lng], 18)
 
-        mapRef.current.flyTo([26.236, -80.09], 18)
+        const marker = markerRef.current;
+        if (marker) {
+          marker.openPopup();
+        }
     }
 
     //scroll to and highlight thing in sidebar 
-    function handlePopupClick(){
-        //get by id
-        //scrollintoview
-        let test = document.getElementById('map-1')
-        test.scrollIntoView({behavior:'smooth', block:'start'})
-        test.style.backgroundColor = '#ff0000'
-        //add class
-        //timeout 2s
-        //remove class
+    function handlePopupClick(index, type){
+        if (typeof window !== "undefined") {
+            let sidebarElem = document.getElementById(`sb-${type}-${index}`)
+            sidebarElem.scrollIntoView({behavior:'smooth', block:'start'})
+            sidebarElem.classList.add('mapsb-highlight')
+
+            setTimeout(() => {
+                // console.log("Delayed for 1 second.");
+                sidebarElem.classList.remove('mapsb-highlight')
+            }, 1000);
+        }
     }
 
     return(
@@ -55,37 +63,22 @@ export default function PortfolioMap() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* <Marker position={[28.54, -81.38]}>
-            <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-        </Marker> */}
         <LayersControl position="topright">
         <LayersControl.Overlay name="Dining Projects" checked>
             <LayerGroup>
-                <Marker
-                    position={[26.236, -80.09]}
-                    eventHandlers={{ click: handlePopupClick }}
-                >
-                <Popup>
-                    Oceanic
-                </Popup>
-                </Marker>
-                <Marker position={[26.235, -80.09]}>
-                <Popup>
-                    Lucky Fish Beach bar & Grill
-                </Popup>
-                </Marker>
-                <Marker position={[26.236697283043124, -80.09017001428346]}>
-                <Popup>
-                    How You Brewin'?
-                </Popup>
-                </Marker>
-                <Marker position={[26.235869639172, -80.08943552222465]}>
-                <Popup>
-                    Baresco
-                </Popup>
-                </Marker>
+                {restaurants.map((item, index) => {
+                    return(
+                    <Marker
+                        key={`marker-dining-${index}`}
+                        position={[item.coords[0], item.coords[1]]}
+                        eventHandlers={{ click: () => {handlePopupClick(index, 'dining')}}}
+                    >
+                    <Popup>
+                        {item.name}
+                    </Popup>
+                    </Marker>
+                    )
+                })}
             </LayerGroup>
         </LayersControl.Overlay>
         </LayersControl>
@@ -93,8 +86,24 @@ export default function PortfolioMap() {
 
         <div id='map-sidebar'>
             <div id='sidebar-wrapper'>
+                <section>
                 <h2 className='mapsb-header'>Dining</h2>
-                <h3 id='map-1' className='mapsb-name' onClick={handleFlyTo}>Oceanic</h3>
+                {restaurants.map((item, index) => {
+                    return(
+                    //id needed for handlePopupClick
+                    <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item'>
+                    <h3 className='mapsb-name' onClick={() => handleFlyTo(item.coords[0], item.coords[1])}>{item.name}</h3>
+                    { item.website &&
+                        <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
+                    }
+                    { item.image &&
+                        <img className='mapsb-img' src={item.image} alt={`LEI Dining Portfolio: ${item.name}`} />
+                    }
+                    <hr/>
+                    </div>
+                    )
+                })}
+                </section>
             </div>
         </div>
         </div>

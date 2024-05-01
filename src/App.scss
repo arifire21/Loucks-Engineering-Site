@@ -477,20 +477,32 @@ button[role="tab"] {
     overflow-y: scroll;
 }
 
+.mapsb-item {
+    // margin: 0.5rem 0;
+}
+
 .mapsb-header {
     text-decoration: underline;
 }
 
 .mapsb-name {
     transition: color 0.4s;
+    margin-bottom: 0;
 }
 
 .mapsb-name:hover {
     cursor: pointer;
-    color: maroon;
+    color: darkred;
 }
 
-.mapsb-hover {
+.mapsb-img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.mapsb-highlight {
     background-color: salmon;
     transition: background-color 0.5s;
 }
