@@ -6,12 +6,11 @@ import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
     let pathname = useLocation().pathname
-    console.log(pathname)
 
     return (
     <footer>
         <div>
-            <img src={Logo} alt="LEI small logo" width={100} height={100}/>
+            <img id='mobile-footer-logo' src={Logo} alt="LEI footer logo" width={100} height={100}/>
             <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p>
         </div>
 

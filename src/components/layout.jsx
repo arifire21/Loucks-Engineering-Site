@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <div className='grid-container'>
       <BootstrapNavbar />
-      <main>{children}</main>
+      <main id='grid-content'>{children}</main>
       <Footer />
     </div>
   )

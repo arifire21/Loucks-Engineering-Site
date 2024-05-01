@@ -12,9 +12,7 @@ export default function Contact() {
 
       <Layout>
       <div className='page-contents'>
-        <header>
-          <h1>Contact Us</h1>
-        </header>
+        <h1 style={{textAlign:'center'}}>Contact Us</h1>
 
         <h2>Main Contact</h2>
         <p style={{marginBottom:0}}><b>Office Phone:</b> (954) 938-1881</p>

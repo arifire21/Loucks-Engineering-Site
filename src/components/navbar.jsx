@@ -5,6 +5,7 @@ import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
 
 export default function BootstrapNavbar() {
     return( 
+        <header>
         <Navbar bg="dark" variant="dark" expand="md">
             <Container>
                 <LinkContainer to="/">
@@ -25,7 +26,7 @@ export default function BootstrapNavbar() {
                                 {/* <LinkContainer to="/portfolio">
                                     <Nav.Link>Project Portfolio</Nav.Link>
                                 </LinkContainer> */}
-                                <LinkContainer to="/portfolio">
+                                <LinkContainer to="/portfolio-new">
                                     <Nav.Link><FaImages className='mobile-icon' size={22}/>Project Portfolio</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/about">
@@ -40,5 +41,6 @@ export default function BootstrapNavbar() {
                 </Navbar.Offcanvas>
             </Container>
         </Navbar>
+        </header>
     )
 }
