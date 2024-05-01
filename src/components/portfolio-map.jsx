@@ -14,11 +14,14 @@ require('leaflet/dist/leaflet.js');
 export default function PortfolioMap() {
     useEffect(() => {
         if (typeof window !== "undefined") {
-        let content = document.getElementById('grid-content')
-        let sb = document.getElementById('sidebar-wrapper')
+        // let content = document.getElementById('grid-content')
+        // let sb = document.getElementById('map-sidebar')
+        // let sbWrap = document.getElementById('sidebar-wrapper')        
 
-        sb.style.height = content.clientHeight + 'px'
-        // console.log(content.clientHeight)
+        // sb.style.height = content.clientHeight + 'px'
+        // // sbWrap.style.height = content.clientHeight + 'px'
+        // // console.log(content.clientHeight)
+        // console.log(sb.style.height)
         }
       }, []);
 

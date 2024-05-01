@@ -456,6 +456,7 @@ button[role="tab"] {
     max-height: 100%;
     max-width: 100%;
     overflow: hidden;
+    user-select: none;
 }
 
 #map {
@@ -471,15 +472,17 @@ button[role="tab"] {
     flex-grow: 0;
     padding: 0.5rem;
     border-left: 2px solid maroon;
+    height: 550px;
 }
 
 #sidebar-wrapper {
     overflow-y: scroll;
+    height: 100%;
 }
 
-.mapsb-item {
-    // margin: 0.5rem 0;
-}
+// .mapsb-item {
+//     // margin: 0.5rem 0;
+// }
 
 .mapsb-header {
     text-decoration: underline;
