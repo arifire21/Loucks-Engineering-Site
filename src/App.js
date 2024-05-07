@@ -15,7 +15,6 @@ function App() {
       <Helmet>
         <title>Loucks Engineering, Inc. - MEP Consulting Engineers</title>
         <link rel="canonical" href="https://www.louckseng.com/" />
-        <meta name="description" content="For 50+ years, we have specialized in designing mechanical, electrical, and plumbing (MEP) systems throughout Florida." />
       </Helmet>
 
       <Layout>
