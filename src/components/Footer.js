@@ -9,7 +9,7 @@ export default function Footer() {
 
     return (
     <footer>
-        <div>
+        <div className='mobile'>
             <img id='mobile-footer-logo' src={Logo} alt="LEI footer logo" width={100} height={100}/>
             <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p>
         </div>
@@ -19,7 +19,7 @@ export default function Footer() {
             <p style={{marginBottom: '0'}}><FaPhoneVolume/> (954) 938-1881 | &copy; {new Date().getFullYear()}</p>
         </div>
 
-        <div>
+        <div className='mobile'>
             <p style={{fontSize: '16pt', marginBottom:'0.5rem'}}>Quick Links</p>
             <nav>
                 <a className={`footer-nav ${pathname === '/' ? 'f-active' : ''}`} href='/'>Home</a>

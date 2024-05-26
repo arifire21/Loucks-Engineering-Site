@@ -484,18 +484,24 @@ button[role="tab"] {
 //     // margin: 0.5rem 0;
 // }
 
-.mapsb-header {
-    text-decoration: underline;
-}
+// .mapsb-header {
+//     text-decoration: underline;
+// }
 
 .mapsb-name {
-    transition: color 0.4s;
+    transition: all 0.3s;
     margin-bottom: 0;
+    border-radius: 5px;
 }
 
 .mapsb-name:hover {
     cursor: pointer;
     color: darkred;
+    background-color: #f4cccc;
+}
+
+.mapsb-details {
+    margin: 0;
 }
 
 .mapsb-img {
@@ -506,12 +512,20 @@ button[role="tab"] {
 }
 
 .mapsb-highlight {
-    background-color: salmon;
+    background-color: #f4cccc;
     transition: background-color 0.5s;
+}
+
+.mobile {
+    display: none;
 }
 
 //for mobile
 @media (max-width:450px) {
+    .mobile {
+        display: block;
+    }
+
     .grid-container {
         column-span: 1;
     }

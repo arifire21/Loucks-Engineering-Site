@@ -101,22 +101,31 @@ export const restaurants = [
         name: "Lucky Fish",
         website: "https://www.luckyfishpompano.com/",
         image: Lucky_Fish,
+        year: 2018,
+        arch: 'RWB Architects',
         coords: [26.235523057074396, -80.08897229805034]
     },
     {
         name: "Oceanic",
         website: "https://www.oceanicpompano.com/",
         image: Oceanic,
+        year: 2016,
+        arch: 'RWB Architects',
         coords: [26.23581157785526, -80.08904317461128]
     },
     {
         name: "Baresco",
         website: "https://eatbaresco.com/",
         image: Baresco,
+        year: 2021,
+        arch: 'CSA Architects',
         coords: [26.235869639172, -80.08943552222465]
     },
     {
         name: "How You Brewin'",
+        website: "https://howyoubrewin.com/",
+        year: 2022,
+        arch: 'CSA Architects',
         coords: [26.236697283043124, -80.09017001428346]
     },
     {
@@ -129,12 +138,16 @@ export const restaurants = [
         name: 'Cubico Coffee',
         website: 'https://www.cubicocoffee.com/',
         image: CubicoCoffee,
+        year: 2022,
+        arch: "BG Architects",
         coords: [26.06055934771893, -80.34788717461608]
     },
     {
         name: 'The Cove',
         website: 'https://www.thecovedeerfield.com/',
         image: Cove,
+        year: 2021,
+        arch: 'RWB Architects',
         coords: [26.313747619370787, -80.08158147460914]
     }
     // {
@@ -204,22 +217,26 @@ export const aviation = [
     {
         name: 'Avenger Flight Group - Warehouse',
         website: 'https://www.afgsim.com/flight-training-centers/north-america/fort-lauderdale/',
-        image: AvengerWarehouse
+        image: AvengerWarehouse,
+        coords: [26.07115210763237, -80.15936648999622]
     },
     {
         name: 'Avenger Flight Group - Spirit Pilot Training Room',
         website: 'https://www.afgsim.com/flight-training-centers/north-america/fort-lauderdale/',
-        image: AvengerSpirit
+        image: AvengerSpirit,
+        coords: [26.07115210763237, -80.15936648999622]
     },
     {
         name: 'Sheltair Aviation Office',
         website: 'https://www.sheltairaviation.com/locations/fll/',
-        image: Sheltair
+        image: Sheltair,
+        coords: [26.069934924209957, -80.1559133672749]
     },
     {
         name: "Delta In-Flight Lounge, MIA Airport",
         website: "https://www.delta.com/us/en/airports/united-states/miami-sky-club-airport-map#dscPartner",
-        image: Delta
+        image: Delta,
+        coords: [25.792871238658037, -80.28231662893995]
     }
 ]
 
