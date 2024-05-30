@@ -3,28 +3,112 @@ import { useMap } from 'react-leaflet';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
 import {HiOutlineExternalLink} from 'react-icons/hi'
+import { FaMapMarkerAlt } from "react-icons/fa";
 import {useRef, useState } from 'react';
+import L from 'leaflet';
 
 import { restaurants, aviation } from '../data/portfolio_data';
 
 require('leaflet/dist/leaflet.css');
 require('leaflet/dist/leaflet.js');
 
+// var blueIcon = new L.Icon({
+// 	iconUrl: '../images/markers/marker-icon-2x-blue.png',
+// 	shadowUrl: '../images/markers/marker-shadow.png',
+// 	iconSize: [25, 41],
+// 	iconAnchor: [12, 41],
+// 	popupAnchor: [1, -34],
+// 	shadowSize: [41, 41]
+// });
+
+const goldIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-gold.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const redIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-red.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const greenIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-green.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const orangeIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-orange.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const yellowIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-yellow.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const violetIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-violet.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const greyIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-grey.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
+const blackIcon = new L.Icon({
+	iconUrl: require('../images/markers/marker-icon-2x-black.png'),
+	shadowUrl: require('../images/markers/marker-shadow.png'),
+	iconSize: [25, 41],
+	iconAnchor: [12, 41],
+	popupAnchor: [1, -34],
+	shadowSize: [41, 41]
+});
+
 export default function PortfolioMap() {
     const [diningChecked, setDining] = useState(true)
     const [aviationChecked, setAviation] = useState(true)
 
     const mapRef = useRef(null);
-    const markerRef = useRef(null);
+    // const markerRef = useRef(null);
 
     //zoom in to the marker if name clicked on sidebar
-    function handleFlyTo(lat, lng){
+    function handleSetView(lat, lng){
         mapRef.current.setView([lat, lng], 18)
 
-        const marker = markerRef.current;
-        if (marker) {
-          marker.openPopup();
-        }
+        //would need a unique ref for every element
+        // const marker = markerRef.current;
+        // if (marker) {
+        //   marker.openPopup();
+        // }
     }
 
     //scroll to and highlight thing in sidebar 
@@ -99,6 +183,7 @@ export default function PortfolioMap() {
                         key={`marker-aviation-${index}`}
                         position={[item.coords[0], item.coords[1]]}
                         eventHandlers={{ click: () => {handlePopupClick(index, 'aviation')}}}
+                        icon={redIcon}
                     >
                     <Popup>
                         {item.name}
@@ -139,7 +224,7 @@ export default function PortfolioMap() {
                         return(
                         //id needed for handlePopupClick
                         <div key={`sb-aviation-${index}`} id={`sb-aviation-${index}`} className='mapsb-item'>
-                        <h3 className='mapsb-name' onClick={() => handleFlyTo(item.coords[0], item.coords[1])}>{item.name}</h3>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
                         <p className='mapsb-details'>{item.year} - {item.arch}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
@@ -162,7 +247,7 @@ export default function PortfolioMap() {
                         return(
                         //id needed for handlePopupClick
                         <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item'>
-                        <h3 className='mapsb-name' onClick={() => handleFlyTo(item.coords[0], item.coords[1])}>{item.name}</h3>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
                         <p className='mapsb-details'>{item.year} - {item.arch}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>

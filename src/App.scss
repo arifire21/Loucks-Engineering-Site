@@ -516,6 +516,24 @@ button[role="tab"] {
     transition: background-color 0.5s;
 }
 
+.leaflet-control-layers-selector{
+    accent-color: darkgray;
+}
+
+.map-color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+#aviation-color{
+    color: darkred;
+}
+
+#dining-color{
+    color:rgb(18, 133, 171)
+}
+
 .mobile {
     display: none;
 }
