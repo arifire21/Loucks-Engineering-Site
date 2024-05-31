@@ -3,11 +3,11 @@ import { useMap } from 'react-leaflet';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
 import {HiOutlineExternalLink} from 'react-icons/hi'
-import { FaMapMarkerAlt } from "react-icons/fa";
+// import { FaMapMarkerAlt } from "react-icons/fa";
 import {useRef, useState } from 'react';
 import L from 'leaflet';
 
-import { restaurants, aviation } from '../data/portfolio_data';
+import { auto, aviation, beauty, restaurants, education, gyms, laundry, medDental, multipurpose, offices, other, outreach, pets, residences, retail, storage, supermarkets, worship } from '../data/portfolio_data';
 
 require('leaflet/dist/leaflet.css');
 require('leaflet/dist/leaflet.js');
@@ -129,29 +129,21 @@ export default function PortfolioMap() {
         const map = useMap()
         map.on('overlayadd', e => {
             // console.log(e.name)
-            switch (e.name) {
-                case 'Aviation Projects':
-                    setAviation(true)
-                    break;
-                case 'Dining Projects':
-                    setDining(true)
-                    break;
-                default:
-                    break;
+            if(e.name.includes('Aviation Projects')) {
+                setAviation(true)
+            }
+            if(e.name.includes('Dining Projects')) {
+                setDining(true)
             }
         })
 
         map.on('overlayremove', e => {
             // console.log(e.name)
-            switch (e.name) {
-                case 'Aviation Projects':
-                    setAviation(false)
-                    break;
-                case 'Dining Projects':
-                    setDining(false)
-                    break;
-                default:
-                    break;
+            if(e.name.includes('Aviation Projects')) {
+                setAviation(false)
+            }
+            if(e.name.includes('Dining Projects')) {
+                setDining(false)
             }
         })
         return null
@@ -175,7 +167,7 @@ export default function PortfolioMap() {
         <MapEvents/>
 
         <LayersControl position="topright">
-        <LayersControl.Overlay name="Aviation Projects" checked={aviationChecked}>
+        <LayersControl.Overlay name={`Aviation Projects (${aviation.length})`} checked={aviationChecked}>
             <LayerGroup>
                 {aviation.map((item, index) => {
                     return(
@@ -194,7 +186,7 @@ export default function PortfolioMap() {
             </LayerGroup>
         </LayersControl.Overlay>
         
-        <LayersControl.Overlay name="Dining Projects" checked={diningChecked}>
+        <LayersControl.Overlay name={`Dining Projects (${restaurants.length})`} checked={diningChecked}>
             <LayerGroup>
                 {restaurants.map((item, index) => {
                     return(
@@ -218,7 +210,7 @@ export default function PortfolioMap() {
             <div id='sidebar-wrapper'>
             {aviationChecked && aviationChecked && (
                     <section>
-                    <h2 className='mapsb-header'>Aviation</h2>
+                    <h2 className='mapsb-header' id='aviation-color'>Aviation</h2>
                     <hr style={{marginTop:0}}/>
                     {aviation.map((item, index) => {
                         return(
@@ -241,7 +233,7 @@ export default function PortfolioMap() {
 
                 {diningChecked && diningChecked && (
                     <section>
-                    <h2 className='mapsb-header'>Dining</h2>
+                    <h2 className='mapsb-header' id='dining-color'>Dining</h2>
                     <hr style={{marginTop:0}}/>
                     {restaurants.map((item, index) => {
                         return(

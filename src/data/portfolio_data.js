@@ -168,11 +168,15 @@ export const offices = [
     {
         name: "200 E. Broward",
         website: "https://www.200eastbroward.com/",
+        year: '2019-2024',
+        arch: 'various',
         image: Broward2
     },
     {
         name: '500 E. Broward/Broward Financial Center',
         website: 'https://www.browardfinancialcentre.com/',
+        year: '2019-2024',
+        arch: 'various',
         image: Broward500
     },
     {
@@ -218,25 +222,39 @@ export const aviation = [
         name: 'Avenger Flight Group - Warehouse',
         website: 'https://www.afgsim.com/flight-training-centers/north-america/fort-lauderdale/',
         image: AvengerWarehouse,
+        year: 2021,
+        arch: 'RLC',
         coords: [26.07115210763237, -80.15936648999622]
     },
     {
         name: 'Avenger Flight Group - Spirit Pilot Training Room',
         website: 'https://www.afgsim.com/flight-training-centers/north-america/fort-lauderdale/',
         image: AvengerSpirit,
+        year: 2022,
+        arch: 'RLC',
         coords: [26.07115210763237, -80.15936648999622]
     },
     {
         name: 'Sheltair Aviation Office',
         website: 'https://www.sheltairaviation.com/locations/fll/',
         image: Sheltair,
+        year: 2022,
+        arch: 'Cartaya',
         coords: [26.069934924209957, -80.1559133672749]
     },
     {
         name: "Delta In-Flight Lounge, MIA Airport",
         website: "https://www.delta.com/us/en/airports/united-states/miami-sky-club-airport-map#dscPartner",
         image: Delta,
+        year: 2019,
+        arch: 'Cartaya',
         coords: [25.792871238658037, -80.28231662893995]
+    },
+    {
+        name: "Vero Beach Airport Hangars",
+        year: '2023-2024',
+        arch: 'BG Architects',
+        coords: [27.653376952733957, -80.40611121694016]
     }
 ]
 
@@ -470,8 +488,15 @@ export const multipurpose = [
 
 export const other = [
     {
-        name: "Gulfstream Jumbotron",
-        website: "https://gulfstreampark.com/",
-        image: Jumbotron
+        name: "Gulfstream Racing Jumbotron",
+        image: Jumbotron,
+        year: 2020,
+        coords: [25.97821969403824, -80.13958343228856]
+    },
+    {
+        name: "FL Panthers' Training Facility",
+        website: 'https://panthersiceden.com/',
+        year: 2007,
+        coords: [26.271310824614506, -80.2920759611157]
     },
 ]
