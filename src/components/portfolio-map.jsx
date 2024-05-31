@@ -96,6 +96,7 @@ const blackIcon = new L.Icon({
 export default function PortfolioMap() {
     const [diningChecked, setDining] = useState(true)
     const [aviationChecked, setAviation] = useState(true)
+    const [otherChecked, setOther] = useState(true)
 
     const mapRef = useRef(null);
     // const markerRef = useRef(null);
@@ -133,6 +134,9 @@ export default function PortfolioMap() {
                 setAviation(true)
             }
             if(e.name.includes('Dining Projects')) {
+                setDining(true)
+            }
+            if(e.name.includes('Other Projects')) {
                 setDining(true)
             }
         })
@@ -203,6 +207,25 @@ export default function PortfolioMap() {
                 })}
             </LayerGroup>
         </LayersControl.Overlay>
+        
+        <LayersControl.Overlay name={`Other Projects (${other.length})`} checked={otherChecked}>
+            <LayerGroup>
+                {other.map((item, index) => {
+                    return(
+                    <Marker
+                        key={`marker-other-${index}`}
+                        position={[item.coords[0], item.coords[1]]}
+                        eventHandlers={{ click: () => {handlePopupClick(index, 'other')}}}
+                        icon={goldIcon}
+                    >
+                    <Popup>
+                        {item.name}
+                    </Popup>
+                    </Marker>
+                    )
+                })}
+            </LayerGroup>
+        </LayersControl.Overlay>
         </LayersControl>
         </MapContainer>
 
@@ -217,7 +240,7 @@ export default function PortfolioMap() {
                         //id needed for handlePopupClick
                         <div key={`sb-aviation-${index}`} id={`sb-aviation-${index}`} className='mapsb-item'>
                         <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
-                        <p className='mapsb-details'>{item.year} - {item.arch}</p>
+                        <p className='mapsb-details'>{item.year} {item.arch ? '-' : ''} {item.arch}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
@@ -240,12 +263,35 @@ export default function PortfolioMap() {
                         //id needed for handlePopupClick
                         <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item'>
                         <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
-                        <p className='mapsb-details'>{item.year} - {item.arch}</p>
+                        <p className='mapsb-details'>{item.year} {item.arch ? '-' : ''} {item.arch}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
                             <img className='mapsb-img' src={item.image} alt={`LEI Dining Portfolio: ${item.name}`} />
+                        }
+                        <hr/>
+                        </div>
+                        )
+                    })}
+                    </section>
+                )}
+
+                {otherChecked && otherChecked && (
+                    <section>
+                    <h2 className='mapsb-header' id='other-color'>Other Notable Projects</h2>
+                    <hr style={{marginTop:0}}/>
+                    {other.map((item, index) => {
+                        return(
+                        //id needed for handlePopupClick
+                        <div key={`sb-other-${index}`} id={`sb-other-${index}`} className='mapsb-item'>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
+                        <p className='mapsb-details'>{item.year} {item.arch ? '-' : ''} {item.arch}</p>
+                        { item.website &&
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
+                        }
+                        { item.image &&
+                            <img className='mapsb-img' src={item.image} alt={`LEI Other Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>

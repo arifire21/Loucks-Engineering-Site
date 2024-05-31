@@ -118,14 +118,14 @@ export const restaurants = [
         website: "https://eatbaresco.com/",
         image: Baresco,
         year: 2021,
-        arch: 'CSA Architects',
+        arch: 'CSA',
         coords: [26.235869639172, -80.08943552222465]
     },
     {
         name: "How You Brewin'",
         website: "https://howyoubrewin.com/",
         year: 2022,
-        arch: 'CSA Architects',
+        arch: 'CSA',
         coords: [26.236697283043124, -80.09017001428346]
     },
     {
@@ -161,6 +161,13 @@ export const residences = [
         name: "Blu on Marina Boulevard",
         website: 'https://www.bluonmarinaboulevard.com',
         image: BluApts,
+        coords: [26.091875405138612, -80.1591043355374]
+    },
+    {
+        name: 'Pompano Pointe Apts',
+        year: '2022-2024',
+        arch: 'S.H. Brandt',
+        coords: [26.26998410261203, -80.15031022532283]
     }
 ]
 
@@ -169,28 +176,34 @@ export const offices = [
         name: "200 E. Broward",
         website: "https://www.200eastbroward.com/",
         year: '2019-2024',
-        arch: 'various',
+        arch: 'Various',
         image: Broward2
     },
     {
         name: '500 E. Broward/Broward Financial Center',
         website: 'https://www.browardfinancialcentre.com/',
         year: '2019-2024',
-        arch: 'various',
+        arch: 'Various',
         image: Broward500
     },
     {
         name: 'One Boca Place',
         website: 'https://www.onebocaplace.com/',
-        image: OneBoca
+        image: OneBoca,
+        year: '2005-2020',
+        arch: 'Various'
     },
     {
         name: 'YMP Real Estate Office',
         website: 'https://ymprealestate.com/',
+        year: 2022,
+        arch: 'TD Architect Group',
         image: Lakeshore
     },
     {
         name: "Esperante",
+        year: '2014-2024',
+        arch: 'Various',
         image: Esperante
     }
 ]
@@ -199,21 +212,29 @@ export const outreach = [
     {
         name: "Sheridan House",
         website: "https://sheridanhouse.org/",
-        image: SheridanHouse
+        image: SheridanHouse,
+        year: '2004-2007, 2023-2024',
+        arch: 'Pierce, Claren'
     },
     {
         name: "Goodwill (kitchen)",
         website: "https://goggi.org/",
-        image: Goodwill
+        image: Goodwill,
+        year: 2022,
+        arch: 'Myott Architecture'
     },
     {
         name: 'YMCA',
         website: 'https://www.ymcaspbc.org/locations/peter-blum-family-ymca-boca-raton',
-        image: YMCA
+        image: YMCA,
+        year: '2022-2023',
+        arch: 'CSA'
     },
     {
         name: 'Boys and Girls Club',
-        image: BGC
+        image: BGC,
+        year: '2011-2023',
+        arch: 'AAAdvance'
     }
 ]
 
@@ -482,7 +503,13 @@ export const multipurpose = [
     {
         name: 'Mizner Park (tenant improvement, multiple spaces)',
         website: 'https://www.miznerpark.com/en.html',
-        image: Mizner
+        image: Mizner,
+        year: '2000-2023',
+        coords: [26.35418735216275, -80.08487031878359]
+    },
+    {
+        name: 'Fun Sweets Warehouse (tenant improvement)',
+
     }
 ]
 
@@ -499,4 +526,17 @@ export const other = [
         year: 2007,
         coords: [26.271310824614506, -80.2920759611157]
     },
+    {
+        name: 'Pick-A-Ball (interactive flooring)',
+        website: 'http://pickaballcourts.com/',
+        coords: [26.30306061909846, -80.15367131693922],
+        year: '2022-2024',
+        arch: 'RWB'
+    },
+    {
+        name: 'Sundance Marina (electrical service)',
+        coords: [28.179039349196223, -80.6503942745556],
+        year: 2023,
+        arch: 'Sunbelt Electric'
+    }
 ]
