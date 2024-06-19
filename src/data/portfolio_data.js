@@ -177,34 +177,39 @@ export const offices = [
         website: "https://www.200eastbroward.com/",
         year: '2019-2024',
         arch: 'Various',
-        image: Broward2
+        image: Broward2,
+        coords: [26.12222946027434, -80.14089684396279]
     },
     {
         name: '500 E. Broward/Broward Financial Center',
         website: 'https://www.browardfinancialcentre.com/',
         year: '2019-2024',
         arch: 'Various',
-        image: Broward500
+        image: Broward500,
+        coords: [26.12210830745826, -80.13821333807186]
     },
     {
         name: 'One Boca Place',
         website: 'https://www.onebocaplace.com/',
         image: OneBoca,
         year: '2005-2020',
-        arch: 'Various'
+        arch: 'Various',
+        coords: [26.369137982405746, -80.1263570658463]
     },
     {
         name: 'YMP Real Estate Office',
         website: 'https://ymprealestate.com/',
         year: 2022,
         arch: 'TD Architect Group',
-        image: Lakeshore
+        image: Lakeshore,
+        coords: [26.181950555257696, -80.20246546033366]
     },
     {
         name: "Esperante",
         year: '2014-2024',
         arch: 'Various',
-        image: Esperante
+        image: Esperante,
+        coords: [26.705942659378785, -80.0508708105364]
     }
 ]
 
@@ -214,28 +219,33 @@ export const outreach = [
         website: "https://sheridanhouse.org/",
         image: SheridanHouse,
         year: '2004-2007, 2023-2024',
-        arch: 'Pierce, Claren'
+        arch: 'Pierce, Claren',
+        coords: [26.099171793722164, -80.31198308364891]
     },
     {
-        name: "Goodwill (kitchen)",
+        name: "Goodwill",
+        smallText: '(kitchen)',
         website: "https://goggi.org/",
         image: Goodwill,
         year: 2022,
-        arch: 'Myott Architecture'
+        arch: 'Myott Architecture',
+        coords: [26.754522554218198, -80.08153330175482]
     },
     {
         name: 'YMCA',
+        smallText: '(Boca Raton)',
         website: 'https://www.ymcaspbc.org/locations/peter-blum-family-ymca-boca-raton',
         image: YMCA,
         year: '2022-2023',
-        arch: 'CSA'
+        arch: 'CSA',
+        coords: [26.352992766143526, -80.14832193752302]
     },
-    {
-        name: 'Boys and Girls Club',
-        image: BGC,
-        year: '2011-2023',
-        arch: 'AAAdvance'
-    }
+    // {
+    //     name: 'Boys and Girls Club',
+    //     image: BGC,
+    //     year: '2011-2023',
+    //     arch: 'AAAdvance'
+    // }
 ]
 
 export const aviation = [
@@ -264,7 +274,7 @@ export const aviation = [
         coords: [26.069934924209957, -80.1559133672749]
     },
     {
-        name: "Delta In-Flight Lounge, MIA Airport",
+        name: "Delta In-Flight Lounge - MIA Airport",
         website: "https://www.delta.com/us/en/airports/united-states/miami-sky-club-airport-map#dscPartner",
         image: Delta,
         year: 2019,
@@ -281,7 +291,8 @@ export const aviation = [
 
 export const education = [
     {
-        name: 'FIU Student Center (offcampus building)',
+        name: 'FIU Student Center',
+        smallText: '(offcampus building)',
         website: 'https://www.fiu.edu/',
         image: FIUStudent
     },
@@ -501,7 +512,8 @@ export const supermarkets = [
 
 export const multipurpose = [
     {
-        name: 'Mizner Park (tenant improvement, multiple spaces)',
+        name: 'Mizner Park',
+        smallText: '(tenant improvement, multiple spaces)',
         website: 'https://www.miznerpark.com/en.html',
         image: Mizner,
         year: '2000-2023',
@@ -527,14 +539,16 @@ export const other = [
         coords: [26.271310824614506, -80.2920759611157]
     },
     {
-        name: 'Pick-A-Ball (interactive flooring)',
+        name: 'Pick-A-Ball',
+        smallText: '(interactive flooring)',
         website: 'http://pickaballcourts.com/',
         coords: [26.30306061909846, -80.15367131693922],
         year: '2022-2024',
         arch: 'RWB'
     },
     {
-        name: 'Sundance Marina (electrical service)',
+        name: 'Sundance Marina',
+        smallText: '(electrical service)',
         coords: [28.179039349196223, -80.6503942745556],
         year: 2023,
         arch: 'Sunbelt Electric'

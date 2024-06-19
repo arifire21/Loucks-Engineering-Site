@@ -95,7 +95,9 @@ const blackIcon = new L.Icon({
 
 export default function PortfolioMap() {
     const [diningChecked, setDining] = useState(true)
+    const [outreachChecked, setOutreach] = useState(true)
     const [aviationChecked, setAviation] = useState(true)
+    const [officeChecked, setOffice] = useState(true)
     const [otherChecked, setOther] = useState(true)
 
     const mapRef = useRef(null);
@@ -136,8 +138,14 @@ export default function PortfolioMap() {
             if(e.name.includes('Dining Projects')) {
                 setDining(true)
             }
+            if(e.name.includes('Office Projects')) {
+                setOffice(true)
+            }
+            if(e.name.includes('Outreach Projects')) {
+                setOutreach(true)
+            }
             if(e.name.includes('Other Projects')) {
-                setDining(true)
+                setOther(true)
             }
         })
 
@@ -148,6 +156,15 @@ export default function PortfolioMap() {
             }
             if(e.name.includes('Dining Projects')) {
                 setDining(false)
+            }
+            if(e.name.includes('Office Projects')) {
+                setOffice(false)
+            }
+            if(e.name.includes('Outreach Projects')) {
+                setOutreach(false)
+            }
+            if(e.name.includes('Other Projects')) {
+                setOther(false)
             }
         })
         return null
@@ -207,6 +224,44 @@ export default function PortfolioMap() {
                 })}
             </LayerGroup>
         </LayersControl.Overlay>
+
+        <LayersControl.Overlay name={`Office Projects (${offices.length})`} checked={officeChecked}>
+            <LayerGroup>
+                {offices.map((item, index) => {
+                    return(
+                    <Marker
+                        key={`marker-offices-${index}`}
+                        position={[item.coords[0], item.coords[1]]}
+                        eventHandlers={{ click: () => {handlePopupClick(index, 'offices')}}}
+                        icon={orangeIcon}
+                    >
+                    <Popup>
+                        {item.name}
+                    </Popup>
+                    </Marker>
+                    )
+                })}
+            </LayerGroup>
+        </LayersControl.Overlay>
+
+        <LayersControl.Overlay name={`Outreach Projects (${outreach.length})`} checked={outreachChecked}>
+            <LayerGroup>
+                {outreach.map((item, index) => {
+                    return(
+                    <Marker
+                        key={`marker-outreach-${index}`}
+                        position={[item.coords[0], item.coords[1]]}
+                        eventHandlers={{ click: () => {handlePopupClick(index, 'outreach')}}}
+                        icon={greenIcon}
+                    >
+                    <Popup>
+                        {item.name}
+                    </Popup>
+                    </Marker>
+                    )
+                })}
+            </LayerGroup>
+        </LayersControl.Overlay>
         
         <LayersControl.Overlay name={`Other Projects (${other.length})`} checked={otherChecked}>
             <LayerGroup>
@@ -238,9 +293,9 @@ export default function PortfolioMap() {
                     {aviation.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-aviation-${index}`} id={`sb-aviation-${index}`} className='mapsb-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
-                        <p className='mapsb-details'>{item.year} {item.arch ? '-' : ''} {item.arch}</p>
+                        <div key={`sb-aviation-${index}`} id={`sb-aviation-${index}`} className='mapsb-item aviation-item'>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}{item.smallText && ` ${<small>{item.smallText}</small>}`}</h3>
+                        <p className='mapsb-details'>{item.year} {item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
@@ -261,14 +316,60 @@ export default function PortfolioMap() {
                     {restaurants.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
-                        <p className='mapsb-details'>{item.year} {item.arch ? '-' : ''} {item.arch}</p>
+                        <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item dining-item'>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <p className='mapsb-details'>{item.year} {item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
                             <img className='mapsb-img' src={item.image} alt={`LEI Dining Portfolio: ${item.name}`} />
+                        }
+                        <hr/>
+                        </div>
+                        )
+                    })}
+                    </section>
+                )}
+
+                {officeChecked && officeChecked && (
+                    <section>
+                    <h2 className='mapsb-header' id='office-color'>Offices</h2>
+                    <hr style={{marginTop:0}}/>
+                    {offices.map((item, index) => {
+                        return(
+                        //id needed for handlePopupClick
+                        <div key={`sb-office-${index}`} id={`sb-offices-${index}`} className='mapsb-item office-item'>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <p className='mapsb-details'>{item.year}{item.arch && ` - ${item.arch}`}</p>
+                        { item.website &&
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
+                        }
+                        { item.image &&
+                            <img className='mapsb-img' src={item.image} alt={`LEI Office Portfolio: ${item.name}`} />
+                        }
+                        <hr/>
+                        </div>
+                        )
+                    })}
+                    </section>
+                )}
+
+                {outreachChecked && outreachChecked && (
+                    <section>
+                    <h2 className='mapsb-header' id='outreach-color'>Outreach</h2>
+                    <hr style={{marginTop:0}}/>
+                    {outreach.map((item, index) => {
+                        return(
+                        //id needed for handlePopupClick
+                        <div key={`sb-outreach-${index}`} id={`sb-outreach-${index}`} className='mapsb-item outreach-item'>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <p className='mapsb-details'>{item.year}{item.arch && ` - ${item.arch}`}</p>
+                        { item.website &&
+                            <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
+                        }
+                        { item.image &&
+                            <img className='mapsb-img' src={item.image} alt={`LEI Outreach Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>
@@ -284,9 +385,9 @@ export default function PortfolioMap() {
                     {other.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-other-${index}`} id={`sb-other-${index}`} className='mapsb-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}</h3>
-                        <p className='mapsb-details'>{item.year} {item.arch ? '-' : ''} {item.arch}</p>
+                        <div key={`sb-other-${index}`} id={`sb-other-${index}`} className='mapsb-item other-item'>
+                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <p className='mapsb-details'>{item.year}{item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }

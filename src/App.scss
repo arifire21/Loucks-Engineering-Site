@@ -494,10 +494,54 @@ button[role="tab"] {
     border-radius: 5px;
 }
 
-.mapsb-name:hover {
+.aviation-item:hover {
     cursor: pointer;
     color: darkred;
     background-color: #f4cccc;
+}
+
+.dining-item:hover {
+    cursor: pointer;
+    color: rgb(18, 133, 171);
+    background-color: rgb(217, 246, 255);
+}
+
+.other-item:hover {
+    cursor: pointer;
+    color: rgb(234, 203, 4);
+    background-color: rgb(243, 234, 177);
+}
+
+.office-item:hover {
+    cursor: pointer;
+    color: orange;
+    background-color: rgb(255, 236, 199);
+}
+
+.outreach-item:hover {
+    cursor: pointer;
+    color: green;
+    background-color: rgb(215, 255, 208);
+}
+
+#aviation-color{
+    color: darkred;
+}
+
+#dining-color{
+    color:rgb(18, 133, 171)
+}
+
+#other-color{
+    color:rgb(234, 203, 4)
+}
+
+#office-color{
+    color:orange
+}
+
+#outreach-color{
+    color:green
 }
 
 .mapsb-details {
@@ -524,18 +568,6 @@ button[role="tab"] {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-}
-
-#aviation-color{
-    color: darkred;
-}
-
-#dining-color{
-    color:rgb(18, 133, 171)
-}
-
-#other-color{
-    color:rgb(234, 203, 4)
 }
 
 .mobile {
