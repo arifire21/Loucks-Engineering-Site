@@ -3,23 +3,14 @@ import { useMap } from 'react-leaflet';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
 import {HiOutlineExternalLink} from 'react-icons/hi'
-// import { FaMapMarkerAlt } from "react-icons/fa";
 import {useRef, useState } from 'react';
 import L from 'leaflet';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { auto, aviation, beauty, restaurants, education, gyms, laundry, medDental, multipurpose, offices, other, outreach, pets, residences, retail, storage, supermarkets, worship } from '../data/portfolio_data';
 
 require('leaflet/dist/leaflet.css');
 require('leaflet/dist/leaflet.js');
-
-// var blueIcon = new L.Icon({
-// 	iconUrl: '../images/markers/marker-icon-2x-blue.png',
-// 	shadowUrl: '../images/markers/marker-shadow.png',
-// 	iconSize: [25, 41],
-// 	iconAnchor: [12, 41],
-// 	popupAnchor: [1, -34],
-// 	shadowSize: [41, 41]
-// });
 
 const goldIcon = new L.Icon({
 	iconUrl: require('../images/markers/marker-icon-2x-gold.png'),
@@ -300,7 +291,7 @@ export default function PortfolioMap() {
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
-                            <img className='mapsb-img' src={item.image} alt={`LEI Aviation Portfolio: ${item.name}`} />
+                            <LazyLoadImage effect='blur' className='mapsb-img' src={item.image} alt={`LEI Aviation Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>
@@ -323,7 +314,7 @@ export default function PortfolioMap() {
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
-                            <img className='mapsb-img' src={item.image} alt={`LEI Dining Portfolio: ${item.name}`} />
+                            <LazyLoadImage effect='blur' className='mapsb-img' src={item.image} alt={`LEI Dining Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>
@@ -346,7 +337,7 @@ export default function PortfolioMap() {
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
-                            <img className='mapsb-img' src={item.image} alt={`LEI Office Portfolio: ${item.name}`} />
+                            <LazyLoadImage effect='blur' className='mapsb-img' src={item.image} alt={`LEI Office Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>
@@ -369,7 +360,7 @@ export default function PortfolioMap() {
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
-                            <img className='mapsb-img' src={item.image} alt={`LEI Outreach Portfolio: ${item.name}`} />
+                            <LazyLoadImage effect='blur' className='mapsb-img' src={item.image} alt={`LEI Outreach Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>
@@ -392,7 +383,7 @@ export default function PortfolioMap() {
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
                         }
                         { item.image &&
-                            <img className='mapsb-img' src={item.image} alt={`LEI Other Portfolio: ${item.name}`} />
+                            <LazyLoadImage effect='blur' className='mapsb-img' src={item.image} alt={`LEI Other Portfolio: ${item.name}`} />
                         }
                         <hr/>
                         </div>

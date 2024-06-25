@@ -102,6 +102,10 @@ footer {
 //     margin-left: 1rem;
 // }
 
+.page-title {
+    text-align: center;
+}
+
 .page-contents {
     grid-area: content;
     margin: 0 1rem;
@@ -215,7 +219,6 @@ footer {
 }
 
 // SERVICES TAB
-
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -420,35 +423,10 @@ button[role="tab"] {
     padding: 20px !important;
 }
 
-//-------------------------------------------//
-//MOBILE STYLING
-
-// .mobile-nav {
-//     margin: 2em 0em 1em 2em;
-//     border: 2px solid red;
-//     border-radius: 20px;
-//     width: fit-content;
-//     &:active{
-//         background-color: lightgray;
-//     }
-// }
-
-//for smaller viewports, just wrap the stupid thing for now
-@media (max-width:1275px) {
-    .home-container {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width:1000px) {
-    #portfolio-nav-desktop{
-        display: none;
-    }
-    
-    #portfolio-nav-mobile{
-        display: block;
-    }
-
+//MAP
+.pp-text {
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 #map-sidebar-container {
@@ -572,6 +550,44 @@ button[role="tab"] {
 
 .mobile {
     display: none;
+}
+//-------------------------------------------//
+//MEDIA RULES
+
+// .mobile-nav {
+//     margin: 2em 0em 1em 2em;
+//     border: 2px solid red;
+//     border-radius: 20px;
+//     width: fit-content;
+//     &:active{
+//         background-color: lightgray;
+//     }
+// }
+
+//for smaller viewports, just wrap the stupid thing for now
+@media (max-width:1275px) {
+    .home-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:1000px) {
+    #portfolio-nav-desktop{
+        display: none;
+    }
+    
+    #portfolio-nav-mobile{
+        display: block;
+    }
+
+    .pp-text {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .mapsb-img {
+        display: none;
+    }
 }
 
 //for mobile
@@ -704,4 +720,9 @@ button[role="tab"] {
     // .service-header{
     //     width: 70%;
     // }
+
+    .pp-text {
+        margin-left: unset;
+        margin-right: unset;
+    }
 }

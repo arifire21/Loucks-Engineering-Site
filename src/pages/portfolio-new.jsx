@@ -5,11 +5,13 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function PortfolioNew() {
     return(
-    <>
+    // <>
     <Layout>
-        <hgroup style={{textAlign:'center'}}>
+        <hgroup className="page-title">
             <h1>Portfolio</h1>
-            <p>[flavor text]<br/>Use the layer control <SlLayers/> to toggle project categories. Click any project name on the side bar to be taken to that project location, or click any marker <FaMapMarkerAlt/> to highlight the project entry.</p>
+            <p className="pp-text">We have completed a wide array of jobs across the state, shown in this interactive map!<br/>
+                Use the layer control <SlLayers/> to toggle project categories. Click any project name on the sidebar to be taken to that project location, or click any marker <FaMapMarkerAlt/> to highlight the project entry.
+            </p>
         </hgroup>
         <PortfolioMap/>
 
@@ -18,6 +20,6 @@ export default function PortfolioNew() {
             Pictures used are either provided by us or pulled from the general internet. We believe that no copyright laws have been violated. If we are notified differently, we will immediately remove the picture(s) in question.</p>
         </section> */}
     </Layout>
-    </>
+    // </>
     )
 }

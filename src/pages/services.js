@@ -11,7 +11,7 @@ export default function Services() {
       <Layout>
 
       <div className="page-contents">
-        <h1 style={{textAlign:'center'}}>Services Provided</h1>
+        <h1 className="page-title">Services Provided</h1>
 
         <p>We provide our services to various types of projects, from sizable warehouses to small single-family residences.</p>
 
