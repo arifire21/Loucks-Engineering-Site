@@ -1,9 +1,9 @@
 import { MapContainer, TileLayer, LayersControl, LayerGroup, Marker, Popup } from 'react-leaflet'
 import { useMap } from 'react-leaflet';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import 'leaflet-defaulticon-compatibility';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
 import {HiOutlineExternalLink} from 'react-icons/hi'
-import {useRef, useState } from 'react';
+import {useRef, useState, useEffect } from 'react';
 import L from 'leaflet';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -84,7 +84,7 @@ const blackIcon = new L.Icon({
 	shadowSize: [41, 41]
 });
 
-export default function PortfolioMap() {
+export default function PortfolioMap({handleCounting}) {
     const [diningChecked, setDining] = useState(true)
     const [outreachChecked, setOutreach] = useState(true)
     const [aviationChecked, setAviation] = useState(true)
@@ -93,6 +93,12 @@ export default function PortfolioMap() {
 
     const mapRef = useRef(null);
     // const markerRef = useRef(null);
+
+    function countAndSend(){
+        const count = auto.length + aviation.length + beauty.length + restaurants.length + education.length + gyms.length + laundry.length + medDental.length + multipurpose.length + offices.length + other.length + outreach.length + pets.length + residences.length + retail.length + storage.length + supermarkets.length + worship.length;
+        console.log(count)
+        handleCounting(count);
+    };
 
     //zoom in to the marker if name clicked on sidebar
     function handleSetView(lat, lng){
@@ -160,6 +166,10 @@ export default function PortfolioMap() {
         })
         return null
     }
+
+    useEffect(() => {
+        countAndSend()
+    }, []);
 
     return(
         <div id='map-sidebar-container'>
