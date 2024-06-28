@@ -8,6 +8,7 @@ import L from 'leaflet';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { auto, aviation, beauty, restaurants, education, gyms, laundry, medDental, multipurpose, offices, other, outreach, pets, residences, retail, storage, supermarkets, worship } from '../data/portfolio_data';
+import { layerControlColors } from '../data/layercontrol_colors';
 
 require('leaflet/dist/leaflet.css');
 require('leaflet/dist/leaflet.js');
@@ -126,7 +127,7 @@ export default function PortfolioMap({handleCounting}) {
     }
 
     function MapEvents(){
-        const map = useMap()
+        const map = useMap();
         map.on('overlayadd', e => {
             // console.log(e.name)
             if(e.name.includes('Aviation Projects')) {
@@ -144,7 +145,7 @@ export default function PortfolioMap({handleCounting}) {
             if(e.name.includes('Other Projects')) {
                 setOther(true)
             }
-        })
+        });
 
         map.on('overlayremove', e => {
             // console.log(e.name)
@@ -171,6 +172,18 @@ export default function PortfolioMap({handleCounting}) {
         countAndSend()
     }, []);
 
+    function colorRadios(){
+        setTimeout(() => {
+            console.log("Delayed, wait for overlay load...");
+            const layerRadios = document.getElementsByClassName('leaflet-control-layers-selector');
+            console.log(layerRadios)
+
+            for (let i = 0; i < layerRadios.length; i++) {
+                layerRadios[i].style['accent-color'] = layerControlColors[i]
+            }
+        }, 500);
+    }
+
     return(
         <div id='map-sidebar-container'>
         <MapContainer
@@ -179,6 +192,7 @@ export default function PortfolioMap({handleCounting}) {
             scrollWheelZoom={true}
             id='map'
             ref={mapRef}
+            whenReady={colorRadios}
         >
         <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
