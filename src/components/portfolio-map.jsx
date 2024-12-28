@@ -360,8 +360,8 @@ export default function PortfolioMap({handleCounting}) {
                     {aviation.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-aviation-${index}`} id={`sb-aviation-${index}`} className='mapsb-item aviation-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}{item.smallText && ` ${<small>{item.smallText}</small>}`}</h3>
+                        <div key={`sb-aviation-${index}`} id={`sb-aviation-${index}`} className='mapsb-item'>
+                        <h3 className='mapsb-name aviation-item' title='Go to marker...' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name}{item.smallText && ` ${<small>{item.smallText}</small>}`}</h3>
                         <p className='mapsb-details'>{item.year} {item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
@@ -383,8 +383,8 @@ export default function PortfolioMap({handleCounting}) {
                     {restaurants.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item dining-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <div key={`sb-dining-${index}`} id={`sb-dining-${index}`} className='mapsb-item'>
+                        <h3 className='mapsb-name dining-item' title='Go to marker...' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
                         <p className='mapsb-details'>{item.year} {item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
@@ -406,8 +406,8 @@ export default function PortfolioMap({handleCounting}) {
                     {offices.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-office-${index}`} id={`sb-offices-${index}`} className='mapsb-item office-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <div key={`sb-office-${index}`} id={`sb-offices-${index}`} className='mapsb-item'>
+                        <h3 className='mapsb-name office-item' title='Go to marker...' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
                         <p className='mapsb-details'>{item.year}{item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
@@ -429,8 +429,8 @@ export default function PortfolioMap({handleCounting}) {
                     {outreach.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-outreach-${index}`} id={`sb-outreach-${index}`} className='mapsb-item outreach-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <div key={`sb-outreach-${index}`} id={`sb-outreach-${index}`} className='mapsb-item'>
+                        <h3 className='mapsb-name outreach-item' title='Go to marker...' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
                         <p className='mapsb-details'>{item.year}{item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
@@ -452,8 +452,8 @@ export default function PortfolioMap({handleCounting}) {
                     {other.map((item, index) => {
                         return(
                         //id needed for handlePopupClick
-                        <div key={`sb-other-${index}`} id={`sb-other-${index}`} className='mapsb-item other-item'>
-                        <h3 className='mapsb-name' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
+                        <div key={`sb-other-${index}`} id={`sb-other-${index}`} className='mapsb-item'>
+                        <h3 className='mapsb-name  other-item' title='Go to marker...' onClick={() => handleSetView(item.coords[0], item.coords[1])}>{item.name} {item.smallText && <small>{item.smallText}</small>}</h3>
                         <p className='mapsb-details'>{item.year}{item.arch && ` - ${item.arch}`}</p>
                         { item.website &&
                             <a className='link' href={item.website} target="_blank" rel="noreferrer">Visit Site <HiOutlineExternalLink/></a>
