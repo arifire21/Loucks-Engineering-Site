@@ -450,6 +450,18 @@ button[role="tab"] {
     border: 2px solid rgba(0,0,0,0.2);
     background-clip: padding-box;
     border-radius: 4px;
+    width: 34px;
+    height: 34px;
+    padding:0;
+    //padding-bottom: initial;
+    // line-height: 30px;
+    //font-size: px; //match zoomctr font
+    text-align: center;
+    //width: 100%;
+}
+
+#customhomebtn:hover {
+    background-color: #f4f4f4;
 }
 
 #map-sidebar {

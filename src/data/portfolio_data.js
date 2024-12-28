@@ -103,7 +103,7 @@ export const restaurants = [
         image: Lucky_Fish,
         year: 2018,
         arch: 'RWB Architects',
-        coords: [26.235523057074396, -80.08897229805034]
+        coords: [26.2354, -80.08897229805034]
     },
     {
         name: "Oceanic",
@@ -302,7 +302,8 @@ export const education = [
         image: Azure
     },
     {
-        name: 'Cardinal Gibbons HS (locker room & misc.)',
+        name: 'Cardinal Gibbons HS',
+        smallText: '(locker room & misc.)',
         website: 'https://www.cghsfl.org/',
         image: CGLocker
     }
@@ -332,7 +333,8 @@ export const gyms = [
 
 export const worship = [
     {
-        name: 'First Baptist Church (restrooms)',
+        name: 'First Baptist Church',
+        smallText: ' (restrooms)',
         website: 'https://www.fbcpompano.org/,',
         image: FBChurch
     },
@@ -385,7 +387,8 @@ export const medDental = [
 
 export const beauty = [
     {
-        name: 'Venetian Nail Spa (multiple locations)',
+        name: 'Venetian Nail Spa',
+        smallText: '(multiple locations)',
         website: 'https://venetiansalon.com/',
         image: Venetian
     },
@@ -427,7 +430,8 @@ export const laundry = [
         image: Aaxon
     },
     {
-        name: 'Sock Monster Laundromart (tenent improvement)',
+        name: 'Sock Monster Laundromart',
+        smallText: '(tenent improvement)',
         website: 'https://www.sockmonsterlaundromart.com/',
         image: PalmLaundry
     },
@@ -463,12 +467,14 @@ export const storage = [
 
 export const auto = [
     {
-        name: 'Pompano Beach Parking Garage (tenant improvement)',
+        name: 'Pompano Beach Parking Garage',
+        smallText: '(tenant improvement)',
         website: 'https://www.pompanobeachfl.gov/residents/parking/parking-garage',
         image: PBGarage
     },
     {
-        name: 'Weston Nissan Volvo (mezzanine)',
+        name: 'Weston Nissan Volvo',
+        smallText: '(mezzanine)',
         website: 'https://www.westonnissan.com/',
         image: NissanMez
     }
@@ -476,17 +482,20 @@ export const auto = [
 
 export const retail = [
     {
-        name: 'Shoppes of Broward (facade renovation)',
+        name: 'Shoppes of Broward',
+        smallText: '(facade renovation)',
         website: 'https://janourarealty.com/property/shoppes-at-broward/',
         image: Shoppes
     },
     {
-        name: 'Shops at Stirling Place (facade renovation)',
+        name: 'Shops at Stirling Place',
+        smallText: '(facade renovation)',
         website: 'https://janourarealty.com/property/shops-at-stirling-place/',
         image: Stirling
     },
     {
-        name: `Macy's (vestibule addition)`,
+        name: `Macy's`,
+        smallText: '(vestibule addition)',
         website: 'https://l.macys.com/boca-raton-fl',
         image: MacysVestibule
     }
@@ -548,7 +557,7 @@ export const other = [
     },
     {
         name: 'Sundance Marina',
-        smallText: '(electrical service)',
+        smallText: '(dock electrical service)',
         coords: [28.179039349196223, -80.6503942745556],
         year: 2023,
         arch: 'Sunbelt Electric'

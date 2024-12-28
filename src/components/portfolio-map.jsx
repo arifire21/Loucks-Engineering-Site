@@ -160,19 +160,22 @@ export default function PortfolioMap({handleCounting}) {
         mapRef.current.flyTo(homeCoords, homeZoom)
     }
     
-    //FIXME: check if already in dom?
-    //creates multiple times when refreshed
+    //checks if already in dom
+    //or else creates multiple times when refreshed
     var created = false;
     const HomeControl = () => {
+        console.log('creating home button...')
         const map = useMap();
-        if(!created){
+        if(!document.getElementById('customhomebtn')){
         // useEffect(() => {
             const homeControl = new L.Control({position: 'topleft'})
             homeControl.onAdd = () => {
                 var btn = L.DomUtil.create('button');
                 btn.ariaLabel = 'Zoom to Home Button';
                 btn.id = 'customhomebtn'
-                btn.textContent = `Home`
+                btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.54253 2.23214C8.40101 2.08388 8.20498 2 8.00002 2C7.79506 2 7.59902 2.08388 7.4575 2.23214L2.2075 7.73214C2.00024 7.94928 1.9424 8.26908 2.06049 8.54505C2.17858 8.82102 2.44984 9 2.75002 9H4V13C4 13.5523 4.44772 14 5 14H6C6.55228 14 7 13.5523 7 13V12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12V13C9 13.5523 9.44772 14 10 14H11C11.5523 14 12 13.5523 12 13V9H13.25C13.5502 9 13.8215 8.82102 13.9395 8.54505C14.0576 8.26908 13.9998 7.94928 13.7925 7.73214L8.54253 2.23214Z" fill="#0F172A"/>
+                                </svg>` //source: https://github.com/tailwindlabs/heroicons/blob/master/src/16/solid/home.svg?short_path=6e4f528
     
                 L.DomEvent.on(btn, 'click', zoomToHome, map)
     
@@ -186,6 +189,8 @@ export default function PortfolioMap({handleCounting}) {
         return () => {
             map.removeControl(homeControl);
         };
+        } else {
+            console.log('btn already exists!')
         }
         //return null;
     }
@@ -216,8 +221,8 @@ export default function PortfolioMap({handleCounting}) {
     }
 
     function colorRadios(){
+        console.log("Delayed, wait for overlay load...");
         setTimeout(() => { 
-            console.log("Delayed, wait for overlay load...");
             const layerRadios = document.getElementsByClassName('leaflet-control-layers-selector');
             for (let i = 0; i < layerRadios.length; i++) {
                 layerRadios[i].style['accent-color'] = layerControlColors[i]
