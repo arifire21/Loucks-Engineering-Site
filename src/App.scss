@@ -444,6 +444,14 @@ button[role="tab"] {
     margin: 0 1rem;
 }
 
+#customhomebtn {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    border-radius: 4px;
+}
+
 #map-sidebar {
     // flex: 1;
     flex-basis: 20%;
@@ -542,6 +550,12 @@ button[role="tab"] {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+}
+
+#zoom-to-home{
+    position: relative;
+    color: red;
+    z-index: 1000;
 }
 
 .mobile {

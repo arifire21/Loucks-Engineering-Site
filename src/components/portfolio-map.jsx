@@ -1,8 +1,8 @@
-import { MapContainer, TileLayer, LayersControl, LayerGroup, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, LayersControl, LayerGroup, Marker, Popup, Control } from 'react-leaflet'
 import { useMap } from 'react-leaflet';
 import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css'; // Re-uses images from ~leaflet package
-import {HiOutlineExternalLink} from 'react-icons/hi'
+import {HiOutlineExternalLink, HiHome} from 'react-icons/hi'
 import {useRef, useState, useEffect } from 'react';
 import L from 'leaflet';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -86,14 +86,17 @@ const blackIcon = new L.Icon({
 });
 
 export default function PortfolioMap({handleCounting}) {
+    const [didMount, setDidMount] = useState(false);
+    const mapRef = useRef(null);
+    // const markerRef = useRef(null);
+    const homeCoords = [26.786950120767685, -81.01376542392296];
+    const homeZoom = 7;
+
     const [diningChecked, setDining] = useState(true)
     const [outreachChecked, setOutreach] = useState(true)
     const [aviationChecked, setAviation] = useState(true)
     const [officeChecked, setOffice] = useState(true)
     const [otherChecked, setOther] = useState(true)
-
-    const mapRef = useRef(null);
-    // const markerRef = useRef(null);
 
     function countAndSend(){
         const count = auto.length + aviation.length + beauty.length + restaurants.length + education.length + gyms.length + laundry.length + medDental.length + multipurpose.length + offices.length + other.length + outreach.length + pets.length + residences.length + retail.length + storage.length + supermarkets.length + worship.length;
@@ -101,31 +104,15 @@ export default function PortfolioMap({handleCounting}) {
         handleCounting(count);
     };
 
-    //zoom in to the marker if name clicked on sidebar
-    function handleSetView(lat, lng){
-        mapRef.current.setView([lat, lng], 18)
+    useEffect(() => {
+        //if(mapRef.current) { //??? needed??
+            setDidMount(true);
+            countAndSend()
+            console.log('init')
+        //}
+    }, []);
 
-        //would need a unique ref for every element
-        // const marker = markerRef.current;
-        // if (marker) {
-        //   marker.openPopup();
-        // }
-    }
-
-    //scroll to and highlight thing in sidebar 
-    function handlePopupClick(index, type){
-        if (typeof window !== "undefined") {
-            let sidebarElem = document.getElementById(`sb-${type}-${index}`)
-            sidebarElem.scrollIntoView({behavior:'smooth', block:'start'})
-            sidebarElem.classList.add('mapsb-highlight')
-
-            setTimeout(() => {
-                // console.log("Delayed for 1 second.");
-                sidebarElem.classList.remove('mapsb-highlight')
-            }, 1000);
-        }
-    }
-
+    //used for handling sidebar rendering
     function MapEvents(){
         const map = useMap();
         map.on('overlayadd', e => {
@@ -168,31 +155,89 @@ export default function PortfolioMap({handleCounting}) {
         return null
     }
 
-    useEffect(() => {
-        countAndSend()
-    }, []);
+    function zoomToHome(){
+        console.log('c')
+        mapRef.current.flyTo(homeCoords, homeZoom)
+    }
+    
+    //FIXME: check if already in dom?
+    //creates multiple times when refreshed
+    var created = false;
+    const HomeControl = () => {
+        const map = useMap();
+        if(!created){
+        // useEffect(() => {
+            const homeControl = new L.Control({position: 'topleft'})
+            homeControl.onAdd = () => {
+                var btn = L.DomUtil.create('button');
+                btn.ariaLabel = 'Zoom to Home Button';
+                btn.id = 'customhomebtn'
+                btn.textContent = `Home`
+    
+                L.DomEvent.on(btn, 'click', zoomToHome, map)
+    
+                return btn;
+            }
+    
+        homeControl.addTo(map);
+        created = true;
+    
+        // Cleanup, remove on unmount
+        return () => {
+            map.removeControl(homeControl);
+        };
+        }
+        //return null;
+    }
+
+    //zoom in to the marker if name clicked on sidebar
+    function handleSetView(lat, lng){
+        mapRef.current.setView([lat, lng], 18)
+
+        //would need a unique ref for every element
+        // const marker = markerRef.current;
+        // if (marker) {
+        //   marker.openPopup();
+        // }
+    }
+
+    //scroll to and highlight thing in sidebar 
+    function handlePopupClick(index, type){
+        if (typeof window !== "undefined") {
+            let sidebarElem = document.getElementById(`sb-${type}-${index}`)
+            sidebarElem.scrollIntoView({behavior:'smooth', block:'start'})
+            sidebarElem.classList.add('mapsb-highlight')
+
+            setTimeout(() => {
+                // console.log("Delayed for 1 second.");
+                sidebarElem.classList.remove('mapsb-highlight')
+            }, 1000);
+        }
+    }
 
     function colorRadios(){
-        setTimeout(() => {
+        setTimeout(() => { 
             console.log("Delayed, wait for overlay load...");
             const layerRadios = document.getElementsByClassName('leaflet-control-layers-selector');
-            console.log(layerRadios)
-
             for (let i = 0; i < layerRadios.length; i++) {
                 layerRadios[i].style['accent-color'] = layerControlColors[i]
             }
         }, 500);
+        console.log('Colors loaded!')
     }
 
+    if(didMount){
     return(
         <div id='map-sidebar-container'>
         <MapContainer
-            center={[26.786950120767685, -81.01376542392296]}
-            zoom={7}
+            center={homeCoords}
+            zoom={homeZoom}
             scrollWheelZoom={true}
             id='map'
             ref={mapRef}
             whenReady={colorRadios}
+            // zoomControl={false}
+            // attributionControl={false}
         >
         <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -201,6 +246,8 @@ export default function PortfolioMap({handleCounting}) {
 
         {/* used for layer control overlay state */}
         <MapEvents/>
+
+        <HomeControl/>
 
         <LayersControl position="topright">
         <LayersControl.Overlay name={`Aviation Projects (${aviation.length})`} checked={aviationChecked}>
@@ -297,8 +344,8 @@ export default function PortfolioMap({handleCounting}) {
             </LayerGroup>
         </LayersControl.Overlay>
         </LayersControl>
+        {/* <button id='zoom-to-home' onClick={zoomToHome}><HiHome/></button> */}
         </MapContainer>
-
         <div id='map-sidebar'>
             <div id='sidebar-wrapper'>
             {aviationChecked && aviationChecked && (
@@ -419,4 +466,9 @@ export default function PortfolioMap({handleCounting}) {
         </div>
         </div>
     )
+    } // end if didMount is true
+
+    else {
+        return( <p>Loading!</p> )
+    }
 }
