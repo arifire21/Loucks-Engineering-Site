@@ -5,6 +5,7 @@ import Funky_Buddha_Img from '../images/funkyb.png';
 // import Mora_Grill_img from '../images/mora-grill.jpg'
 // import Temp from '../images/warehouse.jpg';
 import GulfstreamScreen from '../images/gulfstream.jpg';
+import Athletica from '../images/athletica.png';
 
 export const carouselData = [
     {
@@ -16,6 +17,11 @@ export const carouselData = [
         image: Lucky_Fish_Img,
         name: "Lucky Fish",
         location: "Pompano Beach Pier"
+    },
+    {
+        image: Athletica,
+        name: "Athletic Health and Fitness",
+        location: "Sunrise"
     },
     {
         image: Funky_Buddha_Img,

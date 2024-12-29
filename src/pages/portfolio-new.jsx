@@ -17,15 +17,16 @@ export default function PortfolioNew() {
         <hgroup className="page-title">
             <h1>Portfolio</h1>
             <p className="pp-text">We have completed a wide array of jobs across the state, shown in this interactive map! There are currently <strong>{jobCount}</strong> jobs listed here.<br/>
-                Use the layer control <SlLayers/> to toggle project categories. Click any project name on the sidebar to be taken to that project location, or click any marker <FaMapMarkerAlt/> to highlight the project entry.
+                Use the layer control <SlLayers/> to toggle project categories. Click any marker <FaMapMarkerAlt/> to highlight a project entry.<br/>
+                Click a project name on the sidebar to be taken to that project location.
             </p>
         </hgroup>
         <PortfolioMap handleCounting={handleCounting}/>
 
-        {/* <section style={{margin:"1rem 2rem"}}>
-            <p><span style={{color:'red', fontWeight:'bold'}}>Disclaimer:</span> Pictures are used to indicate the spaces on location of listed projects. Projects include tenant improvements, shell buildings, remodels, and complete jobs. By using them, we are not intending to misrepresent our projects.
+        <section style={{margin:"0 2rem", fontSize:'8pt'}}>
+            <p><strong>Disclaimer:</strong> Pictures are used to indicate the spaces on location of listed projects. Projects include tenant improvements, shell buildings, remodels, and complete jobs. By using them, we are not intending to misrepresent our projects.<br/>
             Pictures used are either provided by us or pulled from the general internet. We believe that no copyright laws have been violated. If we are notified differently, we will immediately remove the picture(s) in question.</p>
-        </section> */}
+        </section>
     </Layout>
     // </>
     )

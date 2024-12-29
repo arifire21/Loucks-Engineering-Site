@@ -492,55 +492,132 @@ button[role="tab"] {
     border-radius: 5px;
 }
 
+.auto-item:hover {
+    cursor: pointer;
+    color: purple;
+    background-color: #f3ccf4a0; /* much lighter purple */
+}
+
 .aviation-item:hover {
     cursor: pointer;
-    color: darkred;
-    background-color: #f4cccc;
+    color: red;
+    background-color: #ffb3b3a0; /* lighter red */
+}
+
+.beauty-item:hover {
+    cursor: pointer;
+    color: rgb(205, 28, 205);
+    background-color: rgb(255, 182, 255); /* much lighter pink/purple */
 }
 
 .dining-item:hover {
     cursor: pointer;
-    color: rgb(18, 133, 171);
-    background-color: rgb(217, 246, 255);
+    color: orangered;
+    background-color: #ffb3aba0; /* much lighter coral */
 }
 
-.other-item:hover {
+.education-item:hover {
+    cursor: pointer;
+    color: orange;
+    background-color: #ffdba4a0; /* lighter orange */
+}
+
+.gyms-item:hover {
     cursor: pointer;
     color: rgb(234, 203, 4);
-    background-color: rgb(243, 234, 177);
+    background-color: rgb(255, 255, 186); /* much lighter yellow */
+}
+
+.laundry-item:hover {
+    cursor: pointer;
+    color: rgb(199, 199, 0);
+    background-color: #ffffbca0; /* much lighter yellow */
+}
+
+.medDental-item:hover {
+    cursor: pointer;
+    color: rgb(167, 224, 194);
+    background-color: rgb(210, 255, 255); /* much lighter cyan */
+}
+
+.multipurpose-item:hover {
+    cursor: pointer;
+    color: yellowgreen;
+    background-color: #d2f0a2a0; /* lighter yellow-green */
 }
 
 .office-item:hover {
     cursor: pointer;
-    color: orange;
-    background-color: rgb(255, 236, 199);
+    color: #2cc71d;
+    background-color: #a2d9a2a0; /* much lighter green */
+}
+
+.other-item:hover {
+    cursor: pointer;
+    color: teal;
+    background-color: #a2e2e2a0; /* much lighter teal */
 }
 
 .outreach-item:hover {
     cursor: pointer;
-    color: green;
-    background-color: rgb(215, 255, 208);
+    color: rgb(18, 133, 171);
+    background-color: rgb(160, 210, 240); /* lighter blue */
 }
 
-#aviation-color{
-    color: darkred;
+.pets-item:hover {
+    cursor: pointer;
+    color: navy;
+    background-color: #9bb3cca0; /* lighter navy */
 }
 
-#dining-color{
-    color:rgb(18, 133, 171)
+.residences-item:hover {
+    cursor: pointer;
+    color: #bea2d2;
+    background-color: lavender;
 }
 
-#other-color{
-    color:rgb(234, 203, 4)
+.retail-item:hover {
+    cursor: pointer;
+    color: purple;
+    background-color: #f3ccf4a0; /* much lighter purple */
 }
 
-#office-color{
-    color:orange
+.storage-item:hover {
+    cursor: pointer;
+    color: rgb(72, 0, 72);
+    background-color: #b39ddba0; /* much lighter dark purple */
 }
 
-#outreach-color{
-    color:green
+.supermarkets-item:hover {
+    cursor: pointer;
+    color: gray;
+    background-color: #f2f2f2; /* much lighter gray */
 }
+
+.worship-item:hover {
+    cursor: pointer;
+    color: #333333;
+    background-color: #b0c4de; /* much lighter slate */
+}
+
+#auto-color { color: purple }
+#aviation-color { color: red }
+#beauty-color { color: rgb(205, 28, 205) }
+#dining-color { color: orangered }
+#education-color { color: orange }
+#gyms-color { color: rgb(234, 203, 4) }
+#laundry-color { color: rgb(199, 199, 0) }
+#medDental-color { color: rgb(167, 224, 194) }
+#multipurpose-color { color: yellowgreen}
+#office-color { color: green }
+#other-color { color: teal }
+#outreach-color { color: rgb(18, 133, 171) }
+#pets-color { color: navy }
+#residences-color { color: #bea2d2 }
+#retail-color { color: purple }
+#storage-color { color: rgb(72, 0, 72) }
+#supermarkets-color { color: gray }
+#worship-color { color: #333 }
 
 .mapsb-details {
     margin: 0;
@@ -605,6 +682,7 @@ button[role="tab"] {
     .pp-text {
         margin-left: 1rem;
         margin-right: 1rem;
+        max-width: 75%;
     }
 
     .mapsb-img {
