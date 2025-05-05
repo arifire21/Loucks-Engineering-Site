@@ -15,6 +15,14 @@ html, body {
     font-size: 14pt;
 }
 
+.btn-danger {
+    background-color: #c62222 !important;
+    border-color: #c62222 !important;
+    &:hover {
+        background-color: #b00000 !important;
+    }
+}
+
 // body {
 //     // height: 100vh !important;
 //     // display: flex;
@@ -112,6 +120,8 @@ footer {
 
 #portfolio-page {
     margin-top: 0 !important;
+    //margin-right: 0 !important;
+    width: calc(100vw - 2rem);
     overflow-x: hidden;
 }
 
@@ -269,17 +279,17 @@ footer {
     // width: 100vw;
     background-color: white;
     padding: 0.25rem 1rem;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid darkred;
 }
 
 #portfolio-nav-mobile{
     display: none;
     z-index: 100;
     position: sticky;
-    top: 65px;
+    top: 0px;
     background-color: white;
     padding: 0.25rem;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid darkred;
 }
 
 // .stuck {
@@ -290,13 +300,42 @@ footer {
 .sticky-btn {
     display:flex;
     justify-content:center;
+    top: 0;
 }
 
 .portfolio-flex-container {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll !important;
-    width: 100vw;
+    width: calc(100vw - 2rem);;
+}
+
+.portfolio-items-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
+
+.portfolio-btn {
+    border-radius: 50%;
+    height: 3rem;
+    padding: 0.5rem !important;
+    text-align: center;
+}
+
+.long-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-left {
+    box-shadow: 10px 0px 15px #fff;
+    z-index: 2;
+}
+
+.btn-right {
+    box-shadow: -10px 0px 15px #fff;
+    z-index: 2;
 }
 
 .portfolio-item {
@@ -577,4 +616,21 @@ button[role="tab"] {
     // .service-header{
     //     width: 70%;
     // }
+
+    #portfolio-page {
+        width: 100vw;
+    }
+
+    .portfolio-flex-container {
+        margin: 0 1rem;
+        //width: 100%;
+    }
+
+    #portfolio-page > h2 {
+        margin-left: 1rem;
+    }
+
+    .portfolio-btn {
+        padding: 0.25rem !important;
+    }
 }

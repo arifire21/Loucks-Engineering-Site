@@ -98,7 +98,7 @@ import Jumbotron from '../images/gulfstream.jpg'
 
 export const restaurants = [
     {
-        name: "Lucky Fish",
+        name: "Lucky Fish (Pompano Bch)",
         website: "https://www.luckyfishpompano.com/",
         image: Lucky_Fish
     },
@@ -111,6 +111,11 @@ export const restaurants = [
         name: "Baresco",
         website: "https://eatbaresco.com/",
         image: Baresco
+    },
+    {
+        name: "Lucky Fish (Dania Bch)",
+        website: "https://www.luckyfishbeachbar.com/dania-beach",
+        image: Lucky_Fish
     },
     {
         name: "Carousel Club",
