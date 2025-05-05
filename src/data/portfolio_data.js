@@ -100,17 +100,24 @@ export const restaurants = [
     {
         name: "Lucky Fish (Pompano Bch)",
         website: "https://www.luckyfishpompano.com/",
-        image: Lucky_Fish
+        image: Lucky_Fish,
+        coords: [26.235523057074396, -80.08897229805034]
     },
     {
         name: "Oceanic",
         website: "https://www.oceanicpompano.com/",
-        image: Oceanic
+        image: Oceanic,
+        coords: [26.23581157785526, -80.08904317461128]
     },
     {
         name: "Baresco",
         website: "https://eatbaresco.com/",
-        image: Baresco
+        image: Baresco,
+        coords: [26.235869639172, -80.08943552222465]
+    },
+    {
+        name: "How You Brewin'",
+        coords: [26.236697283043124, -80.09017001428346]
     },
     {
         name: "Lucky Fish (Dania Bch)",
@@ -119,30 +126,33 @@ export const restaurants = [
     },
     {
         name: "Carousel Club",
-        website: "https://gulfstreampark.com/dining/#carousel-club",
-        image: CarouselClub
+        website: "https://carouselclub.com",
+        image: CarouselClub,
+        coords: [25.980103968915184, -80.13892428265447]
     },
     {
         name: 'Cubico Coffee',
         website: 'https://www.cubicocoffee.com/',
-        image: CubicoCoffee
+        image: CubicoCoffee,
+        coords: [26.06055934771893, -80.34788717461608]
     },
     {
         name: 'The Cove',
         website: 'https://www.thecovedeerfield.com/',
-        image: Cove
-    },
-    {
-        name: 'Mora Grill',
-        image: MoraGrill
+        image: Cove,
+        coords: [26.313747619370787, -80.08158147460914]
     }
+    // {
+    //     name: 'Mora Grill',
+    //     image: MoraGrill
+    // }
 ]
 
 export const residences = [
     {
         name: "Blu on Marina Boulevard",
         website: 'https://www.bluonmarinaboulevard.com',
-        image: BluApts
+        image: BluApts,
     }
 ]
 

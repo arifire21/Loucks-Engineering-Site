@@ -6,7 +6,6 @@ import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
     let pathname = useLocation().pathname
-    console.log(pathname)
 
     return (
     <footer>
