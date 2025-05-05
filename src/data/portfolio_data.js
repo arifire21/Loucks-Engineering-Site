@@ -630,7 +630,6 @@ export const other = [
         name: 'Pick-A-Ball',
         smallText: '(interactive flooring)',
         website: 'http://pickaballcourts.com/',
-        year: 2024,
         coords: [26.30306061909846, -80.15367131693922],
         year: '2022-2024',
         arch: 'RWB'
