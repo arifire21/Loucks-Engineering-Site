@@ -10,7 +10,8 @@ export default function Footer() {
     return (
     <footer>
         <div>
-            <img id='mobile-footer-logo' src={Logo} alt="LEI footer logo" width={100} height={100}/>
+            <img id='d-logo' src={Logo} alt="LEI footer logo" width={100} height={100}/>
+            <p id='m-logo' style={{fontSize: '20pt', marginBottom: 0}}>Loucks Engineering, Inc.</p>
             <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p>
         </div>
 
