@@ -106,6 +106,15 @@ footer {
     color: salmon
 }
 
+#m-logo {display: none;}
+
+#d-logo {
+    display: block;
+    width: 70px !important;
+    height: 70px !important;
+    margin: auto;
+}
+
 // .abt-inner {
 //     margin-left: 1rem;
 // }
@@ -559,10 +568,14 @@ button[role="tab"] {
         gap: 1rem;
     }
 
-    #mobile-footer-logo {
-        width: 80px !important;
-        height: 80px !important;
-    }
+    #m-logo {display: block;}
+
+    #d-logo {display: none;}
+
+    // #mobile-footer-logo {
+    //     width: 80px !important;
+    //     height: 80px !important;
+    // }
 
     .page-contents {
         margin: 0 !important;
