@@ -5,7 +5,8 @@ import Baresco from '../images/baresco.jpg'
 import CarouselClub from '../images/carousel-club.jpg'
 import CubicoCoffee from '../images/cubico-coffee-5275.jpg'
 import Cove from '../images/thecove.jpg'
-import MoraGrill from '../images/mora-grill.jpg'
+//import MoraGrill from '../images/mora-grill.jpg'
+import HYB from '../images/HYB.png'
 
 //residence
 import BluApts from '../images/blu-apt.jpg'
@@ -117,6 +118,8 @@ export const restaurants = [
     },
     {
         name: "How You Brewin'",
+        website: "https://howyoubrewin.com/pages/pompano-guide-for-guests",
+        image: HYB,
         coords: [26.236697283043124, -80.09017001428346]
     },
     {

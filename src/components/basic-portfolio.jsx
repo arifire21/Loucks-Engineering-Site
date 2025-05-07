@@ -14,7 +14,7 @@ export default function BasicPortfolio() {
             const portfolioContainer = document.getElementById(portfolioContainerID);
             console.log(portfolioContainer)
 
-            portfolioContainer.scrollLeft += 200;
+            portfolioContainer.scrollLeft += 100;
 
             if (portfolioContainer.scrollLeft === 0) {
                 //setDisabledRight(true)
@@ -30,7 +30,7 @@ export default function BasicPortfolio() {
             const portfolioContainer = document.getElementById(portfolioContainerID);
             console.log(portfolioContainer)
 
-            portfolioContainer.scrollLeft -= 200;
+            portfolioContainer.scrollLeft -= 100;
 
             if (portfolioContainer.scrollLeft === 0) {
                 //setDisabledLeft(true)
@@ -52,15 +52,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='dining-cnt'>
                     {restaurants.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -84,15 +84,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='worship-cnt'>
                     {worship.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -116,15 +116,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='offices-cnt'>
                     {offices.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -154,9 +154,9 @@ export default function BasicPortfolio() {
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
                             {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
                                 :
-                                <p className='link-placeholder'>{item.name}</p>
+                                <p className='link-placeholder p-name'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -180,15 +180,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='outreach-cnt'>
                     {outreach.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -212,15 +212,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='storage-cnt'>
                     {storage.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -244,15 +244,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='gym-cnt'>
                     {gyms.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -276,15 +276,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='meddent-cnt'>
                     {medDental.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -308,15 +308,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='beauty-cnt'>
                     {beauty.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -340,15 +340,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='retail-cnt'>
                     {retail.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -372,15 +372,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='edu-cnt'>
                     {education.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -404,15 +404,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='market-cnt'>
                     {supermarkets.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -436,15 +436,15 @@ export default function BasicPortfolio() {
                     </div>
                     {laundry.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -468,15 +468,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='auto-cnt'>
                     {auto.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -500,15 +500,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='pet-cnt'>
                     {pets.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -531,15 +531,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='multi-cnt'>
                     {multipurpose.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -563,15 +563,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='res-cnt'>
                     {residences.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}
@@ -595,15 +595,15 @@ export default function BasicPortfolio() {
                 <div className='portfolio-items-container' id='other-cnt'>
                     {other.map((item, index) =>
                         <div className='portfolio-item' key={index}>
+                            {item.website ?
+                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                                :
+                                <p className='link-placeholder p-name'>{item.name}</p>
+                            }
                             {item.image ?
                                 <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                            {item.website ?
-                                <a className='link' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder'>{item.name}</p>
                             }
                         </div>
                     )}

@@ -2,9 +2,9 @@ import Oceanic_Img from '../images/oceanic.jpg';
 import Lucky_Fish_Img from '../images/lucky_fish.jpg';
 import Blu_Img from '../images/blu-apt.jpg';
 import Funky_Buddha_Img from '../images/funkyb.png';
-// import Mora_Grill_img from '../images/mora-grill.jpg'
-// import Temp from '../images/warehouse.jpg';
 import GulfstreamScreen from '../images/gulfstream.jpg';
+import AFG from '../images/afg-warehouse.jpeg';
+import Mizner from '../images/mizner-park-fountain.jpg';
 
 export const carouselData = [
     {
@@ -21,6 +21,16 @@ export const carouselData = [
         image: Funky_Buddha_Img,
         name: "Funky Buddha Brewery",
         location: "Oakland Park"
+    },
+    {
+        image: AFG,
+        name: "Avenger Flight Group Warehouse",
+        location: "Fort Lauderdale"
+    },
+    {
+        image: Mizner,
+        name: "Mizner Park (tenant improvements)",
+        location: "Boca Raton"
     },
     {
         image: Blu_Img,
