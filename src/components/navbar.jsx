@@ -24,7 +24,7 @@ export default function BootstrapNavbar() {
                                     <Nav.Link><FaList className='mobile-icon' size={22}/>Services</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/portfolio">
-                                    <Nav.Link>Project Portfolio</Nav.Link>
+                                    <Nav.Link><FaImages className='mobile-icon' size={22}/>Project Portfolio</Nav.Link>
                                 </LinkContainer>
                                 {/* <LinkContainer to="/portfolio-new">
                                     <Nav.Link><FaImages className='mobile-icon' size={22}/>Project Portfolio</Nav.Link>
