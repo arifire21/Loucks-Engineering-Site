@@ -14,7 +14,7 @@ export default function BasicPortfolio() {
             const portfolioContainer = document.getElementById(portfolioContainerID);
             console.log(portfolioContainer)
 
-            portfolioContainer.scrollLeft += 100;
+            portfolioContainer.scrollLeft += 200;
 
             if (portfolioContainer.scrollLeft === 0) {
                 //setDisabledRight(true)
@@ -30,7 +30,7 @@ export default function BasicPortfolio() {
             const portfolioContainer = document.getElementById(portfolioContainerID);
             console.log(portfolioContainer)
 
-            portfolioContainer.scrollLeft -= 100;
+            portfolioContainer.scrollLeft -= 200;
 
             if (portfolioContainer.scrollLeft === 0) {
                 //setDisabledLeft(true)
@@ -460,11 +460,13 @@ export default function BasicPortfolio() {
 
             <h2>Automotive</h2>
             <div id='auto' className='portfolio-flex-container'>
+            {auto.length > 2 && (
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledLeft}
                         onClick={() => scrollLeft('auto-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
+            )}
                 <div className='portfolio-items-container' id='auto-cnt'>
                     {auto.map((item, index) =>
                         <div className='portfolio-item' key={index}>
@@ -481,22 +483,26 @@ export default function BasicPortfolio() {
                         </div>
                     )}
                 </div>
+                {auto.length > 2 && (
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledRight}
                         onClick={() => scrollRight('auto-cnt')}
                     ><FaCaretRight size={30} /></Button>
                 </div>
+                )}
             </div>
 
             <hr />
 
             <h2>Pet Care</h2>
             <div id='pets' className='portfolio-flex-container'>
+                {pets.length > 2 && (
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledLeft}
                         onClick={() => scrollLeft('pet-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
+                )}
                 <div className='portfolio-items-container' id='pet-cnt'>
                     {pets.map((item, index) =>
                         <div className='portfolio-item' key={index}>
@@ -513,21 +519,25 @@ export default function BasicPortfolio() {
                         </div>
                     )}
                 </div>
+                {pets.length > 2 && (
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledRight}
                         onClick={() => scrollRight('pet-cnt')}
                     ><FaCaretRight size={30} /></Button></div>
+                )}
             </div>
 
             <hr />
 
             <h2>Multipurpose Spaces</h2>
             <div id='multipurpose' className='portfolio-flex-container'>
+                {multipurpose.length > 2 && (
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledLeft}
                         onClick={() => scrollLeft('multi-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
+                )}
                 <div className='portfolio-items-container' id='multi-cnt'>
                     {multipurpose.map((item, index) =>
                         <div className='portfolio-item' key={index}>
@@ -544,22 +554,26 @@ export default function BasicPortfolio() {
                         </div>
                     )}
                 </div>
+                {multipurpose.length > 2 && (
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledRight}
                         onClick={() => scrollRight('multi-cnt')}
                     ><FaCaretRight size={30} /></Button>
                 </div>
+                )}
             </div>
 
             <hr />
 
             <h2>Residences (Single & Multi-Family)</h2>
             <div id='residences' className='portfolio-flex-container'>
-                <div className='long-btn-container btn-left'>
+                {residences.length > 2 && (
+                    <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledLeft}
                         onClick={() => scrollLeft('res-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
+                )}
                 <div className='portfolio-items-container' id='res-cnt'>
                     {residences.map((item, index) =>
                         <div className='portfolio-item' key={index}>
@@ -576,11 +590,13 @@ export default function BasicPortfolio() {
                         </div>
                     )}
                 </div>
+                {residences.length > 2 && (
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={btnDisabledRight}
                         onClick={() => scrollRight('res-cnt')}
                     ><FaCaretRight size={30} /></Button>
                 </div>
+                )}
             </div>
 
             <hr />
