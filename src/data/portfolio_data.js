@@ -453,7 +453,7 @@ export const supermarkets = [
 
 export const multipurpose = [
     {
-        name: 'Mizner Park (tenant improvement, multiple spaces)',
+        name: 'Mizner Park (tenant improvement, multiple)',
         website: 'https://www.miznerpark.com/en.html',
         image: Mizner
     }
