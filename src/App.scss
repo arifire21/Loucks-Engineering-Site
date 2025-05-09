@@ -321,7 +321,7 @@ footer {
 .portfolio-items-container {
     display: flex;
     flex-direction: row;
-    overflow-x: hidden !important;
+    overflow-x: scroll !important;
     scroll-behavior: smooth;
 }
 

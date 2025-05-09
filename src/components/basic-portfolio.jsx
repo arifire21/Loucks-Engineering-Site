@@ -80,42 +80,42 @@ export default function BasicPortfolio() {
     const supermarketsRef = useRef(null);
     const otherRef = useRef(null);
 
-    function setListNode(portfolioContainerID){
-        if (portfolioContainerID === 'restaurants') {
+    function setRefNode(portfolioContainerID) {
+        if (portfolioContainerID === 'dining-cnt') {
             return restaurantsRef.current;
-        } else if (portfolioContainerID === 'offices') {
+        } else if (portfolioContainerID === 'offices-cnt') {
             return officesRef.current;
-        } else if (portfolioContainerID === 'outreach') {
+        } else if (portfolioContainerID === 'outreach-cnt') {
             return outreachRef.current;
-        } else if (portfolioContainerID === 'residences') {
+        } else if (portfolioContainerID === 'res-cnt') {
             return residencesRef.current;
-        } else if (portfolioContainerID === 'aviation') {
+        } else if (portfolioContainerID === 'aviation-cnt') {
             return aviationRef.current;
-        } else if (portfolioContainerID === 'education') {
+        } else if (portfolioContainerID === 'edu-cnt') {
             return educationRef.current;
-        } else if (portfolioContainerID === 'gyms') {
+        } else if (portfolioContainerID === 'gym-cnt') {
             return gymRef.current;
-        } else if (portfolioContainerID === 'worship') {
+        } else if (portfolioContainerID === 'worship-cnt') {
             return worshipRef.current;
-        } else if (portfolioContainerID === 'medDental') {
+        } else if (portfolioContainerID === 'meddental-cnt') {
             return medDentalRef.current;
-        } else if (portfolioContainerID === 'beauty') {
+        } else if (portfolioContainerID === 'beauty-cnt') {
             return beautyRef.current;
-        } else if (portfolioContainerID === 'pets') {
+        } else if (portfolioContainerID === 'pets-cnt') {
             return petsRef.current;
-        } else if (portfolioContainerID === 'laundry') {
+        } else if (portfolioContainerID === 'laundry-cnt') {
             return laundryRef.current;
-        } else if (portfolioContainerID === 'storage') {
+        } else if (portfolioContainerID === 'storage-cnt') {
             return storageRef.current;
-        } else if (portfolioContainerID === 'auto') {
+        } else if (portfolioContainerID === 'auto-cnt') {
             return autoRef.current;
-        } else if (portfolioContainerID === 'multipurpose') {
+        } else if (portfolioContainerID === 'multi-cnt') {
             return multipurposeRef.current;
-        } else if (portfolioContainerID === 'retail') {
+        } else if (portfolioContainerID === 'retail-cnt') {
             return retailRef.current;
-        } else if (portfolioContainerID === 'other') {
+        } else if (portfolioContainerID === 'other-cnt') {
             return otherRef.current;
-        } else if (portfolioContainerID === 'supermarkets') {
+        } else if (portfolioContainerID === 'market-cnt') {
             return supermarketsRef.current;
         } else {
             return null; // fallback
@@ -130,109 +130,145 @@ export default function BasicPortfolio() {
             //portfolioContainer.scrollLeft += 200;
 
             //find which node is used
-            const listNode = setListNode(portfolioContainerID);
+            const refNode = setRefNode(portfolioContainerID);
+
+            //increment whichever ID is used
+            if (portfolioContainerID === 'dining-cnt') {
+                setRestaurantID(restaurantID + 1);
+                setRestaurantsDisabledLeft(false);
+            } else if (portfolioContainerID === 'offices-cnt') {
+                setOfficesID(officesID + 1);
+                setOfficesDisabledLeft(false);
+            } else if (portfolioContainerID === 'outreach-cnt') {
+                setOutreachID(outreachID + 1);
+                setOutreachDisabledLeft(false);
+            } else if (portfolioContainerID === 'res-cnt') {
+                setResidencesID(residencesID + 1);
+                setResidencesDisabledLeft(false);
+            } else if (portfolioContainerID === 'aviation-cnt') {
+                setAviationID(aviationID + 1);
+                setAviationDisabledLeft(false);
+            } else if (portfolioContainerID === 'edu-cnt') {
+                setEducationID(educationID + 1);
+                setEducationDisabledLeft(false);
+            } else if (portfolioContainerID === 'gym-cnt') {
+                setGymsID(gymsID + 1);
+                setGymsDisabledLeft(false);
+            } else if (portfolioContainerID === 'worship-cnt') {
+                setWorshipID(worshipID + 1);
+                setWorshipDisabledLeft(false);
+            } else if (portfolioContainerID === 'meddental-cnt') {
+                setMedDentalID(medDentalID + 1);
+                setMedDentalDisabledLeft(false);
+            } else if (portfolioContainerID === 'beauty-cnt') {
+                setBeautyID(beautyID + 1);
+                setBeautyDisabledLeft(false);
+            } else if (portfolioContainerID === 'pets-cnt') {
+                setPetsID(petsID + 1);
+                setPetsDisabledLeft(false);
+            } else if (portfolioContainerID === 'laundry-cnt') {
+                setLaundryID(laundryID + 1);
+                setLaundryDisabledLeft(false);
+            } else if (portfolioContainerID === 'storage-cnt') {
+                setStorageID(storageID + 1);
+                setStorageDisabledLeft(false);
+            } else if (portfolioContainerID === 'auto-cnt') {
+                setAutoID(autoID + 1);
+                setAutoDisabledLeft(false);
+            } else if (portfolioContainerID === 'multi-cnt') {
+                setMultipurposeID(multipurposeID + 1);
+                setMultipurposeDisabledLeft(false);
+            } else if (portfolioContainerID === 'retail-cnt') {
+                setRetailID(retailID + 1);
+                setRetailDisabledLeft(false);
+            } else if (portfolioContainerID === 'other-cnt') {
+                setOtherID(otherID + 1);
+                setOtherDisabledLeft(false);
+            } else if (portfolioContainerID === 'market-cnt') {
+                setSupermarketsID(supermarketsID + 1);
+                setSupermarketsDisabledLeft(false);
+            }
 
             //do the scroll
-            //const imgToScroll = listNode.querySelectorAll(portfolio-item[index]);
-            listNode.scrollIntoView({
+            //const imgToScroll = refNode.querySelectorAll(portfolio-item[index]);
+            refNode.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
                 inline: 'center'
             });
-            
-            //increment whichever ID is used
-            if (portfolioContainerID === 'restaurants') {
-                setRestaurantID(restaurantID + 1);
-            } else if (portfolioContainerID === 'offices') {
-                setOfficesID(officesID + 1);
-            } else if (portfolioContainerID === 'outreach') {
-                setOutreachID(outreachID + 1);
-            } else if (portfolioContainerID === 'residences') {
-                setResidencesID(residencesID + 1);
-            } else if (portfolioContainerID === 'aviation') {
-                setAviationID(aviationID + 1);
-            } else if (portfolioContainerID === 'education') {
-                setEducationID(educationID + 1);
-            } else if (portfolioContainerID === 'gyms') {
-                setGymsID(gymsID + 1);
-            } else if (portfolioContainerID === 'worship') {
-                setWorshipID(worshipID + 1);
-            } else if (portfolioContainerID === 'medDental') {
-                setMedDentalID(medDentalID + 1);
-            } else if (portfolioContainerID === 'beauty') {
-                setBeautyID(beautyID + 1);
-            } else if (portfolioContainerID === 'pets') {
-                setPetsID(petsID + 1);
-            } else if (portfolioContainerID === 'laundry') {
-                setLaundryID(laundryID + 1);
-            } else if (portfolioContainerID === 'storage') {
-                setStorageID(storageID + 1);
-            } else if (portfolioContainerID === 'auto') {
-                setAutoID(autoID + 1);
-            } else if (portfolioContainerID === 'multipurpose') {
-                setMultipurposeID(multipurposeID + 1)
-            } else if (portfolioContainerID === 'retail') {
-                setRetailID(retailID + 1);
-            } else if (portfolioContainerID === 'other') {
-                setOtherID(otherID + 1);
-            } else if (portfolioContainerID === 'supermarkets') {
-                setSupermarketsID(supermarketsID + 1);
-            }
 
             //check if at end of array
-            if (restaurantID >= restaurants.length) {
+            if (restaurantID >= restaurants.length - 1) {
                 setRestaurantsDisabledRight(true);
+                setRestaurantID(restaurants.length - 1); //confirm rerender, and avoid OOB
             }
-            if (officesID >= offices.length) {
+            if (officesID >= offices.length - 1) {
                 setOfficesDisabledRight(true);
+                setOfficesID(offices.length - 1);
             }
-            if (outreachID >= outreach.length) {
+            if (outreachID >= outreach.length - 1) {
                 setOutreachDisabledRight(true);
+                setOutreachID(outreach.length - 1);
             }
-            if (residencesID >= residences.length) {
+            if (residencesID >= residences.length - 1) {
                 setResidencesDisabledRight(true);
+                setResidencesID(residences.length - 1);
             }
-            if (aviationID >= aviation.length) {
+            if (aviationID >= aviation.length - 1) {
                 setAviationDisabledRight(true);
+                setAviationID(aviation.length - 1);
             }
-            if (educationID >= education.length) {
+            if (educationID >= education.length - 1) {
                 setEducationDisabledRight(true);
+                setEducationID(education.length - 1);
             }
-            if (gymsID >= gyms.length) {
+            if (gymsID >= gyms.length - 1) {
                 setGymsDisabledRight(true);
+                setGymsID(gyms.length - 1);
             }
-            if (worshipID >= worship.length) {
+            if (worshipID >= worship.length - 1) {
                 setWorshipDisabledRight(true);
+                setWorshipID(worship.length - 1);
             }
-            if (medDentalID >= medDental.length) {
+            if (medDentalID >= medDental.length - 1) {
                 setMedDentalDisabledRight(true);
+                setMedDentalID(medDental.length - 1);
             }
-            if (beautyID >= beauty.length) {
+            if (beautyID >= beauty.length - 1) {
                 setBeautyDisabledRight(true);
+                setBeautyID(beauty.length - 1);
             }
-            if (petsID >= pets.length) {
+            if (petsID >= pets.length - 1) {
                 setPetsDisabledRight(true);
+                setPetsID(pets.length - 1);
             }
-            if (laundryID >= laundry.length) {
+            if (laundryID >= laundry.length - 1) {
                 setLaundryDisabledRight(true);
+                setLaundryID(laundry.length - 1);
             }
-            if (storageID >= storage.length) {
+            if (storageID >= storage.length - 1) {
                 setStorageDisabledRight(true);
+                setStorageID(storage.length - 1);
             }
-            if (autoID >= auto.length) {
+            if (autoID >= auto.length - 1) {
                 setAutoDisabledRight(true);
+                setAutoID(auto.length - 1);
             }
-            if (multipurposeID >= multipurpose.length) {
+            if (multipurposeID >= multipurpose.length - 1) {
                 setMultipurposeDisabledRight(true);
+                setMultipurposeID(multipurpose.length - 1);
             }
-            if (retailID >= retail.length) {
+            if (retailID >= retail.length - 1) {
                 setRetailDisabledRight(true);
+                setRetailID(retail.length - 1);
             }
-            if (otherID >= other.length) {
+            if (otherID >= other.length - 1) {
                 setOtherDisabledRight(true);
+                setOtherID(other.length - 1);
             }
-            if (supermarketsID >= supermarkets.length) {
+            if (supermarketsID >= supermarkets.length - 1) {
                 setSupermarketsDisabledRight(true);
+                setSupermarketsID(supermarkets.length - 1);
             }
         } else {    //for SR WIndow
             console.log("Window Undefined, please wait...");
@@ -247,127 +283,145 @@ export default function BasicPortfolio() {
             //portfolioContainer.scrollLeft += 200;
 
             //find which node is used
-            const listNode = setListNode(portfolioContainerID);
+            const refNode = setRefNode(portfolioContainerID);
 
             //do the scroll
-            //const imgToScroll = listNode.querySelectorAll(portfolio-item[index]);
-            listNode.scrollIntoView({
+            //const imgToScroll = refNode.querySelectorAll(portfolio-item[index]);
+            refNode.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
                 inline: 'center'
             });
-            
+
             //increment whichever ID is used
-            if (portfolioContainerID === 'restaurants') {
+            if (portfolioContainerID === 'dining-cnt') {
                 setRestaurantID(restaurantID - 1);
                 setRestaurantsDisabledRight(false);
-            } else if (portfolioContainerID === 'offices') {
+            } else if (portfolioContainerID === 'offices-cnt') {
                 setOfficesID(officesID - 1);
                 setOfficesDisabledRight(false);
-            } else if (portfolioContainerID === 'outreach') {
+            } else if (portfolioContainerID === 'outreach-cnt') {
                 setOutreachID(outreachID - 1);
                 setOutreachDisabledRight(false);
-            } else if (portfolioContainerID === 'residences') {
+            } else if (portfolioContainerID === 'res-cnt') {
                 setResidencesID(residencesID - 1);
                 setResidencesDisabledRight(false);
-            } else if (portfolioContainerID === 'aviation') {
+            } else if (portfolioContainerID === 'aviation-cnt') {
                 setAviationID(aviationID - 1);
                 setAviationDisabledRight(false);
-            } else if (portfolioContainerID === 'education') {
+            } else if (portfolioContainerID === 'edu-cnt') {
                 setEducationID(educationID - 1);
                 setEducationDisabledRight(false);
-            } else if (portfolioContainerID === 'gyms') {
+            } else if (portfolioContainerID === 'gym-cnt') {
                 setGymsID(gymsID - 1);
                 setGymsDisabledRight(false);
-            } else if (portfolioContainerID === 'worship') {
+            } else if (portfolioContainerID === 'worship-cnt') {
                 setWorshipID(worshipID - 1);
                 setWorshipDisabledRight(false);
-            } else if (portfolioContainerID === 'medDental') {
+            } else if (portfolioContainerID === 'meddental-cnt') {
                 setMedDentalID(medDentalID - 1);
                 setMedDentalDisabledRight(false);
-            } else if (portfolioContainerID === 'beauty') {
+            } else if (portfolioContainerID === 'beauty-cnt') {
                 setBeautyID(beautyID - 1);
                 setBeautyDisabledRight(false);
-            } else if (portfolioContainerID === 'pets') {
+            } else if (portfolioContainerID === 'pets-cnt') {
                 setPetsID(petsID - 1);
                 setPetsDisabledRight(false);
-            } else if (portfolioContainerID === 'laundry') {
+            } else if (portfolioContainerID === 'laundry-cnt') {
                 setLaundryID(laundryID - 1);
                 setLaundryDisabledRight(false);
-            } else if (portfolioContainerID === 'storage') {
+            } else if (portfolioContainerID === 'storage-cnt') {
                 setStorageID(storageID - 1);
                 setStorageDisabledRight(false);
-            } else if (portfolioContainerID === 'auto') {
+            } else if (portfolioContainerID === 'auto-cnt') {
                 setAutoID(autoID - 1);
                 setAutoDisabledRight(false);
-            } else if (portfolioContainerID === 'multipurpose') {
+            } else if (portfolioContainerID === 'multi-cnt') {
                 setMultipurposeID(multipurposeID - 1);
                 setMultipurposeDisabledRight(false);
-            } else if (portfolioContainerID === 'retail') {
+            } else if (portfolioContainerID === 'retail-cnt') {
                 setRetailID(retailID - 1);
                 setRetailDisabledRight(false);
-            } else if (portfolioContainerID === 'other') {
+            } else if (portfolioContainerID === 'other-cnt') {
                 setOtherID(otherID - 1);
                 setOtherDisabledRight(false);
-            } else if (portfolioContainerID === 'supermarkets') {
+            } else if (portfolioContainerID === 'market-cnt') {
                 setSupermarketsID(supermarketsID - 1);
                 setSupermarketsDisabledRight(false);
             }
 
             //check if at end of array
-            if (restaurantID == 0) {
+            if (restaurantID === 0) {
                 setRestaurantsDisabledLeft(true);
+                setRestaurantID(0); //confirm rerender
             }
-            if (officesID == 0) {
+            if (officesID === 0) {
                 setOfficesDisabledLeft(true);
+                setOfficesID(0);
             }
-            if (outreachID == 0) {
+            if (outreachID === 0) {
                 setOutreachDisabledLeft(true);
+                setOutreachID(0);
             }
-            if (residencesID == 0) {
+            if (residencesID === 0) {
                 setResidencesDisabledLeft(true);
+                setResidencesID(0);
             }
-            if (aviationID == 0) {
+            if (aviationID === 0) {
                 setAviationDisabledLeft(true);
+                setAviationID(0);
             }
-            if (educationID == 0) {
+            if (educationID === 0) {
                 setEducationDisabledLeft(true);
+                setEducationID(0);
             }
-            if (gymsID == 0) {
+            if (gymsID === 0) {
                 setGymsDisabledLeft(true);
+                setGymsID(0);
             }
-            if (worshipID == 0) {
+            if (worshipID === 0) {
                 setWorshipDisabledLeft(true);
+                setWorshipID(0);
             }
-            if (medDentalID == 0) {
+            if (medDentalID === 0) {
                 setMedDentalDisabledLeft(true);
+                setMedDentalID(0);
             }
-            if (beautyID == 0) {
+            if (beautyID === 0) {
                 setBeautyDisabledLeft(true);
+                setBeautyID(0);
             }
-            if (petsID == 0) {
+            if (petsID === 0) {
                 setPetsDisabledLeft(true);
+                setPetsID(0);
             }
-            if (laundryID == 0) {
+            if (laundryID === 0) {
                 setLaundryDisabledLeft(true);
+                setLaundryID(0);
             }
-            if (storageID == 0) {
+            if (storageID === 0) {
                 setStorageDisabledLeft(true);
+                setStorageID(0);
             }
-            if (autoID == 0) {
+            if (autoID === 0) {
                 setAutoDisabledLeft(true);
+                setAutoID(0);
             }
-            if (multipurposeID == 0) {
+            if (multipurposeID === 0) {
                 setMultipurposeDisabledLeft(true);
+                setMultipurposeID(0);
             }
-            if (retailID == 0) {
+            if (retailID === 0) {
                 setRetailDisabledLeft(true);
+                setRetailID(0);
             }
-            if (otherID == 0) {
+            if (otherID === 0) {
                 setOtherDisabledLeft(true);
+                setOtherID(0);
             }
-            if (supermarketsID == 0) {
+            if (supermarketsID === 0) {
                 setSupermarketsDisabledLeft(true);
+                setSupermarketsID(0);
             }
         } else {
             console.log("Window Undefined, please wait...");
@@ -408,7 +462,7 @@ export default function BasicPortfolio() {
 
             <hr />
 
-            <h2 id='worship'>Worship</h2>
+            <h2 id='worship-cnt'>Worship</h2>
             <div className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={worshipBtnDisabledLeft}
@@ -440,7 +494,7 @@ export default function BasicPortfolio() {
 
             <hr />
 
-            <h2 id='offices'>Offices</h2>
+            <h2 id='offices-cnt'>Office Spaces</h2>
             <div className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={officesBtnDisabledLeft}
@@ -473,7 +527,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Aviation</h2>
-            <div id='aviation' className='portfolio-flex-container'>
+            <div id='aviation-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={aviationBtnDisabledLeft}
                         onClick={() => scrollLeft('aviation-cnt')}
@@ -505,7 +559,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Outreach</h2>
-            <div id='outreach' className='portfolio-flex-container'>
+            <div id='outreach-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={outreachBtnDisabledLeft}
                         onClick={() => scrollLeft('outreach-cnt')}
@@ -537,7 +591,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Storage Facilities</h2>
-            <div id='storage' className='portfolio-flex-container'>
+            <div id='storage-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={storageBtnDisabledLeft}
                         onClick={() => scrollLeft('storage-cnt')}
@@ -569,7 +623,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Gyms</h2>
-            <div id='gyms' className='portfolio-flex-container'>
+            <div id='gym-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={gymsBtnDisabledLeft}
                         onClick={() => scrollLeft('gym-cnt')}
@@ -633,7 +687,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Beauty</h2>
-            <div id='beauty' className='portfolio-flex-container'>
+            <div id='beauty-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={beautyBtnDisabledLeft}
                         onClick={() => scrollLeft('beauty-cnt')}
@@ -665,7 +719,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Retail</h2>
-            <div id='retail' className='portfolio-flex-container'>
+            <div id='retail-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={retailBtnDisabledLeft}
                         onClick={() => scrollLeft('retail-cnt')}
@@ -697,7 +751,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Educational Institutions</h2>
-            <div id='education' className='portfolio-flex-container'>
+            <div id='edu-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={educationBtnDisabledLeft}
                         onClick={() => scrollLeft('edu-cnt')}
@@ -729,7 +783,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Supermarkets</h2>
-            <div id='supermarkets' className='portfolio-flex-container'>
+            <div id='market-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={supermarketsBtnDisabledLeft}
                         onClick={() => scrollLeft('market-cnt')}
@@ -761,7 +815,7 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Laundry Facilities</h2>
-            <div id='laundry' className='portfolio-flex-container'>
+            <div id='laundry-cnt' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={laundryBtnDisabledLeft}
                         onClick={() => scrollLeft('laundry-cnt')}
@@ -793,14 +847,14 @@ export default function BasicPortfolio() {
             <hr />
 
             <h2>Automotive</h2>
-            <div id='auto' className='portfolio-flex-container'>
-            {auto.length > 2 && (
-                <div className='long-btn-container btn-left'>
-                    <Button variant="danger" className="portfolio-btn" disabled={autoBtnDisabledLeft}
-                        onClick={() => scrollLeft('auto-cnt')}
-                    ><FaCaretLeft size={30} /></Button>
-                </div>
-            )}
+            <div id='auto-cnt' className='portfolio-flex-container'>
+                {auto.length > 2 && (
+                    <div className='long-btn-container btn-left'>
+                        <Button variant="danger" className="portfolio-btn" disabled={autoBtnDisabledLeft}
+                            onClick={() => scrollLeft('auto-cnt')}
+                        ><FaCaretLeft size={30} /></Button>
+                    </div>
+                )}
                 <div className='portfolio-items-container' id='auto-cnt'>
                     {auto.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === autoID ? autoRef : null}>
@@ -818,24 +872,24 @@ export default function BasicPortfolio() {
                     )}
                 </div>
                 {auto.length > 2 && (
-                <div className='long-btn-container btn-right'>
-                    <Button variant="danger" className="portfolio-btn" disabled={autoBtnDisabledRight}
-                        onClick={() => scrollRight('auto-cnt')}
-                    ><FaCaretRight size={30} /></Button>
-                </div>
+                    <div className='long-btn-container btn-right'>
+                        <Button variant="danger" className="portfolio-btn" disabled={autoBtnDisabledRight}
+                            onClick={() => scrollRight('auto-cnt')}
+                        ><FaCaretRight size={30} /></Button>
+                    </div>
                 )}
             </div>
 
             <hr />
 
             <h2>Pet Care</h2>
-            <div id='pets' className='portfolio-flex-container'>
+            <div id='pets-cnt' className='portfolio-flex-container'>
                 {pets.length > 2 && (
-                <div className='long-btn-container btn-left'>
-                    <Button variant="danger" className="portfolio-btn" disabled={petsBtnDisabledLeft}
-                        onClick={() => scrollLeft('pet-cnt')}
-                    ><FaCaretLeft size={30} /></Button>
-                </div>
+                    <div className='long-btn-container btn-left'>
+                        <Button variant="danger" className="portfolio-btn" disabled={petsBtnDisabledLeft}
+                            onClick={() => scrollLeft('pet-cnt')}
+                        ><FaCaretLeft size={30} /></Button>
+                    </div>
                 )}
                 <div className='portfolio-items-container' id='pet-cnt'>
                     {pets.map((item, index) =>
@@ -854,23 +908,23 @@ export default function BasicPortfolio() {
                     )}
                 </div>
                 {pets.length > 2 && (
-                <div className='long-btn-container btn-right'>
-                    <Button variant="danger" className="portfolio-btn" disabled={petsBtnDisabledRight}
-                        onClick={() => scrollRight('pet-cnt')}
-                    ><FaCaretRight size={30} /></Button></div>
+                    <div className='long-btn-container btn-right'>
+                        <Button variant="danger" className="portfolio-btn" disabled={petsBtnDisabledRight}
+                            onClick={() => scrollRight('pet-cnt')}
+                        ><FaCaretRight size={30} /></Button></div>
                 )}
             </div>
 
             <hr />
 
             <h2>Multipurpose Spaces</h2>
-            <div id='multipurpose' className='portfolio-flex-container'>
+            <div id='multi-cnt' className='portfolio-flex-container'>
                 {multipurpose.length > 2 && (
-                <div className='long-btn-container btn-left'>
-                    <Button variant="danger" className="portfolio-btn" disabled={multipurposeBtnDisabledLeft}
-                        onClick={() => scrollLeft('multi-cnt')}
-                    ><FaCaretLeft size={30} /></Button>
-                </div>
+                    <div className='long-btn-container btn-left'>
+                        <Button variant="danger" className="portfolio-btn" disabled={multipurposeBtnDisabledLeft}
+                            onClick={() => scrollLeft('multi-cnt')}
+                        ><FaCaretLeft size={30} /></Button>
+                    </div>
                 )}
                 <div className='portfolio-items-container' id='multi-cnt'>
                     {multipurpose.map((item, index) =>
@@ -889,24 +943,24 @@ export default function BasicPortfolio() {
                     )}
                 </div>
                 {multipurpose.length > 2 && (
-                <div className='long-btn-container btn-right'>
-                    <Button variant="danger" className="portfolio-btn" disabled={multipurposeBtnDisabledRight}
-                        onClick={() => scrollRight('multi-cnt')}
-                    ><FaCaretRight size={30} /></Button>
-                </div>
+                    <div className='long-btn-container btn-right'>
+                        <Button variant="danger" className="portfolio-btn" disabled={multipurposeBtnDisabledRight}
+                            onClick={() => scrollRight('multi-cnt')}
+                        ><FaCaretRight size={30} /></Button>
+                    </div>
                 )}
             </div>
 
             <hr />
 
             <h2>Residences (Single & Multi-Family)</h2>
-            <div id='residences' className='portfolio-flex-container'>
+            <div id='res-cnt' className='portfolio-flex-container'>
                 {residences.length > 2 && (
                     <div className='long-btn-container btn-left'>
-                    <Button variant="danger" className="portfolio-btn" disabled={residencesBtnDisabledLeft}
-                        onClick={() => scrollLeft('res-cnt')}
-                    ><FaCaretLeft size={30} /></Button>
-                </div>
+                        <Button variant="danger" className="portfolio-btn" disabled={residencesBtnDisabledLeft}
+                            onClick={() => scrollLeft('res-cnt')}
+                        ><FaCaretLeft size={30} /></Button>
+                    </div>
                 )}
                 <div className='portfolio-items-container' id='res-cnt'>
                     {residences.map((item, index) =>
@@ -925,24 +979,24 @@ export default function BasicPortfolio() {
                     )}
                 </div>
                 {residences.length > 2 && (
-                <div className='long-btn-container btn-right'>
-                    <Button variant="danger" className="portfolio-btn" disabled={residencesBtnDisabledRight}
-                        onClick={() => scrollRight('res-cnt')}
-                    ><FaCaretRight size={30} /></Button>
-                </div>
+                    <div className='long-btn-container btn-right'>
+                        <Button variant="danger" className="portfolio-btn" disabled={residencesBtnDisabledRight}
+                            onClick={() => scrollRight('res-cnt')}
+                        ><FaCaretRight size={30} /></Button>
+                    </div>
                 )}
             </div>
 
             <hr />
 
             <h2>Other Notable Projects</h2>
-            <div id='other' className='portfolio-flex-container'>
+            <div id='other-cnt' className='portfolio-flex-container'>
                 {other.length > 2 && (
-                <div className='long-btn-container btn-left'>
-                    <Button variant="danger" className="portfolio-btn" disabled={setOtherDisabledLeft}
-                        onClick={() => scrollLeft('other-cnt')}
-                    ><FaCaretLeft size={30} /></Button>
-                </div>
+                    <div className='long-btn-container btn-left'>
+                        <Button variant="danger" className="portfolio-btn" disabled={otherBtnDisabledLeft}
+                            onClick={() => scrollLeft('other-cnt')}
+                        ><FaCaretLeft size={30} /></Button>
+                    </div>
                 )}
                 <div className='portfolio-items-container' id='other-cnt'>
                     {other.map((item, index) =>
@@ -961,10 +1015,10 @@ export default function BasicPortfolio() {
                     )}
                 </div>
                 {other.length > 2 && (
-                <div className='long-btn-container btn-right'>
-                    <Button variant="danger" className="portfolio-btn" disabled={otherBtnDisabledRight}
-                        onClick={() => scrollRight('other-cnt')}
-                    ><FaCaretRight size={30} /></Button></div>
+                    <div className='long-btn-container btn-right'>
+                        <Button variant="danger" className="portfolio-btn" disabled={otherBtnDisabledRight}
+                            onClick={() => scrollRight('other-cnt')}
+                        ><FaCaretRight size={30} /></Button></div>
                 )}
             </div>
         </>
