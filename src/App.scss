@@ -475,37 +475,6 @@ button[role="tab"] {
     padding: 20px !important;
 }
 
-//-------------------------------------------//
-//MOBILE STYLING
-
-// .mobile-nav {
-//     margin: 2em 0em 1em 2em;
-//     border: 2px solid red;
-//     border-radius: 20px;
-//     width: fit-content;
-//     &:active{
-//         background-color: lightgray;
-//     }
-// }
-
-//for smaller viewports, just wrap the stupid thing for now
-@media (max-width:1275px) {
-    .home-container {
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width:1000px) {
-    #portfolio-nav-desktop{
-        display: none;
-    }
-    
-    #portfolio-nav-mobile{
-        display: block;
-    }
-
-}
-
 #map-sidebar-container {
     display: flex;
     max-height: 100%;
@@ -535,6 +504,9 @@ button[role="tab"] {
     height: 100%;
 }
 
+//----------------------------------//
+//INTERACTIVE MAP STYLING (BETA)
+
 // .mapsb-item {
 //     // margin: 0.5rem 0;
 // }
@@ -563,6 +535,41 @@ button[role="tab"] {
 .mapsb-highlight {
     background-color: salmon;
     transition: background-color 0.5s;
+}
+
+//-------------------------------------------//
+//MOBILE STYLING
+
+// .mobile-nav {
+//     margin: 2em 0em 1em 2em;
+//     border: 2px solid red;
+//     border-radius: 20px;
+//     width: fit-content;
+//     &:active{
+//         background-color: lightgray;
+//     }
+// }
+
+//for smaller viewports, just wrap the stupid thing for now
+@media (max-width:1275px) {
+    .home-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:1000px) {
+    #portfolio-nav-desktop{
+        display: none;
+    }
+    
+    #portfolio-nav-mobile{
+        display: block;
+    }
+
+    .portfolio-items-container {
+        overflow-x: scroll !important;
+    }
+
 }
 
 //for mobile
@@ -711,6 +718,10 @@ button[role="tab"] {
     .portfolio-flex-container {
         margin: 0 1rem;
         //width: 100%;
+    }
+
+    .portfolio-items-container {
+        overflow-x: scroll !important;
     }
 
     #portfolio-page > h2 {
