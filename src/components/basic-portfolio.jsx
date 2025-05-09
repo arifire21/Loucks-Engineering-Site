@@ -97,7 +97,7 @@ export default function BasicPortfolio() {
             return gymRef.current;
         } else if (portfolioContainerID === 'worship-cnt') {
             return worshipRef.current;
-        } else if (portfolioContainerID === 'meddental-cnt') {
+        } else if (portfolioContainerID === 'meddent-cnt') {
             return medDentalRef.current;
         } else if (portfolioContainerID === 'beauty-cnt') {
             return beautyRef.current;
@@ -157,7 +157,7 @@ export default function BasicPortfolio() {
             } else if (portfolioContainerID === 'worship-cnt') {
                 setWorshipID(worshipID + 1);
                 setWorshipDisabledLeft(false);
-            } else if (portfolioContainerID === 'meddental-cnt') {
+            } else if (portfolioContainerID === 'meddent-cnt') {
                 setMedDentalID(medDentalID + 1);
                 setMedDentalDisabledLeft(false);
             } else if (portfolioContainerID === 'beauty-cnt') {
@@ -194,7 +194,7 @@ export default function BasicPortfolio() {
             refNode.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
-                inline: 'center'
+                inline: 'start'
             });
 
             //check if at end of array
@@ -290,7 +290,7 @@ export default function BasicPortfolio() {
             refNode.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
-                inline: 'center'
+                inline: 'start'
             });
 
             //increment whichever ID is used
@@ -318,7 +318,7 @@ export default function BasicPortfolio() {
             } else if (portfolioContainerID === 'worship-cnt') {
                 setWorshipID(worshipID - 1);
                 setWorshipDisabledRight(false);
-            } else if (portfolioContainerID === 'meddental-cnt') {
+            } else if (portfolioContainerID === 'meddent-cnt') {
                 setMedDentalID(medDentalID - 1);
                 setMedDentalDisabledRight(false);
             } else if (portfolioContainerID === 'beauty-cnt') {
