@@ -15,7 +15,7 @@ export const carouselData = [
     {
         image: Lucky_Fish_Img,
         name: "Lucky Fish",
-        location: "Pompano Beach Pier"
+        location: "Pompano Beach Pier and Dania Beach"
     },
     {
         image: Funky_Buddha_Img,

@@ -4,7 +4,10 @@ import { Button } from 'react-bootstrap';
 import { useState, useRef } from 'react';
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
-export default function BasicPortfolio() {
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+
+function BasicPortfolio({scrollPosition}) {
     const [restaurantsBtnDisabledLeft, setRestaurantsDisabledLeft] = useState(true);
     const [restaurantsBtnDisabledRight, setRestaurantsDisabledRight] = useState(false);
     const [officesBtnDisabledLeft, setOfficesDisabledLeft] = useState(true);
@@ -194,7 +197,7 @@ export default function BasicPortfolio() {
             refNode.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
-                inline: 'start'
+                inline: 'center'
             });
 
             //check if at end of array
@@ -290,7 +293,7 @@ export default function BasicPortfolio() {
             refNode.scrollIntoView({
                 behavior: 'smooth',
                 block: 'nearest',
-                inline: 'start'
+                inline: 'center'
             });
 
             //increment whichever ID is used
@@ -446,7 +449,14 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+<LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -478,7 +488,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -510,7 +533,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -542,7 +578,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -574,7 +623,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -606,7 +668,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -638,7 +713,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -654,7 +742,7 @@ export default function BasicPortfolio() {
 
             <hr />
 
-            <h2>Medical & Dental</h2>
+            <h2>Medical and Dental</h2>
             <div id='med-dent' className='portfolio-flex-container'>
                 <div className='long-btn-container btn-left'>
                     <Button variant="danger" className="portfolio-btn" disabled={medDentalBtnDisabledLeft}
@@ -670,7 +758,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -702,7 +803,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -734,7 +848,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -766,7 +893,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -798,7 +938,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -830,7 +983,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -864,7 +1030,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -900,7 +1079,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -935,7 +1127,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -971,7 +1176,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -1007,7 +1225,20 @@ export default function BasicPortfolio() {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-                                <img className='portfolio-img' src={item.image} alt={`LEI MEP portfolio_img_${item.name}`} />
+                                <LazyLoadImage
+                                    key={index}
+                                    className='portfolio-img'
+                                    src={item.image}
+                                    alt={`LEI MEP portfolio_img_${item.name}`}
+                                    scrollPosition={scrollPosition}
+                                    effect='opacity'
+                                    wrapperProps={{
+                                        // If you need to, you can tweak the effect transition using the wrapper style.
+                                        style: {transitionDelay: "0.5s"},
+                                    }}
+                                    threshold={50}
+                                    delayTime={500}
+                                />
                                 :
                                 <div className='portfolio-img-placeholder'>No image available</div>
                             }
@@ -1024,3 +1255,5 @@ export default function BasicPortfolio() {
         </>
     )
 }
+
+export default trackWindowScroll(BasicPortfolio);
