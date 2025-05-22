@@ -315,7 +315,8 @@ footer {
 .portfolio-flex-container {
     display: flex;
     flex-direction: row;
-    width: calc(100vw - 2rem);;
+    width: calc(100vw - 2rem);
+    min-height: 300px;
 }
 
 .portfolio-items-container {
@@ -348,6 +349,7 @@ footer {
 .btn-right {
     box-shadow: -10px 0px 15px #fff;
     z-index: 2;
+    float: right;
 }
 
 .portfolio-item {
