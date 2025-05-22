@@ -7,6 +7,8 @@ import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
+import { InView } from "react-intersection-observer";
+
 function BasicPortfolio({scrollPosition}) {
     const [restaurantsBtnDisabledLeft, setRestaurantsDisabledLeft] = useState(true);
     const [restaurantsBtnDisabledRight, setRestaurantsDisabledRight] = useState(false);
@@ -440,7 +442,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('dining-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='dining-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='dining-cnt' ref={ref}>
                     {restaurants.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === restaurantID ? restaurantsRef : null}>
                             {item.website ?
@@ -449,7 +453,7 @@ function BasicPortfolio({scrollPosition}) {
                                 <p className='link-placeholder p-name'>{item.name}</p>
                             }
                             {item.image ?
-<LazyLoadImage
+                                <LazyLoadImage
                                     key={index}
                                     className='portfolio-img'
                                     src={item.image}
@@ -463,6 +467,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={restaurantsBtnDisabledRight}
                         onClick={() => scrollRight('dining-cnt')}
@@ -479,7 +485,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('worship-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='worship-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='worship-cnt' ref={ref}>
                     {worship.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === worshipID ? worshipRef : null}>
                             {item.website ?
@@ -496,8 +504,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -508,6 +515,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={worshipBtnDisabledRight}
                         onClick={() => scrollRight('worship-cnt')}
@@ -524,7 +533,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('offices-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='offices-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='offices-cnt' ref={ref}>
                     {offices.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === officesID ? officesRef : null}>
                             {item.website ?
@@ -541,8 +552,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -553,6 +563,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={officesBtnDisabledRight}
                         onClick={() => scrollRight('offices-cnt')}
@@ -569,7 +581,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('aviation-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='aviation-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='aviation-cnt' ref={ref}>
                     {aviation.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === aviationID ? aviationRef : null}>
                             {item.website ?
@@ -586,8 +600,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -598,6 +611,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={aviationBtnDisabledRight}
                         onClick={() => scrollRight('aviation-cnt')}
@@ -614,7 +629,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('outreach-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='outreach-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='outreach-cnt' ref={ref}>
                     {outreach.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === outreachID ? outreachRef : null}>
                             {item.website ?
@@ -631,8 +648,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -643,6 +659,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={outreachBtnDisabledRight}
                         onClick={() => scrollRight('outreach-cnt')}
@@ -659,7 +677,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('storage-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='storage-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='storage-cnt' ref={ref}>
                     {storage.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === storageID ? storageRef : null}>
                             {item.website ?
@@ -676,8 +696,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -688,6 +707,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={storageBtnDisabledRight}
                         onClick={() => scrollRight('storage-cnt')}
@@ -704,7 +725,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('gym-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='gym-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='gym-cnt' ref={ref}>
                     {gyms.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === gymsID ? gymRef : null}>
                             {item.website ?
@@ -721,8 +744,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -733,11 +755,14 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={gymsBtnDisabledRight}
                         onClick={() => scrollRight('gym-cnt')}
                     ><FaCaretRight size={30} /></Button>
                 </div>
+
             </div>
 
             <hr />
@@ -749,7 +774,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('meddent-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='meddent-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='meddent-cnt' ref={ref}>
                     {medDental.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === medDentalID ? medDentalRef : null}>
                             {item.website ?
@@ -766,8 +793,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -778,6 +804,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={medDentalBtnDisabledRight}
                         onClick={() => scrollRight('meddent-cnt')}
@@ -794,7 +822,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('beauty-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='beauty-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='beauty-cnt' ref={ref}>
                     {beauty.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === beautyID ? beautyRef : null}>
                             {item.website ?
@@ -811,8 +841,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -823,6 +852,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={beautyBtnDisabledRight}
                         onClick={() => scrollRight('beauty-cnt')}
@@ -839,7 +870,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('retail-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='retail-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='retail-cnt' ref={ref}>
                     {retail.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === retailID ? retailRef : null}>
                             {item.website ?
@@ -856,8 +889,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -868,6 +900,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={retailBtnDisabledRight}
                         onClick={() => scrollRight('retail-cnt')}
@@ -884,7 +918,9 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('edu-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container' id='edu-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='edu-cnt' ref={ref}>
                     {education.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === educationID ? educationRef : null}>
                             {item.website ?
@@ -901,8 +937,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -913,11 +948,14 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={educationBtnDisabledRight}
                         onClick={() => scrollRight('edu-cnt')}
                     ><FaCaretRight size={30} /></Button>
                 </div>
+
             </div>
 
             <hr />
@@ -929,9 +967,11 @@ function BasicPortfolio({scrollPosition}) {
                         onClick={() => scrollLeft('market-cnt')}
                     ><FaCaretLeft size={30} /></Button>
                 </div>
-                <div className='portfolio-items-container'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='market-cnt' ref={ref}>
                     {supermarkets.map((item, index) =>
-                        <div className='portfolio-item' key={index} id='market-cnt' ref={index === supermarketsID ? supermarketsRef : null}>
+                        <div className='portfolio-item' key={index} ref={index === supermarketsID ? supermarketsRef : null}>
                             {item.website ?
                                 <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
                                 :
@@ -946,8 +986,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -958,11 +997,14 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={supermarketsBtnDisabledRight}
                         onClick={() => scrollRight('market-cnt')}
                     ><FaCaretRight size={30} /></Button>
                 </div>
+
             </div>
 
             <hr />
@@ -973,36 +1015,39 @@ function BasicPortfolio({scrollPosition}) {
                     <Button variant="danger" className="portfolio-btn" disabled={laundryBtnDisabledLeft}
                         onClick={() => scrollLeft('laundry-cnt')}
                     ><FaCaretLeft size={30} /></Button>
-                    <div className='portfolio-items-container' id='laundry-cnt'>
-                    </div>
-                    {laundry.map((item, index) =>
-                        <div className='portfolio-item' key={index} ref={index === laundryID ? laundryRef : null}>
-                            {item.website ?
-                                <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
-                                :
-                                <p className='link-placeholder p-name'>{item.name}</p>
-                            }
-                            {item.image ?
-                                <LazyLoadImage
-                                    key={index}
-                                    className='portfolio-img'
-                                    src={item.image}
-                                    alt={`LEI MEP portfolio_img_${item.name}`}
-                                    scrollPosition={scrollPosition}
-                                    effect='opacity'
-                                    wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
-                                    }}
-                                    threshold={50}
-                                    delayTime={500}
-                                />
-                                :
-                                <div className='portfolio-img-placeholder'>No image available</div>
-                            }
-                        </div>
-                    )}
                 </div>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='laundry-cnt' ref={ref}>
+                {laundry.map((item, index) =>
+                    <div className='portfolio-item' key={index} ref={index === laundryID ? laundryRef : null}>
+                        {item.website ?
+                            <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} <HiOutlineExternalLink /></a>
+                            :
+                            <p className='link-placeholder p-name'>{item.name}</p>
+                        }
+                        {item.image ?
+                            <LazyLoadImage
+                                key={index}
+                                className='portfolio-img'
+                                src={item.image}
+                                alt={`LEI MEP portfolio_img_${item.name}`}
+                                scrollPosition={scrollPosition}
+                                effect='opacity'
+                                wrapperProps={{
+                                    //style: {transitionDelay: "0.5s"},
+                                }}
+                                threshold={50}
+                                delayTime={500}
+                            />
+                            :
+                            <div className='portfolio-img-placeholder'>No image available</div>
+                        }
+                    </div>
+                )}
+                </div>
+                )}
+                </InView>
                 <div className='long-btn-container btn-right'>
                     <Button variant="danger" className="portfolio-btn" disabled={laundryBtnDisabledRight}
                         onClick={() => scrollRight('laundry-cnt')}
@@ -1021,7 +1066,9 @@ function BasicPortfolio({scrollPosition}) {
                         ><FaCaretLeft size={30} /></Button>
                     </div>
                 )}
-                <div className='portfolio-items-container' id='auto-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='auto-cnt' ref={ref}>
                     {auto.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === autoID ? autoRef : null}>
                             {item.website ?
@@ -1038,8 +1085,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -1050,6 +1096,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 {auto.length > 2 && (
                     <div className='long-btn-container btn-right'>
                         <Button variant="danger" className="portfolio-btn" disabled={autoBtnDisabledRight}
@@ -1070,7 +1118,9 @@ function BasicPortfolio({scrollPosition}) {
                         ><FaCaretLeft size={30} /></Button>
                     </div>
                 )}
-                <div className='portfolio-items-container' id='pet-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='pet-cnt' ref={ref}>
                     {pets.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === petsID ? petsRef : null}>
                             {item.website ?
@@ -1087,8 +1137,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -1099,6 +1148,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 {pets.length > 2 && (
                     <div className='long-btn-container btn-right'>
                         <Button variant="danger" className="portfolio-btn" disabled={petsBtnDisabledRight}
@@ -1118,7 +1169,9 @@ function BasicPortfolio({scrollPosition}) {
                         ><FaCaretLeft size={30} /></Button>
                     </div>
                 )}
-                <div className='portfolio-items-container' id='multi-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='multi-cnt' ref={ref}>
                     {multipurpose.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === multipurposeID ? multipurposeRef : null}>
                             {item.website ?
@@ -1135,8 +1188,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -1147,6 +1199,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 {multipurpose.length > 2 && (
                     <div className='long-btn-container btn-right'>
                         <Button variant="danger" className="portfolio-btn" disabled={multipurposeBtnDisabledRight}
@@ -1167,7 +1221,9 @@ function BasicPortfolio({scrollPosition}) {
                         ><FaCaretLeft size={30} /></Button>
                     </div>
                 )}
-                <div className='portfolio-items-container' id='res-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='res-cnt' ref={ref}>
                     {residences.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === residencesID ? residencesRef : null}>
                             {item.website ?
@@ -1184,8 +1240,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -1196,6 +1251,8 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 {residences.length > 2 && (
                     <div className='long-btn-container btn-right'>
                         <Button variant="danger" className="portfolio-btn" disabled={residencesBtnDisabledRight}
@@ -1203,6 +1260,7 @@ function BasicPortfolio({scrollPosition}) {
                         ><FaCaretRight size={30} /></Button>
                     </div>
                 )}
+
             </div>
 
             <hr />
@@ -1216,7 +1274,9 @@ function BasicPortfolio({scrollPosition}) {
                         ><FaCaretLeft size={30} /></Button>
                     </div>
                 )}
-                <div className='portfolio-items-container' id='other-cnt'>
+                <InView>
+                {({ ref }) => (
+                <div className='portfolio-items-container' id='other-cnt' ref={ref}>
                     {other.map((item, index) =>
                         <div className='portfolio-item' key={index} ref={index === otherID ? otherRef : null}>
                             {item.website ?
@@ -1233,8 +1293,7 @@ function BasicPortfolio({scrollPosition}) {
                                     scrollPosition={scrollPosition}
                                     effect='opacity'
                                     wrapperProps={{
-                                        // If you need to, you can tweak the effect transition using the wrapper style.
-                                        style: {transitionDelay: "0.5s"},
+                                        //style: {transitionDelay: "0.5s"},
                                     }}
                                     threshold={50}
                                     delayTime={500}
@@ -1245,12 +1304,15 @@ function BasicPortfolio({scrollPosition}) {
                         </div>
                     )}
                 </div>
+                )}
+                </InView>
                 {other.length > 2 && (
                     <div className='long-btn-container btn-right'>
                         <Button variant="danger" className="portfolio-btn" disabled={otherBtnDisabledRight}
                             onClick={() => scrollRight('other-cnt')}
                         ><FaCaretRight size={30} /></Button></div>
                 )}
+
             </div>
         </>
     )
