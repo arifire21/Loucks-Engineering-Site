@@ -8,6 +8,7 @@ import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-componen
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 import { useInView } from "react-intersection-observer";
+import SingleCarousel from './simple-portfolio/single-carousel';
 
 function BasicPortfolio({scrollPosition}) {
     const [restaurantsBtnDisabledLeft, setRestaurantsDisabledLeft] = useState(true);
@@ -441,7 +442,7 @@ function BasicPortfolio({scrollPosition}) {
     return (
         <>
             <h2 id='dining'>Dining</h2>
-            <div className='portfolio-flex-container' ref={ref}>
+            {/* <div className='portfolio-flex-container' ref={ref}>
                 {inView ? (
                 <>
                 <div className='long-btn-container btn-left'>
@@ -479,8 +480,10 @@ function BasicPortfolio({scrollPosition}) {
                 </div>
                 </>
                 ) : null }
-                {/* end inView conditional */}
-            </div>
+                {/* end inView conditional
+            </div>*/}
+
+            <SingleCarousel array={restaurants} arrayName="restaurants" scrollPosition={scrollPosition}/>
 
             <hr />
 

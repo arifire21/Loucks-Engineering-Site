@@ -1,6 +1,6 @@
 import Layout from '../components/layout';
 import { Helmet } from 'react-helmet';
-import { PortfolioNavDesktop, PortfolioNavMobile } from '../components/portfolio-nav';
+import { PortfolioNavDesktop, PortfolioNavMobile } from '../components/simple-portfolio/portfolio-nav';
 import BasicPortfolio from '../components/basic-portfolio';
 // import { ScrollRestoration } from 'react-router-dom';    //remove bc messes w anchor tags
 
