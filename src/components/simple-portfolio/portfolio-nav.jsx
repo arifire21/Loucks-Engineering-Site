@@ -14,8 +14,8 @@ export function PortfolioNavDesktop() {
             <h4>Jump to:</h4>
             <div  style={{display:'flex', flexWrap:'wrap'}}>
                 <div className='portfolio-nav-item' onClick={() => customScroll('dining')}>Dining</div>&ensp;<b>|</b>&ensp;
-                <div className='portfolio-nav-item' onClick={() => customScroll('worship')}>Worship</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('offices')}>Offices</div>&ensp;<b>|</b>&ensp;
+                <div className='portfolio-nav-item' onClick={() => customScroll('worship')}>Worship</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('aviation')}>Aviation</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('outreach')}>Outreach</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('storage')}>Storage</div>&ensp;<b>|</b>&ensp;
@@ -61,8 +61,8 @@ export function PortfolioNavMobile() {
                 <Offcanvas.Body>
                     <div style={{display:'flex', flexDirection:'column'}}>
                         <div className='portfolio-nav-item' onClick={() => customScroll('dining')}>Dining</div>
-                        <div className='portfolio-nav-item' onClick={() => customScroll('worship')}>Worship</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('offices')}>Offices</div>
+                        <div className='portfolio-nav-item' onClick={() => customScroll('worship')}>Worship</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('aviation')}>Aviation</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('outreach')}>Outreach</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('storage')}>Storage</div>

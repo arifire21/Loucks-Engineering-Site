@@ -1,17 +1,19 @@
 // import Navbar from "../components/navbar";
 // import Footer from '../components/Footer';
-import Helmet from 'react-helmet';
+import { Helmet, HelmetProvider} from 'react-helmet-async';
 import { ScrollRestoration } from 'react-router-dom';
 import Layout from '../components/layout';
 
 export default function Services() {
   return (
     <>
+      <HelmetProvider>
       <Helmet>
         <title>Services | Loucks Engineering, Inc.</title>
         <link rel="canonical" href="https://www.louckseng.com/services" />
         <meta name="description" content="We provide our services to various types of projects, from sizable warehouses to small single-family residences. See all services listed here." />
       </Helmet>
+      </HelmetProvider>
       <Layout>
 
       <div className="page-contents">
