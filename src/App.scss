@@ -368,12 +368,14 @@ footer {
 }
 
 .portfolio-img-placeholder {
-    width: max-content;
+    width: 400px;
     height: 300px;
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
-    border: 1px dotted #bbbbbb
+    border: 2px dotted #ccc;
+    color: #333;
+    border-radius: 25px;
 }
 
 .p-name { text-align: center;}
@@ -396,7 +398,7 @@ footer {
 }
 
 .link-placeholder {
-    font-size: 16pt;
+    font-size: 14pt; //match other font size
     width: max-content;
     margin-bottom: 0;
 }
@@ -724,6 +726,12 @@ button[role="tab"] {
 
     .portfolio-items-container {
         overflow-x: scroll !important;
+        min-height: 150px;
+    }
+
+    .portfolio-img-placeholder {
+        height: 150px;
+        width: 200px;
     }
 
     #portfolio-page > h2 {

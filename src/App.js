@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //IMPORT MODULES
 import Logo from './images/logo.png'
 import HomeCarousel from './components/carousel';
-import Helmet from 'react-helmet';
+import { Helmet, HelmetProvider} from 'react-helmet-async';
 import { ScrollRestoration } from 'react-router-dom';
 import Layout from './components/layout';
 import { Button } from 'react-bootstrap';
@@ -12,10 +12,12 @@ import { Button } from 'react-bootstrap';
 function App() {
   return (
     <>
+      <HelmetProvider>
       <Helmet>
         <title>Loucks Engineering, Inc. - MEP Consulting Engineers</title>
         <link rel="canonical" href="https://www.louckseng.com/" />
       </Helmet>
+      </HelmetProvider>
 
       <Layout>
       <h1 hidden aria-hidden>Loucks Engineering, Inc. - MEP Consulting</h1>

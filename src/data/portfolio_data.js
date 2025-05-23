@@ -125,7 +125,7 @@ export const restaurants = [
     {
         name: "Lucky Fish (Dania Bch)",
         website: "https://www.luckyfishbeachbar.com/dania-beach",
-        image: Lucky_Fish
+        //image: Lucky_Fish
     },
     {
         name: "Carousel Club",
@@ -417,17 +417,20 @@ export const auto = [
 
 export const retail = [
     {
-        name: 'Shoppes of Broward (facade renovation)',
+        name: 'Shoppes of Broward',
+        smallText: '(facade renovation)',
         website: 'https://janourarealty.com/property/shoppes-at-broward/',
         image: Shoppes
     },
     {
-        name: 'Shops at Stirling Place (facade renovation)',
+        name: 'Shops at Stirling Place',
+        smallText: '(facade renovation)',
         website: 'https://janourarealty.com/property/shops-at-stirling-place/',
         image: Stirling
     },
     {
-        name: `Macy's (vestibule addition)`,
+        name: `Macy's`,
+        smallText: '(vestibule addition)',
         website: 'https://l.macys.com/boca-raton-fl',
         image: MacysVestibule
     }
@@ -456,6 +459,13 @@ export const multipurpose = [
         name: 'Mizner Park (tenant improvement, multiple)',
         website: 'https://www.miznerpark.com/en.html',
         image: Mizner
+    },
+    {
+        name: 'Fun Sweets Warehouse',
+        smallText: '(tenant improvement)',
+        website: 'http://funsweets.net/',
+        year: 2020,
+        coords: [26.685041538695813, -80.21275428465931]
     }
 ]
 
@@ -465,4 +475,25 @@ export const other = [
         website: "https://gulfstreampark.com/",
         image: Jumbotron
     },
+    {
+        name: 'Pick-A-Ball',
+        smallText: '(interactive flooring)',
+        website: 'http://pickaballcourts.com/',
+        coords: [26.30306061909846, -80.15367131693922],
+        year: '2022-2024',
+        arch: 'RWB'
+    },
+    {
+        name: 'Sundance Marina',
+        smallText: '(dock electrical service)',
+        coords: [28.179039349196223, -80.6503942745556],
+        year: 2023,
+        arch: 'Sunbelt Electric'
+    },
+    {
+        name: "FL Panthers' Training Facility (2007)",
+        website: 'https://panthersiceden.com/',
+        year: 2007,
+        coords: [26.271310824614506, -80.2920759611157]
+    }
 ]

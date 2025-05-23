@@ -1,6 +1,6 @@
 // import Navbar from '../components/navbar';
 // import Footer from '../components/Footer';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider} from 'react-helmet-async';
 import {HiOutlineExternalLink} from 'react-icons/hi';
 import { ScrollRestoration } from 'react-router-dom';
 import Layout from '../components/layout';
@@ -8,11 +8,13 @@ import Layout from '../components/layout';
 export default function Contact() {
   return (
     <>
+      <HelmetProvider>
       <Helmet>
         <title>Contact Us | Loucks Engineering, Inc.</title>
         <link rel="canonical" href="https://www.louckseng.com/contact" />
         <meta name="description" content="Find ways to contact us here." />
       </Helmet>
+      </HelmetProvider>
 
       <Layout>
       <div className='page-contents'>
