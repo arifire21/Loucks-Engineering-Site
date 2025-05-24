@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import ScrollResetHandler from './components/ScrollResetHandler';
 
 //pages
 import ErrorPage from './pages/error';
@@ -14,28 +13,7 @@ import Portfolio from './pages/portfolio';
 import About from './pages/about';
 import Contact from './pages/contact';
 import PortfolioNew from './pages/portfolio-new';
-
-//test
-// import PortfolioLayout from './pages/portfolio';
-
-//portfolio pages
-// import Residences from './OLD_ARCHIVED/portfolio/residences';
-// import Restaurants from './OLD_ARCHIVED/portfolio/restaurants';
-// import Retail from './OLD_ARCHIVED/portfolio/retail';
-// import Tenents from './pages/portfolio/ti';
-// import Aviation from './OLD_ARCHIVED/portfolio/aviation';
-// import MultiPurpose from './OLD_ARCHIVED/portfolio/multi-purpose';
-// import Offices from './OLD_ARCHIVED/portfolio/offices';
-// import Education from './OLD_ARCHIVED/portfolio/education';
-// import Gyms from './OLD_ARCHIVED/portfolio/gymnasiums';
-// import Churches from './OLD_ARCHIVED/portfolio/worship';
-// import MedDental from './OLD_ARCHIVED/portfolio/medical-offices';
-// import Media from './pages/portfolio/media';
-// import Pets from './OLD_ARCHIVED/portfolio/pet-services';
-// import Laundry from './OLD_ARCHIVED/portfolio/laundry';
-// import Storage from './OLD_ARCHIVED/portfolio/storage';
-// import Auto from './OLD_ARCHIVED/portfolio/auto-repair';
-// import Other from './OLD_ARCHIVED/portfolio/other';
+import NotFoundPage from './pages/notfound';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +45,14 @@ const router = createBrowserRouter([
     path: "/portfolio-new",
     element: <PortfolioNew/>,
     errorElement: <ErrorPage/>
+  },
+  {
+    path: "/404",
+    element: <NotFoundPage/>
+  },
+  {
+    path: "*",
+    element: <NotFoundPage/>
   }
 ]);
 
