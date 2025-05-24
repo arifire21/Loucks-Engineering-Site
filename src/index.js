@@ -14,6 +14,7 @@ import Portfolio from './pages/portfolio';
 import About from './pages/about';
 import Contact from './pages/contact';
 import PortfolioNew from './pages/portfolio-new';
+import NotFoundPage from './pages/notfound';
 
 //test
 // import PortfolioLayout from './pages/portfolio';
@@ -67,6 +68,14 @@ const router = createBrowserRouter([
     path: "/portfolio-new",
     element: <PortfolioNew/>,
     errorElement: <ErrorPage/>
+  },
+  {
+    path: "/404",
+    element: <NotFoundPage/>
+  },
+  {
+    path: "/*",
+    element: <NotFoundPage/>
   }
 ]);
 
