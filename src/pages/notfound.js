@@ -1,14 +1,13 @@
-import { useRouteError } from "react-router-dom";
+import Logo from '../images/logo_sm.png';
 
 export default function NotFoundPage() {
-  const error = useRouteError();
-  console.error(error);
 
   return (
     <div id="not-found-page" style={{display:"flex", flexDirection:"column", alignItems:"center", marginTop:"2rem"}}>
-      <h1>Page Not Found</h1>
+      <img src={Logo} alt="LEI logo sm" width={100} height={100}/>
+      <h1><span id="not-found-number">404</span> - Page Not Found</h1>
 
-      <p>Sorry, this page couldn't be found. <a href="/">Return to home page</a></p>
+      <p>Sorry, the <span id="not-found-flavor">{window.location.pathname}</span> page couldn't be found. <a href="/">Return to home page</a></p>
     </div>
   );
 }

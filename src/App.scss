@@ -542,6 +542,21 @@ button[role="tab"] {
 }
 
 //-------------------------------------------//
+//MISC
+#not-found-number {
+    color: darkred;
+    font-weight: bolder;
+    font-size: inherit;
+}
+
+#not-found-flavor {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ccc;
+    padding: 0.25rem;
+    border-radius: 5px;
+}
+
+//-------------------------------------------//
 //MOBILE STYLING
 
 // .mobile-nav {
