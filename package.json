@@ -1,6 +1,6 @@
 {
   "name": "lei-site",
-  "version": "N1.0.0",
+  "version": "N1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

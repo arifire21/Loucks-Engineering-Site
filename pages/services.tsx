@@ -23,7 +23,8 @@ export default function Services() {
               <li>Existing HVAC System Analysis</li>
               <li>Building Energy Audits</li>
               <li>Manufacturing Facility/Cleanroom Ductwork</li>
-              <li>System Design for Enclosure Airflow Control <small>(physical enclosures designed by others)</small></li>
+              <li>System Design for Enclosure Airflow Control<br/>
+              <small>(physical enclosures designed by others)</small></li>
             </ul>
           </div>
 

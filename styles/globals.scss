@@ -242,6 +242,18 @@ header {
   scroll-behavior: smooth;
 }
 
+.credit-tooltip {
+  position: absolute;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: invert;
+}
+
+.credit-a {
+  text-decoration: underline;
+}
+
 .portfolio-btn {
   background-color: variables.$branding_red;
   height: 3rem;
@@ -527,11 +539,11 @@ main {
   }
 
   //navbar override bc i hate how close it is to thw edges
-  .navbar {
-      height: 4.286rem !important; //OR for the desktop sizing
-      padding-left: 0.75rem !important;
-      padding-right: 0.75rem !important;
-  }
+  // .navbar {
+  //     height: 4.286rem !important; //OR for the desktop sizing
+  //     padding-left: 0.75rem !important;
+  //     padding-right: 0.75rem !important;
+  // }
 
   .portfolio-img{
       width: 200px;

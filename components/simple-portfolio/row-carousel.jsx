@@ -109,10 +109,19 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                         :
                                         <p className='link-placeholder p-name'>{item.name} {item.smallText && <small>{item.smallText}</small>}</p>
                                     }
+                                    {item.year ? <p className='p-name'>{item.year}</p> : <p className='p-name' style={{visibility: 'hidden'}}>No year</p>}
                                     {item.image ?
-                                    <>
                                     <div>
-                                        </div>
+                                    {item.imagesrc ?
+                                        <Tooltip className="credit-tooltip"
+                                        placement='bottom'
+                                        title={<a className='credit-a'
+                                        href={item.imagesrcLink}>src: {JSON.stringify(item.imagesrc)}
+                                        <HiOutlineExternalLink/></a>}>
+                                            <FaInfo size={22} />
+                                        </Tooltip>
+                                        : null
+                                    }
                                         <LazyLoadImage
                                             key={index}
                                             className='portfolio-img'
@@ -125,7 +134,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                             //     style: {transitionDelay: "1s"},
                                             // }}
                                         />
-                                        </>
+                                        </div>
                                         :
                                         <div className='portfolio-img-placeholder'>No image available</div>
                                     }
