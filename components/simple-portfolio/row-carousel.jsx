@@ -1,7 +1,7 @@
 import { HiOutlineExternalLink } from 'react-icons/hi';
-import { Button } from 'antd';
+import { Button, Tooltip } from 'antd';
 import { useState, useRef, useEffect } from 'react';
-import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
+import { FaCaretLeft, FaCaretRight, FaInfo } from "react-icons/fa";
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
@@ -110,6 +110,9 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                         <p className='link-placeholder p-name'>{item.name} {item.smallText && <small>{item.smallText}</small>}</p>
                                     }
                                     {item.image ?
+                                    <>
+                                    <div>
+                                        </div>
                                         <LazyLoadImage
                                             key={index}
                                             className='portfolio-img'
@@ -122,6 +125,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                             //     style: {transitionDelay: "1s"},
                                             // }}
                                         />
+                                        </>
                                         :
                                         <div className='portfolio-img-placeholder'>No image available</div>
                                     }

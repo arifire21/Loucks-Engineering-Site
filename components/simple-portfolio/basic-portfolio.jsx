@@ -1,6 +1,6 @@
 import { restaurants, offices, outreach, residences, aviation,
     education, gyms, worship, medDental, beauty, pets, laundry,
-    storage, auto, multipurpose, retail, other, supermarkets } from '@/data/portfolio_data';
+    storage, auto, multipurpose, retail, other, supermarkets, cleanrooms } from '@/data/portfolio_data';
 import RowCarousel from './row-carousel';
 import { trackWindowScroll } from 'react-lazy-load-image-component';
 import { useRef } from 'react';
@@ -19,13 +19,18 @@ function BasicPortfolio({scrollPosition}) {
 
             <hr />
 
-            <h2 id='worship-cnt'>Worship</h2>
-            <RowCarousel array={worship} arrayName="worship" scrollPosition={scrollPosition} rootWrapper={rootWrapperRef.current}/>
+            <h2>Aviation</h2>
+            <RowCarousel array={aviation} arrayName="aviation" scrollPosition={scrollPosition} rootWrapper={rootWrapperRef.current}/>
 
             <hr />
 
-            <h2>Aviation</h2>
-            <RowCarousel array={aviation} arrayName="aviation" scrollPosition={scrollPosition} rootWrapper={rootWrapperRef.current}/>
+            <h2>Manufacturing/Compounding Cleanrooms</h2>
+            <RowCarousel array={cleanrooms} arrayName="cleanrooms" scrollPosition={scrollPosition} rootWrapper={rootWrapperRef.current}/>
+
+            <hr />
+
+            <h2 id='worship-cnt'>Worship</h2>
+            <RowCarousel array={worship} arrayName="worship" scrollPosition={scrollPosition} rootWrapper={rootWrapperRef.current}/>
 
             <hr />
 

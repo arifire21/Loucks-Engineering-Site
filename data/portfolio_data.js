@@ -97,6 +97,9 @@ import Mizner from '@/images/mizner-park-fountain.jpg'
 //other
 import Jumbotron from '@/images/gulfstream.jpg'
 
+//cleanrooms
+import AirportLogistics from '@/images/Airport-Logistics.jpg'
+
 export const restaurants = [
     {
         name: "Lucky Fish (Pompano Bch)",
@@ -495,5 +498,26 @@ export const other = [
         website: 'https://panthersiceden.com/',
         year: 2007,
         coords: [26.271310824614506, -80.2920759611157]
+    }
+]
+
+export const cleanrooms = [
+    {
+        name: "GummyWorks",
+        website: "https://www.gummyworks.com/",
+        year: 2023,
+        image: AirportLogistics,
+        imagesrc: "Verdex Construction",
+        imgsrcLink: "https://verdex.com/airport-logistics-warehouse/"
+    },
+    {
+        name: "MSC TransDermal",
+        website: "https://gulfstreampark.com/",
+        year: 2019,
+    },
+    {
+        name: "DPR Pharmacy",
+        website: "https://dprpharmacy.com/",
+        year: 2022,
     }
 ]
