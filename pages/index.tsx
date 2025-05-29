@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Button } from "antd";
 import styles from "@/styles/Home.module.css";
 import Logo from "@/images/logo.png"
-import HomeCarousel from "@/components/home-carousel"
+import HomeCarousel from "@/components/home-carousel";
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
             <p className="center" style={{color: "#cc0b02", fontWeight:'bold', fontSize:'16pt'}}>Est. 1966</p>
           </div>
           <div className='home-item' id='home-caro'>
-            {/* <HomeCarousel /> */}
+            <HomeCarousel/>
           </div>
         </div>
 

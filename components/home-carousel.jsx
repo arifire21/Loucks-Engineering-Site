@@ -1,21 +1,21 @@
-import Carousel from 'antd';
+import {Carousel} from 'antd';
 import {carouselData} from '../data/carousel_data';
-
+import styles from '@/styles/carousel.module.scss'
 export default function HomeCarousel(){
     return(
-        <Carousel arrows autoplay={{ dotDuration: true }} autoplaySpeed={5000} infinite>
+        <Carousel className={styles.caroWrapper} arrows dots dotPosition='bottom' autoplay={{ dotDuration: true }} autoplaySpeed={4500} infinite>
           {carouselData.map((entry, index) =>
               <div key={index}>
-              <img
-                src={entry.image.src}
-                alt={index}
-                width='700'
-                height='500'
-              />
-              <div>
-                <h5>{entry.name}</h5>
-                <p>{entry.location}</p>
-              </div>
+                <img className={styles.caroImage}
+                  src={entry.image.src}
+                  alt={index}
+                  width='600'
+                  height='300'
+                />
+                <div className={styles.caption}>
+                  <p className={styles.entryName}>{entry.name}</p>
+                  <p>{entry.location}</p>
+                </div>
             </div>
           )}
         </Carousel>

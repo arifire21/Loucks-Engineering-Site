@@ -99,6 +99,25 @@ header {
 }
 
 //TODO: MOVE LATER ONCE MIGRATED
+//HOME TAB
+.home-container {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 1rem;
+}
+
+.home-item {
+  margin: 0 auto;
+}
+
+#home-caro {
+  width: 600px;
+  height: 400px; //for caption
+}
+
 //SERVICES
 .flex-container {
   display: flex;
@@ -341,6 +360,10 @@ header {
   }
 }
 
+.slick-arrow {
+  opacity: 1 !important;
+}
+
 //-------------------------------------------//
 //MISC
 
@@ -452,8 +475,8 @@ main {
   }
 
   #home-caro {
-      width: 95% !important;
-      height: 300px !important;
+      width: 50% !important;
+      height: 200px !important;
       margin: 0 !important;
   }
 

@@ -1,0 +1,38 @@
+.caroWrapper {
+    height: 300px;
+    width: 600px;
+}
+
+.caroImage {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.caption {
+    font-family: "Playfair", Helvetica, serif !important; 
+    font-size: 14pt !important;
+    padding: 0.5rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #333333;
+    color: white;
+    width: 100%;
+}
+
+.entryName {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+//for mobile
+@media (max-width:450px) {
+    .caroWrapper, .caroImage {
+        width: 250px;
+        height: 100px;
+    }
+
+    .entryName {
+        font-size: 14pt;
+        font-weight: bold;
+    }
+}    
