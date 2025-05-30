@@ -112,7 +112,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                     {item.year ? <p className='p-name'>{item.year}</p> : <p className='p-name' style={{visibility: 'hidden'}}>No year</p>}
                                     {item.image ?
                                     <div>
-                                    {item.imagesrc ?
+                                    {/* {item.imagesrc ?
                                         <Tooltip className="credit-tooltip"
                                         placement='bottom'
                                         title={<a className='credit-a'
@@ -121,7 +121,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                             <FaInfo size={22} />
                                         </Tooltip>
                                         : null
-                                    }
+                                    } */}
                                         <LazyLoadImage
                                             key={index}
                                             className='portfolio-img'

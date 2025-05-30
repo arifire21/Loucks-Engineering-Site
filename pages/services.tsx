@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Button } from "antd";
 
 export default function Services() {
   return (
@@ -24,7 +25,7 @@ export default function Services() {
               <li>Building Energy Audits</li>
               <li>Manufacturing Facility/Cleanroom Ductwork</li>
               <li>System Design for Enclosure Airflow Control<br/>
-              <small>(physical enclosures designed by others)</small></li>
+              <small>(physical enclosure spaces designed by others)</small></li>
             </ul>
           </div>
 
@@ -36,7 +37,7 @@ export default function Services() {
               <li>Lighting Design and Controls</li>
               <li>Data and IT Systems</li>
               <li>Photometrics</li>
-              <li>UPS systems</li>
+              <li>UPS Systems</li>
             </ul>
           </div>
 
@@ -51,6 +52,8 @@ export default function Services() {
             </ul>
           </div>
         </div>
+
+        <Button href='/portfolio' variant="filled" type="primary" style={{width: 'fit-content', padding:'1rem', margin: 'auto'}}>See our work</Button>
       </main>
     </>
   );

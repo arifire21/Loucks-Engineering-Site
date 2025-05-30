@@ -243,7 +243,7 @@ header {
 }
 
 .credit-tooltip {
-  position: absolute;
+  position: relative;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
   cursor: pointer;
@@ -366,9 +366,11 @@ header {
 }
 
 .ant-btn-primary {
+  font-family: "Playfair", Helvetica, serif !important; 
+  font-size: 14pt !important;
   background-color: variables.$branding_red;
   &:hover {
-    background-color: darkred !important;
+    background-color: rgb(170, 0, 0) !important;
   }
 }
 
