@@ -23,7 +23,7 @@ export default function Contact() {
         </Card>
 
         <Card title="Hours of Operation" style={{ maxWidth: 500 }}>
-        <p><strong>Monday - Friday:</strong> 8:00AM - 5:00PM</p>
+        <p><strong>Monday - Friday</strong><br/>8:00AM - 5:00PM</p>
         </Card>
 
         <Card title="Contact Methods" style={{ maxWidth: 500 }}>

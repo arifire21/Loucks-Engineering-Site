@@ -1,5 +1,4 @@
 .caroWrapper {
-    height: 300px;
     width: 600px;
 }
 
@@ -27,8 +26,8 @@
 //for mobile
 @media (max-width:450px) {
     .caroWrapper, .caroImage {
-        width: 250px;
-        height: 100px;
+        width: 100%;
+        height: 200px;
     }
 
     .entryName, .caption {

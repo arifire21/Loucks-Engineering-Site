@@ -57,7 +57,7 @@
     border-color: #666;
     color: #666;
     transition: background-color, color 0.5s;
-    &:active {
+    &:hover, &:active {
         background-color: #666 !important;
         color: #fff !important;
     }

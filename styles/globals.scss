@@ -100,6 +100,18 @@ header {
 
 //TODO: MOVE LATER ONCE MIGRATED
 //HOME TAB
+
+.est-date {
+  color: variables.$branding_red;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+.home-text {
+  padding: 1rem 5rem;
+  padding-top: 0;
+}
+
 .home-container {
   display: flex;
   flex-direction: row;
@@ -115,7 +127,7 @@ header {
 
 #home-caro {
   width: 600px;
-  height: 400px; //for caption
+  // height: 400px; //for caption
 }
 
 //SERVICES
@@ -370,9 +382,20 @@ header {
   //min-height: 100vh !important;
 }
 
-.ant-btn-primary {
+.ant-carousel {
+  height: fit-content;
+}
+
+.ant-btn-primary, .ant-card {
   font-family: "Playfair", Helvetica, serif !important; 
   font-size: 14pt !important;
+}
+
+.ant-card-head-title {
+  font-size: revert;
+}
+
+.ant-btn-primary {
   background-color: variables.$branding_red;
   &:hover {
     background-color: rgb(170, 0, 0) !important;
@@ -381,7 +404,6 @@ header {
 
 .ant-drawer-close {
   margin-left: auto !important;
-  float: right !important;
   font-size: large !important;
 }
 
@@ -458,6 +480,11 @@ main {
 
 //for mobile
 @media (max-width:450px) {
+  .ant-layout-content {
+    padding: 1rem 2rem;
+    //min-height: 100vh !important;
+  }
+
   .grid-container {
       column-span: 1;
   }
@@ -485,17 +512,26 @@ main {
       flex-wrap: nowrap;
       row-gap: 0;
       column-gap: 0.5rem;
+      width: 100%;
   }
 
   #logo {
-      max-width: 90vw;
-      max-height: 90vh;
-      margin-bottom: 20px;
+      max-width: 90%;
+      // max-height: 90vh;
+  }
+
+  .est-date {
+    margin-bottom: 1rem;
   }
 
   .home-item {
       flex-grow: 0;
-      margin: 0 1rem;
+      // margin: 0 1rem;
+      width: 100%;
+  }
+
+  .home-text {
+    padding: 1rem 0 !important;
   }
   
   .carousel-caption{
@@ -512,19 +548,14 @@ main {
   }
 
   #home-caro {
-      width: 50% !important;
-      height: 200px !important;
-      margin: 0 !important;
+    width: 100%;
+    height: fit-content;
   }
 
   .flex-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
-  }
-
-  .home-txt {
-      padding: 0 3rem;
   }
 
   //mobile nav
@@ -551,24 +582,6 @@ main {
           padding-top: 0px !important;
       }
   }
-
-  //what are these??
-  .me-auto.navbar-nav > .nav-link {
-      border-bottom: 0px;
-      color: black;
-  }
-
-  .me-auto.navbar-nav > .nav-link.active {
-      // color: red;
-      width: fit-content;
-  }
-
-  //navbar override bc i hate how close it is to thw edges
-  // .navbar {
-  //     height: 4.286rem !important; //OR for the desktop sizing
-  //     padding-left: 0.75rem !important;
-  //     padding-right: 0.75rem !important;
-  // }
 
   .portfolio-img{
       width: 200px;

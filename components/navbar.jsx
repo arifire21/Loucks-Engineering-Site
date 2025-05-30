@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
 import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
-import { TiGlobe } from "react-icons/ti";
+// import { TiGlobe } from "react-icons/ti";
 import { HiMenuAlt1 } from "react-icons/hi";
 import AbbrLogo from '@/images/logo_sm.png'
 import { Drawer, Button } from "antd";
@@ -13,11 +13,13 @@ export default function Navbar(){
     const path = usePathname();
     const [open, setOpen] = useState(false);
 
-    const showDrawer = () => {
+    const openDrawer = () => {
+        document.body.style.overflow = "hidden";    //disable mobile scrolling
         setOpen(true);
     }
 
     const closeDrawer = () => {
+        document.body.style.overflow = "auto";
         setOpen(false);
     }
 
@@ -50,7 +52,7 @@ export default function Navbar(){
             <Button
             className={styles.mobileMenuBtn}
             type="primary"
-            onClick={() => showDrawer()}
+            onClick={() => openDrawer()}
             ><HiMenuAlt1 size={30}/></Button>
             <Drawer
                 placement="left"

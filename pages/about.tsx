@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styles from "@/styles/about.module.scss"
 
 export default function About() {
   return (
@@ -10,23 +11,21 @@ export default function About() {
     </Head>
     
       <main>
-        <h1>About Us</h1>
+        <h1 style={{marginBottom:"1rem"}}>About Us</h1>
 
-        <section>
-          <h2>Overview</h2>
-          <section>
-            <p className="abt-p">We have experience in Computer-Aided Design (CAD) drafting, working with commercial projects, municipal projects, parks, recreation spaces, and environmentally-friendly projects. Many of our projects are of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities. We have many projects that have achieved LEED certification.</p>
-          </section>
+        <div className={styles.aboutContainer}>
+        <section className={styles.aboutItem}>
+          <h2>Why Work With Us?</h2>
+            <p className="abt-p">We utilize Computer-Aided Design (CAD) drafting, working with <strong>commercial</strong> projects, <strong>municipal</strong> projects, <strong>residential</strong> spaces, <strong>parks</strong>, <strong>recreation</strong> spaces, and <strong>environmentally-friendly</strong> projects. Many of our projects consist of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities. We have many projects that have achieved LEED certification.</p>
         </section>
 
-        <br/>
+        <hr className={styles.header}/>
 
-        <section>
+        <section className={styles.aboutItem}>
           <h2>History</h2>
-          <section>
-            <p className="abt-p">Our company was founded in 1966, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
-          </section>
+            <p className="abt-p">Our company was founded in <strong>1966</strong>, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
         </section>
+        </div>
       </main>    
     </>
   )
