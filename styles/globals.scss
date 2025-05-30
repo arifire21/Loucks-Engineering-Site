@@ -178,6 +178,11 @@ header {
   margin-bottom: 1rem !important;
 }
 
+// #about-us {
+//   display: flex;
+//   justify-content: center;
+// }
+
 //PORTFOLIO STUFF
 #portfolio-nav-desktop{
   display: block;
@@ -374,8 +379,26 @@ header {
   }
 }
 
+.ant-drawer-close {
+  margin-left: auto !important;
+  float: right !important;
+  font-size: large !important;
+}
+
 .slick-arrow {
   opacity: 1 !important;
+  background-color: #33333375 !important;
+  border-radius: 10px;
+  padding: 0.5rem !important;
+  height: 1rem !important;
+  width: 1rem !important;
+  &:hover {
+    background-color: #333 !important;
+  }
+}
+
+.slick-list, .slick-track {
+  border-radius: 20px;
 }
 
 //-------------------------------------------//

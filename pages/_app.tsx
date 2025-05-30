@@ -18,7 +18,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={playfair.className}>
       {/* prevent terrible css-dev-only tags overriding everything */}
-      <ConfigProvider theme={{ hashed: false }}>
+      <ConfigProvider theme={{ hashed: false,
+        components: {
+          Carousel: {dotHeight: 5, arrowSize: 20}
+        }
+      }}>
       <Layout style={{minHeight: "100vh"}}>
         {/* <Layout.Header> */}
           <Navbar />

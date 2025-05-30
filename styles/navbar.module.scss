@@ -1,3 +1,5 @@
+@use "_variables.scss";
+
 .navbar {
     background-color: #222;
     padding: 1rem;
@@ -9,13 +11,20 @@
     text-decoration: none;
     color: white;
     padding: 0.5rem 1rem;
-    padding-top: 0.25rem;
     border-bottom: 2px solid transparent;
-    transition-property: border-bottom-color, color;
+    // border-top-right-radius: 5px;
+    // border-top-left-radius: 5px;
+    transition-property: border-bottom-color, color, background;
     transition-duration: 0.5s;
-    &:hover, &:active {
-        color: salmon;
+    &:hover {
+        color: #fff;
+        // background-color: #333;
         border-bottom-color: #ff0000;
+    }
+    &.nActive {
+        background: linear-gradient(#222, #333);
+        border-bottom-color: #ff0000;
+        color: white;
     }
 }
 
@@ -34,4 +43,48 @@
 
 .mobileIcon {
     display: none;
+}
+
+.mobileMenuBtn {
+    margin-left: auto;
+    margin-bottom: auto;
+    height: fit-content;
+    width: fit-content;
+    padding: 6px;
+    line-height: 0 !important;
+    display: none !important; /* overwrite ant-btn */
+    background: #222;
+    border-color: #666;
+    color: #666;
+    transition: background-color, color 0.5s;
+    &:active {
+        background-color: #666 !important;
+        color: #fff !important;
+    }
+}
+
+//for mobile
+@media (max-width:450px) {
+    .desktopNav { display: none; }
+
+    .mobileIcon { display: block; }
+
+    .mobileMenuBtn { display: inline-block !important; }
+
+    .navLink {
+        font-family: "Playfair", Helvetica, serif !important; 
+        font-size: 14pt;
+        display: inline-flex;
+        width: 100%;
+        color: #000;
+        background: none !important;
+        & span {
+            margin-left: 1rem;
+        }
+    }
+
+    .nActive {
+        background: none !important;
+        color: variables.$branding_red !important;
+    }
 }

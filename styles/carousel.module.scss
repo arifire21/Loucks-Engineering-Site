@@ -31,8 +31,7 @@
         height: 100px;
     }
 
-    .entryName {
-        font-size: 14pt;
-        font-weight: bold;
+    .entryName, .caption {
+        font-size: 10pt !important;
     }
 }    

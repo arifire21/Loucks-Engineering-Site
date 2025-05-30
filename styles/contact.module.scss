@@ -4,3 +4,11 @@
     justify-content: space-around;
     align-content: center;
 }
+
+//for mobile
+@media (max-width:450px) {
+    .cardContainer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
