@@ -138,6 +138,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                         :
                                         <div className='portfolio-img-placeholder'>No image available</div>
                                     }
+                                    <div className={`row-dot ${index === imgIndex ? 'row-dot-active' : ''}`}></div>
                                 </div>
                             )}
                         </div>

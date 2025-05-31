@@ -257,6 +257,7 @@ header {
   flex-direction: row;
   overflow-x: scroll !important;
   scroll-behavior: smooth;
+  height: fit-content;
 }
 
 .credit-tooltip {
@@ -324,6 +325,21 @@ header {
 }
 
 .p-name { text-align: center;}
+
+.row-dot {
+  margin: 0.5rem 0;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.row-dot-active {
+  background-color: variables.$branding_red;
+  border-color: variables.$branding_red;
+}
 
 .tbd {
   font-weight: bold;
