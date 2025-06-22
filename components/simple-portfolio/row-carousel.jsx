@@ -109,7 +109,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                         :
                                         <p className='link-placeholder p-name'>{item.name} {item.smallText && <small>{item.smallText}</small>}</p>
                                     }
-                                    {item.year ? <p className='p-name'>{item.year}</p> : <p className='p-name' style={{visibility: 'hidden'}}>No year</p>}
+                                    {/* {item.year ? <p className='p-name'>{item.year}</p> : <p className='p-name' style={{visibility: 'hidden'}}>No year</p>} */}
                                     {item.image ?
                                     <div>
                                     {/* {item.imagesrc ?
