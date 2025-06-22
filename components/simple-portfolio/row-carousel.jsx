@@ -27,17 +27,17 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
 
     useEffect(() => {
         //debug
-        if (inView) {
-          console.log(`${arrayName} in view!`);
-        } else {
-          console.log(`${arrayName} out of view`);
-        }
+        // if (inView) {
+        //   console.log(`${arrayName} in view!`);
+        // } else {
+        //   console.log(`${arrayName} out of view`);
+        // }
 
         //to avoid jarring effect when scrolling past cont in view,
         //set known height (some containers have slight differences)
         if(inView && !heightSetOnce){
             const container = document.getElementById(arrayName);
-            console.log(arrayName, container.offsetHeight);
+            // console.log(arrayName, container.offsetHeight);
             container.style.height = container.offsetHeight + 'px';
             setHeightOnceCheck(true);
         }

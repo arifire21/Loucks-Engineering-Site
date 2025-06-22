@@ -69,7 +69,11 @@
 
     .mobileIcon { display: block; }
 
-    .mobileMenuBtn { display: inline-block !important; }
+    .mobileMenuBtn { 
+        display: inline-block !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
 
     .navLink {
         font-family: "Playfair", Helvetica, serif !important; 

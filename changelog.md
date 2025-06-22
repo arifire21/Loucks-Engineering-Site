@@ -12,3 +12,6 @@
 - fixing other mobile styling
 - font-family and text cleanup
 - flex tags in "about" page
+
+# v1.2.0
+- fix both portfolio navbar versions not appearing

@@ -1,8 +1,17 @@
 import Head from "next/head";
 import { PortfolioNavDesktop, PortfolioNavMobile } from '@/components/simple-portfolio/portfolio-nav';
 import BasicPortfolio from '@/components/simple-portfolio/basic-portfolio';
+import { useEffect } from "react";
 
 export default function Portfolio() {
+  //need to have a static height for sticky nav to work
+  useEffect(() => {
+    if(typeof window !== "undefined"){
+      const portfolioMain = document.getElementById("portfolio-main");
+      portfolioMain!.style.height = portfolioMain!.clientHeight + 'px';
+    }
+  }, []);
+
     return (
       <>
         <Head>
@@ -11,12 +20,12 @@ export default function Portfolio() {
         <meta name="description" content="View a gallery showcasing notable projects." />
         </Head>
 
-        <main id="portfolio-grid">
+        <main id="portfolio-main">
           <h1>Project Portfolio</h1>
           <p>View a gallery showcasing notable projects.</p>
 
-          {/* <PortfolioNavDesktop /> */}
-          {/* <PortfolioNavMobile /> */}
+          <PortfolioNavDesktop />
+          <PortfolioNavMobile />
               <BasicPortfolio />
 
               <hr />

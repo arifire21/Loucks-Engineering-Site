@@ -6,7 +6,7 @@ export function PortfolioNavDesktop() {
     function customScroll(id){
         console.log(id)
         let element = document.getElementById(id)
-        element.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
     }
 
     return(
@@ -17,6 +17,7 @@ export function PortfolioNavDesktop() {
                 <div className='portfolio-nav-item' onClick={() => customScroll('offices')}>Offices</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('worship')}>Worship</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('aviation')}>Aviation</div>&ensp;<b>|</b>&ensp;
+                <div className='portfolio-nav-item' onClick={() => customScroll('cleanrooms')}>Manufacturing/Compounding Cleanrooms</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('outreach')}>Outreach</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('storage')}>Storage</div>&ensp;<b>|</b>&ensp;
                 <div className='portfolio-nav-item' onClick={() => customScroll('gyms')}>Gyms</div>&ensp;<b>|</b>&ensp;
@@ -61,6 +62,7 @@ export function PortfolioNavMobile() {
                         <div className='portfolio-nav-item' onClick={() => customScroll('offices')}>Offices</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('worship')}>Worship</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('aviation')}>Aviation</div>
+                        <div className='portfolio-nav-item' onClick={() => customScroll('cleanrooms')}>Manufacturing/Compounding Cleanrooms</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('outreach')}>Outreach</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('storage')}>Storage</div>
                         <div className='portfolio-nav-item' onClick={() => customScroll('gyms')}>Gyms</div>

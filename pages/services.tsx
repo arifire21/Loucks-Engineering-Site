@@ -53,7 +53,7 @@ export default function Services() {
           </div>
         </div>
 
-        <Button href='/portfolio' variant="filled" type="primary" style={{width: 'fit-content', padding:'1rem', margin: 'auto'}}>See our work</Button>
+        <Button href='/portfolio' variant="filled" type="primary">See our work</Button>
       </main>
     </>
   );
