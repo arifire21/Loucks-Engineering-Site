@@ -92,7 +92,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
             <div className='portfolio-flex-container' id={arrayName ?? "cnt"} ref={inViewRef}>
                 {inView ? (
                     <>
-                    {array.length > 2 && (
+                    {/* {array.length > 2 && (
                         <div className='long-btn-container btn-left'>
                             <Button className="portfolio-btn"
                                 variant="filled" type="primary"
@@ -100,7 +100,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                 onClick={() => scrollLeft()}
                             ><FaCaretLeft size={30} /></Button>
                         </div>
-                    )}
+                    )} */}
                         <div className='portfolio-items-container'>
                             {array.map((item, index) =>
                                 <div className='portfolio-item' key={index} ref={index === imgIndex ? itemRef : null}>
@@ -138,11 +138,11 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                         :
                                         <div className='portfolio-img-placeholder'>No image available</div>
                                     }
-                                    <div className={`row-dot ${index === imgIndex ? 'row-dot-active' : ''}`}></div>
+                                    {/* <div className={`row-dot ${index === imgIndex ? 'row-dot-active' : ''}`}></div> */}
                                 </div>
                             )}
                         </div>
-                        {array.length > 2 && (
+                        {/* {array.length > 2 && (
                         <div className='long-btn-container btn-right'>
                             <Button  className="portfolio-btn"
                                 variant="filled" type="primary"
@@ -150,7 +150,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                 onClick={() => scrollRight()}
                             ><FaCaretRight size={30} /></Button>
                         </div>
-                        )}
+                        )} */}
                     </>
                 ) : null} {/* if inView, render. if not, render nothing */}
                 {/* end inView conditional */}
