@@ -90,7 +90,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
 
     return (
             <div className='portfolio-flex-container' id={arrayName ?? "cnt"} ref={inViewRef}>
-                {inView ? (
+                {/* {inView ? (
                     <>
                     {/* {array.length > 2 && (
                         <div className='long-btn-container btn-left'>
@@ -151,8 +151,8 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                             ><FaCaretRight size={30} /></Button>
                         </div>
                         )} */}
-                    </>
-                ) : null} {/* if inView, render. if not, render nothing */}
+                    {/* </> */}
+                // ) : null} {/* if inView, render. if not, render nothing */}
                 {/* end inView conditional */}
             </div>
     )
