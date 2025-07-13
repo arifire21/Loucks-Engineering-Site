@@ -1,8 +1,17 @@
 .cardContainer {
-    margin-top: 1rem;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-around;
     align-content: center;
+}
+
+.contactFormContainer {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: white;
+    width: fit-content;
+    margin: auto;
 }
 
 //for mobile
