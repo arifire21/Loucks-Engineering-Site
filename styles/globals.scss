@@ -55,6 +55,19 @@ footer {
       color: salmon;
       text-decoration: underline;
   }
+  &:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+}
+}
+
+@supports not selector(:focus-visible) {
+  .footer-nav:focus {
+      /* Fallback for browsers without :focus-visible support */
+      outline: 3px solid deepskyblue;
+      outline-offset: 3px;
+  }
 }
 
 .f-active {
@@ -361,6 +374,19 @@ header {
   // &:active {
   //     color: purple
   // }
+  &:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+}
+
+@supports not selector(:focus-visible) {
+    .link:focus {
+        /* Fallback for browsers without :focus-visible support */
+        outline: 3px solid deepskyblue;
+        outline-offset: 3px;
+    }
+}
 }
 
 .link-placeholder {

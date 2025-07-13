@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div>
             <p style={{fontSize: '16pt', marginBottom:'0.5rem'}}>Quick Links</p>
-            <nav>
+            <nav tabIndex={-1}>
                 <a className={`footer-nav ${pathname === '/' ? 'f-active' : ''}`} href='/'>Home</a>
                 &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
                 <a className={`footer-nav ${pathname === '/services' ? 'f-active' : ''}`} href='/services'>Services</a>

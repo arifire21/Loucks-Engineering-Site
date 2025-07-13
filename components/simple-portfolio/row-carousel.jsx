@@ -21,7 +21,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
         rootMargin: "0px 0px 0px 0px", //margin of element to look for?
         threshold: 0.1, //10% visible in order to trigger
         triggerOnce: false,
-        //skip: false,
+        skip: true, //TESTING ACC
         initialInView: arrayName === 'restaurants' || arrayName === 'offices' ? true : false
     });
 
