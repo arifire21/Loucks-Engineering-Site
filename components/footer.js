@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
 
         <div>
-            <p style={{marginBottom:'0.25rem'}}><FaMapPin/> 321 E. Commercial Blvd<br/>Oakland Park, FL 33334</p>
+            <p style={{marginBottom:'0.25rem'}}><FaMapPin/> 321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
             <p style={{marginBottom: '0'}}><FaPhoneVolume/> (954) 938-1881 | &copy; {new Date().getFullYear()}</p>
         </div>
 
