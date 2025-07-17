@@ -34,7 +34,6 @@ function ContactForm() {
         // labelWrap={true}
         layout = {"vertical"}
         wrapperCol={{ span: 12 }}
-        style={{ minWidth: 700 }}
         initialValues={{ remember: true }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
@@ -101,6 +100,7 @@ function ContactForm() {
           name="project"
           rules={[{ required: true }]}
           wrapperCol={{ span: 20 }}
+          labelCol={{ span: 20 }}
         >
           <Select options={[
                 { label: <span>N/A, asking a general question</span>, value: 'General question' },
@@ -112,7 +112,7 @@ function ContactForm() {
 
       <Col span={12}>
           {/* complex form fields */}
-          <p style={{textAlign: "left"}}>If existing, have we worked on it?</p>
+          <p style={{textAlign: "left", paddingBottom: '8px'}}>If existing, have we worked on it?</p>
         <Form.Item<FieldType>
             name = "existing_yes"
             style={{ display: 'inline-block', width: 'calc(50%)' }}
