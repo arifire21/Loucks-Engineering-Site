@@ -439,7 +439,7 @@ header {
 }
 
 .ant-card-head-title {
-  font-size: revert;
+  font-size: 16pt;
 }
 
 .ant-btn-primary {
@@ -474,6 +474,10 @@ header {
 .slick-list, .slick-track {
   border-radius: 20px;
 }
+
+// .ant-form-item {
+//   width: fit-content;
+// }
 
 //-------------------------------------------//
 //MISC
