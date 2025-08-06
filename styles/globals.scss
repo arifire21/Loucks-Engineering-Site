@@ -62,14 +62,6 @@ footer {
 }
 }
 
-@supports not selector(:focus-visible) {
-  .footer-nav:focus {
-      /* Fallback for browsers without :focus-visible support */
-      outline: 3px solid deepskyblue;
-      outline-offset: 3px;
-  }
-}
-
 .f-active {
   color: salmon;
   text-decoration: underline;
@@ -378,15 +370,7 @@ header {
     /* Draw the focus when :focus-visible is supported */
     outline: 3px solid deepskyblue;
     outline-offset: 3px;
-}
-
-@supports not selector(:focus-visible) {
-    .link:focus {
-        /* Fallback for browsers without :focus-visible support */
-        outline: 3px solid deepskyblue;
-        outline-offset: 3px;
-    }
-}
+  }
 }
 
 .link-placeholder {
@@ -459,20 +443,56 @@ header {
 
 .slick-arrow {
   opacity: 1 !important;
-  background-color: rgba(51, 51, 51, 0.70) !important;
-  border-radius: 10px;
+  background-color: rgba(139, 0, 0, 0.60) !important;
+  border-radius: 20px;
+  border: 5px solid rgba(139, 0, 0, 0.60) !important;
   padding: 0.5rem !important;
   height: 1rem !important;
   width: 1rem !important;
   transition-property: background-color;
   transition-duration: 0.5s;
   &:hover {
-    background-color: #333 !important;
+    background-color: darkred !important;
+    border-color: darkred !important
+  }
+  &:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
   }
 }
 
 .slick-list, .slick-track {
   border-radius: 20px;
+}
+
+.slick-dots > li {
+  border: 1px solid darkred;
+}
+
+.focus-visible {
+  outline: 3px solid deepskyblue !important;
+  outline-offset: 3px !important;
+}
+
+/* Fallback for browsers without :focus-visible support */
+@supports not selector(:focus-visible) {
+  .footer-nav:focus {
+    outline: 3px solid deepskyblue;
+    outline-offset: 1px;
+  }
+  .link:focus {
+    outline: 3px solid deepskyblue;
+    outline-offset: 1px;
+  }
+  .slick-arrow:focus {
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+  }
+  // .slick-dots:focus {
+  //   outline: 3px solid deepskyblue !important;
+  //   outline-offset: 3px !important;
+  // }
 }
 
 //-------------------------------------------//
