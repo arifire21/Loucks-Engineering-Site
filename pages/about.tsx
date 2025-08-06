@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/about.module.scss"
+import { LiaFlagUsaSolid } from "react-icons/lia";
 
 export default function About() {
   return (
@@ -26,6 +27,7 @@ export default function About() {
             <p className="abt-p">Our company was founded in <strong>1966</strong>, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
         </section>
         </div>
+        <p style={{marginTop: '1rem'}}>Veteran-friendly employer <LiaFlagUsaSolid style={{verticalAlign:'bottom'}} size={25}/></p>
       </main>    
     </>
   )

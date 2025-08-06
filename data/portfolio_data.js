@@ -7,6 +7,7 @@ import CubicoCoffee from '@/images/cubico-coffee-5275.jpg'
 import Cove from '@/images/thecove.jpg'
 //import MoraGrill from '@/images/mora-grill.jpg'
 import HYB from '@/images/HYB.png'
+import Pinball from '@/images/pinball.jpg'
 
 //residence
 import BluApts from '@/images/blu-apt.jpg'
@@ -102,7 +103,7 @@ import AirportLogistics from '@/images/Airport-Logistics.jpg'
 
 export const restaurants = [
     {
-        name: "Lucky Fish",
+        name: "Lucky Fish (Pompano Bch)",
         website: "https://www.luckyfishpompano.com/",
         image: Lucky_Fish,
         year: 2018,
@@ -132,6 +133,12 @@ export const restaurants = [
         year: 2022,
         arch: 'CSA',
         coords: [26.236697283043124, -80.09017001428346]
+    },
+    {
+        name: "Satellite Pinball Lounge",
+        website: "https://www.satellitepinballlounge.com/",
+        year: 2024,
+        image: Pinball
     },
     {
         name: "Lucky Fish (Dania Bch)",
