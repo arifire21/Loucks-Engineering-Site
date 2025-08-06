@@ -63,6 +63,20 @@
     }
 }
 
+.navLink:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+}
+
+@supports not selector(:focus-visible) {
+    .navLink:focus {
+        /* Fallback for browsers without :focus-visible support */
+        outline: 3px solid deepskyblue;
+        outline-offset: 3px;
+    }
+}
+
 //for mobile
 @media (max-width:450px) {
     .desktopNav { display: none; }

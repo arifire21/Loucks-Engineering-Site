@@ -21,7 +21,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
         rootMargin: "0px 0px 0px 0px", //margin of element to look for?
         threshold: 0.1, //10% visible in order to trigger
         triggerOnce: false,
-        //skip: false,
+        skip: true, //TESTING ACC
         initialInView: arrayName === 'restaurants' || arrayName === 'offices' ? true : false
     });
 
@@ -90,17 +90,6 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
 
     return (
             <div className='portfolio-flex-container' id={arrayName ?? "cnt"} ref={inViewRef}>
-                {inView ? (
-                    <>
-                    {/* {array.length > 2 && (
-                        <div className='long-btn-container btn-left'>
-                            <Button className="portfolio-btn"
-                                variant="filled" type="primary"
-                                disabled={btnDisabledLeft}
-                                onClick={() => scrollLeft()}
-                            ><FaCaretLeft size={30} /></Button>
-                        </div>
-                    )} */}
                         <div className='portfolio-items-container'>
                             {array.map((item, index) =>
                                 <div className='portfolio-item' key={index} ref={index === imgIndex ? itemRef : null}>
@@ -151,8 +140,6 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                             ><FaCaretRight size={30} /></Button>
                         </div>
                         )} */}
-                    </>
-                ) : null} {/* if inView, render. if not, render nothing */}
                 {/* end inView conditional */}
             </div>
     )
