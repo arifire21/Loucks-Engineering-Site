@@ -32,6 +32,11 @@
     display: inline-block;
     height: fit-content;
     width: fit-content;
+    &:focus-visible {
+        /* Draw the focus when :focus-visible is supported */
+        outline: 3px solid deepskyblue;
+        outline-offset: 3px;
+    }
 }
 
 .navLogo {
@@ -61,12 +66,6 @@
         background-color: #666 !important;
         color: #fff !important;
     }
-}
-
-.navLink:focus-visible {
-    /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue;
-    outline-offset: 3px;
 }
 
 @supports not selector(:focus-visible) {
