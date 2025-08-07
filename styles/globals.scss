@@ -472,11 +472,6 @@ header {
   border: 1px solid darkred;
 }
 
-.focus-visible {
-  outline: 3px solid deepskyblue !important;
-  outline-offset: 3px !important;
-}
-
 /* Fallback for browsers without :focus-visible support */
 @supports not selector(:focus-visible) {
   .footer-nav:focus {
