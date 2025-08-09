@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* <Layout.Header> */}
           <Navbar />
         {/* </Layout.Header> */}
-        <Layout.Content className={currentPage === '/portfolio'? 'portfolio-page' : ''}>
+        <Layout.Content className={(currentPage === '/portfolio'? 'portfolio-page' : '') || (currentPage === '/contact'? 'contact-page' : '')}>
           <Component {...pageProps}/>
         </Layout.Content>
         {/* <Layout.Footer> */}

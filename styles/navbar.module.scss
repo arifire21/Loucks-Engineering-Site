@@ -1,7 +1,7 @@
 @use "_variables.scss";
 
 .navbar {
-    background-color: #222;
+    background-color: variables.$gray_primary;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -18,12 +18,12 @@
     transition-duration: 0.5s;
     &:hover {
         color: #fff;
-        // background-color: #333;
-        border-bottom-color: #ff0000;
+        // background-color: variables.$gray_secondary;
+        border-bottom-color: variables.$branding_red;
     }
     &.nActive {
-        background: linear-gradient(#222, #333);
-        border-bottom-color: #ff0000;
+        background: linear-gradient(variables.$gray_primary, variables.$gray_secondary);
+        border-bottom-color: variables.$branding_red;
         color: white;
     }
 }
@@ -58,7 +58,7 @@
     padding: 6px;
     line-height: 0 !important;
     display: none !important; /* overwrite ant-btn */
-    background: #222;
+    background: variables.$gray_primary;
     border-color: #666;
     color: #666;
     transition: background-color, color 0.5s;

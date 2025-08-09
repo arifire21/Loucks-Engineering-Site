@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { Button } from "antd";
+import { GrFanOption } from "react-icons/gr";
+import { MdElectricalServices, MdPlumbing } from "react-icons/md";
 
 export default function Services() {
   return (
@@ -16,7 +18,7 @@ export default function Services() {
 
         <div className="flex-container">
           <div className="item">
-            <p className="subtitle">Mechanical</p>
+            <p className="subtitle"><GrFanOption/><br/>Mechanical</p>
             <hr className="service-header" />
             <ul className="list">
               <li>HVAC Design</li>
@@ -30,7 +32,7 @@ export default function Services() {
           </div>
 
           <div className="item">
-            <p className="subtitle">Electrical</p>
+            <p className="subtitle"><MdElectricalServices/><br/>Electrical</p>
             <hr className="service-header" />
             <ul className="list">
               <li>Power Distribution</li>
@@ -42,7 +44,7 @@ export default function Services() {
           </div>
 
           <div className="item">
-            <p className="subtitle">Plumbing</p>
+            <p className="subtitle"><MdPlumbing/>Plumbing</p>
             <hr className="service-header" />
             <ul className="list">
               <li>Plumbing Systems Design</li>
