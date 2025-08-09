@@ -1,6 +1,6 @@
 "use client"
 import { usePathname } from 'next/navigation';
-import Logo from '@/images/logo_sm.png';
+import Logo from '@/public/logo192.png';
 import { FaMapPin, FaPhoneVolume } from "react-icons/fa";
 
 export default function Footer() {
