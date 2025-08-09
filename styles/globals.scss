@@ -207,7 +207,7 @@ header {
   top: 0px;
   // width: 100vw;
   background-color: white;
-  border-bottom: 2px solid darkred;
+  border-bottom: 2px solid variables.$red_secondary;
 }
 
 #portfolio-nav-desktop{
@@ -330,7 +330,7 @@ header {
   justify-content: center;
   align-items: center;
   border: 2px dotted #ccc;
-  color: #333;
+  color: variables.$gray_secondary;
   border-radius: 25px;
 }
 
@@ -413,6 +413,10 @@ header {
   //min-height: 100vh !important;
 }
 
+.contact-page {
+  background: url('../public/images/banner.png') no-repeat;
+}
+
 .ant-carousel {
   height: fit-content;
 }
@@ -443,9 +447,9 @@ header {
 
 .slick-arrow {
   opacity: 1 !important;
-  background-color: #333 !important;
+  background-color: variables.$gray_secondary !important;
   border-radius: 50% !important;
-  border: 5px solid #333 !important;
+  border: 5px solid variables.$gray_secondary !important;
   outline: 1px solid #fff !important;
   outline-offset: 0px !important;
   padding: 0.5rem !important;
@@ -454,8 +458,8 @@ header {
   transition-property: all;
   transition-duration: 0.5s;
   &:hover {
-    background-color: darkred !important;
-    border-color: darkred !important
+    background-color: variables.$red_secondary !important;
+    border-color: variables.$red_secondary !important
   }
   &:focus-visible {
     /* Draw the focus when :focus-visible is supported */
@@ -469,7 +473,7 @@ header {
 }
 
 .slick-dots > li {
-  border: 1px solid darkred;
+  border: 1px solid variables.$red_secondary;
 }
 
 /* Fallback for browsers without :focus-visible support */
@@ -500,7 +504,7 @@ main {
 }
 
 #not-found-number {
-    color: darkred;
+    color: variables.$red_secondary;
     font-weight: bolder;
     font-size: inherit;
 }
@@ -552,6 +556,10 @@ main {
   .ant-layout-content {
     padding: 1rem 2rem;
     //min-height: 100vh !important;
+  }
+
+  .contact-page {
+    background: none;
   }
 
   .grid-container {
