@@ -207,7 +207,7 @@ header {
   top: 0px;
   // width: 100vw;
   background-color: white;
-  border-bottom: 2px solid variables.$red_secondary;
+  border-bottom: 2px solid darkred;
 }
 
 #portfolio-nav-desktop{
@@ -330,7 +330,7 @@ header {
   justify-content: center;
   align-items: center;
   border: 2px dotted #ccc;
-  color: variables.$gray_secondary;
+  color: #333;
   border-radius: 25px;
 }
 
@@ -411,11 +411,6 @@ header {
 .ant-layout-content {
   padding: 1rem 3rem;
   //min-height: 100vh !important;
-  // background: url('../public/images/blueprinttexture.png') repeat-x bottom;
-}
-
-.contact-page {
-  background: url('../public/images/banner.png') no-repeat;
 }
 
 .ant-carousel {
@@ -448,9 +443,9 @@ header {
 
 .slick-arrow {
   opacity: 1 !important;
-  background-color: variables.$gray_secondary !important;
+  background-color: #333 !important;
   border-radius: 50% !important;
-  border: 5px solid variables.$gray_secondary !important;
+  border: 5px solid #333 !important;
   outline: 1px solid #fff !important;
   outline-offset: 0px !important;
   padding: 0.5rem !important;
@@ -459,8 +454,8 @@ header {
   transition-property: all;
   transition-duration: 0.5s;
   &:hover {
-    background-color: variables.$red_secondary !important;
-    border-color: variables.$red_secondary !important
+    background-color: darkred !important;
+    border-color: darkred !important
   }
   &:focus-visible {
     /* Draw the focus when :focus-visible is supported */
@@ -474,7 +469,7 @@ header {
 }
 
 .slick-dots > li {
-  border: 1px solid variables.$red_secondary;
+  border: 1px solid darkred;
 }
 
 /* Fallback for browsers without :focus-visible support */
@@ -505,7 +500,7 @@ main {
 }
 
 #not-found-number {
-    color: variables.$red_secondary;
+    color: darkred;
     font-weight: bolder;
     font-size: inherit;
 }
