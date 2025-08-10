@@ -1,7 +1,8 @@
 "use client"
 import { usePathname } from 'next/navigation';
 import Logo from '@/public/logo192.png';
-import { FaMapPin, FaPhoneVolume } from "react-icons/fa";
+import { FaMapPin, FaPhoneVolume, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
+import styles from '@/styles/footer.module.scss'
 
 export default function Footer() {
     const pathname = usePathname();
@@ -11,7 +12,12 @@ export default function Footer() {
         <div>
             <img id='d-logo' src={Logo.src} alt="LEI footer logo" width={100} height={100}/>
             <p id='m-logo' style={{fontSize: '20pt', marginBottom: 0}}>Loucks Engineering, Inc.</p>
-            <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p>
+            {/* <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p> */}
+            <hr style={{color: 'salmon'}}/>
+            <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly', marginTop: '0.5rem'}}>
+                <a href='https://www.linkedin.com/company/loucks-engineering-inc./' target='_blank' title='Linkedin'><FaLinkedin size={30} className={styles.linkedinLogo}/></a>
+                <a href='https://www.instagram.com/loucksengineering/' target='_blank' title='Instagram'><FaInstagramSquare size={30} className={styles.instaLogo}/></a>
+            </div>
         </div>
 
         <div>
