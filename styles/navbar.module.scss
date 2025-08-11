@@ -18,13 +18,12 @@
     transition-duration: 0.5s;
     &:hover {
         color: #fff;
-        // background-color: variables.$gray_secondary;
+        // background-color: variables.$gray_secondary; //doesnt work
         border-bottom-color: variables.$branding_red;
     }
     &.nActive {
         background: linear-gradient(variables.$gray_primary, variables.$gray_secondary);
         border-bottom-color: variables.$branding_red;
-        color: white;
     }
 }
 
@@ -34,7 +33,7 @@
     width: fit-content;
     &:focus-visible {
         /* Draw the focus when :focus-visible is supported */
-        outline: 3px solid deepskyblue;
+        outline: 3px solid variables.$focus_blue;
         outline-offset: 3px;
     }
 }
@@ -71,7 +70,7 @@
 @supports not selector(:focus-visible) {
     .navLink:focus {
         /* Fallback for browsers without :focus-visible support */
-        outline: 3px solid deepskyblue;
+        outline: 3px solid variables.$focus_blue;
         outline-offset: 3px;
     }
 }

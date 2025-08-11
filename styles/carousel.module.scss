@@ -1,7 +1,10 @@
-@use "_variables.scss";
-
-.caroWrapper {
+@use "variables";
+// this is the actual caro component
+.caroElem {
     width: 600px;
+    box-shadow: 0 2px 0 rgba(5,145,255,0.1); //match btn
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .caroImage {
@@ -27,7 +30,7 @@
 
 //for mobile
 @media (max-width:450px) {
-    .caroWrapper, .caroImage {
+    .caroElem, .caroImage {
         width: 100%;
         height: 200px;
     }
