@@ -135,6 +135,11 @@ export const restaurants = [
         coords: [26.236697283043124, -80.09017001428346]
     },
     {
+        name: "Beach House",
+        smallText: "(kitchen)",
+        website: "https://beachhousepompano.com/"
+    },
+    {
         name: "Satellite Pinball Lounge",
         website: "https://www.satellitepinballlounge.com/",
         year: 2024,

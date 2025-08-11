@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Button } from "antd";
 import styles from "@/styles/Home.module.scss";
-import Logo from "@/images/logo.png"
+import Logo from "@/public/logo.png"
 import HomeCarousel from "@/components/home-carousel";
 
 export default function Home() {
