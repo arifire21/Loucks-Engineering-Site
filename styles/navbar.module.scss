@@ -1,7 +1,7 @@
 @use "_variables.scss";
 
 .navbar {
-    background-color: #222;
+    background-color: variables.$gray_primary;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -18,11 +18,11 @@
     transition-duration: 0.5s;
     &:hover {
         color: #fff;
-        // background-color: #333;
+        // background-color: variables.$gray_secondary;
         border-bottom-color: #ff0000;
     }
     &.nActive {
-        background: linear-gradient(#222, #333);
+        background: linear-gradient(variables.$gray_primary, variables.$gray_secondary);
         border-bottom-color: #ff0000;
         color: white;
     }
@@ -34,7 +34,7 @@
     width: fit-content;
     &:focus-visible {
         /* Draw the focus when :focus-visible is supported */
-        outline: 3px solid deepskyblue;
+        outline: 3px solid variables.$focus_blue;
         outline-offset: 3px;
     }
 }
@@ -58,7 +58,7 @@
     padding: 6px;
     line-height: 0 !important;
     display: none !important; /* overwrite ant-btn */
-    background: #222;
+    background: variables.$gray_primary;
     border-color: #666;
     color: #666;
     transition: background-color, color 0.5s;
@@ -71,7 +71,7 @@
 @supports not selector(:focus-visible) {
     .navLink:focus {
         /* Fallback for browsers without :focus-visible support */
-        outline: 3px solid deepskyblue;
+        outline: 3px solid variables.$focus_blue;
         outline-offset: 3px;
     }
 }

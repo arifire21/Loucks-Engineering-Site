@@ -1,5 +1,10 @@
-.caroWrapper {
+@use "variables";
+// this is the actual caro component
+.caroElem {
     width: 600px;
+    box-shadow: 0 2px 0 rgba(5,145,255,0.1); //match btn
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .caroImage {
@@ -13,7 +18,7 @@
     padding: 0.5rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: #333333;
+    background-color: variables.$gray_secondary;
     color: white;
     width: 100%;
 }
@@ -25,7 +30,7 @@
 
 //for mobile
 @media (max-width:450px) {
-    .caroWrapper, .caroImage {
+    .caroElem, .caroImage {
         width: 100%;
         height: 200px;
     }

@@ -27,9 +27,18 @@ body {
   margin: 0;
 }
 
+//ELEMENT BASED GLOBALS!
+/* this centers headers, buttons, text
+(including carousel text!!)
+anything that isn't custom centered in
+its own class */
+main {
+  text-align: center;
+}
+
 a {
   color: inherit;
-  //text-decoration: none;
+  //text-decoration: none; //ov somewhere else?
 }
 
 footer {
@@ -37,7 +46,7 @@ footer {
   height: fit-content;
   width: 100%;
   padding: 1rem;
-  background-color: #800000;
+  background-color: variables.$red_secondary;
   color: white;
   text-align: center;
   z-index: 2;
@@ -45,44 +54,6 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
-
-.footer-nav {
-  color: white;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  &:hover {
-      color: salmon;
-      text-decoration: underline;
-  }
-  &:focus-visible {
-    /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue;
-    outline-offset: 3px;
-}
-}
-
-.f-active {
-  color: salmon;
-  text-decoration: underline;
-  &:hover {
-      color: rgb(184, 119, 98);
-      text-decoration: underline;
-  }
-}
-
-.footer-nav-spacer {
-  color: salmon
-}
-
-
-#m-logo {display: none;}
-
-#d-logo {
-  display: block;
-  width: 70px !important;
-  height: 70px !important;
-  margin: auto;
 }
 
 h1 {
@@ -103,38 +74,61 @@ header {
   text-align: center;
 }
 
+//MISC
+#not-found-number {
+  color: variables.$red_secondary;
+  font-weight: bolder;
+  font-size: inherit;
+}
+
+#not-found-flavor {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ccc;
+  padding: 0.25rem;
+  border-radius: 5px;
+}
+
+//-------------------------------------------//
+
+.footer-nav {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  &:hover {
+      color: variables.$salmon_accent;
+      text-decoration: underline;
+  }
+  &:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid variables.$focus_blue;
+    outline-offset: 3px;
+}
+}
+
+.f-active {
+  color: variables.$salmon_accent;
+  text-decoration: underline;
+  &:hover {
+      color: rgb(184, 119, 98);
+      text-decoration: underline;
+  }
+}
+
+.footer-nav-spacer {
+  color: variables.$salmon_accent
+}
+
+
+#m-logo {display: none;}
+
+#d-logo {
+  display: block;
+  width: 70px !important;
+  height: 70px !important;
+  margin: auto;
+}
+
 //TODO: MOVE LATER ONCE MIGRATED
-//HOME TAB
-
-.est-date {
-  color: variables.$branding_red;
-  font-weight: bold;
-  font-size: 16pt;
-}
-
-.home-text {
-  padding: 1rem 5rem;
-  padding-top: 0;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: row;
-  row-gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  // margin-top: 1rem;
-}
-
-.home-item {
-  margin: 0 auto;
-}
-
-#home-caro {
-  width: 600px;
-  // height: 400px; //for caption
-}
-
 //SERVICES
 .flex-container {
   display: flex;
@@ -207,7 +201,7 @@ header {
   top: 0px;
   // width: 100vw;
   background-color: white;
-  border-bottom: 2px solid darkred;
+  border-bottom: 2px solid variables.$red_secondary;
 }
 
 #portfolio-nav-desktop{
@@ -330,7 +324,7 @@ header {
   justify-content: center;
   align-items: center;
   border: 2px dotted #ccc;
-  color: #333;
+  color: variables.$gray_secondary;
   border-radius: 25px;
 }
 
@@ -357,18 +351,18 @@ header {
 
 .link, .portfolio-nav-item {
   font-size: 14pt;
-  color: #e00000;
+  color: variables.$branding_red;
   width: max-content !important;
   cursor: pointer;
   &:hover {
-      color: #b00000;
+      color: variables.$red_secondary;
   }
   // &:active {
   //     color: purple
   // }
   &:focus-visible {
     /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue;
+    outline: 3px solid variables.$focus_blue;
     outline-offset: 3px;
   }
 }
@@ -443,9 +437,9 @@ header {
 
 .slick-arrow {
   opacity: 1 !important;
-  background-color: #333 !important;
+  background-color: variables.$gray_secondary !important;
   border-radius: 50% !important;
-  border: 5px solid #333 !important;
+  border: 5px solid variables.$gray_secondary !important;
   outline: 1px solid #fff !important;
   outline-offset: 0px !important;
   padding: 0.5rem !important;
@@ -454,12 +448,12 @@ header {
   transition-property: all;
   transition-duration: 0.5s;
   &:hover {
-    background-color: darkred !important;
-    border-color: darkred !important
+    background-color: variables.$red_secondary !important;
+    border-color: variables.$red_secondary !important
   }
   &:focus-visible {
     /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue !important;
+    outline: 3px solid variables.$focus_blue !important;
     outline-offset: 3px !important;
   }
 }
@@ -469,50 +463,31 @@ header {
 }
 
 .slick-dots > li {
-  border: 1px solid darkred;
+  border: 1px solid variables.$red_secondary;
 }
 
 /* Fallback for browsers without :focus-visible support */
 @supports not selector(:focus-visible) {
   .footer-nav:focus {
-    outline: 3px solid deepskyblue;
+    outline: 3px solid variables.$focus_blue;
     outline-offset: 1px;
   }
   .link:focus {
-    outline: 3px solid deepskyblue;
+    outline: 3px solid variables.$focus_blue;
     outline-offset: 1px;
   }
   .slick-arrow:focus {
-    outline: 3px solid deepskyblue;
+    outline: 3px solid variables.$focus_blue;
     outline-offset: 3px;
   }
   // .slick-dots:focus {
-  //   outline: 3px solid deepskyblue !important;
+  //   outline: 3px solid variables.$focus_blue !important;
   //   outline-offset: 3px !important;
   // }
 }
 
 //-------------------------------------------//
-//MISC
 
-main {
-  text-align: center;
-}
-
-#not-found-number {
-    color: darkred;
-    font-weight: bolder;
-    font-size: inherit;
-}
-
-#not-found-flavor {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ccc;
-    padding: 0.25rem;
-    border-radius: 5px;
-}
-
-//-------------------------------------------//
 //MOBILE STYLING
 
 // .mobile-nav {
@@ -524,13 +499,6 @@ main {
 //         background-color: lightgray;
 //     }
 // }
-
-//for smaller viewports, just wrap the stupid thing for now
-@media (max-width:1275px) {
-  .home-container {
-      flex-wrap: wrap;
-  }
-}
 
 @media (max-width:1000px) {
   #portfolio-nav-desktop{
@@ -549,6 +517,11 @@ main {
 
 //for mobile
 @media (max-width:450px) {
+  footer {
+    flex-direction: column !important;
+    gap: 1rem;
+}
+
   .ant-layout-content {
     padding: 1rem 2rem;
     //min-height: 100vh !important;
@@ -556,10 +529,6 @@ main {
 
   .grid-container {
       column-span: 1;
-  }
-  footer {
-      flex-direction: column !important;
-      gap: 1rem;
   }
 
   #m-logo {display: block;}
@@ -570,38 +539,6 @@ main {
   //     width: 80px !important;
   //     height: 80px !important;
   // }
-
-  .page-contents {
-      margin: 0 !important;
-  }
-
-  .home-container{
-      margin-top: 0;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      row-gap: 0;
-      column-gap: 0.5rem;
-      width: 100%;
-  }
-
-  #logo {
-      max-width: 90%;
-      // max-height: 90vh;
-  }
-
-  .est-date {
-    margin-bottom: 1rem;
-  }
-
-  .home-item {
-      flex-grow: 0;
-      // margin: 0 1rem;
-      width: 100%;
-  }
-
-  .home-text {
-    padding: 1rem 0 !important;
-  }
   
   .carousel-caption{
      padding: 0.5rem 0 !important;
@@ -614,11 +551,6 @@ main {
   .carousel-item > img {
       width: 100% !important;
       height: 300px !important;
-  }
-
-  #home-caro {
-    width: 100%;
-    height: fit-content;
   }
 
   .flex-container {
