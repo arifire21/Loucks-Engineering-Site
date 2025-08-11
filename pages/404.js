@@ -1,4 +1,4 @@
-import Logo from '@/images/logo_sm.png';
+import Logo from '@/public/logo192.png';
 import { useEffect, useState } from 'react';
 
 export default function NotFoundPage() {

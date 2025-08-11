@@ -407,6 +407,10 @@ header {
   //min-height: 100vh !important;
 }
 
+.contact-page {
+  background: url('../public/images/banner.png') no-repeat;
+}
+
 .ant-carousel {
   height: fit-content;
 }
@@ -487,7 +491,6 @@ header {
 }
 
 //-------------------------------------------//
-
 //MOBILE STYLING
 
 // .mobile-nav {
@@ -525,6 +528,10 @@ header {
   .ant-layout-content {
     padding: 1rem 2rem;
     //min-height: 100vh !important;
+  }
+
+  .contact-page {
+    background: none;
   }
 
   .grid-container {
