@@ -1,6 +1,6 @@
 import styles from "@/styles/contact.module.scss"
 import type { FormProps } from 'antd';
-import { Button, Checkbox, Col, Form, Input, Row, Select } from 'antd';
+import { Button, Checkbox, Col, Form, Input, InputNumber, Row, Select } from 'antd';
 
 type FieldType = {
   f_name: string;
@@ -11,6 +11,7 @@ type FieldType = {
   project: string;
   category: string;
   existing_yes?: string;
+  existing_no?: string;
   existing_unsure?: string;
   description: string;
 };
@@ -72,7 +73,7 @@ function ContactForm() {
           rules={[{ required: true, message: 'Please enter your email' }]}
           wrapperCol={{ span: 16 }}
         >
-          <Input />
+          <Input type="email"/>
         </Form.Item>
         </Col>
         <Col span={12}>
@@ -82,7 +83,7 @@ function ContactForm() {
           rules={[{ required: true, message: 'Please enter your phone number' }]}
           wrapperCol={{ span: 16 }}
         >
-          <Input/>
+          <InputNumber max={10} type="tel" />
         </Form.Item>
         </Col>
         </Row>
@@ -112,19 +113,26 @@ function ContactForm() {
 
       <Col span={12}>
           {/* complex form fields */}
-          <p style={{textAlign: "left"}}>If existing, have we worked on it?</p>
+          <p style={{textAlign: "left"}}>If existing, has LEI worked on it in the past?</p>
         <Form.Item<FieldType>
             name = "existing_yes"
-            style={{ display: 'inline-block', width: 'calc(50%)' }}
+            style={{ display: 'inline-block', width: 'calc(33%)' }}
           >
             <Checkbox value={"Yes"} defaultChecked={false} style={{float: 'left'}}>Yes</Checkbox>
           </Form.Item>
 
           <Form.Item<FieldType>
-            name = "existing_unsure"
-            style={{ display: 'inline-block', width: 'calc(50%)' }}
+            name = "existing_no"
+            style={{ display: 'inline-block', width: 'calc(33%)' }}
           >
-            <Checkbox value={"Unsure"} defaultChecked={false} style={{float: 'left'}}>Unsure</Checkbox>
+            <Checkbox value={"No"} defaultChecked={false} style={{float: 'left'}}>No</Checkbox>
+          </Form.Item>
+
+          <Form.Item<FieldType>
+            name = "existing_unsure"
+            style={{ display: 'inline-block', width: 'calc(33%)' }}
+          >
+            <Checkbox value={"No"} defaultChecked={false} style={{float: 'left'}}>Unsure</Checkbox>
           </Form.Item>
       </Col>
       </Row>
@@ -155,6 +163,8 @@ function ContactForm() {
         >
           <Input.TextArea style={{width: '100%', minHeight: "100px"}}/>
         </Form.Item>
+
+        <p style={{fontSize: '14pt', marginTop: '0.25rem'}}>If you are an existing client, please contact our office by phone.</p>
 
         <Form.Item wrapperCol={{ span: 24 }}>
           <Button type="primary" htmlType="submit" style={{marginTop: '1rem'}}>
