@@ -26,7 +26,7 @@ const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
 function ContactForm() {
   return (
     <div className={styles.contactFormContainer}>
-      <p style={{fontSize: "16pt"}}><strong>Want to get in touch? Send your info!</strong></p>
+      <p style={{fontSize: "16pt"}}><strong>Want to get in touch? Send your info</strong></p>
       <Form
         name="contact-form"
         labelCol={{ span: 16 }}
@@ -45,7 +45,7 @@ function ContactForm() {
           <Form.Item<FieldType>
             label="First Name"
             name="f_name"
-            rules={[{ required: true, message: 'Please input your first name!' }]}
+            rules={[{ required: true, message: 'Please enter your first name' }]}
             wrapperCol={{ span: 16 }}
             >
             <Input />
@@ -56,7 +56,7 @@ function ContactForm() {
           <Form.Item<FieldType>
             label="Last Name"
             name="l_name"
-            rules={[{ required: true, message: 'Please input your last name!' }]}
+            rules={[{ required: true, message: 'Please enter your last name' }]}
             wrapperCol={{ span: 16 }}
           >
             <Input />
@@ -69,7 +69,7 @@ function ContactForm() {
         <Form.Item<FieldType>
           label="Email"
           name="email"
-          rules={[{ required: true, message: 'Please input your email!' }]}
+          rules={[{ required: true, message: 'Please enter your email' }]}
           wrapperCol={{ span: 16 }}
         >
           <Input />
@@ -79,7 +79,7 @@ function ContactForm() {
         <Form.Item<FieldType>
           label="Phone Number"
           name="phone"
-          rules={[{ required: true }]}
+          rules={[{ required: true, message: 'Please enter your phone number' }]}
           wrapperCol={{ span: 16 }}
         >
           <Input/>
@@ -99,13 +99,13 @@ function ContactForm() {
         <Form.Item<FieldType>
           label="Is this a new or existing project?"
           name="project"
-          rules={[{ required: true }]}
+          rules={[{ required: true, message: 'Please select project status' }]}
           wrapperCol={{ span: 20 }}
         >
           <Select options={[
                 { label: <span>N/A, asking a general question</span>, value: 'General question' },
                 { label: <span>New project</span>, value: 'New project' },
-                { label: <span>Existing project (reno/add-on)</span>, value: 'Existing project' },
+                { label: <span>Existing project (reno/add-on)</span>, value: 'Existing project  (reno/add-on)' },
           ]} />
       </Form.Item>
       </Col>
@@ -132,7 +132,7 @@ function ContactForm() {
           <Form.Item<FieldType>
           label="Is this project focused on a specific discipline?"
           name="category"
-          rules={[{ required: true }]}
+          rules={[{ required: true, message: 'Please select project discipline' }]}
         >
           <Select options={[
             { value: 'Full MEP', label: <span>Full MEP</span> },
@@ -150,10 +150,10 @@ function ContactForm() {
           label="Description & Details"
           name="description"
           help={"Describe the project scope and/or details about the service."}
-          rules={[{ required: true, message: 'Please input details about your question or project!' }]}
+          rules={[{ required: true, message: 'Please enter details about your question or project' }]}
           wrapperCol={{ span: 20 }}
         >
-          <Input.TextArea style={{width: '100%', minHeight: "120px"}}/>
+          <Input.TextArea style={{width: '100%', minHeight: "100px"}}/>
         </Form.Item>
 
         <Form.Item wrapperCol={{ span: 24 }}>
