@@ -17,16 +17,16 @@ export default function Contact() {
         <p>Find ways to contact us here!</p>
 
         <div className={styles.cardContainer}>
-        <Card title="Office Location" style={{ maxWidth: 500, border: "1px solid gray" }}>
+        <Card title="Office Location" className={styles.cardCustom}>
         <p style={{marginBottom:0}}>321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
         <a style={{color: 'darkred', textDecoration: 'underline'}} href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <HiOutlineExternalLink/></a>
         </Card>
 
-        <Card title="Hours of Operation"style={{ minWidth: 250, maxWidth: 500, border: "1px solid gray" }}>
+        <Card title="Hours of Operation" className={styles.cardCustom}>
         <p><strong>Monday - Friday</strong><br/>8:00AM - 5:00PM</p>
         </Card>
 
-        <Card title="Contact Methods" style={{ maxWidth: 500, border: "1px solid gray" }}>
+        <Card title="Contact Methods" className={styles.cardCustom}>
         <p style={{marginBottom:0}}><strong>Office Phone:</strong> (954) 938-1881</p>
         <p><strong>Email:</strong> Bob Loucks -<br/>bob@louckseng.com</p>
         </Card>

@@ -16,6 +16,11 @@
     margin: 0 auto;
 }
 
+.abtPara {
+margin: 0 6rem;
+margin-bottom: 1rem !important;
+}
+
 //for mobile
 @media (max-width:450px) {
     .aboutContainer {
@@ -25,5 +30,9 @@
 
     .header {
         width: 100%;
+    }
+
+    .abtPara {
+        margin: 0 2rem
     }
 }

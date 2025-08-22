@@ -89,7 +89,7 @@ header {
 }
 
 //-------------------------------------------//
-
+//FOOTER CLASSES, tricky to move bc ternary
 .footer-nav {
   color: white;
   text-decoration: none;
@@ -114,11 +114,6 @@ header {
   }
 }
 
-.footer-nav-spacer {
-  color: variables.$salmon_accent
-}
-
-
 #m-logo {display: none;}
 
 #d-logo {
@@ -128,72 +123,14 @@ header {
   margin: auto;
 }
 
-//TODO: MOVE LATER ONCE MIGRATED
-//SERVICES
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.item {
-  padding: 20px;
-}
-
+//for home and service pages, do not move
 .service-header{
   border: 2px solid variables.$branding_red;
   width: 100%;
   margin: 0 auto;
 }
 
-.subtitle {
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 0.5rem !important;
-}
-
-//SERVICES TAB
-.list {
-  list-style: square inside;
-  padding-left: 0 !important;
-  margin-bottom: 0 !important;
-
-  li {
-  // text-align: center;
-  font-size: 20px;
-  padding: 0.5rem 0;
-  }
-
-  &:last-child{
-      margin-bottom: 1rem;
-  }
-}
-
-.details {
-  margin: 2rem;
-}
-
-//ABOUT TAB
-#abt-ctr {
-  display: flex;
-  flex-direction: column;
-}
-
-#abt-ctr > section {
-  text-align: center;
-}
-
-.abt-p {
-  margin: 0 6rem;
-  margin-bottom: 1rem !important;
-}
-
-// #about-us {
-//   display: flex;
-//   justify-content: center;
-// }
-
+//TODO: MOVE LATER ONCE MIGRATED
 //PORTFOLIO STUFF
 #portfolio-nav-desktop, #portfolio-nav-mobile{
   z-index: 100;
@@ -607,14 +544,6 @@ header {
   #sticky-portfolio-nav a {
       font-size: 10pt;    
   }
-
-  .abt-p {
-      margin: 0 2rem
-  }
-
-  // .service-header{
-  //     width: 70%;
-  // }
 
   #portfolio-page {
       width: 100vw;

@@ -1,3 +1,4 @@
+@use '_variables.scss';
 
 .linkedinLogo {
     color: #fff;
@@ -15,4 +16,8 @@
         cursor: pointer;
         color: #E1306C;
     }
+}
+
+.footerNavSpacer {
+    color: variables.$salmon_accent
 }

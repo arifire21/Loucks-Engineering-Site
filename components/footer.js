@@ -1,6 +1,6 @@
 "use client"
 import { usePathname } from 'next/navigation';
-import Logo from '@/public/logo192.png';
+import Logo from '@/public/lei-logo-sm-100.png';
 import { FaMapPin, FaPhoneVolume, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import styles from '@/styles/footer.module.scss'
 
@@ -13,29 +13,29 @@ export default function Footer() {
             <img id='d-logo' src={Logo.src} alt="LEI footer logo" width={100} height={100}/>
             <p id='m-logo' style={{fontSize: '20pt', marginBottom: 0}}>Loucks Engineering, Inc.</p>
             {/* <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p> */}
-            <hr style={{color: 'salmon'}}/>
+            {/* <hr style={{color: 'salmon'}}/>
             <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly', marginTop: '0.5rem'}}>
                 <a href='https://www.linkedin.com/company/loucks-engineering-inc./' target='_blank' title='Linkedin'><FaLinkedin size={30} className={styles.linkedinLogo}/></a>
                 <a href='https://www.instagram.com/loucksengineering/' target='_blank' title='Instagram'><FaInstagramSquare size={30} className={styles.instaLogo}/></a>
-            </div>
+            </div> */}
         </div>
 
         <div>
             <p style={{marginBottom:'0.25rem'}}><FaMapPin/> 321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
-            <p style={{marginBottom: '0'}}><FaPhoneVolume/> (954) 938-1881 | &copy; {new Date().getFullYear()}</p>
+            <p style={{marginBottom: '0'}}><FaPhoneVolume/> (954) 938-1881 <span className={styles.footerNavSpacer}>|</span> &copy; {new Date().getFullYear()}</p>
         </div>
 
         <div>
             <p style={{fontSize: '16pt', marginBottom:'0.5rem'}}>Quick Links</p>
             <nav tabIndex={-1}>
                 <a className={`footer-nav ${pathname === '/' ? 'f-active' : ''}`} href='/'>Home</a>
-                &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
+                &ensp;<b className={styles.footerNavSpacer}>|</b>&ensp;
                 <a className={`footer-nav ${pathname === '/services' ? 'f-active' : ''}`} href='/services'>Services</a>
-                &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
+                &ensp;<b className={styles.footerNavSpacer}>|</b>&ensp;
                 <a className={`footer-nav ${pathname === '/portfolio' ? 'f-active' : ''}`} href='/portfolio'>Project Portfolio</a>
                 <br/>
                 <a className={`footer-nav ${pathname === '/about' ? 'f-active' : ''}`} href='/about'>About Us</a>
-                &ensp;<b className='footer-nav-spacer'>|</b>&ensp;
+                &ensp;<b className={styles.footerNavSpacer}>|</b>&ensp;
                 <a className={`footer-nav ${pathname === '/contact' ? 'f-active' : ''}`} href='/contact'>Contact Us</a>
             </nav>
         </div>
