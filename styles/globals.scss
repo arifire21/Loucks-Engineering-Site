@@ -134,9 +134,10 @@ header {
 #portfolio-nav-desktop, #portfolio-nav-mobile{
   z-index: 100;
   position: sticky;
-  top: 0px;
+  width: 100%;
+  top: 0;
   // width: 100vw;
-  // background-color: white;
+  background-color: black; //rgb(245, 245, 245);
   border-bottom: 2px solid variables.$red_secondary;
 }
 
@@ -158,12 +159,20 @@ header {
 //THIS OVERRIDES LAYOUT.CONTENT
 .portfolio-page {
   padding: 0 !important;          //AD has: padding: 1rem 3rem;
-  max-height: revert !important;  //AD has: max-height: 100vh !important;
+  //bad. keep mh because it creates a weird nested container
+  //max-height: revert !important;  //AD has: max-height: 100vh !important;
   margin-top: 0 !important;
-  //margin-right: 0 !important;
-  // overflow-x: hidden;
-  // background-color: white;
-  position: relative;
+  display: block !important;
+  overflow: auto !important
+}
+
+//this is the page content itself, text w nav below until it is sticky
+#portfolio-main {
+  position: relative; //important part
+  // overflow-y: scroll;
+  display: block;
+  height: 100vh !important;
+  overflow: auto !important;
 }
 
 //this is the page content itself, text w nav below until it is sticky
@@ -181,8 +190,7 @@ header {
 
 //for nav elem, do not move
 .sticky-btn {
-  display:flex;
-  justify-content:center;
+  display: block;
   top: 0;
 }
 
