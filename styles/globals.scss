@@ -130,14 +130,13 @@ header {
   margin: 0 auto;
 }
 
-//TODO: MOVE LATER ONCE MIGRATED
 //PORTFOLIO STUFF
 #portfolio-nav-desktop, #portfolio-nav-mobile{
   z-index: 100;
   position: sticky;
   top: 0px;
   // width: 100vw;
-  background-color: white;
+  // background-color: white;
   border-bottom: 2px solid variables.$red_secondary;
 }
 
@@ -163,7 +162,7 @@ header {
   margin-top: 0 !important;
   //margin-right: 0 !important;
   // overflow-x: hidden;
-  background-color: white;
+  // background-color: white;
   position: relative;
 }
 
@@ -180,150 +179,12 @@ header {
   }
 }
 
+//for nav elem, do not move
 .sticky-btn {
   display:flex;
   justify-content:center;
   top: 0;
 }
-
-.portfolio-flex-container {
-  display: flex;
-  flex-direction: row;
-  width: calc(100vw - 2rem);
-  min-height: 300px;
-}
-
-.portfolio-items-container {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll !important;
-  scroll-behavior: smooth;
-  height: fit-content;
-}
-
-.credit-tooltip {
-  position: relative;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  color: invert;
-}
-
-.credit-a {
-  text-decoration: underline;
-}
-
-.portfolio-btn {
-  background-color: variables.$branding_red;
-  height: 3rem;
-  padding: 0px !important;
-  svg {
-      display: flex;
-      vertical-align: middle !important;
-  }
-}
-
-.long-btn-container {
-  display: flex;
-  align-items: center;
-}
-
-.btn-left {
-  box-shadow: 10px 0px 15px #fff;
-  z-index: 2;
-}
-
-.btn-right {
-  box-shadow: -10px 0px 15px #fff;
-  z-index: 2;
-  float: right;
-}
-
-.portfolio-item {
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.portfolio-img {
-  width: 400px;
-  height: 300px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.portfolio-img-placeholder {
-  width: 400px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px dotted #ccc;
-  color: variables.$gray_secondary;
-  border-radius: 25px;
-}
-
-.p-name { text-align: center; margin-bottom: 0.25rem;}
-
-.row-dot {
-  margin: 0.5rem 0;
-  width: 10px !important;
-  height: 10px !important;
-  background-color: transparent;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  transition: all 0.5s;
-}
-
-.row-dot-active {
-  background-color: variables.$branding_red;
-  border-color: variables.$branding_red;
-}
-
-.tbd {
-  font-weight: bold;
-}
-
-.link, .portfolio-nav-item {
-  font-size: 14pt;
-  color: variables.$branding_red;
-  width: max-content !important;
-  cursor: pointer;
-  &:hover {
-      color: variables.$red_secondary;
-  }
-  // &:active {
-  //     color: purple
-  // }
-  &:focus-visible {
-    /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid variables.$focus_blue;
-    outline-offset: 3px;
-  }
-}
-
-.link-placeholder {
-  font-size: 14pt; //match other font size
-  width: max-content;
-  margin-bottom: 0;
-}
-
-.item-name {
-  font-size: 16pt;
-  font-weight: bold;
-}
-
-.item-location {
-  font-size: 14pt;
-}
-
-.item-category {
-  font-size: 14pt;
-  font-style: italic;
-}
-
 
 @media (prefers-color-scheme: light) {
   html {
@@ -413,10 +274,6 @@ header {
     outline: 3px solid variables.$focus_blue;
     outline-offset: 1px;
   }
-  .link:focus {
-    outline: 3px solid variables.$focus_blue;
-    outline-offset: 1px;
-  }
   .slick-arrow:focus {
     outline: 3px solid variables.$focus_blue;
     outline-offset: 3px;
@@ -448,11 +305,6 @@ header {
   #portfolio-nav-mobile{
       display: block;
   }
-
-  .portfolio-items-container {
-      overflow-x: scroll !important;
-  }
-
 }
 
 //for mobile
@@ -483,19 +335,6 @@ header {
   //     width: 80px !important;
   //     height: 80px !important;
   // }
-  
-  .carousel-caption{
-     padding: 0.5rem 0 !important;
-  }
-
-  .carousel-caption > p {
-      margin-bottom: 0.5rem;
-  }
-
-  .carousel-item > img {
-      width: 100% !important;
-      height: 300px !important;
-  }
 
   .flex-container {
       display: flex;
@@ -528,46 +367,11 @@ header {
       }
   }
 
-  .portfolio-img{
-      width: 200px;
-      height: auto;
-  }
-
-  .portfolio-item {
-      margin: 1rem;
-  }
-
-  .p-name {
-      font-size: 12pt;
-  }
-
   #sticky-portfolio-nav a {
       font-size: 10pt;    
   }
 
   #portfolio-page {
       width: 100vw;
-  }
-
-  .portfolio-flex-container {
-    align-items: center;
-  }
-
-  .portfolio-items-container {
-      overflow-x: scroll !important;
-      min-height: 150px;
-  }
-
-  .portfolio-img-placeholder {
-      height: 150px;
-      width: 200px;
-  }
-
-  .portfolio-btn {
-      padding: 0.25rem !important;
-  }
-
-  .row-dot, .row-dot-active {
-    display: none;
   }
 }
