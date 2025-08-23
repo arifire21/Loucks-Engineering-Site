@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
 // import { TiGlobe } from "react-icons/ti";
 import { HiMenuAlt1 } from "react-icons/hi";
-import AbbrLogo from '@/images/logo_sm.png'
+import AbbrLogo from '@/public/lei-logo-sm-100.png'
 import { Drawer, Button } from "antd";
 import styles from '@/styles/navbar.module.scss'
 

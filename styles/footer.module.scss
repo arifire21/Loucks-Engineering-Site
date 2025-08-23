@@ -1,0 +1,23 @@
+@use '_variables.scss';
+
+.linkedinLogo {
+    color: #fff;
+    transition: all 0.5s;
+    &:hover, &:active {
+        cursor: pointer;
+        color: #2867b2;
+    }
+}
+
+.instaLogo {
+    color: #fff;
+    transition: all 0.5s;
+    &:hover, &:active {
+        cursor: pointer;
+        color: #E1306C;
+    }
+}
+
+.footerNavSpacer {
+    color: variables.$salmon_accent
+}

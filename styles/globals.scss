@@ -1,10 +1,4 @@
 @use '_variables.scss';
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -27,9 +21,18 @@ body {
   margin: 0;
 }
 
+//ELEMENT BASED GLOBALS!
+/* this centers headers, buttons, text
+(including carousel text!!)
+anything that isn't custom centered in
+its own class */
+main {
+  text-align: center;
+}
+
 a {
   color: inherit;
-  //text-decoration: none;
+  //text-decoration: none; //ov somewhere else?
 }
 
 footer {
@@ -37,7 +40,7 @@ footer {
   height: fit-content;
   width: 100%;
   padding: 1rem;
-  background-color: #800000;
+  background-color: variables.$red_secondary;
   color: white;
   text-align: center;
   z-index: 2;
@@ -45,44 +48,6 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
-
-.footer-nav {
-  color: white;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  &:hover {
-      color: salmon;
-      text-decoration: underline;
-  }
-  &:focus-visible {
-    /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue;
-    outline-offset: 3px;
-}
-}
-
-.f-active {
-  color: salmon;
-  text-decoration: underline;
-  &:hover {
-      color: rgb(184, 119, 98);
-      text-decoration: underline;
-  }
-}
-
-.footer-nav-spacer {
-  color: salmon
-}
-
-
-#m-logo {display: none;}
-
-#d-logo {
-  display: block;
-  width: 70px !important;
-  height: 70px !important;
-  margin: auto;
 }
 
 h1 {
@@ -103,111 +68,76 @@ header {
   text-align: center;
 }
 
-//TODO: MOVE LATER ONCE MIGRATED
-//HOME TAB
-
-.est-date {
-  color: variables.$branding_red;
-  font-weight: bold;
-  font-size: 16pt;
+//MISC
+#not-found-number {
+  color: variables.$red_secondary;
+  font-weight: bolder;
+  font-size: inherit;
 }
 
-.home-text {
-  padding: 1rem 5rem;
-  padding-top: 0;
+#not-found-flavor {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ccc;
+  padding: 0.25rem;
+  border-radius: 5px;
 }
 
-.home-container {
-  display: flex;
-  flex-direction: row;
-  row-gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  // margin-top: 1rem;
+//-------------------------------------------//
+//FOOTER CLASSES, tricky to move bc ternary
+.footer-nav {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  &:hover {
+      color: variables.$salmon_accent;
+      text-decoration: underline;
+  }
+  &:focus-visible {
+    /* Draw the focus when :focus-visible is supported */
+    outline: 3px solid variables.$focus_blue;
+    outline-offset: 3px;
+}
 }
 
-.home-item {
-  margin: 0 auto;
+.f-active {
+  color: variables.$salmon_accent;
+  text-decoration: underline;
+  &:hover {
+      color: rgb(184, 119, 98);
+      text-decoration: underline;
+  }
 }
 
-#home-caro {
-  width: 600px;
-  // height: 400px; //for caption
+#m-logo {display: none;}
+
+#d-logo {
+  display: block;
+  width: 70px !important;
+  height: 70px !important;
+  margin: auto;
 }
 
-//SERVICES
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.item {
-  padding: 20px;
-}
-
+//for home and service pages, do not move
 .service-header{
   border: 2px solid variables.$branding_red;
   width: 100%;
   margin: 0 auto;
 }
 
-.subtitle {
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 0.5rem !important;
-}
-
-//SERVICES TAB
-.list {
-  list-style: square inside;
-  padding-left: 0 !important;
-  margin-bottom: 0 !important;
-
-  li {
-  // text-align: center;
-  font-size: 20px;
-  padding: 0.5rem 0;
-  }
-
-  &:last-child{
-      margin-bottom: 1rem;
-  }
-}
-
-.details {
-  margin: 2rem;
-}
-
-//ABOUT TAB
-#abt-ctr {
-  display: flex;
-  flex-direction: column;
-}
-
-#abt-ctr > section {
-  text-align: center;
-}
-
-.abt-p {
-  margin: 0 6rem;
-  margin-bottom: 1rem !important;
-}
-
-// #about-us {
-//   display: flex;
-//   justify-content: center;
-// }
-
 //PORTFOLIO STUFF
 #portfolio-nav-desktop, #portfolio-nav-mobile{
   z-index: 100;
   position: sticky;
-  top: 0px;
+  width: 100%;
+  top: 0;
   // width: 100vw;
-  background-color: white;
-  border-bottom: 2px solid darkred;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 2px solid variables.$red_secondary;
+}
+
+#portfolio-nav-desktop.fixed, #portfolio-nav-mobile.fixed {
+  position: fixed;
+  box-shadow: 0 2px 0 rgba(5,145,255,0.1); //match btn
 }
 
 #portfolio-nav-desktop{
@@ -226,14 +156,27 @@ header {
 // }
 
 //THIS OVERRIDES LAYOUT.CONTENT
-.portfolio-page {
-  padding: 0 !important;          //AD has: padding: 1rem 3rem;
-  max-height: revert !important;  //AD has: max-height: 100vh !important;
-  margin-top: 0 !important;
-  //margin-right: 0 !important;
-  // overflow-x: hidden;
-  background-color: white;
-  position: relative;
+// .portfolio-page {
+//   padding: 0 !important;          //AD has: padding: 1rem 3rem;
+//   //bad. keep mh because it creates a weird nested container
+//   max-height: revert !important;  //AD has: max-height: 100vh !important;
+//   margin-top: 0 !important;
+//   // display: block !important;
+//   // overflow: auto !important;
+//   // height: 100vh !important;
+// }
+
+//this is the page content itself, text w nav below until it is sticky
+#portfolio-main {
+  position: relative; //important part
+  // overflow-y: scroll;
+  display: block;
+  // height: max-content !important;
+  // overflow: scroll !important;
+  min-height: 100vh;
+  max-height: max-content;
+  background-color: rgb(245, 245, 245);
+
 }
 
 //this is the page content itself, text w nav below until it is sticky
@@ -249,150 +192,11 @@ header {
   }
 }
 
+//for nav elem, do not move
 .sticky-btn {
-  display:flex;
-  justify-content:center;
+  display: block;
   top: 0;
 }
-
-.portfolio-flex-container {
-  display: flex;
-  flex-direction: row;
-  width: calc(100vw - 2rem);
-  min-height: 300px;
-}
-
-.portfolio-items-container {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll !important;
-  scroll-behavior: smooth;
-  height: fit-content;
-}
-
-.credit-tooltip {
-  position: relative;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  color: invert;
-}
-
-.credit-a {
-  text-decoration: underline;
-}
-
-.portfolio-btn {
-  background-color: variables.$branding_red;
-  height: 3rem;
-  padding: 0px !important;
-  svg {
-      display: flex;
-      vertical-align: middle !important;
-  }
-}
-
-.long-btn-container {
-  display: flex;
-  align-items: center;
-}
-
-.btn-left {
-  box-shadow: 10px 0px 15px #fff;
-  z-index: 2;
-}
-
-.btn-right {
-  box-shadow: -10px 0px 15px #fff;
-  z-index: 2;
-  float: right;
-}
-
-.portfolio-item {
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.portfolio-img {
-  width: 400px;
-  height: 300px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.portfolio-img-placeholder {
-  width: 400px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px dotted #ccc;
-  color: #333;
-  border-radius: 25px;
-}
-
-.p-name { text-align: center; margin-bottom: 0.25rem;}
-
-.row-dot {
-  margin: 0.5rem 0;
-  width: 10px !important;
-  height: 10px !important;
-  background-color: transparent;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  transition: all 0.5s;
-}
-
-.row-dot-active {
-  background-color: variables.$branding_red;
-  border-color: variables.$branding_red;
-}
-
-.tbd {
-  font-weight: bold;
-}
-
-.link, .portfolio-nav-item {
-  font-size: 14pt;
-  color: #e00000;
-  width: max-content !important;
-  cursor: pointer;
-  &:hover {
-      color: #b00000;
-  }
-  // &:active {
-  //     color: purple
-  // }
-  &:focus-visible {
-    /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue;
-    outline-offset: 3px;
-  }
-}
-
-.link-placeholder {
-  font-size: 14pt; //match other font size
-  width: max-content;
-  margin-bottom: 0;
-}
-
-.item-name {
-  font-size: 16pt;
-  font-weight: bold;
-}
-
-.item-location {
-  font-size: 14pt;
-}
-
-.item-category {
-  font-size: 14pt;
-  font-style: italic;
-}
-
 
 @media (prefers-color-scheme: light) {
   html {
@@ -411,6 +215,10 @@ header {
 .ant-layout-content {
   padding: 1rem 3rem;
   //min-height: 100vh !important;
+}
+
+.contact-page {
+  background: url('../public/images/banner.png') no-repeat;
 }
 
 .ant-carousel {
@@ -443,9 +251,9 @@ header {
 
 .slick-arrow {
   opacity: 1 !important;
-  background-color: #333 !important;
+  background-color: variables.$gray_secondary !important;
   border-radius: 50% !important;
-  border: 5px solid #333 !important;
+  border: 5px solid variables.$gray_secondary !important;
   outline: 1px solid #fff !important;
   outline-offset: 0px !important;
   padding: 0.5rem !important;
@@ -454,12 +262,12 @@ header {
   transition-property: all;
   transition-duration: 0.5s;
   &:hover {
-    background-color: darkred !important;
-    border-color: darkred !important
+    background-color: variables.$red_secondary !important;
+    border-color: variables.$red_secondary !important
   }
   &:focus-visible {
     /* Draw the focus when :focus-visible is supported */
-    outline: 3px solid deepskyblue !important;
+    outline: 3px solid variables.$focus_blue !important;
     outline-offset: 3px !important;
   }
 }
@@ -469,47 +277,23 @@ header {
 }
 
 .slick-dots > li {
-  border: 1px solid darkred;
+  border: 1px solid variables.$red_secondary;
 }
 
 /* Fallback for browsers without :focus-visible support */
 @supports not selector(:focus-visible) {
   .footer-nav:focus {
-    outline: 3px solid deepskyblue;
-    outline-offset: 1px;
-  }
-  .link:focus {
-    outline: 3px solid deepskyblue;
+    outline: 3px solid variables.$focus_blue;
     outline-offset: 1px;
   }
   .slick-arrow:focus {
-    outline: 3px solid deepskyblue;
+    outline: 3px solid variables.$focus_blue;
     outline-offset: 3px;
   }
   // .slick-dots:focus {
-  //   outline: 3px solid deepskyblue !important;
+  //   outline: 3px solid variables.$focus_blue !important;
   //   outline-offset: 3px !important;
   // }
-}
-
-//-------------------------------------------//
-//MISC
-
-main {
-  text-align: center;
-}
-
-#not-found-number {
-    color: darkred;
-    font-weight: bolder;
-    font-size: inherit;
-}
-
-#not-found-flavor {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ccc;
-    padding: 0.25rem;
-    border-radius: 5px;
 }
 
 //-------------------------------------------//
@@ -525,13 +309,6 @@ main {
 //     }
 // }
 
-//for smaller viewports, just wrap the stupid thing for now
-@media (max-width:1275px) {
-  .home-container {
-      flex-wrap: wrap;
-  }
-}
-
 @media (max-width:1000px) {
   #portfolio-nav-desktop{
       display: none;
@@ -540,26 +317,26 @@ main {
   #portfolio-nav-mobile{
       display: block;
   }
-
-  .portfolio-items-container {
-      overflow-x: scroll !important;
-  }
-
 }
 
 //for mobile
 @media (max-width:450px) {
+  footer {
+    flex-direction: column !important;
+    gap: 1rem;
+}
+
   .ant-layout-content {
     padding: 1rem 2rem;
     //min-height: 100vh !important;
   }
 
+  .contact-page {
+    background: none;
+  }
+
   .grid-container {
       column-span: 1;
-  }
-  footer {
-      flex-direction: column !important;
-      gap: 1rem;
   }
 
   #m-logo {display: block;}
@@ -570,56 +347,6 @@ main {
   //     width: 80px !important;
   //     height: 80px !important;
   // }
-
-  .page-contents {
-      margin: 0 !important;
-  }
-
-  .home-container{
-      margin-top: 0;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      row-gap: 0;
-      column-gap: 0.5rem;
-      width: 100%;
-  }
-
-  #logo {
-      max-width: 90%;
-      // max-height: 90vh;
-  }
-
-  .est-date {
-    margin-bottom: 1rem;
-  }
-
-  .home-item {
-      flex-grow: 0;
-      // margin: 0 1rem;
-      width: 100%;
-  }
-
-  .home-text {
-    padding: 1rem 0 !important;
-  }
-  
-  .carousel-caption{
-     padding: 0.5rem 0 !important;
-  }
-
-  .carousel-caption > p {
-      margin-bottom: 0.5rem;
-  }
-
-  .carousel-item > img {
-      width: 100% !important;
-      height: 300px !important;
-  }
-
-  #home-caro {
-    width: 100%;
-    height: fit-content;
-  }
 
   .flex-container {
       display: flex;
@@ -652,54 +379,11 @@ main {
       }
   }
 
-  .portfolio-img{
-      width: 200px;
-      height: auto;
-  }
-
-  .portfolio-item {
-      margin: 1rem;
-  }
-
-  .p-name {
-      font-size: 12pt;
-  }
-
   #sticky-portfolio-nav a {
       font-size: 10pt;    
   }
 
-  .abt-p {
-      margin: 0 2rem
-  }
-
-  // .service-header{
-  //     width: 70%;
-  // }
-
   #portfolio-page {
       width: 100vw;
-  }
-
-  .portfolio-flex-container {
-    align-items: center;
-  }
-
-  .portfolio-items-container {
-      overflow-x: scroll !important;
-      min-height: 150px;
-  }
-
-  .portfolio-img-placeholder {
-      height: 150px;
-      width: 200px;
-  }
-
-  .portfolio-btn {
-      padding: 0.25rem !important;
-  }
-
-  .row-dot, .row-dot-active {
-    display: none;
   }
 }

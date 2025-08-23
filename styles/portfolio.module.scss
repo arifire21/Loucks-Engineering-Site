@@ -1,0 +1,190 @@
+@use "_variables.scss";
+
+.portfolioFlexContainer {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 2rem);
+    min-height: 300px;
+}
+
+.portfolioItemsContainer {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll !important;
+    scroll-behavior: smooth;
+    height: fit-content;
+}
+
+.portfolioItem {
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+  
+.portfolioImg {
+    width: 400px;
+    height: 300px;
+    border-radius: 25px;
+    text-align: center;
+}
+  
+.portfolioImgPlaceholder {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted #ccc;
+    color: variables.$gray_secondary;
+    border-radius: 25px;
+}
+
+.pName { text-align: center; margin-bottom: 0.25rem;}
+
+.pLink, .portfolioNavItem {
+    font-size: 14pt;
+    color: variables.$branding_red;
+    width: max-content !important;
+    cursor: pointer;
+    &:hover {
+        color: variables.$red_secondary;
+    }
+    &:focus-visible {
+      /* Draw the focus when :focus-visible is supported */
+      outline: 3px solid variables.$focus_blue;
+      outline-offset: 3px;
+    }
+}
+  
+.linkPlaceholder {
+font-size: 14pt; //match other font size
+width: max-content;
+margin-bottom: 0;
+}
+
+//CURRENTLY UNUSED
+//CREDITS
+// .credit-tooltip {
+//     position: relative;
+//     margin-left: 0.5rem;
+//     margin-top: 0.5rem;
+//     cursor: pointer;
+//     color: invert;
+//   }
+  
+//   .credit-a {
+//     text-decoration: underline;
+//   }
+//FOR MANUAL BUTTONS
+//(axed because usestate was impractical, can use tab ctrl)
+// .portfolio-btn {
+//     background-color: variables.$branding_red;
+//     height: 3rem;
+//     padding: 0px !important;
+//     svg {
+//         display: flex;
+//         vertical-align: middle !important;
+//     }
+//   }
+  
+//   .long-btn-container {
+//     display: flex;
+//     align-items: center;
+//   }
+  
+//   .btn-left {
+//     box-shadow: 10px 0px 15px #fff;
+//     z-index: 2;
+//   }
+  
+//   .btn-right {
+//     box-shadow: -10px 0px 15px #fff;
+//     z-index: 2;
+//     float: right;
+//   }
+  
+//   .row-dot {
+//     margin: 0.5rem 0;
+//     width: 10px !important;
+//     height: 10px !important;
+//     background-color: transparent;
+//     border: 2px solid #ccc;
+//     border-radius: 50%;
+//     transition: all 0.5s;
+//   }
+// .row-dot-active {
+//     background-color: variables.$branding_red;
+//     border-color: variables.$branding_red;
+//   }
+  
+//   .tbd {
+//     font-weight: bold;
+//   }
+
+//FOR INTERACTIVE MAP
+// .itemName {
+// font-size: 16pt;
+// font-weight: bold;
+// }
+
+// .itemLocation {
+// font-size: 14pt;
+// }
+
+// .itemCategory {
+// font-size: 14pt;
+// font-style: italic;
+// }
+
+@supports not selector(:focus-visible) {
+    .link:focus {
+        outline: 3px solid variables.$focus_blue;
+        outline-offset: 1px;
+    }
+}
+
+
+@media (max-width:1000px) {  
+    .portfolioItemsContainer {
+        overflow-x: scroll !important;
+    }
+}
+
+@media (max-width:450px) {
+    .portfolioFlexContainer {
+        align-items: center;
+    }
+    
+    .portfolioItemsContainer {
+        overflow-x: scroll !important;
+        min-height: 150px;
+    }
+
+    .portfolioImg{
+        width: 200px;
+        height: auto;
+    }
+  
+    .portfolioItem {
+        margin: 1rem;
+    }
+
+    .portfolioImgPlaceholder {
+        height: 150px;
+        width: 200px;
+    }
+
+    .pName {
+        font-size: 12pt;
+    }
+
+    // .portfolio-btn {
+    //     padding: 0.25rem !important;
+    // }
+  
+    // .row-dot, .row-dot-active {
+    //   display: none;
+    // }
+}
