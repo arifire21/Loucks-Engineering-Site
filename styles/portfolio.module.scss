@@ -5,6 +5,16 @@
     flex-direction: row;
     width: calc(100vw - 2rem);
     min-height: 300px;
+    // mask-image: radial-gradient(black 50%, transparent 60%);
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,              //starts fully transparent at left
+        rgb(245, 245, 245) 5%,   // 1/5 bg color
+        rgb(245, 245, 245) 95%,   //5 -> 95% of row is color
+        transparent 100%            //fade to transparent at right
+      );
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
 }
 
 .portfolioItemsContainer {
@@ -14,6 +24,16 @@
     scroll-behavior: smooth;
     height: fit-content;
 }
+
+//this is a wrapper for all the portfolio-divs, plus has rootWrapperRef attached
+.portfolioWrapper {
+    margin: 0 1rem;
+    background-color: rgb(245, 245, 245);
+    // box-shadow: 10px 0px 15px rgb(245, 245, 245);
+    & h2 {
+      text-align: left;
+    }
+  }
 
 .portfolioItem {
     align-items: center;

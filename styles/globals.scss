@@ -179,19 +179,6 @@ header {
 
 }
 
-//this is the page content itself, text w nav below until it is sticky
-// #portfolio-main {
-//   position: relative; //important part
-// }
-
-//this is a wrapper for all the portfolio-divs, plus has rootWrapperRef attached
-#portfolio-wrapper {
-  margin: 0 1rem;
-  & h2 {
-    text-align: left;
-  }
-}
-
 //for nav elem, do not move
 .sticky-btn {
   display: block;
@@ -347,12 +334,6 @@ header {
   //     width: 80px !important;
   //     height: 80px !important;
   // }
-
-  .flex-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  }
 
   //mobile nav
   .navbar-offc {

@@ -4,12 +4,13 @@ import { restaurants, offices, outreach, residences, aviation,
 import RowCarousel from './row-carousel';
 import { trackWindowScroll } from 'react-lazy-load-image-component';
 import { useRef } from 'react';
+import styles from "@/styles/carousel.module.scss";
 
 function BasicPortfolio({scrollPosition}) {
     const rootWrapperRef = useRef(null); //per docs used to observe scrollable container, not viewport
 
     return (
-        <div ref={rootWrapperRef} id='portfolio-wrapper'>
+        <div ref={rootWrapperRef} className={styles.portfolioWrapper}>
             <h2 id='dining'>Dining</h2>
             <RowCarousel array={restaurants} arrayName="restaurants" scrollPosition={scrollPosition} rootWrapper={rootWrapperRef.current}/>
             <hr />
