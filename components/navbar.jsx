@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaHome, FaComments, FaInfo, FaList, FaImages } from 'react-icons/fa'
 // import { TiGlobe } from "react-icons/ti";
 import { HiMenuAlt1 } from "react-icons/hi";
-import AbbrLogo from '@/public/lei-logo-sm-100.png'
+import AbbrLogo from '@/public/lei-logo-sm-100-nav.png'
 import { Drawer, Button } from "antd";
 import styles from '@/styles/navbar.module.scss'
 
@@ -24,8 +24,8 @@ export default function Navbar(){
     }
 
     return(
-        <nav className={styles.navbar}>
-            <Link href="/" className={styles.navLogo}>
+        <nav className={styles.navbar} aria-label="main page navigation navbar">
+            <Link href="/" className={styles.navLogo} aria-label="Home - Clickable Logo">
                 <Image src={AbbrLogo} alt="lei-logo" width={50} height={50}/>
             </Link>
             <div className={styles.desktopNav}>

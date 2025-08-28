@@ -1,4 +1,4 @@
-import Logo from "@/public/logo192.png"
+import Logo from "@/public/lei-logo-sm-100.png"
 
 export default function ErrorPage() {
 

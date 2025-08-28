@@ -1,7 +1,8 @@
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { Button, Tooltip } from 'antd';
 import { useState, useRef, useEffect } from 'react';
-import { FaCaretLeft, FaCaretRight, FaInfo } from "react-icons/fa";
+// import { FaCaretLeft, FaCaretRight, FaInfo } from "react-icons/fa";
+import styles from "@/styles/portfolio.module.scss"
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
@@ -22,7 +23,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
         threshold: 0.1, //10% visible in order to trigger
         triggerOnce: false,
         skip: true, //TESTING ACC
-        initialInView: arrayName === 'restaurants' || arrayName === 'offices' ? true : false
+        // initialInView: arrayName === 'restaurants' || arrayName === 'offices' ? true : false
     });
 
     useEffect(() => {
@@ -89,14 +90,14 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
     }
 
     return (
-            <div className='portfolio-flex-container' id={arrayName ?? "cnt"} ref={inViewRef}>
-                        <div className='portfolio-items-container'>
+            <div className={styles.portfolioFlexContainer} id={arrayName ?? "cnt"} ref={inViewRef}>
+                        <div className={styles.portfolioItemsContainer}>
                             {array.map((item, index) =>
-                                <div className='portfolio-item' key={index} ref={index === imgIndex ? itemRef : null}>
+                                <div className={styles.portfolioItem} key={index} ref={index === imgIndex ? itemRef : null}>
                                     {item.website ?
-                                        <a className='link p-name' href={item.website} target="_blank" rel="noreferrer">{item.name} {item.smallText && <small>{item.smallText}</small>}<HiOutlineExternalLink /></a>
+                                        <a className={`${styles.pLink} ${styles.pName}`} href={item.website} target="_blank" rel="noreferrer">{item.name} {item.smallText && <small>{item.smallText}</small>}<HiOutlineExternalLink /></a>
                                         :
-                                        <p className='link-placeholder p-name'>{item.name} {item.smallText && <small>{item.smallText}</small>}</p>
+                                        <p className={`${styles.linkPlaceholder} ${styles.pName}`}>{item.name} {item.smallText && <small>{item.smallText}</small>}</p>
                                     }
                                     {/* {item.year ? <p className='p-name'>{item.year}</p> : <p className='p-name' style={{visibility: 'hidden'}}>No year</p>} */}
                                     {item.image ?
@@ -113,9 +114,9 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                     } */}
                                         <LazyLoadImage
                                             key={index}
-                                            className='portfolio-img'
+                                            className={styles.portfolioImg}
                                             src={item.image.src}
-                                            alt={`LEI MEP portfolio_img_${item.name}`}
+                                            alt={`LEI portfolio image for project ${item.name}`}
                                             scrollPosition={scrollPosition}
                                             effect='opacity'
                                             // wrapperProps={{
@@ -125,7 +126,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                         />
                                         </div>
                                         :
-                                        <div className='portfolio-img-placeholder'>No image available</div>
+                                        <div className={styles.portfolioImgPlaceholder}>No image available</div>
                                     }
                                     {/* <div className={`row-dot ${index === imgIndex ? 'row-dot-active' : ''}`}></div> */}
                                 </div>

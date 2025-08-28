@@ -23,17 +23,25 @@ export default function App({ Component, pageProps }: AppProps) {
           Carousel: {dotHeight: 5, arrowSize: 20}
         }
       }}>
-      <Layout style={{minHeight: "100vh"}}>
-        {/* <Layout.Header> */}
+        {/* if currentPage is portfolio, render special layout more suited to it
+            that does not nest content
+            bug fix and also futureproofing for map */}
+        {currentPage === '/portfolio'? (
+          <>
+          <Component {...pageProps}/>
+          </>
+        ) :
+        // if not, be normal PLEASE
+        (
+        <Layout style={{minHeight: "100vh"}}>
           <Navbar />
-        {/* </Layout.Header> */}
-        <Layout.Content className={currentPage === '/portfolio'? 'portfolio-page' : ''}>
+        <Layout.Content>
           <Component {...pageProps}/>
         </Layout.Content>
-        {/* <Layout.Footer> */}
           <Footer/>
-          {/* </Layout.Footer> */}
-      </Layout>
+        </Layout>
+        )
+        }
       </ConfigProvider>
     </div>
   )
