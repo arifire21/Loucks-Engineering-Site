@@ -26,7 +26,7 @@ export default function Home() {
           </div>
         </div>
 
-        <hr id='homeheader' className='service-header' />
+        <hr className={styles.homeHeader}/>
         
         <div className={styles.homeTextContainer}>
           <p className={styles.homeText}>

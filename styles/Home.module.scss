@@ -20,12 +20,12 @@ logo and caro */
   // margin-top: 1rem;
 }
 
-// container for component. TODO: adjust w new logo
+// container for component
 .homeItem {
   margin: 0 auto;
 }
 
-// container for component. TODO: adjust w new logo
+// container for component
 .homeCaro {
   width: 600px;
 }
@@ -47,11 +47,55 @@ logo and caro */
   padding-top: 0;
 }
 
+.homeHeader{
+  border: 2px solid variables.$branding_red;
+  width: 100%;
+  margin: 0 auto;
+}
+
 //for smaller desktop viewports, just wrap the stupid thing for now
 //FIXME:
-@media (max-width:1275px) {
-  .homeContainer {
+// @media (max-width:1275px) {
+//   .homeContainer {
+//       flex-wrap: wrap;
+//   }
+
+//   .logo,  .homeCaro{
+//     scale: 0.75
+//   }
+// }
+
+//for smaller desktop viewports or 120%+ browser zooms
+@media (max-width: 1280px){
+  // .homeContainer {width: fit-content;}
+  .logo {
+    width: 80%
+  }
+}
+
+//133%
+@media (max-width: 1155px){
+  //   .homeContainer {
+  //     flex-wrap: wrap;
+  // }
+
+  .logo {
+    width: 70%
+  }
+
+  .homeCaro {
+    scale: 0.8;
+  }
+}
+
+//150%
+@media (max-width: 1024px){
+    .homeContainer {
       flex-wrap: wrap;
+  }
+
+  .logo, .homeCaro {
+    width: 60%
   }
 }
 
@@ -60,6 +104,17 @@ logo and caro */
   .main {
     align-items: center;
   }
+}
+
+//200%
+@media (max-width: 768px){
+  .homeContainer {
+    flex-wrap: wrap;
+}
+
+.logo, .homeCaro {
+  width: 60%
+}
 }
 
 //mobile
@@ -80,7 +135,8 @@ logo and caro */
   }
 
   .logo {
-    max-width: 100%;
+    width: unset !important;
+    max-width: 100% !important;
     // max-height: 90vh;
   }
 
@@ -95,5 +151,6 @@ logo and caro */
 
   .homeText {
     padding: 1rem 0 !important;
+    padding-top: 0 !important;
   }
 }

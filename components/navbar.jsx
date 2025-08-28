@@ -24,8 +24,8 @@ export default function Navbar(){
     }
 
     return(
-        <nav className={styles.navbar}>
-            <Link href="/" className={styles.navLogo}>
+        <nav className={styles.navbar} aria-label="main page navigation navbar">
+            <Link href="/" className={styles.navLogo} aria-label="Home - Clickable Logo">
                 <Image src={AbbrLogo} alt="lei-logo" width={50} height={50}/>
             </Link>
             <div className={styles.desktopNav}>

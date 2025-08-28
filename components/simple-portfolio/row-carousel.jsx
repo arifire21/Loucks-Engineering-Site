@@ -116,7 +116,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                                             key={index}
                                             className={styles.portfolioImg}
                                             src={item.image.src}
-                                            alt={`LEI MEP portfolio_img_${item.name}`}
+                                            alt={`LEI portfolio image for project ${item.name}`}
                                             scrollPosition={scrollPosition}
                                             effect='opacity'
                                             // wrapperProps={{

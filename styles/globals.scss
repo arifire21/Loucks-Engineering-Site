@@ -117,13 +117,6 @@ header {
   margin: auto;
 }
 
-//for home and service pages, do not move
-.service-header{
-  border: 2px solid variables.$branding_red;
-  width: 100%;
-  margin: 0 auto;
-}
-
 //PORTFOLIO STUFF
 #portfolio-nav-desktop, #portfolio-nav-mobile{
   z-index: 100;
@@ -296,7 +289,21 @@ header {
 //     }
 // }
 
-@media (max-width:1000px) {
+//150% or tablet
+@media (max-width:1024px) {
+
+  .ant-layout { //ignore these defaults
+    font-size: unset;
+  }
+
+html, body, .ant-btn-primary, .ant-card {
+    font-size: 12pt !important;
+}
+
+.ant-card-head-title {
+  font-size: 14pt !important;
+}
+
   #portfolio-nav-desktop{
       display: none;
   }
@@ -306,8 +313,32 @@ header {
   }
 }
 
+//200% or tablet
+@media (max-width:786px) {
+  html, body, .ant-btn-primary, .ant-card {
+    font-size: 10pt !important;
+  }
+
+  .ant-card-head-title {
+    font-size: 14pt !important;
+  }
+}
+
 //for mobile
+//rely on the font adapting as it does
 @media (max-width:450px) {
+  html, body, .ant-btn-primary, .ant-card {
+    font-size: unset !important;
+  }
+
+  .ant-card-head-title {
+    font-size: unset !important;
+  }
+
+  .ant-layout { //ignore these defaults
+    font-size: unset;
+  }
+
   footer {
     flex-direction: column !important;
     gap: 1rem;

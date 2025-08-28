@@ -48,6 +48,7 @@
     height: 300px;
     border-radius: 25px;
     text-align: center;
+    font-size: 12pt !important;
 }
   
 .portfolioImgPlaceholder {
@@ -61,7 +62,7 @@
     border-radius: 25px;
 }
 
-.pName { text-align: center; margin-bottom: 0.25rem;}
+.pName { font-size: 14pt; text-align: center; margin-bottom: 0.25rem;}
 
 .pLink, .portfolioNavItem {
     font-size: 14pt;
@@ -165,11 +166,76 @@ margin-bottom: 0;
     }
 }
 
-
-@media (max-width:1000px) {  
+//150% zoom or tablet
+@media (max-width:1024px) {  
+    .portfolioFlexContainer {
+        align-items: center;
+    }
+    
     .portfolioItemsContainer {
         overflow-x: scroll !important;
+        min-height: 150px;
     }
+
+    .portfolioImg{
+        width: 250px;
+        height: auto;
+    }
+  
+    .portfolioItem {
+        margin: 1rem;
+    }
+
+    .portfolioImgPlaceholder {
+        height: 150px;
+        width: 200px;
+    }
+
+    .pName, .pLink, .portfolioNavItem {
+        font-size: 12pt;
+    }
+}
+
+// //200% zoom or mobile
+// @media (max-width:768px) {
+    
+// }
+
+@media (max-width:768px) {
+    .portfolioFlexContainer {
+        align-items: center;
+    }
+    
+    .portfolioItemsContainer {
+        overflow-x: scroll !important;
+        min-height: 150px;
+    }
+
+    .portfolioImg{
+        width: 200px;
+        height: auto;
+    }
+  
+    .portfolioItem {
+        margin: 1rem;
+    }
+
+    .portfolioImgPlaceholder {
+        height: 150px;
+        width: 200px;
+    }
+
+    .pName, .pLink, .portfolioNavItem {
+        font-size: 10pt;
+    }
+
+    // .portfolio-btn {
+    //     padding: 0.25rem !important;
+    // }
+  
+    // .row-dot, .row-dot-active {
+    //   display: none;
+    // }
 }
 
 @media (max-width:450px) {
@@ -195,16 +261,4 @@ margin-bottom: 0;
         height: 150px;
         width: 200px;
     }
-
-    .pName {
-        font-size: 12pt;
-    }
-
-    // .portfolio-btn {
-    //     padding: 0.25rem !important;
-    // }
-  
-    // .row-dot, .row-dot-active {
-    //   display: none;
-    // }
 }
