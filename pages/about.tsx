@@ -17,7 +17,7 @@ export default function About() {
         <div className={styles.aboutContainer}>
         <section className={styles.aboutItem}>
           <h2>Why Work With Us?</h2>
-            <p className="abt-p">We utilize Computer-Aided Design (CAD) drafting, working with <strong>commercial</strong> projects, <strong>municipal</strong> projects, <strong>residential</strong> spaces, <strong>parks</strong>, <strong>recreation</strong> spaces, and <strong>environmentally-friendly</strong> projects. Many of our projects consist of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities. We have many projects that have achieved LEED certification.</p>
+            <p className="abt-p">We utilize Computer-Aided Design (CAD) drafting, working with <strong>commercial</strong> projects, <strong>municipal</strong> projects, <strong>residential</strong> spaces, <strong>parks</strong>, <strong>recreation</strong> spaces, and <strong>environmentally-friendly</strong> projects. Many of our projects consist of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth, we take great pride in being part of the intelligent reuse of existing facilities. We have many projects that have achieved LEED certification.</p>
         </section>
 
         <hr className={styles.header}/>
