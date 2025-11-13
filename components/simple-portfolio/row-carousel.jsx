@@ -95,7 +95,7 @@ const RowCarousel = ({ array = [], arrayName = "", scrollPosition, rootWrapper})
                             {array.map((item, index) =>
                                 <div className={styles.portfolioItem} key={index} ref={index === imgIndex ? itemRef : null}>
                                     {item.website ?
-                                        <a className={`${styles.pLink} ${styles.pName}`} href={item.website} target="_blank" rel="noreferrer">{item.name} {item.smallText && <small>{item.smallText}</small>}<HiOutlineExternalLink /></a>
+                                        <a className={`${styles.pLink} ${styles.pName}`} href={item.website} target="_blank" rel="noreferrer">{item.name} {item.smallText && <small>{item.smallText}</small>}<HiOutlineExternalLink style={{verticalAlign:'middle'}}/></a>
                                         :
                                         <p className={`${styles.linkPlaceholder} ${styles.pName}`}>{item.name} {item.smallText && <small>{item.smallText}</small>}</p>
                                     }
