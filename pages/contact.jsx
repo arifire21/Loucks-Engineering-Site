@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Card } from 'antd';
-import ContactForm from "@/components/contact-form";
 import {HiOutlineExternalLink} from 'react-icons/hi';
 import styles from "@/styles/contact.module.scss"
 
@@ -29,10 +28,9 @@ export default function Contact() {
 
         <Card title="Contact Methods" className={styles.cardCustom}>
         <p style={{marginBottom:0}}><strong>Office Phone:</strong> (954) 938-1881</p>
-        <p><strong>Email:</strong> Bob Loucks -<br/>bob@louckseng.com</p>
+        <p><strong>Email:</strong> Bob Loucks -<br/><a href="mailto:name@email.com">bob@louckseng.com</a></p>
         </Card>
         </div>
-        <ContactForm/>
       </main>
     </>
   )
