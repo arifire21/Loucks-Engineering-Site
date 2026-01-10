@@ -214,18 +214,17 @@ header {
   font-size: 16pt;
 }
 
-.ant-btn-primary {
+.ant-switch.ant-switch-checked, .ant-btn-primary {
   background-color: variables.$branding_red;
-  width: fit-content !important;
-  padding: 1rem;
-  margin: auto;
   &:hover {
     background-color: rgb(170, 0, 0) !important;
   }
 }
 
-.ant-form-item {
-  margin-bottom: 0.25rem !important;
+.ant-btn-primary {
+  width: fit-content !important;
+  padding: 1rem;
+  margin: auto;
 }
 
 .ant-drawer-close {

@@ -127,6 +127,11 @@ export const restaurants = [
         coords: [26.235869639172, -80.08943552222465]
     },
     {
+        name: "Beach House",
+        smallText: "(kitchen)",
+        website: "https://beachhousepompano.com/"
+    },
+    {
         name: "How You Brewin'",
         website: "https://howyoubrewin.com/pages/pompano-guide-for-guests",
         image: HYB,

@@ -2,11 +2,12 @@ import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import { usePathname } from 'next/navigation';
 
-import { Layout, ConfigProvider } from "antd";
+import { Layout, ConfigProvider, theme } from "antd";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 import { Playfair } from "next/font/google";
+import { useState, useCallback, useEffect } from "react";
 
 const playfair = Playfair({
   subsets: ['latin'],
@@ -14,11 +15,48 @@ const playfair = Playfair({
 
 export default function App({ Component, pageProps }: AppProps) {
   const currentPage = usePathname();
+  //for dark mode
+  const [windowQuery, setWindowQuery] = useState<MediaQueryList>();
+  const [darkModeTop, setDarkMode] = useState<boolean>(false);
+
+  const darkModeChange = useCallback((event: MediaQueryListEvent) => {
+    console.log(event.matches ? true : false);
+    setDarkMode(event.matches ? true : false);
+  }, []);
+
+  //set windowQuery at start otherwise undefined
+  useEffect(() => {
+    if (typeof window != "undefined" && typeof window.matchMedia === "function") {
+      setWindowQuery(window.matchMedia("(prefers-color-scheme:dark)"));
+    }
+  }, [])
+
+  //do the change
+  useEffect(() => {
+    if(!windowQuery?.matches || windowQuery.media){
+    windowQuery?.addEventListener("change", darkModeChange);
+    return () => {
+      windowQuery?.removeEventListener("change", darkModeChange);
+    };
+  }
+  }, [windowQuery, darkModeChange]);
+
+  useEffect(() => {
+    console.log(windowQuery?.matches ? true : false);
+    setDarkMode(windowQuery?.matches ? true : false);
+  }, []);
+
+  //parent function for switch child
+  function handleSwitchChange(checked:boolean){
+    console.log("Switch toggled:", checked);
+    setDarkMode(checked);
+  };
 
   return (
     <div className={playfair.className}>
       {/* prevent terrible css-dev-only tags overriding everything */}
       <ConfigProvider theme={{ hashed: false,
+        algorithm: darkModeTop ? theme.darkAlgorithm : theme.defaultAlgorithm,
         components: {
           Carousel: {dotHeight: 5, arrowSize: 20}
         }
@@ -34,7 +72,7 @@ export default function App({ Component, pageProps }: AppProps) {
         // if not, be normal PLEASE
         (
         <Layout style={{minHeight: "100vh"}}>
-          <Navbar />
+          <Navbar darkMode={darkModeTop} handleSwitchChange={handleSwitchChange}/>
         <Layout.Content>
           <Component {...pageProps}/>
         </Layout.Content>
