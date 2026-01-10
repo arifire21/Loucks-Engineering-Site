@@ -177,6 +177,12 @@ export const restaurants = [
         year: 2021,
         arch: 'RWB Architects',
         coords: [26.313747619370787, -80.08158147460914]
+    },
+    {
+        name: `Lucky Lou's Raw Bar`,
+        website: 'https://www.luckylousrawbar.com/',
+        year: 2025,
+        arch: "BG Architects"
     }
 ]
 

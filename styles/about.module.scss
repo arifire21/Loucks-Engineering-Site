@@ -21,6 +21,23 @@ margin: 0 6rem;
 margin-bottom: 1rem !important;
 }
 
+.pLink {
+    color: variables.$branding_red;
+    text-decoration: underline;
+    // width: max-content !important;
+    cursor: pointer;
+    &:hover {
+        color: variables.$red_secondary;
+        // text-decoration: underline;
+    }
+    &:focus-visible {
+      /* Draw the focus when :focus-visible is supported */
+      outline: 3px solid variables.$focus_blue;
+      outline-offset: 3px;
+      text-decoration: underline;
+    }
+}
+
 //for mobile, tablet, and 200+ browser zoom
 @media (max-width: 1024px) {
     .aboutContainer {
