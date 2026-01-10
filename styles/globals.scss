@@ -210,6 +210,11 @@ header {
   font-size: 14pt !important;
 }
 
+.ant-card-head {
+  min-height: 50px !important;
+  border-bottom: 1px solid variables.$red_secondary !important;
+}
+
 .ant-card-head-title {
   font-size: 16pt;
 }
@@ -299,12 +304,12 @@ header {
     font-size: unset;
   }
 
-html, body, .ant-btn-primary, .ant-card {
-    font-size: 12pt !important;
-}
+// html, body, .ant-btn-primary, .ant-card {
+//     // font-size: 12pt !important;
+// }
 
 .ant-card-head-title {
-  font-size: 14pt !important;
+  font-size: 16pt !important;
 }
 
   #portfolio-nav-desktop{
@@ -316,31 +321,31 @@ html, body, .ant-btn-primary, .ant-card {
   }
 }
 
-//200% or tablet
-@media (max-width:786px) {
-  html, body, .ant-btn-primary, .ant-card {
-    font-size: 10pt !important;
-  }
+// //200% or tablet
+// @media ((max-device-width:786px)) {
+//   html, body, .ant-btn-primary, .ant-card {
+//     font-size: 10pt !important;
+//   }
 
-  .ant-card-head-title {
-    font-size: 14pt !important;
-  }
-}
+//   .ant-card-head-title {
+//     font-size: 14pt !important;
+//   }
+// }
 
 //for mobile
 //rely on the font adapting as it does
 @media (max-width:450px) {
-  html, body, .ant-btn-primary, .ant-card {
-    font-size: unset !important;
-  }
+  // html, body, .ant-btn-primary, .ant-card {
+  //   font-size: 14pt !important;
+  // }
 
-  .ant-card-head-title {
-    font-size: unset !important;
-  }
+  // .ant-card-head-title {
+  //   font-size: unset !important;
+  // }
 
-  .ant-layout { //ignore these defaults
-    font-size: unset;
-  }
+  // .ant-layout { //ignore these defaults
+  //   font-size: unset;
+  // }
 
   footer {
     flex-direction: column !important;
