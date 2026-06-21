@@ -3,7 +3,7 @@ import { Button } from "antd";
 import styles from "@/styles/Home.module.scss";
 import Logo from "@/public/logo.png"
 import HomeCarousel from "@/components/home-carousel";
-import Ribbon from '../public/ribbon.svg'
+import Ribbon from '../public/ribbon.png'
 
 export default function Home() {
   return (
