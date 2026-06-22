@@ -22,7 +22,7 @@ export default function Footer() {
 
         <div>
             <p style={{marginBottom:'0.25rem'}}><FaMapPin/> 321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
-            <p style={{marginBottom: '0'}}><FaPhoneVolume/> (954) 938-1881 <span className={styles.footerNavSpacer}>|</span> &copy; {new Date().getFullYear()}</p>
+            <p style={{marginBottom: '0'}}><FaPhoneVolume/> <a href="tel:+19549381881" title='Mobile users - Click to call!'>(954) 938-1881</a> <span className={styles.footerNavSpacer}>|</span> &copy; {new Date().getFullYear()}</p>
         </div>
 
         <div>
