@@ -10,7 +10,7 @@ function initTabIndex() {
 
 export default function HomeCarousel(){
     return(
-        <Carousel onInit={initTabIndex} className={styles.caroElem} arrows dots dotPosition='top' autoplay={{ dotDuration: true }} autoplaySpeed={4500} infinite>
+        <Carousel onInit={initTabIndex} className={styles.caroElem} arrows dots dotPlacement='top' autoplay={{ dotDuration: true }} autoplaySpeed={4500} infinite>
           {carouselData.map((entry, index) =>
               <div key={index}>
                 <img className={styles.caroImage}
