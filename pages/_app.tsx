@@ -20,31 +20,38 @@ export default function App({ Component, pageProps }: AppProps) {
   const [darkModeTop, setDarkMode] = useState<boolean>(false);
 
   const darkModeChange = useCallback((event: MediaQueryListEvent) => {
-    console.log(event.matches ? true : false);
-    setDarkMode(event.matches ? true : false);
+    console.log(event.matches);
+    setDarkMode(event.matches);
   }, []);
 
   //set windowQuery at start otherwise undefined
   useEffect(() => {
     if (typeof window != "undefined" && typeof window.matchMedia === "function") {
+      console.log("hit window query match media");
       setWindowQuery(window.matchMedia("(prefers-color-scheme:dark)"));
+      setDarkMode(window.matchMedia("(prefers-color-scheme:dark)").matches)
     }
   }, [])
 
   //do the change
   useEffect(() => {
-    if(!windowQuery?.matches || windowQuery.media){
+    //fix?: remove condition
+    if(!windowQuery){
+      return;
+    }
+    
+    // if(!windowQuery?.matches || windowQuery.media){
     windowQuery?.addEventListener("change", darkModeChange);
     return () => {
       windowQuery?.removeEventListener("change", darkModeChange);
-    };
+    // };
   }
   }, [windowQuery, darkModeChange]);
 
-  useEffect(() => {
-    console.log(windowQuery?.matches ? true : false);
-    setDarkMode(windowQuery?.matches ? true : false);
-  }, []);
+  // useEffect(() => {
+  //   console.log(windowQuery?.matches ? true : false);
+  //   setDarkMode(windowQuery?.matches ? true : false);
+  // }, []);
 
   //parent function for switch child
   function handleSwitchChange(checked:boolean){
