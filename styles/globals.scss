@@ -96,7 +96,7 @@ header {
     /* Draw the focus when :focus-visible is supported */
     outline: 3px solid variables.$focus_blue;
     outline-offset: 3px;
-}
+  }
 }
 
 .f-active {
@@ -212,7 +212,7 @@ header {
 
 .ant-card-head {
   min-height: 50px !important;
-  border-bottom: 1px solid variables.$red_secondary !important;
+  border-bottom: 2px solid variables.$red_secondary !important;
 }
 
 .ant-card-head-title {

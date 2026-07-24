@@ -18,6 +18,29 @@
     }
 }
 
+#linkedin-link, #insta-link {
+    &:focus-visible {
+        /* Draw the focus when :focus-visible is supported */
+        outline: 3px solid variables.$focus_blue;
+        outline-offset: 3px;
+        text-decoration: underline;
+      }
+}
+
 .footerNavSpacer {
     color: variables.$salmon_accent !important;
+}
+
+@supports not selector(:focus-visible) {
+    #linkedin-link:focus {
+        /* Fallback for browsers without :focus-visible support */
+        outline: 3px solid variables.$focus_blue;
+        outline-offset: 3px;
+    }
+
+    #linkedin-link:focus {
+        /* Fallback for browsers without :focus-visible support */
+        outline: 3px solid variables.$focus_blue;
+        outline-offset: 3px;
+    }
 }
