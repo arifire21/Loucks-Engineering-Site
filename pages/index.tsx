@@ -33,7 +33,7 @@ export default function Home() {
         <div className={styles.homeTextContainer}>
           <p className={styles.homeText}>
             Loucks Engineering, Inc. consulting engineers specialize in <strong>mechanical</strong>, <strong>electrical</strong>, and <strong>plumbing</strong> (MEP) systems. We are known for various restaurants and commercial, residential, and recreation-based projects across Florida, having worked in the state for 60 years.
-            Many of our projects are of existing structures being renovated to meet the continuing needs of our clients. With the ability to provide services with Green Building Council certification, we are committed to producing projects with sustainability in mind.
+            Many of our projects involve existing structures being renovated to meet the new or continuing needs of our clients. With the ability to provide services with Green Building Council certification, we are committed to producing projects with sustainability in mind.
           </p>
           <Button href='/services' variant="filled" type="primary">See our services</Button>
         </div>
