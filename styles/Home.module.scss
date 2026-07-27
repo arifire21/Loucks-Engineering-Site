@@ -1,0 +1,157 @@
+@use "variables";
+
+/* this is specifically for spacing
+out the "home flex containers" and hr i guess */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-row-start: 2;
+}
+
+/* this is the orig flex container for
+logo and caro */
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 1rem;
+}
+
+// container for component
+.homeItem {
+  margin: 0 auto;
+}
+
+// container for component
+.homeCaro {
+  width: 600px;
+}
+
+.estDate {
+  // color: variables.$branding_red;
+  // color: variables.$gray_primary;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+.homeTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homeText {
+  padding: 1rem 5rem;
+  padding-top: 0;
+}
+
+.homeHeader{
+  border: 2px solid variables.$branding_red;
+  width: 100%;
+  margin: 0 auto;
+}
+
+//for smaller desktop viewports, just wrap the stupid thing for now
+//FIXME:
+// @media (max-width:1275px) {
+//   .homeContainer {
+//       flex-wrap: wrap;
+//   }
+
+//   .logo,  .homeCaro{
+//     scale: 0.75
+//   }
+// }
+
+//for smaller desktop viewports or 120%+ browser zooms
+@media (max-width: 1280px){
+  // .homeContainer {width: fit-content;}
+  .logo {
+    width: 80%
+  }
+}
+
+//133%
+@media (max-width: 1155px){
+  //   .homeContainer {
+  //     flex-wrap: wrap;
+  // }
+
+  .logo {
+    width: 70%
+  }
+
+  .homeCaro {
+    scale: 0.8;
+  }
+}
+
+//150%
+@media (max-width: 1024px){
+    .homeContainer {
+      flex-wrap: wrap;
+  }
+
+  .logo, .homeCaro {
+    width: 60%
+  }
+}
+
+//tablets?
+@media (max-width: 600px) {
+  .main {
+    align-items: center;
+  }
+}
+
+//200%
+@media (max-width: 768px){
+  .homeContainer {
+    flex-wrap: wrap;
+}
+
+.logo, .homeCaro {
+  width: 60%
+}
+}
+
+//mobile
+@media (max-width:450px) {
+  .homeContainer{
+    margin-top: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    column-gap: 0.5rem;
+    width: 100%;
+  }
+
+  .homeItem {
+    flex-grow: 0;
+    // margin: 0 1rem;
+    width: 100%;
+  }
+
+  .logo {
+    width: unset !important;
+    max-width: 100% !important;
+    // max-height: 90vh;
+  }
+
+  .homeCaro {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .estDate {
+    margin-bottom: 1rem;
+  }
+
+  .homeText {
+    padding: 1rem 0 !important;
+    padding-top: 0 !important;
+  }
+}
