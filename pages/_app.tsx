@@ -65,19 +65,20 @@ export default function App({ Component, pageProps }: AppProps) {
       <ConfigProvider theme={{ hashed: false,
         algorithm: darkModeTop ? theme.darkAlgorithm : theme.defaultAlgorithm,
         components: {
-          Carousel: {dotHeight: 5, arrowSize: 20}
+          Carousel: {dotHeight: 5, arrowSize: 20},
+          // Switch: {colorPrimary: "#8b0000", colorPrimaryHover: "#0A4AA3"}
         }
       }}>
         {/* if currentPage is portfolio, render special layout more suited to it
             that does not nest content
             bug fix and also futureproofing for map */}
-        {currentPage === '/portfolio'? (
+        {/* {currentPage === '/portfolio'? (
           <>
           <Component {...pageProps}/>
           </>
         ) :
         // if not, be normal PLEASE
-        (
+        ( */}
         <Layout style={{minHeight: "100vh"}}>
           <Navbar darkModeFromTop={darkModeTop} handleSwitchChangeFromTop={handleSwitchChange}/>
         <Layout.Content>
@@ -85,8 +86,8 @@ export default function App({ Component, pageProps }: AppProps) {
         </Layout.Content>
           <Footer/>
         </Layout>
-        )
-        }
+        {/* )
+        } */}
       </ConfigProvider>
     </div>
   )

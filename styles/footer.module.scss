@@ -27,9 +27,12 @@
       }
 }
 
-.footerNavSpacer {
-    border-style: solid;
+.footerNavSpacer, .logoSpacer {
     color: variables.$salmon_accent !important;
+}
+
+.logoSpacer {
+    border-style: solid;
 }
 
 @supports not selector(:focus-visible) {

@@ -219,10 +219,10 @@ header {
   font-size: 16pt;
 }
 
-.ant-switch.ant-switch-checked, .ant-btn-primary {
+.ant-btn-primary {
   background-color: variables.$branding_red;
   &:hover {
-    background-color: rgb(170, 0, 0) !important;
+    background-color: #aa0000 !important;
   }
 }
 
@@ -230,6 +230,13 @@ header {
   width: fit-content !important;
   padding: 1rem;
   margin: auto;
+}
+
+.ant-switch.ant-switch-checked {
+  background-color: variables.$red_secondary;
+  &:hover {
+    background-color: rgb(120, 0, 0);
+  }
 }
 
 .ant-drawer-close {

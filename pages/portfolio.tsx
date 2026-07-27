@@ -37,7 +37,7 @@ export default function Portfolio() {
         <meta name="description" content="View a gallery showcasing notable projects." />
         </Head>
 
-        <Navbar />
+        {/* <Navbar /> */}
 
         <main id="portfolio-main">
           <h1>Project Portfolio</h1>
