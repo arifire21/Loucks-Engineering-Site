@@ -10,7 +10,7 @@ type DarkModeSwitchProps = {
 
 export default function DarkModeSwitch({darkModeFromNav, handleSwitchChangeFromNav}:DarkModeSwitchProps){
 
-    console.log("Child received handleSwitchChangeFromNav:", handleSwitchChangeFromNav);
+    // console.log("Child received handleSwitchChangeFromNav:", handleSwitchChangeFromNav);
 
     return(
         <div style={{display: 'inline-block'}}>
