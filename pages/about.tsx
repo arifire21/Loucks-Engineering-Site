@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/about.module.scss"
 import { GiPalmTree } from "react-icons/gi";
+import { FaComputer, FaPeopleRoof } from "react-icons/fa6";
 
 export default function About() {
   return (
@@ -16,6 +17,7 @@ export default function About() {
 
         <div className={styles.aboutContainer}>
         <section className={styles.aboutItem}>
+          <FaComputer size={35}/>
           <h2>Why Work With Us?</h2>
             <p className={styles.abtPara}>We utilize Computer-Aided Design (CAD) drafting, working with <strong>commercial</strong> projects, <strong>municipal</strong> projects, <strong>residential</strong> spaces, <strong>parks</strong>, <strong>recreation</strong> spaces, and <strong>environmentally-friendly</strong> projects. Many of our projects consist of existing structures being renovated to meet the continuing needs of our clients. With our knowledge and depth we take great pride in being part of the intelligent reuse of existing facilities. We have many projects that have achieved LEED certification.</p>
         </section>
@@ -23,6 +25,7 @@ export default function About() {
         <hr className={styles.header}/>
 
         <section className={styles.aboutItem}>
+          <FaPeopleRoof size={35}/>
           <h2>History</h2>
             <p className={styles.abtPara}>Our company was founded in <strong>1966</strong> here in south Florida, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
         </section>
