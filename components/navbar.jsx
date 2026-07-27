@@ -10,7 +10,7 @@ import { Drawer, Button } from "antd";
 import styles from '@/styles/navbar.module.scss'
 import DarkModeSwitch from "./dark-switch";
 
-export default function Navbar(darkModeFromTop, handleSwitchChangeFromTop){
+export default function Navbar({darkModeFromTop, handleSwitchChangeFromTop}){
     const path = usePathname();
     const [open, setOpen] = useState(false);
 
@@ -50,8 +50,8 @@ export default function Navbar(darkModeFromTop, handleSwitchChangeFromTop){
                 </Link>
                 <div style={{display: 'inline-flex', flexDirection: 'column', width: 'fit-content', float: 'right'}}>
                     <DarkModeSwitch
-                    checked={darkModeFromTop}
-                    handleSwitchChange={handleSwitchChangeFromTop}/>
+                    darkModeFromNav={darkModeFromTop}
+                    handleSwitchChangeFromNav={handleSwitchChangeFromTop}/>
                 </div>
                 
             </div>

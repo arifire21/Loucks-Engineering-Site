@@ -4,10 +4,12 @@ import Oceanic from '@/images/oceanic.jpg'
 import Baresco from '@/images/baresco.jpg'
 import CarouselClub from '@/images/carousel-club.jpg'
 import CubicoCoffee from '@/images/cubico-coffee-5275.jpg'
+// import BeachHouseKitchen from '@/images/beach-house-pompano.jpeg' //FIXME
 import Cove from '@/images/thecove.jpg'
 //import MoraGrill from '@/images/mora-grill.jpg'
 import HYB from '@/images/HYB.png'
 import Pinball from '@/images/pinball.jpg'
+import LuckyLous from '@/images/Lucky-Lous.jpg'
 
 //residence
 import BluApts from '@/images/blu-apt.jpg'
@@ -103,6 +105,13 @@ import AirportLogistics from '@/images/Airport-Logistics.jpg'
 
 export const restaurants = [
     {
+        name: `Lucky Lou's Raw Bar`,
+        website: 'https://www.luckylousrawbar.com/',
+        year: 2025,
+        arch: "BG Architects",
+        image: LuckyLous
+    },
+    {
         name: "Lucky Fish (Pompano Bch)",
         website: "https://www.luckyfishpompano.com/",
         image: Lucky_Fish,
@@ -132,7 +141,7 @@ export const restaurants = [
         website: "https://beachhousepompano.com/"
     },
     {
-        name: "How You Brewin'",
+        name: "How You Brewin' (Pompano Bch)",
         website: "https://howyoubrewin.com/pages/pompano-guide-for-guests",
         image: HYB,
         year: 2022,
@@ -142,7 +151,8 @@ export const restaurants = [
     {
         name: "Beach House",
         smallText: "(kitchen)",
-        website: "https://beachhousepompano.com/"
+        website: "https://beachhousepompano.com/",
+        // image: BeachHouseKitchen //FIXME
     },
     {
         name: "Satellite Pinball Lounge",
@@ -177,12 +187,6 @@ export const restaurants = [
         year: 2021,
         arch: 'RWB Architects',
         coords: [26.313747619370787, -80.08158147460914]
-    },
-    {
-        name: `Lucky Lou's Raw Bar`,
-        website: 'https://www.luckylousrawbar.com/',
-        year: 2025,
-        arch: "BG Architects"
     }
 ]
 

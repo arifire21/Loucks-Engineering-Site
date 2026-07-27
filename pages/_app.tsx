@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return () => {
       windowQuery?.removeEventListener("change", darkModeChange);
     // };
-  }
+    }
   }, [windowQuery, darkModeChange]);
 
   // useEffect(() => {
@@ -79,7 +79,7 @@ export default function App({ Component, pageProps }: AppProps) {
         // if not, be normal PLEASE
         (
         <Layout style={{minHeight: "100vh"}}>
-          <Navbar darkMode={darkModeTop} handleSwitchChange={handleSwitchChange}/>
+          <Navbar darkModeFromTop={darkModeTop} handleSwitchChangeFromTop={handleSwitchChange}/>
         <Layout.Content>
           <Component {...pageProps}/>
         </Layout.Content>
