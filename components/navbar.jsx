@@ -8,9 +8,9 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import AbbrLogo from '@/public/lei-logo-sm-100-nav.png'
 import { Drawer, Button } from "antd";
 import styles from '@/styles/navbar.module.scss'
-import DarkModeSwitch from "./dark-switch";
+import {DarkModeSwitch, AccModeSwitch} from "./switches";
 
-export default function Navbar({darkModeFromTop, handleSwitchChangeFromTop}){
+export default function Navbar({darkModeFromTop, handleDarkSwitchChangeFromTop, accModeFromTop, handleAccSwitchChangeFromTop}){
     const path = usePathname();
     const [open, setOpen] = useState(false);
 
@@ -51,7 +51,10 @@ export default function Navbar({darkModeFromTop, handleSwitchChangeFromTop}){
                 <div style={{display: 'inline-flex', flexDirection: 'column', width: 'fit-content', float: 'right'}}>
                     <DarkModeSwitch
                     darkModeFromNav={darkModeFromTop}
-                    handleSwitchChangeFromNav={handleSwitchChangeFromTop}/>
+                    handleSwitchChangeFromNav={handleDarkSwitchChangeFromTop}/>
+                    <AccModeSwitch
+                    accModeFromNav={accModeFromTop}
+                    handleSwitchChangeFromNav={handleAccSwitchChangeFromTop}/>
                 </div>
                 
             </div>
