@@ -1,13 +1,15 @@
 import { Drawer, Button } from "antd";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AccContext } from '@/pages/_app';
 import styles from "@/styles/portfolio.module.scss"
 
 export function PortfolioNavDesktop() {
+    let {reducedMotionTop} = useContext(AccContext);
 
     function customScroll(id){
         console.log(id)
         let element = document.getElementById(id)
-        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+        element.scrollIntoView({ behavior: reducedMotionTop === false ? "instant" : "smooth", block: "start", inline: "nearest" })
     }
 
     return(
@@ -22,7 +24,7 @@ export function PortfolioNavDesktop() {
                 <div className={styles.portfolioNavItem} onClick={() => customScroll('outreach')}>Outreach</div>&ensp;<b>|</b>&ensp;
                 <div className={styles.portfolioNavItem} onClick={() => customScroll('storage')}>Storage</div>&ensp;<b>|</b>&ensp;
                 <div className={styles.portfolioNavItem} onClick={() => customScroll('gyms')}>Gyms</div>&ensp;<b>|</b>&ensp;
-                <div className={styles.portfolioNavItem} onClick={() => customScroll('med-dent')}>Medical & Dental</div>&ensp;<b>|</b>&ensp;
+                <div className={styles.portfolioNavItem} onClick={() => customScroll('medDental')}>Medical & Dental</div>&ensp;<b>|</b>&ensp;
                 <div className={styles.portfolioNavItem} onClick={() => customScroll('beauty')}>Beauty</div>&ensp;<b>|</b>&ensp;
                 <div className={styles.portfolioNavItem} onClick={() => customScroll('retail')}>Retail</div>&ensp;<b>|</b>&ensp;
                 <div className={styles.portfolioNavItem} onClick={() => customScroll('education')}>Education</div>&ensp;<b>|</b>&ensp;
@@ -38,6 +40,7 @@ export function PortfolioNavDesktop() {
 }
 
 export function PortfolioNavMobile() {
+    let {reducedMotionTop} = useContext(AccContext);
     const [show, setShow] = useState(false)
 
     const handleClose = () => setShow(false)
@@ -47,7 +50,7 @@ export function PortfolioNavMobile() {
         console.log(id)
         let element = document.getElementById(id)
         handleClose()
-        element.scrollIntoView({ behavior: "smooth", block: "start"})
+        element.scrollIntoView({ behavior: reducedMotionTop === false ? "instant" : "smooth", block: "start"})
     }
 
     return (
@@ -68,7 +71,7 @@ export function PortfolioNavMobile() {
                         <div className={styles.portfolioNavItem} onClick={() => customScroll('outreach')}>Outreach</div>
                         <div className={styles.portfolioNavItem} onClick={() => customScroll('storage')}>Storage</div>
                         <div className={styles.portfolioNavItem} onClick={() => customScroll('gyms')}>Gyms</div>
-                        <div className={styles.portfolioNavItem} onClick={() => customScroll('med-dent')}>Medical & Dental</div>
+                        <div className={styles.portfolioNavItem} onClick={() => customScroll('medDental')}>Medical & Dental</div>
                         <div className={styles.portfolioNavItem} onClick={() => customScroll('beauty')}>Beauty</div>
                         <div className={styles.portfolioNavItem} onClick={() => customScroll('retail')}>Retail</div>
                         <div className={styles.portfolioNavItem} onClick={() => customScroll('education')}>Education</div>
