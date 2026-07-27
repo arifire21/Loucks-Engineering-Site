@@ -96,7 +96,7 @@ header {
     /* Draw the focus when :focus-visible is supported */
     outline: 3px solid variables.$focus_blue;
     outline-offset: 3px;
-}
+  }
 }
 
 .f-active {
@@ -123,14 +123,16 @@ header {
   position: sticky;
   width: 100%;
   top: 0;
+  left: 0;
   // width: 100vw;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--ant-layout-body-bg);
   border-bottom: 2px solid variables.$red_secondary;
 }
 
 #portfolio-nav-desktop.fixed, #portfolio-nav-mobile.fixed {
   position: fixed;
   box-shadow: 0 2px 0 rgba(5,145,255,0.1); //match btn
+  background-color: var(--ant-color-bg-container);
 }
 
 #portfolio-nav-desktop{
@@ -168,7 +170,7 @@ header {
   // overflow: scroll !important;
   min-height: 100vh;
   max-height: max-content;
-  background-color: rgb(245, 245, 245);
+  // background-color: rgb(245, 245, 245);
 
 }
 
@@ -210,17 +212,32 @@ header {
   font-size: 14pt !important;
 }
 
+.ant-card-head {
+  min-height: 50px !important;
+  border-bottom: 2px solid variables.$red_secondary !important;
+}
+
 .ant-card-head-title {
   font-size: 16pt;
 }
 
+// .ant-btn-primary {
+//   background-color: variables.$branding_red;
+//   &:hover {
+//     background-color: #aa0000 !important;
+//   }
+// }
+
 .ant-btn-primary {
-  background-color: variables.$branding_red;
   width: fit-content !important;
   padding: 1rem;
   margin: auto;
+}
+
+.ant-switch.ant-switch-checked {
+  background-color: variables.$red_secondary;
   &:hover {
-    background-color: rgb(170, 0, 0) !important;
+    background-color: rgb(120, 0, 0);
   }
 }
 
@@ -296,12 +313,12 @@ header {
     font-size: unset;
   }
 
-html, body, .ant-btn-primary, .ant-card {
-    font-size: 12pt !important;
-}
+// html, body, .ant-btn-primary, .ant-card {
+//     // font-size: 12pt !important;
+// }
 
 .ant-card-head-title {
-  font-size: 14pt !important;
+  font-size: 16pt !important;
 }
 
   #portfolio-nav-desktop{
@@ -313,41 +330,41 @@ html, body, .ant-btn-primary, .ant-card {
   }
 }
 
-//200% or tablet
-@media (max-width:786px) {
-  html, body, .ant-btn-primary, .ant-card {
-    font-size: 10pt !important;
-  }
+// //200% or tablet
+// @media ((max-device-width:786px)) {
+//   html, body, .ant-btn-primary, .ant-card {
+//     font-size: 10pt !important;
+//   }
 
-  .ant-card-head-title {
-    font-size: 14pt !important;
-  }
-}
+//   .ant-card-head-title {
+//     font-size: 14pt !important;
+//   }
+// }
 
 //for mobile
 //rely on the font adapting as it does
 @media (max-width:450px) {
-  html, body, .ant-btn-primary, .ant-card {
-    font-size: unset !important;
-  }
+  // html, body, .ant-btn-primary, .ant-card {
+  //   font-size: 14pt !important;
+  // }
 
-  .ant-card-head-title {
-    font-size: unset !important;
-  }
+  // .ant-card-head-title {
+  //   font-size: unset !important;
+  // }
 
-  .ant-layout { //ignore these defaults
-    font-size: unset;
-  }
+  // .ant-layout { //ignore these defaults
+  //   font-size: unset;
+  // }
 
   footer {
     flex-direction: column !important;
     gap: 1rem;
 }
 
-  .ant-layout-content {
-    padding: 1rem 2rem;
-    //min-height: 100vh !important;
-  }
+  // .ant-layout-content {
+  //   padding: 1rem 2rem;
+  //   //min-height: 100vh !important;
+  // }
 
   .contact-page {
     background: none;

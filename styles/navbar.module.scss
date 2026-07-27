@@ -7,6 +7,10 @@
     align-items: center;
 }
 
+.desktopNav {
+    width: 100%; //of .navbar container
+}
+
 .navLink {
     text-decoration: none;
     color: white;
@@ -92,7 +96,7 @@
         font-size: 14pt;
         display: inline-flex;
         width: 100%;
-        color: #000;
+        // color: #000;
         background: none !important;
         & span {
             margin-left: 1rem;

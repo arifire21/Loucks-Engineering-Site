@@ -13,16 +13,16 @@ export default function Footer() {
             <img id='d-logo' src={Logo.src} alt="LEI footer logo" width={100} height={100}/>
             <p id='m-logo' style={{fontSize: '20pt', marginBottom: 0}}>Loucks Engineering, Inc.</p>
             {/* <p style={{fontSize: '16pt', marginBottom: 0}}>MEP Consulting Engineers</p> */}
-            <hr className={styles.footerNavSpacer}/>
+            <hr className={styles.logoSpacer}/>
             <div style={{width: '100%', display: 'inline-flex', justifyContent: 'space-evenly', marginTop: '0.5rem'}}>
-                <a href='https://www.linkedin.com/company/loucks-engineering-inc./' target='_blank' title='Linkedin'><FaLinkedin size={30} className={styles.linkedinLogo}/></a>
-                <a href='https://www.instagram.com/loucksengineering/' target='_blank' title='Instagram'><FaInstagramSquare size={30} className={styles.instaLogo}/></a>
+                <a id='linkedin-link' href='https://www.linkedin.com/company/loucks-engineering-inc./' target='_blank' title='Linkedin'><FaLinkedin size={30} className={styles.linkedinLogo}/></a>
+                <a id='insta-link' href='https://www.instagram.com/loucksengineering/' target='_blank' title='Instagram'><FaInstagramSquare size={30} className={styles.instaLogo}/></a>
             </div>
         </div>
 
         <div>
             <p style={{marginBottom:'0.25rem'}}><FaMapPin/> 321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
-            <p style={{marginBottom: '0'}}><FaPhoneVolume/> (954) 938-1881 <span className={styles.footerNavSpacer}>|</span> &copy; {new Date().getFullYear()}</p>
+            <p style={{marginBottom: '0'}}><FaPhoneVolume/> <a href="tel:+19549381881" title='Mobile users - Click to call!'>(954) 938-1881</a> <span className={styles.footerNavSpacer}>|</span> &copy; {new Date().getFullYear()}</p>
         </div>
 
         <div>
