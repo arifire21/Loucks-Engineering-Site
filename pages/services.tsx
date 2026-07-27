@@ -50,7 +50,7 @@ export default function Services() {
 
         </main>
 
-        <Button href='/portfolio' variant="filled" type="primary">See our work</Button>
+        <Button href='/portfolio' variant="filled" type="primary">See Our Work</Button>
       </main>
     </>
   );

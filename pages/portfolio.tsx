@@ -2,8 +2,6 @@ import Head from "next/head";
 import { PortfolioNavDesktop, PortfolioNavMobile } from '@/components/simple-portfolio/portfolio-nav';
 import BasicPortfolio from '@/components/simple-portfolio/basic-portfolio';
 import { useEffect } from "react";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
 
 export default function Portfolio() {
   useEffect(() => {
@@ -37,8 +35,6 @@ export default function Portfolio() {
         <meta name="description" content="View a gallery showcasing notable projects." />
         </Head>
 
-        <Navbar />
-
         <main id="portfolio-main">
           <h1>Project Portfolio</h1>
           <p>View a gallery showcasing notable projects.</p>
@@ -55,9 +51,6 @@ export default function Portfolio() {
                   Pictures used are either provided by us or pulled from the general internet. We believe that no copyright laws have been violated. If we are notified differently, we will immediately remove the picture(s) in question.</p>
           </section>
         </main>
-
-        <Footer/>
-
       </>
     )
 }
