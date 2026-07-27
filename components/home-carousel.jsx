@@ -1,5 +1,7 @@
 import {Carousel} from 'antd';
 import {carouselData} from '../data/carousel_data';
+import { useContext } from 'react';
+import { AccContext } from '@/pages/_app';
 import styles from '@/styles/carousel.module.scss'
 
 function initTabIndex() {
@@ -9,8 +11,12 @@ function initTabIndex() {
 }
 
 export default function HomeCarousel(){
+  let {reducedMotionTop} = useContext(AccContext);
+
     return(
-        <Carousel onInit={initTabIndex} className={styles.caroElem} arrows dots dotPlacement='top' autoplay={{ dotDuration: true }} autoplaySpeed={4500} infinite fade>
+        <Carousel onInit={initTabIndex} className={styles.caroElem} arrows dots dotPlacement='top' autoplay={{ dotDuration: true }} autoplaySpeed={4500} infinite
+        effect={reducedMotionTop === false ? 'fade' : 'scrollx'} speed={600}
+        >
           {carouselData.map((entry, index) =>
               <div key={index}>
                 <img className={styles.caroImage}

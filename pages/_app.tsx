@@ -1,17 +1,23 @@
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import { usePathname } from 'next/navigation';
+import { useState, useCallback, useEffect, createContext } from "react";
 
 import { Layout, ConfigProvider, theme } from "antd";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 import { Playfair } from "next/font/google";
-import { useState, useCallback, useEffect } from "react";
 
 const playfair = Playfair({
   subsets: ['latin'],
 })
+ 
+export const AccContext = createContext({})
+ 
+// export function AccStatusProvider({children,}: {children: React.ReactNode}) {
+//   return <AccContext.Provider value={{darkModeTop}}>{children}</AccContext.Provider>
+// }
 
 export default function App({ Component, pageProps }: AppProps) {
   const currentPage = usePathname();
@@ -100,6 +106,7 @@ export default function App({ Component, pageProps }: AppProps) {
       }}>
         {/* if currentPage is portfolio, remove padding*/}
         <Layout style={{minHeight: "100vh"}}>
+          <AccContext.Provider value={{reducedMotionTop}}>
           <Navbar
             darkModeFromTop={darkModeTop}
             handleDarkSwitchChangeFromTop={handleDarkSwitchChange}
@@ -109,6 +116,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Layout.Content style={layoutStyle}>
             <Component {...pageProps}/>
           </Layout.Content>
+          </AccContext.Provider>
           <Footer/>
         </Layout>
       </ConfigProvider>

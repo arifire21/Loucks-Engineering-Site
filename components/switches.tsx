@@ -38,7 +38,7 @@ export function AccModeSwitch({accModeFromNav, handleSwitchChangeFromNav}:AccMod
 
     return(
         <div style={{display: 'inline-block'}}>
-            <Tooltip placement="top" title={accModeFromNav ? "Animation Motion is: Default" : "Animation Motion is: Reduced"} arrow={true}>
+            <Tooltip placement="top" title={accModeFromNav ? "Animation Motion is: Animated" : "Animation Motion is: Reduced"} arrow={true}>
                 <CgMenu className={styles.switchIcon} color={accModeFromNav ? "#666666" : "#ffffff"}/>
                 <Switch className={styles.switch}
                     checked={accModeFromNav}
