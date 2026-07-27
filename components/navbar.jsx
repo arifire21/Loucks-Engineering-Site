@@ -66,9 +66,19 @@ export default function Navbar({darkModeFromTop, handleDarkSwitchChangeFromTop, 
             ><HiMenuAlt1 size={30}/></Button>
             <Drawer
                 placement="left"
-                closeIcon
+                closable={{placement:'end'}}
                 open={open}
                 onClose={() => closeDrawer()}
+                title = {
+                    <div style={{display: 'inline-flex', flexDirection: 'column', width: 'fit-content', float: 'left'}}>
+                    <DarkModeSwitch
+                    darkModeFromNav={darkModeFromTop}
+                    handleSwitchChangeFromNav={handleDarkSwitchChangeFromTop}/>
+                    <AccModeSwitch
+                    accModeFromNav={accModeFromTop}
+                    handleSwitchChangeFromNav={handleAccSwitchChangeFromTop}/>
+                </div>
+                }
             >
                 <nav className={styles.mobileNav}>
                 <Link className={`${styles.navLink} ${path === '/' ? styles.nActive : ''}`} href="/"
