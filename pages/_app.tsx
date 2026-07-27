@@ -15,6 +15,8 @@ const playfair = Playfair({
 
 export default function App({ Component, pageProps }: AppProps) {
   const currentPage = usePathname();
+  const layoutStyle = (currentPage === '/portfolio' ? {padding:0} : {padding:"1rem 2rem"})
+
   //for dark mode
   const [windowQuery, setWindowQuery] = useState<MediaQueryList>();
   const [darkModeTop, setDarkMode] = useState<boolean>(false);
@@ -62,32 +64,26 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={playfair.className}>
       {/* prevent terrible css-dev-only tags overriding everything */}
-      <ConfigProvider theme={{ hashed: false,
+      <ConfigProvider theme={{
+        hashed: false,
         algorithm: darkModeTop ? theme.darkAlgorithm : theme.defaultAlgorithm,
+        token: {
+          colorPrimary: "#cc0c00",
+          colorBgLayout: darkModeTop ? "#111111" : "#f5f5f5", //default is "#f5f5f5"
+          colorBgContainer: darkModeTop ? "#222222" : "#ffffff" //default is "#ffffff"
+        },
         components: {
           Carousel: {dotHeight: 5, arrowSize: 20},
-          // Switch: {colorPrimary: "#8b0000", colorPrimaryHover: "#0A4AA3"}
         }
       }}>
-        {/* if currentPage is portfolio, render special layout more suited to it
-            that does not nest content
-            bug fix and also futureproofing for map */}
-        {/* {currentPage === '/portfolio'? (
-          <>
-          <Component {...pageProps}/>
-          </>
-        ) :
-        // if not, be normal PLEASE
-        ( */}
+        {/* if currentPage is portfolio, remove padding*/}
         <Layout style={{minHeight: "100vh"}}>
           <Navbar darkModeFromTop={darkModeTop} handleSwitchChangeFromTop={handleSwitchChange}/>
-        <Layout.Content>
+        <Layout.Content style={layoutStyle}>
           <Component {...pageProps}/>
         </Layout.Content>
           <Footer/>
         </Layout>
-        {/* )
-        } */}
       </ConfigProvider>
     </div>
   )
