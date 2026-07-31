@@ -34,7 +34,9 @@ export default function Services() {
               <li>Power Distribution</li>
               <li>Lighting Design and Controls</li>
               <li>Data and IT Systems</li>
-              <li>Photometrics</li>
+              <li>Photometrics<br/>
+                <small>(when provided by others)</small>
+              </li>
               <li>UPS Systems</li>
             </ul>
           </Card>
@@ -43,8 +45,8 @@ export default function Services() {
           <ul className={styles.list}>
               <li>Plumbing Systems Design</li>
               <li>Domestic Water System Design</li>
-              <li>Sanitary Waste System Design</li>
-              <li>Natural Gas System Design</li>
+              <li>Sanitary and Grease Waste System Design</li>
+              <li>Natural Gas and Propane System Design</li>
             </ul>
           </Card>
 
