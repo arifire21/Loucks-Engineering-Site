@@ -34,9 +34,7 @@ export default function Services() {
               <li>Power Distribution</li>
               <li>Lighting Design and Controls</li>
               <li>Data and IT Systems</li>
-              <li>Photometrics<br/>
-                <small>(when provided by others)</small>
-              </li>
+              <li>Photometrics</li>
               <li>UPS Systems</li>
             </ul>
           </Card>
