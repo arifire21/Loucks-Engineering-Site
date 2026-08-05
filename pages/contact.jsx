@@ -18,7 +18,7 @@ export default function Contact() {
 
         <div className={styles.cardContainer}>
         <Card title="Office Location" className={styles.cardCustom}>
-        <p style={{marginBottom:0}}>321 E. Commercial Blvd<br/>Fort Lauderdale, FL 33334</p>
+        <p style={{marginBottom:0}}>321 E. Commercial Blvd<br/>Oakland Park, FL 33334</p>
         <a className={styles.mailLink} href="https://goo.gl/maps/vfK9qLgASjXJTs7r5" target="_blank" rel="noreferrer">Directions via Google Maps <HiOutlineExternalLink/></a>
         </Card>
 
