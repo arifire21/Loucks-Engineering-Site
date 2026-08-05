@@ -33,7 +33,7 @@ export default function Home() {
         <div className={styles.homeTextContainer}>
         <p className={styles.homeText}>
             Loucks Engineering, Inc. consulting engineers specialize in <strong>mechanical</strong>, <strong>electrical</strong>, and <strong>plumbing</strong> (MEP) systems.
-            With 60 years of experience, we bring local knowledge to the table. Our firm is known for contributing to several iconic restaurants and entertainment hotspots across Florida, including several of the restaurants at the Pompano Beach Pier! We also produce designs for commercial facilities, residences, and recreation-based projects. Many of our projects involve existing structures being renovated to meet the new or continuing needs of our clients. We are committed to producing projects with sustainability in mind.
+            With 60 years of experience, we bring local knowledge to the table. Our firm is known for contributing to several iconic restaurants and entertainment hotspots across Florida, including several of the restaurants at the Pompano Beach Pier! We also produce designs for commercial facilities, residences, and recreation-based projects. Many of our projects involve existing structures being renovated to meet the new or continuing needs of our clients. With the ability to provide services with Green Building Council certification, we are committed to producing projects with sustainability in mind.
           </p>
           <Button href='/services' variant="filled" type="primary">See Our Services</Button>
         </div>

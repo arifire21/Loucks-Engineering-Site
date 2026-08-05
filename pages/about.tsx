@@ -27,7 +27,7 @@ export default function About() {
         <section className={styles.aboutItem}>
           <FaPeopleRoof size={35}/>
           <h2>History</h2>
-            <p className={styles.abtPara}>Our company was founded in <strong>1966</strong> here in south Florida, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work.</p>
+            <p className={styles.abtPara}>Our company was founded in <strong>1966</strong> here in south Florida, and continues to remain a family business. We do what we can to support all who work here so that their tenure is long. This has built a conscientious team that takes great pride in their work designing multiple types of projects.</p>
         </section>
         </div>
         <p style={{marginTop: '1rem'}}><GiPalmTree style={{verticalAlign:'bottom'}} size={25}/> Proud sponsor of an <a className={styles.pLink} href="https://adoptadune.com/" target="_blank">Adopt a Dune</a> sand dune for 2 years!</p>
